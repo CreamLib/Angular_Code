@@ -1,0 +1,17 @@
+<li class="accordion-group" [ngClass]="{'closed': !isOpen}">
+
+  <button class="panel-heading" (click)="toggleOpen()" [attr.aria-expanded]="isOpen" [attr.aria-controls]="panelID" id={{tabID}}>
+       {{nameButton}}
+
+       <svg>
+          <use xlink:href="#arrowDownSvg"></use>
+       </svg>
+
+  </button>
+
+  <div class="panel-collapse" [attr.aria-hidden]="!isOpen" id={{panelID}} [attr.aria-labeledby]="tabID">
+      <ng-content></ng-content>
+  </div>
+
+</li>
+

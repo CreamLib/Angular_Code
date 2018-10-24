@@ -1,0 +1,83 @@
+/* Pagination Container */
+c3m-pagination .paginationContainer{
+    padding:0.5rem;
+}
+    /* Pagination Items List */
+    c3m-pagination .paginationItems{
+        display:flex;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+        /* Pagination Items */
+        c3m-pagination .paginationItems li{
+          color: #fff;
+          height: 5rem;
+          font: 1rem quicksandbold, Helvetica, Arial, sans-serif;
+          width: 5rem;
+          background-color: #45abbc;
+          margin: 0.5rem;
+          padding: 0.5rem;
+        }
+          /* Buttons List for Pagination */
+          c3m-pagination .pagination{
+              margin-top: 2rem;
+              text-align: left;
+          }
+          /* Buttons for Pagination */
+           c3m-pagination .pagination li {
+               background-color: #ed9c21;
+               width: 1.7rem;
+               display: inline-block;
+               height: 1.7rem;
+               margin-right: 0.3rem;
+               margin-bottom: 0.6rem;
+           }
+           c3m-pagination .pagination li:not(.btnPages){
+             background-color:#6cbe45;
+           }
+           /* Item List Active */
+           c3m-pagination .pagination li.active{
+               background-color: #ea920b;
+           }
+
+           /* Pagination List Item Button */
+           c3m-pagination .pagination button{
+               background-color: initial;
+               height: 100%;
+               width: 100%;
+               color:white;
+               cursor:pointer;
+           }
+
+            /* Pagination List Item Button IMG */
+            c3m-pagination .pagination button img{
+                width: 80%;
+                height: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+                c3m-pagination .pagination li:hover{
+                    opacity: 0.8;
+                }
+                 c3m-pagination .pagination li.disabled {
+                     background-color: #b7bdb4;
+                 }
+                    c3m-pagination .pagination li.disabled button {
+                       pointer-events: none;
+                    }
+                      c3m-pagination .pagination li.disabled:hover {
+                          opacity: 1;
+                      }
+
+
+            @media screen and (min-width: 1000px){
+                c3m-pagination .pagination li {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+
+
+
+
+

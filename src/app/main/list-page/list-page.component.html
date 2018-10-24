@@ -1,0 +1,346 @@
+<div class="panelTitle">
+  <h2>
+    <strong>List</strong> Component</h2>
+  <ul>
+    <li>
+      <a scrollTo href="#list">Regular List</a>
+    </li>
+    <li>
+      <a scrollTo href="#list-order">Ordered List</a>
+    </li>
+    <li>
+      <a scrollTo href="#list-thumbnails">List with thumbnails</a>
+    </li>
+    <li>
+        <a scrollTo href="#list-description">Description list</a>
+      </li>
+  </ul>
+</div>
+
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="list">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Regular List
+
+      <a href="https://github.com/CreamNG/Components/tree/master/list" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span>
+      </a>
+    </h3>
+    <p>Regular List (JSON)</p>
+
+    <div class="demo">
+      <!-- SIMPLE LIST -->
+      <c3m-list>
+      </c3m-list>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>dataList</dt>
+        <dd>The data in the list comes from a JSON file</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+  &lt;!-- SIMPLE LIST --&gt;
+  &lt;c3m-list&gt;
+  &lt;/c3m-list&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="JSON">
+          <p class="pre-code"> dataList.json</p>
+          <div class="code">
+            <!--?prettify lang=js linenums=true?-->
+              <pre class="prettyprint linenums">
+[
+  &#123;
+      &#34;value&#34;: &#34;List Item 1&#34;,
+  &#125;,
+  &#123;
+      &#34;value&#34;: &#34;List Item 2&#34;,
+  &#125;,
+  &#123;
+      &#34;value&#34;: &#34;List Item 3&#34;,
+  &#125;,
+  &#123;
+      &#34;value&#34;: &#34;List Item 4&#34;,
+  &#125;
+]
+              </pre>
+          </div>
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+<div class="titleComponent">
+    <div class="descriptionComponent" id="list-order">
+      <h3>
+        <svg>
+          <use xlink:href="#gitListItem"></use>
+        </svg>
+        Regular List
+
+        <a href="https://github.com/CreamNG/Components/tree/master/list-order" class="gitBtn" target="_blank">
+          <svg>
+            <use xlink:href="#gitSvg"></use>
+          </svg>
+
+          <span>Github</span>
+        </a>
+      </h3>
+      <p>Ordered List (JSON)</p>
+
+      <div class="demo">
+        <!-- SIMPLE LIST -->
+        <c3m-list-order>
+        </c3m-list-order>
+      </div>
+
+      <div class="explain">
+        <dl>
+          <dt>dataList</dt>
+          <dd>The data in the list comes from a JSON file</dd>
+        </dl>
+      </div>
+
+      <!-- TABS SNIPPETS -->
+      <c3m-tabs class="snippets">
+        <c3m-tab tabTitle="HTML">
+          <p class="pre-code">To call the component</p>
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+    &lt;!-- SIMPLE LIST --&gt;
+    &lt;c3m-list-order&gt;
+    &lt;/c3m-list-order&gt;
+              </pre>
+          </div>
+        </c3m-tab>
+
+        <c3m-tab tabTitle="CSS">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="TypeScript">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="JSON">
+            <p class="pre-code"> dataList.json</p>
+            <div class="code">
+              <!--?prettify lang=js linenums=true?-->
+                <pre class="prettyprint linenums">
+[
+    &#123;
+        &#34;value&#34;: &#34;List Item 1&#34;,
+    &#125;,
+    &#123;
+        &#34;value&#34;: &#34;List Item 2&#34;,
+    &#125;,
+    &#123;
+        &#34;value&#34;: &#34;List Item 3&#34;,
+    &#125;,
+    &#123;
+        &#34;value&#34;: &#34;List Item 4&#34;,
+    &#125;
+]
+                </pre>
+            </div>
+        </c3m-tab>
+      </c3m-tabs>
+    </div>
+  </div>
+
+
+
+  <div class="titleComponent">
+      <div class="descriptionComponent" id="list-thumbnails">
+        <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          List with thumbnails
+
+          <a href="https://github.com/CreamNG/Components/tree/master/list-thumbnails" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+
+            <span>Github</span>
+          </a>
+        </h3>
+        <p>List with thumbnails (JSON)</p>
+
+        <div class="demo">
+          <!-- SIMPLE LIST -->
+          <c3m-list-thumbnails>
+          </c3m-list-thumbnails>
+        </div>
+
+        <div class="explain">
+          <dl>
+            <dt>dataList</dt>
+            <dd>The data in the list comes from a JSON file</dd>
+          </dl>
+          <dl>
+              <dt>placeholder.com</dt>
+              <dd>Fake image with a specific size</dd>
+            </dl>
+
+        </div>
+
+        <!-- TABS SNIPPETS -->
+        <c3m-tabs class="snippets">
+          <c3m-tab tabTitle="HTML">
+            <p class="pre-code">To call the component</p>
+            <div class="code">
+              <!--?prettify lang=html linenums=true?-->
+              <pre class="prettyprint linenums">
+      &lt;!-- SIMPLE LIST --&gt;
+      &lt;c3m-list-thumbnails&gt;
+      &lt;/c3m-list-thumbnails&gt;
+                </pre>
+            </div>
+          </c3m-tab>
+
+          <c3m-tab tabTitle="CSS">
+          </c3m-tab>
+
+          <c3m-tab tabTitle="TypeScript">
+          </c3m-tab>
+
+          <c3m-tab tabTitle="JSON">
+              <p class="pre-code"> dataList.json</p>
+              <div class="code">
+                <!--?prettify lang=js linenums=true?-->
+                  <pre class="prettyprint linenums">
+  [
+      &#123;
+          &#34;value&#34;: &#34;List Item 1&#34;,
+          &#34;url&#34;: &#34;http://via.placeholder.com/150x150&#34;,
+      &#125;,
+      &#123;
+          &#34;value&#34;: &#34;List Item 2&#34;,
+          &#34;url&#34;: &#34;http://via.placeholder.com/150x150&#34;,
+      &#125;,
+      &#123;
+          &#34;value&#34;: &#34;List Item 3&#34;,
+          &#34;url&#34;: &#34;http://via.placeholder.com/150x150&#34;,
+      &#125;,
+      &#123;
+          &#34;value&#34;: &#34;List Item 4&#34;,
+          &#34;url&#34;: &#34;http://via.placeholder.com/150x150&#34;,
+      &#125;
+  ]
+                  </pre>
+              </div>
+          </c3m-tab>
+        </c3m-tabs>
+      </div>
+    </div>
+
+
+  <div class="titleComponent">
+      <div class="descriptionComponent" id="list-description">
+        <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          Description List
+
+          <a href="https://github.com/CreamNG/Components/tree/master/list-description" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+
+            <span>Github</span>
+          </a>
+        </h3>
+        <p>Description List (JSON)</p>
+
+        <div class="demo">
+          <!-- SIMPLE LIST -->
+          <c3m-list-description>
+          </c3m-list-description>
+        </div>
+
+        <div class="explain">
+          <dl>
+            <dt>dataList</dt>
+            <dd>The data in the list comes from a JSON file</dd>
+          </dl>
+        </div>
+
+        <!-- TABS SNIPPETS -->
+        <c3m-tabs class="snippets">
+          <c3m-tab tabTitle="HTML">
+            <p class="pre-code">To call the component</p>
+            <div class="code">
+              <!--?prettify lang=html linenums=true?-->
+              <pre class="prettyprint linenums">
+      &lt;!-- SIMPLE LIST --&gt;
+      &lt;c3m-list-description&gt;
+      &lt;/c3m-list-description&gt;
+                </pre>
+            </div>
+          </c3m-tab>
+
+          <c3m-tab tabTitle="CSS">
+          </c3m-tab>
+
+          <c3m-tab tabTitle="TypeScript">
+          </c3m-tab>
+
+          <c3m-tab tabTitle="JSON">
+              <p class="pre-code"> dataList.json</p>
+              <div class="code">
+                <!--?prettify lang=js linenums=true?-->
+                  <pre class="prettyprint linenums">
+  [
+      &#123;
+          &#34;title&#34;: &#34;List Title 1&#34;,
+          &#34;content&#34;: &#34;List Content 1&#34;
+      &#125;,
+      &#123;
+          &#34;title&#34;: &#34;List Title 2&#34;,
+          &#34;content&#34;: &#34;List Content 2&#34;
+      &#125;,
+      &#123;
+          &#34;title&#34;: &#34;List Title 3&#34;,
+          &#34;content&#34;: &#34;List Content 3&#34;
+      &#125;,
+      &#123;
+          &#34;title&#34;: &#34;List Title 4&#34;,
+          &#34;content&#34;: &#34;List Content 4&#34;
+      &#125;
+  ]
+                  </pre>
+              </div>
+          </c3m-tab>
+
+        </c3m-tabs>
+      </div>
+    </div>

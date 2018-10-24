@@ -1,0 +1,4 @@
+ng build --prod --output-path docs --base-href https://creamlib.github.io/Angular_Portal/
+
+Copy / Past  "docs" dir into /Library
+Copy / Past index.html of /Library to /library and rename it to "404.html"

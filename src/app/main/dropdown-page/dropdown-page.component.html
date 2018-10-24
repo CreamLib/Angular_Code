@@ -1,0 +1,75 @@
+<!-- TITLE MODAL COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2><strong>Dropdown</strong> Component</h2>
+  <ul>
+      <li><a scrollTo href="dropdown">Dropdown normal</a></li>
+  </ul>
+</div>
+
+
+<!-- DESCRIPTION ACCORDION COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="dropdown">
+      <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          Dropdown
+
+          <a href="https://github.com/CreamNG/Components/tree/master/dropdown" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+            <span>Github</span></a>
+      </h3>
+
+      <p>Dropdown with unlimited dropdown Item with true links</p>
+
+      <div class="demo">
+          <c3m-dropdown nameDropdown="Dropdown">
+            <c3m-dropdown-item nameDdItem="Item1" url="creamng.github.io"></c3m-dropdown-item>
+            <c3m-dropdown-item nameDdItem="Item2"></c3m-dropdown-item>
+            <c3m-dropdown-item nameDdItem="Item3"></c3m-dropdown-item>
+          </c3m-dropdown>
+      </div>
+
+      <div class="explain">
+           <dl>
+              <dt>nameDropdown</dt>
+              <dd>On the c3m-dropdown component to rename the dropdown button</dd>
+            </dl>
+            <dl>
+                <dt>nameDdItem</dt>
+                <dd>On the c3m-dropdown-item component to rename the link</dd>
+             </dl>
+             <dl>
+                <dt>url</dt>
+                <dd>On the c3m-dropdown-item component to change the href path of link</dd>
+             </dl>
+      </div>
+
+      <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+        <c3m-tab tabTitle="HTML">
+          <p class="pre-code">To call the component</p>
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;c3m-dropdown nameDropdown=&#34;Dropdown&#34;&gt;
+      &lt;c3m-dropdown-item nameDdItem=&#34;Item1&#34; url=&#34;creamng.github.io&#34;&gt;&lt;/c3m-dropdown-item&gt;
+      &lt;c3m-dropdown-item nameDdItem=&#34;Item2&#34;&gt;&lt;/c3m-dropdown-item&gt;
+      &lt;c3m-dropdown-item nameDdItem=&#34;Item3&#34;&gt;&lt;/c3m-dropdown-item&gt;
+&lt;/c3m-dropdown&gt;
+              </pre>
+          </div>
+        </c3m-tab>
+
+        <c3m-tab tabTitle="CSS">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="TypeScript">
+        </c3m-tab>
+
+      </c3m-tabs>
+</div>
+</div>

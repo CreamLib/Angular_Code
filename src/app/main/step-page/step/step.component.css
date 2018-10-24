@@ -1,0 +1,67 @@
+
+/* Step List */
+c3m-step ol {
+  counter-reset: step;
+}
+  /* Step List Item */
+  c3m-step ol li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 0.9em;
+    text-align: center;
+    color: #FFF;
+    background: #333;
+    padding: 0.8em 1em;
+  }
+  /* Step List Item Number */
+    c3m-step ol li::before {
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5em;
+      font-size: 1.2em;
+      content: counter(step);
+      counter-increment: step;
+      text-align: center;
+      border-radius: 1.5em;
+      margin: 0 auto 0.6rem;
+    }
+
+/* PAST STEP */
+c3m-step ol li.past {color: #EFEFEF;}
+  c3m-step ol li.past::before {
+    color: #333;
+    background: #EFEFEF;
+  }
+
+/* ACTIVE STEP */
+c3m-step ol li.active {color: #ED9C21; background-color: #333;}
+  c3m-step ol li.active::before {
+    color: #333;
+    background: #ED9C21;
+  }
+
+/* FUTURE STEP */
+c3m-step ol li.future {
+  color: #333;
+  background-color: #EFEFEF;
+}
+  c3m-step ol li.future::before {
+    color: #EFEFEF;
+    background: #333;
+  }
+
+
+
+/* BREAKPOINT */
+
+c3m-step ol.over li {
+  width:100%;
+  text-align: left;
+  display: block;
+  padding: 0.5rem;
+}
+  c3m-step ol.over li:before{
+    display: inline-block;
+    margin: 0;
+  }

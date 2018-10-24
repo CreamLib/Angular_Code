@@ -1,0 +1,456 @@
+<!-- TITLE SLIDER COMPONENT PAGE -->
+<div class="panelTitle">
+    <h2><strong>Input</strong> Component</h2>
+    <ul>
+      <li><a scrollTo href="#input">Regular Input</a></li>
+      <li><a scrollTo href="#input-floating">Input Floating Label</a></li>
+      <li><a scrollTo href="#input-material">Input Floating Material</a></li>
+      <li><a scrollTo href="#input-tel">Input Phone</a></li>
+      <li><a scrollTo href="#input-mail">Input Mail</a></li>
+      <li><a scrollTo href="#input-error-msg">Error Message</a></li>
+    </ul>
+</div>
+
+
+  <!-- INPUT REGULAR -->
+  <div class="titleComponent">
+    <div class="descriptionComponent" id="input">
+      <h3>
+        <svg>
+          <use xlink:href="#gitListItem"></use>
+        </svg>
+        Regular Input
+
+        <a href="https://github.com/CreamNG/Components/tree/master/input" class="gitBtn" target="_blank">
+          <svg>
+            <use xlink:href="#gitSvg"></use>
+          </svg>
+
+          <span>Github</span></a>
+      </h3>
+      <p>Regular Input (don't forget to add the <code>form</code> tag)</p>
+
+      <div class="demo">
+        <!-- SIMPLE INPUT -->
+        <c3m-input
+          title="Enter your name"
+          placeholder="placeholder"
+          name="name"
+          [id]="'name'">
+        </c3m-input>
+      </div>
+
+      <div class="explain">
+        <dl>
+          <dt>title</dt>
+          <dd>The label tag</dd>
+        </dl>
+        <dl>
+          <dt>placeholder</dt>
+          <dd>Placeholder value (optional)</dd>
+        </dl>
+      </div>
+
+      <!-- TABS SNIPPETS -->
+      <c3m-tabs class="snippets">
+        <c3m-tab tabTitle="HTML">
+          <p class="pre-code">To call the component</p>
+          <div class="code">
+             <!--?prettify lang=html linenums=true?-->
+              <pre class="prettyprint linenums">
+&lt;!-- SIMPLE INPUT --&gt;
+&lt;c3m-input
+  title=&#34;Enter your name&#34;
+  placeholder=&#34;placeholder&#34;
+  name=&#34;name&#34;
+  [id]=&#34;&apos;name&apos;&#34;&gt;
+&lt;/c3m-input&gt;
+              </pre>
+          </div>
+        </c3m-tab>
+
+        <c3m-tab tabTitle="CSS">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="TypeScript">
+        </c3m-tab>
+
+      </c3m-tabs>
+    </div>
+    </div>
+
+
+  <!-- INPUT FLOATING LABEL -->
+  <div class="titleComponent">
+      <div class="descriptionComponent" id="input-floating">
+        <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          Input Floating Label
+
+          <a href="https://github.com/CreamNG/Components/tree/master/input-floating" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+
+            <span>Github</span></a>
+        </h3>
+
+        <p>Input with a floating label <code>bottom</code></p>
+
+        <div class="demo">
+          <!-- FLOATING BOTTOM INPUT -->
+          <c3m-input-floating
+            title="Enter your name"
+            floating="bottom"
+            name="name1"
+            id="name1">
+          </c3m-input-floating>
+        </div>
+
+          <p>Input with a floating label <code>right</code></p>
+
+        <div class="demo">
+            <c3m-input-floating
+              title="Enter your name"
+              floating="right"
+              name="name2"
+              id="name2">
+            </c3m-input-floating>
+        </div>
+
+
+        <div class="explain">
+          <dl>
+            <dt>title</dt>
+            <dd>The label tag</dd>
+          </dl>
+          <dl>
+            <dt>placeholder</dt>
+            <dd>Placeholder value 'bottom', 'right' or 'top' </dd>
+          </dl>
+        </div>
+
+        <!-- TABS SNIPPETS -->
+        <c3m-tabs class="snippets">
+          <c3m-tab tabTitle="HTML">
+            <p class="pre-code">To call the component</p>
+            <div class="code">
+               <!--?prettify lang=html linenums=true?-->
+                <pre class="prettyprint linenums">
+&lt;!-- FLOATING BOTTOM INPUT --&gt;
+&lt;c3m-input-floating
+  title=&#34;Enter your name&#34;
+  floating=&#34;bottom&#34;
+  name=&#34;name1&#34;
+  id=&#34;name1&#34;&gt;
+&lt;/c3m-input-floating&gt;
+
+&lt;!-- FLOATING RIGHT INPUT --&gt;
+&lt;c3m-input-floating
+  title=&#34;Enter your name&#34;
+  floating=&#34;right&#34;
+  name=&#34;name1&#34;
+  id=&#34;name1&#34;&gt;
+&lt;/c3m-input-floating&gt;
+
+                </pre>
+            </div>
+          </c3m-tab>
+
+          <c3m-tab tabTitle="CSS">
+          </c3m-tab>
+
+          <c3m-tab tabTitle="TypeScript">
+          </c3m-tab>
+
+        </c3m-tabs>
+      </div>
+    </div>
+
+
+    <!-- INPUT MATERIAL FLOATING LABEL -->
+  <div class="titleComponent">
+    <div class="descriptionComponent" id="input-material">
+      <h3>
+        <svg>
+          <use xlink:href="#gitListItem"></use>
+        </svg>
+        Input Material Floating
+
+        <a href="https://github.com/CreamNG/Components/tree/master/input-material" class="gitBtn" target="_blank">
+          <svg>
+            <use xlink:href="#gitSvg"></use>
+          </svg>
+
+          <span>Github</span></a>
+      </h3>
+      <p>Input Material Like (don't forget to add a <code>form</code> tag). </p>
+      <p>It uses the functionality <code>:placeholder-shown</code> that is not handled by all browsers</p>
+
+      <div class="demo">
+        <!-- Input Material -->
+        <c3m-input-material
+          title="Enter your name"
+          placeholder="placeholder3"
+          name="name3"
+          id="name3">
+        </c3m-input-material>
+      </div>
+
+      <div class="explain">
+        <dl>
+          <dt>title</dt>
+          <dd>The label tag</dd>
+        </dl>
+        <dl>
+          <dt>placeholder</dt>
+          <dd>Placeholder value (optional)</dd>
+        </dl>
+      </div>
+
+      <!-- TABS SNIPPETS -->
+      <c3m-tabs class="snippets">
+        <c3m-tab tabTitle="HTML">
+          <p class="pre-code">To call the component</p>
+          <div class="code">
+             <!--?prettify lang=html linenums=true?-->
+              <pre class="prettyprint linenums">
+&lt;!-- Input Material --&gt;
+&lt;c3m-input-material
+  title=&#34; Enter your name &#34;
+  placeholder=&#34;placeholder3&#34;
+  name=&#34;name3&#34;
+  id=&#34;name3&#34;&gt;
+&lt;/c3m-input-material&gt;
+
+              </pre>
+          </div>
+        </c3m-tab>
+
+        <c3m-tab tabTitle="CSS">
+        </c3m-tab>
+
+        <c3m-tab tabTitle="TypeScript">
+        </c3m-tab>
+
+      </c3m-tabs>
+    </div>
+    </div>
+
+
+<!-- INPUT TYPE PHONE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-tel">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Input Phone
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-tel" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Input Type Phone (don't forget the <code>form</code> tag)</p>
+
+    <div class="demo">
+      <!-- INPUT PHONE -->
+      <c3m-input-tel
+        title="Enter your Phone Number"
+        placeholder="06.xx.xx.xx.xx"
+        name="phoneTelName"
+        [id]="'phoneTelId'">
+      </c3m-input-tel>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The label tag</dd>
+      </dl>
+      <dl>
+        <dt>placeholder</dt>
+        <dd>Placeholder value (optional)</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &lt;!-- INPUT PHONE --&gt;
+  &lt;c3m-input-tel
+    title=&#34;Enter your Phone Number&#34;
+    placeholder=&#34;06.xx.xx.xx.xx&#34;
+    name=&#34;phoneTelName&#34;
+    [id]=&#34;&apos;phoneTelId&apos;&#34;&gt;
+  &lt;/c3m-input-tel&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+<!-- INPUT TYPE MAIL -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-mail">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Input Mail
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-mail" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Input Type Email (don't forget the <code>form</code> tag)</p>
+
+    <div class="demo">
+      <!-- INPUT MAIL -->
+      <c3m-input-mail
+        title="Enter your Mail adress"
+        placeholder="john-doe@something.com"
+        name="mailName"
+        [id]="'mailId'">
+      </c3m-input-mail>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The label tag</dd>
+      </dl>
+      <dl>
+        <dt>placeholder</dt>
+        <dd>Placeholder value (optional)</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &lt;!-- INPUT MAIL --&gt;
+  &lt;c3m-input-mail
+    title=&#34;Enter your Mail adress&#34;
+    placeholder=&#34;john-doe@something.com&#34;
+    name=&#34;mailName&#34;
+    [id]=&#34;&apos;mailId&apos;&#34;&gt;
+  &lt;/c3m-input-mail&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+
+<!-- ERRO RMESSAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-error-msg">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Input Error Message
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-error-msg" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Input Error Message (don't forget the <code>form</code> tag) under an Input Tag / Component</p>
+
+    <div class="demo">
+      <div class="containerForDemo">
+        <!-- SIMPLE INPUT -->
+        <c3m-input
+          title="Enter a name"
+          placeholder="just look error"
+          name="nameBeforeError"
+          [id]="'nameBeforeError'">
+        </c3m-input>
+
+        <!-- INPUT ERROR MESSAGE -->
+        <c3m-input-error-msg>
+          The field is not correct
+        </c3m-input-error-msg>
+      </div>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>Between the tags</dt>
+        <dd>Insert the text error</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &lt;div class=&#34;containerForDemo&#34;&gt;
+  &lt;!-- SIMPLE INPUT --&gt;
+  &lt;c3m-input
+    title=&#34;Enter a name&#34;
+    placeholder=&#34;just look error&#34;
+    name=&#34;nameBeforeError&#34;
+    [id]=&#34;&apos;nameBeforeError&apos;&#34;&gt;
+  &lt;/c3m-input&gt;
+
+  &lt;!-- INPUT ERROR MESSAGE --&gt;
+  &lt;c3m-input-error-msg&gt;
+    The field is not correct
+  &lt;/c3m-input-error-msg&gt;
+&lt;/div&gt;
+
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>

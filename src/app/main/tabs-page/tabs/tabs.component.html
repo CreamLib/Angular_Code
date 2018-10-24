@@ -1,0 +1,16 @@
+<div class="tabsContainer">
+  <ul>
+        <li #tabs *ngFor="let tab of tabs"
+            (click)="selectTab(tab)"
+            [ngClass]="{active: tab.isActive, over: isOver, disabled: isDisabled}"
+            [attr.aria-expanded]="tab.isActive"
+            [attr.aria-controls]="tab.panelID"
+            [attr.aria-selected]="tab.isActive"
+            id={{tab.tabID}}>
+
+          <a> {{ tab.tabTitle }} </a>
+        </li>
+  </ul>
+
+  <ng-content></ng-content>
+</div>

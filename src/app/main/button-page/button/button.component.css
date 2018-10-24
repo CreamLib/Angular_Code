@@ -1,0 +1,24 @@
+ /* BUTTON */
+ c3m-button button {
+    color: #FFF;
+    background: rgb(105, 105, 105);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+      /* BUTTON HOVER */
+      c3m-button button:hover {opacity:0.8;}
+
+      /* COLORS OF DIFFERENTS BUTTONS */
+      c3m-button.success button {
+          background-color: #6CBE45;
+      }
+      c3m-button.info button {
+          background-color: #45ABBC;
+      }
+      c3m-button.warning button {
+          background-color: #D769A8;
+      }
+      c3m-button.danger button {
+          background-color: #ED9C21;
+      }

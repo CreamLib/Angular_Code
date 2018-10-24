@@ -1,0 +1,11 @@
+c3m-input-error-msg > p{
+  margin: 0.3rem 0 0.7rem;
+}
+c3m-input-error-msg p > span{
+  font-size: 1.1rem;
+  font-family: "quicksanditalic";
+  color: #e86413;
+}
+c3m-input-error-msg p > span > svg {
+  fill: #e86413;
+}

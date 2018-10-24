@@ -1,0 +1,129 @@
+<!-- TITLE SLIDER COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2><strong>Slider</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="#slider">Regular Slider</a></li>
+    <li><a scrollTo href="#slider-bubble">Tooltip Slider</a></li>
+  </ul>
+</div>
+
+
+<!-- DESCRIPTION SLIDER COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="slider">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Regular Slider
+
+      <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Regular slider with OUTPUT tag.</p>
+
+    <div class="demo">
+      <!-- SIMPLE SLIDER -->
+      <c3m-slider
+            title="Choose a value"
+            min="0"
+            max="50"
+            value="45"
+            step="1">
+      </c3m-slider>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The label tag</dd>
+      </dl>
+      <dl>
+        <dt>min</dt>
+        <dd>Minimum slider value</dd>
+      </dl>
+      <dl>
+        <dt>max</dt>
+        <dd>Maximum slider value</dd>
+      </dl>
+      <dl>
+        <dt>step</dt>
+        <dd>Steps value (Integer or Float)</dd>
+      </dl>
+      <dl>
+        <dt>value</dt>
+        <dd>Default value</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &#x3C;!-- SIMPLE SLIDER --&#x3E;
+    &#x3C;c3m-slider
+          title=&#x22;Simple Slider&#x22;
+          min=&#x22;0&#x22;
+          max=&#x22;50&#x22;
+          value=&#x22;45&#x22;
+          step=&#x22;1&#x22;&#x3E;
+    &#x3C;/c3m-slider&#x3E;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="demoComponent" id="slider-bubble">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Tooltip Slider
+
+      <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+
+    <div class="explain">
+      <p>The current value is displayed in a sliding tooltip.</p>
+    </div>
+
+    <div class="demo">
+      <!-- SLIDER WITH BUBBLE -->
+      <c3m-slider
+              title="Slider with Bubble"
+              min="0"
+              max="100"
+              value="30"
+              step="1"
+              class="bubble">
+      </c3m-slider>
+    </div>
+
+    <div class="explain">
+      <p>Just add the <strong>class="bubble"</strong> when calling the <code>c3m-slider</code> component
+        to display the OUTPUT element as a tooltip.</p>
+    </div>
+  </div>
+</div>

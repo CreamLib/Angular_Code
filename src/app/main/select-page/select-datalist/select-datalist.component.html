@@ -1,0 +1,7 @@
+<label for="{{id}}"> {{ this.title }}</label>
+
+<input #inputList type="text" id="{{id}}" [name]=this.name>
+
+<datalist #dataList>
+  <option *ngFor="let option of allOptions" value="{{option.value}}"> {{ option.value }} </option>
+</datalist>

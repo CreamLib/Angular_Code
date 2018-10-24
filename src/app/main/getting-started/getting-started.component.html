@@ -1,0 +1,143 @@
+<!-- COMPONENT PAGE HEADER FOR GETTING STARTED-->
+<div class="panelTitle">
+    <h2><strong> Getting Started </strong></h2>
+    <ul>
+        <li><a scrollTo href="#install">Install Angular</a></li>
+        <li><a scrollTo href="#create">Create Project</a></li>
+        <li><a scrollTo href="#start">Start Project</a></li>
+        <li><a scrollTo href="#creamng">Import CreamNG</a></li>
+    </ul>
+</div>
+
+
+<article class="post">
+
+  <!-- ANGULAR 2 INSTALL -->
+  <section>
+      <h3 id="install">How to install Angular 2</h3>
+
+      <div class="group">
+        <h4>First Step</h4>
+        <p>The first Step is to download <a href="https://nodejs.org/en/">Node.js</a> to use <strong> npm </strong>.</p>
+        <p>Npm is the <strong>package manager</strong> for JavaScript and the world’s largest software registry.</p>
+      </div>
+
+      <div class="group">
+        <h4>Install NPM</h4>
+        <p>If you don't have the latest version of Npm, you can download it with this command line:</p>
+
+        <div class="code-ex">
+          <code>npm install npm@latest -g</code>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>Install Angular</h4>
+        <p>The second step is to download <strong>Angular-Cli </strong> with npm.</p>
+        <p>Angular-Cli is a <strong>command line</strong> interface for Angular. It allows you to use:</p>
+        <div class="code-ex">
+          <code>ng new</code>
+          <code>ng generate</code>
+          <code>ng serve</code>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>Update</h4>
+        <p>To get the latest Andular-Cli version:</p>
+
+        <div class="code-ex">
+          <code>npm install -g angular-cli@latest</code>
+        </div>
+      </div>
+  </section>
+
+  <!-- CREATE A PROJECT -->
+  <section>
+      <h3 id="create">How to create your project</h3>
+
+      <div class="group">
+        <h4>New Project</h4>
+        <p>To create a <strong>new project</strong>, write this command:</p>
+        <div class="code-ex">
+          <code>ng new angular-app-name</code>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>New Project with SASS</h4>
+        <p>If you want an Angular project that use <strong>SASS</strong>, write this command:</p>
+        <div class="code-ex">
+          <code>ng new angular-app-name --style = scss</code>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>New Component</h4>
+        <p>To create a component, use:</p>
+        <div class="code-ex">
+          <code>ng generate component my-component-name</code>
+        </div>
+
+        <p>You can use <strong>ng generate</strong> or just <abbr title="generate">ng g</abbr>.</p>
+        <p>The others <strong>ng g</strong> attributes are:</p>
+        <div class="code-ex">
+          <code>ng g component</code>
+          <code>ng g directive</code>
+          <code>ng g pipe</code>
+          <code>ng g service</code>
+          <code>ng g class</code>
+          <code>ng g guard</code>
+          <code>ng g interface</code>
+          <code>ng g enum</code>
+          <code>ng g module</code>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- START ANGULAR 2 PROJECT -->
+  <section>
+    <h3 id="start">How to start your project</h3>
+
+    <div class="group">
+      <h4>Git Import</h4>
+      <p>If you got your project on <a href="https://github.com/">Github</a>, the folder
+        will not contain a <strong>node-modules</strong> folder.</p>
+      <p>To download it, write this command:</p>
+      <div class="code-ex">
+        <code>npm install</code>
+      </div>
+    </div>
+
+    <div class="group">
+      <h4>Start Project</h4>
+      <p>To test your project, use:</p>
+      <div class="code-ex">
+        <code>ng serve</code>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CREAM NG -->
+  <section>
+      <h3 id="creamng">How to import CreamNG into your project</h3>
+
+      <div class="group">
+        <h4>Installation</h4>
+        <p>Install via <a href="https://www.npmjs.com/">npm</a>:</p>
+        <div class="code-ex">
+          <code>npm install creamngnpm</code>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>Import Me!</h4>
+        <p>Then include the <strong>CreamNG</strong> module in your app root module:</p>
+        <div class="code-ex">
+          <code>import &#123; CreamNgModule &#125; from 'creamngnpm'; </code>
+        </div>
+      </div>
+  </section>
+</article>

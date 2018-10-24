@@ -1,0 +1,10 @@
+<!-- Label -->
+<label for="fileToUpload"><ng-content></ng-content></label>
+
+<!-- USE "input" type file  -->
+<input (change)="onChange(file.files)" type="file" name="fileToUpload" #file id="fileToUpload" multiple>
+
+<!-- File name list -->
+<ul>
+    <li *ngFor="let f of files"> {{ f.name }}</li>
+</ul>

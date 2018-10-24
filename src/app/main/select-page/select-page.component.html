@@ -1,0 +1,254 @@
+<div class="panelTitle">
+  <h2>
+    <strong>Select</strong> Component</h2>
+  <ul>
+    <li>
+      <a scrollTo href="#select">Regular Select</a>
+    </li>
+    <li>
+      <a scrollTo href="#select-datalist">Datalist</a>
+    </li>
+    <li>
+      <a scrollTo href="#select-datalists">Combined Datalists</a>
+    </li>
+  </ul>
+</div>
+
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="select">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Regular Select
+
+      <a href="https://github.com/CreamNG/Components/tree/master/select" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span>
+      </a>
+    </h3>
+    <p>Regular Select (JSON)</p>
+
+    <div class="demo">
+      <!-- SIMPLE SELECT -->
+      <c3m-select title="Choose something" name="Choose Something" [id]="'choice-something'">
+      </c3m-select>
+
+
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The Label of the Input</dd>
+      </dl>
+      <dl>
+        <dt>name</dt>
+        <dd>The name of the Input</dd>
+      </dl>
+      <dl>
+        <dt>id</dt>
+        <dd>The id of the Input and the "for" Label Attribute</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+&lt;!-- Select --&gt;
+&lt;c3m-select
+  title=&#34;Choose something&#34;
+  name=&#34;Choose Something&#34;
+  [id]=&#34;&apos;choice-something&apos;&#34;&gt;
+&lt;/c3m-select&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+<!-- ************************************* -->
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="select-datalist">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Datalist
+
+      <a href="https://github.com/CreamNG/Components/tree/master/select-datalist" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span>
+      </a>
+    </h3>
+    <p>Datalist - integrates the auto-completion system (JSON)</p>
+
+    <div class="demo">
+      <!-- Datalist Select -->
+      <c3m-select-datalist title="Choose Me" name="Choose Me" list="mylist1" [id]="'choice-me'">
+      </c3m-select-datalist>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The Label of the Input</dd>
+      </dl>
+      <dl>
+        <dt>name</dt>
+        <dd>The name of the Input</dd>
+      </dl>
+      <dl>
+        <dt>list</dt>
+        <dd>Link between input and datalist</dd>
+      </dl>
+      <dl>
+        <dt>id</dt>
+        <dd>The id of the Input and the "for" Label Attribute</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+&lt;!-- Datalist Select --&gt;
+&lt;c3m-select-datalist
+  title=&#34;Choose Me&#34;
+  name=&#34;Choose Me&#34;
+  list=&#34;mylist1&#34;
+  [id]=&#34;&apos;choice-me&apos;&#34;&gt;
+&lt;/c3m-select-datalist&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+<!-- ************************************* -->
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="select-datalists">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Combined Datalists
+
+      <a href="https://github.com/CreamNG/Components/tree/master/select-datalists" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span>
+      </a>
+    </h3>
+    <p>Combined Datalists - You can associate two inputs to the same datalist.
+      Both datalists integrate the auto-completion system
+      (JSON) </p>
+
+    <div class="demo">
+      <!-- Datalists Select -->
+      <c3m-select-datalists title1="Choose Me Please" title2="Choose Me To" name1="Choose Me1 " name2="Choose Me2" list="mylist2"
+        [id1]="'choice-me1'" [id2]="'choice-me2'">
+      </c3m-select-datalists>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title1</dt>
+        <dd>Label of the first Input</dd>
+      </dl>
+      <dl>
+        <dt>title2</dt>
+        <dd>Label of the Second Input</dd>
+      </dl>
+      <dl>
+        <dt>name1</dt>
+        <dd>Name of the first Input</dd>
+      </dl>
+      <dl>
+        <dt>name2</dt>
+        <dd>Name of the first Input</dd>
+      </dl>
+      <dl>
+        <dt>title1</dt>
+        <dd>Label of the first Input</dd>
+      </dl>
+      <dl>
+        <dt>id1</dt>
+        <dd>ID of the first Input and "for" label attribute</dd>
+      </dl>
+      <dl>
+        <dt>id2</dt>
+        <dd>ID of the Second Input and "for" label attribute</dd>
+      </dl>
+      <dl>
+        <dt>list</dt>
+        <dd>Link between the DataList ID and the "list" attributes of the two lists</dd>
+      </dl>
+
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+&lt;!-- Datalists Select --&gt;
+&lt;c3m-select-datalists
+  title1=&#34;Choose Me Please&#34;
+  title2=&#34;Choose Me To&#34;
+  name1=&#34;Choose Me1 &#34;
+  name2=&#34;Choose Me2&#34;
+  list=&#34;mylist2&#34;
+  [id1]=&#34;&apos;choice-me1&apos;&#34;
+  [id2]=&#34;&apos;choice-me2&apos;&#34;&gt;
+&lt;/c3m-select-datalists&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>

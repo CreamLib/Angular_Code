@@ -1,0 +1,21 @@
+/* Toast */
+c3m-toast p{
+  position: fixed;
+  right: 1rem;
+  transition: bottom 2s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+  padding: 0.5rem 1rem;
+  background-color: #d769a8;
+  color: white;
+  border-radius: 3px;
+}
+/* Before Appears */
+c3m-toast p.inactive{
+  bottom: 110%;
+  transition: bottom 0.1s;
+}
+
+/* Appears */
+c3m-toast p.active{
+  bottom: 1rem;
+
+}

@@ -1,0 +1,13 @@
+c3m-select-datalists label{
+  display: block;
+  margin-bottom: 0.3rem;
+}
+c3m-select-datalists input{
+  display: block;
+  width: 40%;
+  min-width: 230px;
+  font-size: 1.1rem;
+  font-family: 'quicksandregular';
+  padding: 0.2rem 0.1rem;
+  margin-bottom: 0.6rem;
+}

@@ -1,0 +1,322 @@
+<!-- TITLE SLIDER COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2><strong>Checkbox</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="#checkbox">Checkbox</a></li>
+    <li><a scrollTo href="#checkbox-button">Checkbox Button</a></li>
+    <li><a scrollTo href="#checkbox-group">Radio Group</a></li>
+    <li><a scrollTo href="#checkbox-group-button">Radio Group Button</a></li>
+  </ul>
+</div>
+
+
+<!-- DESCRIPTION SLIDER COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="checkbox">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Regular Checkbox
+
+      <a href="https://github.com/CreamNG/Components/tree/master/checkbox" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Regular Checkbox. Need to call in a <code>form</code> tag</p>
+
+    <div class="demo">
+      <!-- SIMPLE CHECKBOX -->
+      <c3m-checkbox
+        title="Do you want check me ?"
+        name="checkboxName1"
+        [id]="'checkbox1'">
+      </c3m-checkbox>
+    </div>
+
+    <p>The Custom Class CSS version (add the <code>custom</code> class)</p>
+
+    <div class="demo">
+      <!-- SIMPLE CHECKBOX -->
+      <c3m-checkbox
+        title="Do you want check me ?"
+        name="checkboxName2"
+        [id]="'checkbox2'"
+        class="custom">
+      </c3m-checkbox>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The label tag</dd>
+      </dl>
+      <dl>
+        <dt>name</dt>
+        <dd>The name of input</dd>
+      </dl>
+      <dl>
+        <dt>id</dt>
+        <dd>The most important attribute : Link between Label and Input</dd>
+      </dl>
+      <dl>
+        <dt>class</dt>
+        <dd>optional : Only for a custom css style</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- SIMPLE CHECKBOX --&gt;
+&lt;c3m-checkbox
+  title=&#34;Do you want check me ?&#34;
+  name=&#34;checkboxName1&#34;
+  [id]=&#34;&apos;checkbox1&apos;&#34;&gt;
+&lt;/c3m-checkbox&gt;
+
+
+&lt;!-- CUSTOM CSS CHECKBOX --&gt;
+&lt;c3m-checkbox
+  title=&#34;Do you want check me ?&#34;
+  name=&#34;checkboxName2&#34;
+  [id]=&#34;&apos;checkbox2&apos;&#34;
+  class=&#34;custom&#34;&gt;
+&lt;/c3m-checkbox&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+<!-- CHECKBOX GROUP -->
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="checkbox-group">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Radio Button
+
+      <a href="https://github.com/CreamNG/Components/tree/master/checkbox-group" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Radio Button. A group with same name. Need to call in a <code>form</code> tag</p>
+
+
+    <p> A first radio button group </p>
+    <div class="demo">
+      <!-- RADIO BUTTON -->
+      <c3m-checkbox-group
+        title="Radio 1"
+        name="radiogroup1"
+        [id]="'radio1'">
+      </c3m-checkbox-group>
+      <c3m-checkbox-group
+        title="Radio 2"
+        name="radiogroup1"
+        [id]="'radio2'">
+      </c3m-checkbox-group>
+      <c3m-checkbox-group
+        title="Radio 3"
+        name="radiogroup1"
+        [id]="'radio3'">
+      </c3m-checkbox-group>
+    </div>
+
+    <p> A second radio button group </p>
+    <div class="demo">
+        <!-- RADIO BUTTON -->
+        <c3m-checkbox-group
+          title="Radio 1"
+          name="radiogroup2"
+          [id]="'radio4'">
+        </c3m-checkbox-group>
+        <c3m-checkbox-group
+          title="Radio 2"
+          name="radiogroup2"
+          [id]="'radio5'">
+        </c3m-checkbox-group>
+      </div>
+
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &lt;!-- RADIO BUTTON --&gt;
+  &lt;c3m-checkbox-group
+    title=&#34;Radio 1&#34;
+    name=&#34;radiogroup1&#34;
+    [id]=&#34;&apos;radio1&apos;&#34;&gt;
+  &lt;/c3m-checkbox-group&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+<!-- RADIO GROUP BUTTON -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="checkbox-group-button">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Radio Group Button
+
+      <a href="https://github.com/CreamNG/Components/tree/master/checkbox-group-button" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Radio Group Button. A group with same name. Need to call in a <code>form</code> tag</p>
+    <p> Add class <code>custom</code> to change the CSS with this style</p>
+
+
+    <div class="demo">
+      <!-- RADIO GROUP BUTTON -->
+      <c3m-checkbox-group-button
+        title="Check 1"
+        name="checkboxNameGroup">
+      </c3m-checkbox-group-button>
+
+      <c3m-checkbox-group-button
+        title="Check 2"
+        name="checkboxNameGroup">
+      </c3m-checkbox-group-button>
+
+      <c3m-checkbox-group-button
+        title="Check 3"
+        name="checkboxNameGroup">
+      </c3m-checkbox-group-button>
+
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+  &lt;!-- RADIO GROUP BUTTON --&gt;
+  &lt;c3m-checkbox-group-button
+    title=&#34;Check 1&#34;
+    name=&#34;checkboxNameGroup&#34;&gt;
+  &lt;/c3m-checkbox-group-button&gt;
+
+  &lt;!-- AN OTHER RADIO GROUP BUTTON --&gt;
+  &lt;c3m-checkbox-group-button
+    title=&#34;Check 2&#34;
+    name=&#34;checkboxNameGroup&#34;&gt;
+  &lt;/c3m-checkbox-group-button&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+<!-- RADIO CHECK BUTTON-->
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="checkbox-button">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Checkbox Button
+
+      <a href="https://github.com/CreamNG/Components/tree/master/checkbox-button" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Checkbox as a Button. Need to call in a <code>form</code> tag</p>
+
+    <div class="demo">
+      <!-- CHECKBOX BUTTON -->
+      <c3m-checkbox-button
+        title="Check me !"
+        name="checkboxName3">
+      </c3m-checkbox-button>
+    </div>
+
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- CHECKBOX BUTTON --&gt;
+&lt;c3m-checkbox-button
+  title=&#34;Check me !&#34;
+  name=&#34;checkboxName3&#34;&gt;
+&lt;/c3m-checkbox-button&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+
+
+
+
+
+

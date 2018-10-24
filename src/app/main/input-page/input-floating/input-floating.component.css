@@ -1,0 +1,90 @@
+/* Global p */
+c3m-input-floating > p {
+  position: relative;
+  overflow: hidden;
+  width: 40%;
+  font-size: 1rem;
+  min-width: 220px;
+}
+/* Input */
+c3m-input-floating input {
+  width: 100%;
+  border: 2px solid gray;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  font-family: quicksandregular;
+  box-sizing: border-box;
+}
+  /* If Valid */
+  c3m-input-floating input:valid {
+    background: white;
+  }
+  /* If Focus */
+  c3m-input-floating input:focus {
+    border-color: #f06d06;
+  }
+  /* Label If Input Focused */
+  c3m-input-floating input:focus + label {
+    background: #f06d06;
+    color: white;
+    font-size: 70%;
+    padding: 1px 6px;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+
+  /* Label */
+  c3m-input-floating label {
+  transition:
+    background 0.2s,
+    color 0.2s,
+    top 0.2s,
+    bottom 0.2s,
+    right 0.2s,
+    left 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+}
+
+/* Input with Floating Bottom */
+c3m-input-floating p.bottom > input {
+  padding: 12px 0 12px 0;
+}
+/* Label with Floating Bottom */
+c3m-input-floating p.bottom > label {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* Input Focused with Floating Bottom */
+c3m-input-floating p.bottom > input:focus {
+  padding: 4px 6px 20px 6px;
+}
+/* Label with Input Focused FLoating Bottom */
+c3m-input-floating p.bottom > input:focus + label{
+  top: 100%;
+  margin-top: -16px;
+}
+
+
+/* **** RIGHT ***** */
+c3m-input-floating p.right label {
+    top: 2px;
+    right: 100%;
+    width: 100%;
+    margin-right: -100%;
+    bottom: 2px;
+  }
+  c3m-input-floating p.right input:focus + label {
+    right: 0;
+    margin-right: 0;
+    width: 40%;
+    padding-top: 5px;
+  }

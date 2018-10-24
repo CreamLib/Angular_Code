@@ -1,0 +1,73 @@
+/* Global Parent */
+c3m-input-material p.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+    width: 40%;
+    min-width: 220px;
+  }
+
+  /* Animation Label / Input */
+  c3m-input-material label,
+  c3m-input-material input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+
+  /* Input */
+  c3m-input-material input {
+    font-size: 1.2em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+  }
+
+  /* Input Focused */
+  c3m-input-material input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+  }
+
+  /* Label */
+  c3m-input-material label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Label With Input PlaceHolder Selected */
+  c3m-input-material input:placeholder-shown + label {
+    cursor: text;
+    padding-bottom: 0.4rem;
+    max-width: 66.66%;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.825rem) scale(1.3);
+  }
+
+  /* PlaceHolder Selected */
+  c3m-input-material ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+
+  /* Input with PlaceHolder selected & focused */
+  c3m-input-material input:focus::-webkit-input-placeholder{
+    opacity: 1;
+  }
+
+  /* Label with input focus but placeholder not selected */
+  c3m-input-material input:not(:placeholder-shown) + label,
+  c3m-input-material input:focus + label {
+    transform-origin: top left;
+    transform: translate(0, 0) scale(0.8);
+    padding-bottom: 0;
+    cursor: pointer;
+  }

@@ -1,0 +1,7 @@
+c3m-list-description dl{
+  margin: 1rem 0;
+}
+c3m-list-description dt{
+  text-transform: uppercase;
+  font-weight: bold;
+}

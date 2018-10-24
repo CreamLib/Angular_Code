@@ -1,0 +1,13 @@
+<!-- Dropdown Button -->
+<button [ngClass]="{'open': isOpen}" (click)="toggleOpen()" class="dropdown">
+  <span> {{ this.nameDropdown }} </span>
+  <svg>
+      <use xlink:href="#arrowDownSvg"></use>
+   </svg>
+</button>
+
+<!-- Dropdown Content List -->
+<ul [ngClass]="{'open': isOpen}">
+    <ng-content></ng-content>
+</ul>
+

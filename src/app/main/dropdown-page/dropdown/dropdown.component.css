@@ -1,0 +1,65 @@
+/* Dropdown */
+c3m-dropdown{
+  position:relative;
+}
+
+/* Dropdown Content */
+c3m-dropdown ul {
+    display: none;
+    width: 20%;
+    transition: all .25s ease;
+  }
+    /* Dropdown Content List Item */
+    c3m-dropdown li{
+      background-color: #f3ba65
+    }
+      /* Link Of Dropdown Content List Item */
+      c3m-dropdown a {
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        text-decoration: none;
+        transition: all .25s ease;
+      }
+        /* Dropdown Button */
+        c3m-dropdown > button{
+          padding: 0.5rem 1rem;
+          background-color: #44abbc;
+          color: white;
+          cursor : pointer;
+        }
+          c3m-dropdown button:hover{
+            background-color: #58c5d8;
+          }
+          c3m-dropdown > button span{
+            display: inline-block;
+          }
+          c3m-dropdown > button svg{
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            fill: white;
+            margin-left: 0.4rem;
+            transition: transform 0.5s;
+            vertical-align: top;
+            margin-top: -0.1rem;
+          }
+
+  /* Display Dropdown Content List if Button Click */
+  c3m-dropdown ul.open {
+    display: block;
+    position: absolute;
+    top: calc(100% + 1.3rem);
+    left: 0;
+    width: 14rem;
+  }
+    c3m-dropdown > button.open svg{
+      transform: rotate(180deg);
+    }
+   c3m-dropdown ul li {
+        width: 100%;
+    }
+    c3m-dropdown ul a:hover {
+        background: #e0ac5d;
+    }

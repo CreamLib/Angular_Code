@@ -1,0 +1,118 @@
+<!-- Component Page Title -->
+<div class="panelTitle">
+  <h2> <strong> Calendar </strong> Component </h2>
+  <ul>
+    <li><a scrollTo href="#calendar">Simple Calendar</a></li>
+
+  </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="calendar">
+      <h3>
+          <svg>
+            <use xlink:href="#gitListItem"></use>
+          </svg>
+          Simple Calendar
+
+          <a href="https://github.com/CreamNG/Components/calendar" class="gitBtn" target="_blank">
+            <svg>
+              <use xlink:href="#gitSvg"></use>
+            </svg>
+
+            <span>Github</span></a>
+      </h3>
+
+    <!-- Demo -->
+    <div class="demo">
+        <c3m-calendar></c3m-calendar>
+    </div>
+
+    <div class="explain">
+      <h4>ACCESSIBILITY - Keys</h4>
+      <dl>
+        <dt>Up</dt>
+        <dd>Go back 7 days</dd>
+      </dl>
+      <dl>
+        <dt>Down</dt>
+        <dd>Advance 7 days</dd>
+      </dl>
+      <dl>
+        <dt>Left</dt>
+        <dd>Go back 1 day</dd>
+      </dl>
+      <dl>
+        <dt>Right</dt>
+        <dd>Avance 1 day</dd>
+      </dl>
+      <dl>
+        <dt>Page Up</dt>
+        <dd>Go to the previous Month if we are on the Calendar</dd>
+      </dl>
+      <dl>
+        <dt>Page Down</dt>
+        <dd>Go to the next Month if we are on the Calendar</dd>
+      </dl>
+      <dl>
+        <dt>Home</dt>
+        <dd>Go to the first day of Month if we are on the Calendar</dd>
+      </dl>
+      <dl>
+        <dt>End</dt>
+        <dd>Go to the last day of Month if we are on the Calendar</dd>
+      </dl>
+      <dl>
+        <dt>Esc</dt>
+        <dd>Exit the Calendar component</dd>
+      </dl>
+      <dl>
+        <dt>Tab</dt>
+        <dd>Go to previous button if we are on the calendar</dd>
+        <dd>Go to next button if we are on the previous button</dd>
+        <dd>Go to grid if we are on the next button</dd>
+      </dl>
+      <dl>
+        <dt>Shift + Tab</dt>
+        <dd>Go to previous button if we are on the next button</dd>
+        <dd>Go to next button if we are on the calendar</dd>
+        <dd>Go to grid if we are on the previous button</dd>
+      </dl>
+      <dl>
+        <dt>Enter Or Space Or Click</dt>
+        <dd>Go to next month if we are on the next button</dd>
+        <dd>Go to previous month if we are on the previous button</dd>
+        <dd>Select the focused date if we are on the calendar</dd>
+      </dl>
+      <dl>
+        <dt>CTRL + Enter Or Space Or Click</dt>
+        <dd>Go to next year if we are on the next button</dd>
+        <dd>Go to previous year if we are on the previous button</dd>
+      </dl>
+    </div>
+
+
+           <!-- TABS SNIPPETS -->
+           <c3m-tabs class="snippets">
+            <c3m-tab tabTitle="HTML">
+                <p class="pre-code"> To call the component </p>
+                <div class="code">
+                    <!--?prettify lang=html linenums=true?-->
+                    <pre class="prettyprint linenums">
+&lt;div class=&#34;calendar&#34;&gt;
+    &lt;c3m-calendar&gt;&lt;/c3m-calendar&gt;
+&lt;/div>
+                    </pre>
+                </div>
+            </c3m-tab>
+
+            <c3m-tab tabTitle="CSS">
+            </c3m-tab>
+
+            <c3m-tab tabTitle="TS">
+            </c3m-tab>
+
+          </c3m-tabs>
+    </div>
+</div>

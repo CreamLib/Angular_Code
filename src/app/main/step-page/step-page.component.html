@@ -1,0 +1,85 @@
+<!-- TITLE STEP COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2> <strong> Step </strong> Component </h2>
+  <ul>
+    <li><a  scrollTo href="#step">Multiple Steps</a></li>
+  </ul>
+</div>
+
+<!-- DESCRIPTION STEP COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="step">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Multiple Steps
+
+      <a href="https://github.com/CreamNG/Components/tree/master/step" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+
+    <p>This component displays the different steps of a form if divided in different pages/containers.
+      It will automatically detect the previous and next steps.</p>
+
+    <div class="demo">
+      <!-- STEP -->
+      <c3m-step>
+        <!-- STEP ITEMS -->
+        <c3m-step-item title="Title Of Past Step"></c3m-step-item>
+        <c3m-step-item isActive="true" title="Title Of Active Step"></c3m-step-item>
+        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
+        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
+        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
+      </c3m-step>
+    </div>
+
+    <!-- EXPLAIN -->
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The step title</dd>
+      </dl>
+      <dl>
+        <dt>isActive="true"</dt>
+        <dd>To indicate the current step</dd>
+      </dl>
+      <dl>
+        <dt>over</dt>
+        <dd>The class added to calculate the breakpoint</dd>
+      </dl>
+    </div>
+
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+  &lt;!-- STEP --&gt;
+  &lt;c3m-step&gt;
+    &lt;!-- STEP ITEMS --&gt;
+    &lt;c3m-step-item title=&#34;Title Of Past Step&#34;&gt;&lt;/c3m-step-item&gt;
+    &lt;c3m-step-item isActive=&#34;true&#34; title=&#34;Title Of Active Step&#34;&gt;&lt;/c3m-step-item&gt;
+    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
+    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
+    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
+  &lt;/c3m-step&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<!-- TITLE STEP COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2>
+    <strong> Breadcrumbs </strong> Component </h2>
+  <ul>
+    <li>
+      <a scrollTo href="#breadcrumbs">Simple Breadcrumbs</a>
+    </li>
+  </ul>
+</div>
+
+<!-- DESCRIPTION STEP COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="breadcrumbs">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Regular Breadcrumbs
+
+      <a href="https://github.com/CreamNG/Components/tree/master/breadcrumbs" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span>
+      </a>
+    </h3>
+
+    <p>Display the current page in the app hierarchy. Each Item is a page. The last Item is the current page.</p>
+
+    <div class="demo">
+      <!-- BREADCRUMBS -->
+      <c3m-breadcrumbs></c3m-breadcrumbs>
+    </div>
+
+    <!-- EXPLAIN -->
+    <div class="explain">
+      <dl>
+        <dt>Model</dt>
+        <dd>You can get the model
+          <a href="https://github.com/CreamNG/Components/tree/master/breadcrumbs/breadcrumbs.model.ts">here</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>Module</dt>
+        <dd>You can get the module
+          <a href="https://github.com/CreamNG/Components/tree/master/breadcrumbs/breadcrumbs.module.ts">here</a>
+        </dd>
+      </dl>
+      <dl>
+        <dt>Service</dt>
+        <dd>You can get the service
+          <a href="https://github.com/CreamNG/Components/tree/master/breadcrumbs/breadcrumbs.service.ts">here</a>
+        </dd>
+      </dl>
+    </div>
+
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code"> To call the component </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+    &lt;!-- BREADCRUMBS --&gt;
+    &lt;c3m-breadcrumbs&gt;&lt;/c3m-breadcrumbs&gt;
+              </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="Import">
+        <p class="pre-code"> In your App Module </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+  import &#123; BreadcrumbsModule &#125; from &apos;./module-breadcrumbs&apos;;
+
+  imports: [
+      RouterModule.forRoot(appRoutes),
+      BreadcrumbsModule
+  ]
+                </pre>
+        </div>
+        <p class="pre-code"> The Breadcrumbs module </p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+  export * from &apos;../app/main/breadcrumbs-page/breadcrumbs/breadcrumbs.component&apos; ;
+  export * from &apos;../app/main/breadcrumbs-page/breadcrumbs/breadcrumbs.service&apos; ;
+  export * from &apos;../app/main/breadcrumbs-page/breadcrumbs/breadcrumbs.model&apos; ;
+  export * from &apos;../app/main/breadcrumbs-page/breadcrumbs/breadcrumbs.module&apos; ;
+          </pre>
+        </div>
+      </c3m-tab>
+
+    </c3m-tabs>
+
+  </div>
+</div>
