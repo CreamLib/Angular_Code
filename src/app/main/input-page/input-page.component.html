@@ -393,10 +393,15 @@
 
         <span>Github</span></a>
     </h3>
-    <p>Input Error Message (don't forget the <code>form</code> tag) under an Input Tag / Component</p>
+    <p>Contextual Input Error Message (be sure to place error message before form field).</p>
 
     <div class="demo">
       <div class="containerForDemo">
+      <!-- INPUT ERROR MESSAGE -->
+      <c3m-input-error-msg>
+        The field is not correct
+      </c3m-input-error-msg>
+
         <!-- SIMPLE INPUT -->
         <c3m-input
           title="Enter a name"
@@ -404,11 +409,6 @@
           name="nameBeforeError"
           [id]="'nameBeforeError'">
         </c3m-input>
-
-        <!-- INPUT ERROR MESSAGE -->
-        <c3m-input-error-msg>
-          The field is not correct
-        </c3m-input-error-msg>
       </div>
     </div>
 

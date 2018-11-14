@@ -4,37 +4,46 @@
   background-color: transparent;
   margin: 2rem 0;
 }
-  .tabsContainer > ul li {
-    display: inline-block;
-    text-align: center;
-    margin-right: 0.5rem;
-  }
-    .tabsContainer > ul li.active {
-      background-color: #F5F5F5;
-    }
 
-    .tabsContainer > ul li a {
-        width: 100%;
-        font-size: 1.1rem;
-        color: #000;
-        background-color: initial;
-        cursor: pointer;
-        padding: 0.3rem 0.9rem;
-        display: block;
-    }
-    .tabsContainer > ul li.over {
-      display:block;
-      width:100%;
-      border-bottom: 1px solid #FFF;
-    }
+  .tabsContainer > ul li button {
+    width: 100%;
+    font-family: var(--stack-b);
+    text-align: left;
+    background-color: var(--n-light);
+    padding: 0.5em 1em;
+  }
+  .tabsContainer > ul li.active button,
+    .tabsContainer > ul li button:hover,
+      .tabsContainer > ul li button:focus {
+        color: var(--text-inv);
+        background-color: var(--main-color);
+  }
 
 c3m-tab .content[aria-hidden="false"] {
-  background-color: #F5F5F5;
+  background-color: var(--n-light);
   padding: 1rem;
 }
-c3m-tab .content[aria-hidden="true"] {display:none;}
 
+c3m-tab .content[aria-hidden="true"] {
+  display: none;
+}
 
-@media screen and (min-width:850px) {
+/* When space is not enough ... */
+.tabsContainer > ul li.over {display: inline-block; margin-right: 0.5rem;}
+
+.tabsContainer > ul li.over button {
+  background-color: var(--body-bg);
+}
+.tabsContainer > ul li.over.active button,
+  .tabsContainer > ul li.over button:hover,
+    .tabsContainer > ul li.over button:focus {
+      color: var(--body-text);
+      background-color: var(--n-light);
+}
+
+@media screen and (min-width: 850px) {
   .tabsContainer > ul li {font-size: 1.2rem;}
+  c3m-tab .content[aria-hidden="false"] {
+    padding: 2rem;
+  }
 }

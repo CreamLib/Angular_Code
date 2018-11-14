@@ -1,0 +1,30 @@
+/* --------------------------------------------------------------------
+               			CREAMLIB
+          				Le Studio, 2018
+/*-------------------------------------------------------------------- */
+
+:root {
+	--body-text: #000;
+	--body-bg: #F9F9F9;
+	--text-inv: #FFF;
+
+	--main-color: #15819E;
+	--main-light: #45ABBC;
+	--sec-color: #35781C;
+	--sec-light: #6CBE45;
+	--hot-color: #BD4D96;
+	--hot-light: #D769A8;
+	--hot-color-sec: #ED9C21;
+	--n-dark: #1E2E39;
+	--n-medium: #CCC;
+	--n-light: #EEE;
+	--n-lighter: #EFEFEF;
+	--n-s-dark: #000;
+	--alert-color: #C00;
+
+  --stack: quicksandregular, Calibri, Roboto, Helvetica, sans-serif;
+	--stack-m: quicksandmedium, Calibri, Roboto, Helvetica, sans-serif;
+	--stack-l: quicksandlight, Calibri, Roboto, Helvetica, sans-serif;
+	--stack-b: quicksandbold, Calibri, Roboto, Helvetica, sans-serif;
+	--stack-i: quicksanditalic, Calibri, Roboto, Helvetica, sans-serif;
+}

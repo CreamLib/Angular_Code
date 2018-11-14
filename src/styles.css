@@ -2,11 +2,9 @@
 /* 2018 */
 
 /* CUSTOM PROPERTIES */
-
+@import 'vars.css';
 
 /* RESET */
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,8 +21,6 @@ time, mark, audio, video,button {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: top;
 	box-sizing: border-box;
 }
@@ -39,36 +35,56 @@ html {
   height: 100%;
 }
 
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+/* ----------- DEFAULTS ----------------- */
 
 body {
-  font: 100%/1.2 "quicksandregular", Helvetica, Arial, sans-serif;
+  font: 100%/1.2 var(--stack);
+	color: var(--body-text);
+	background-color: var(--body-bg);
 }
 
 p, li, dt, dd {font-size: 1em;}
 li p, li li, li dt, li dd {font-size: 100%;}
 
 a {
-	text-decoration: none;
-	color: #000;
+	text-decoration: underline;
+	color: var(--n-s-dark);
 }
-a:visited {color: #444;}
-a:hover {
-	text-decoration: none;
+a:visited {color: var(--n-dark);}
+a:hover {text-decoration: none;}
+
+ol, ul {list-style: none;}
+
+img {max-width: 100%; border:0;}
+
+strong {
+	font-family: var(--stack-b);
+	font-weight: normal;
+}
+
+em {
+  font-family:  var(--stack-i);
+	font-style: normal;
+}
+
+button {
+	font: 100%/1 var(--stack-m);
+	padding: 0;
+	border: none;
+	cursor: pointer;
+}
+abbr {cursor: help;}
+
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 hr {display:none;}
@@ -78,80 +94,90 @@ a.skip_links {
   position: absolute;
 }
 
-img {max-width:100%; border:0;}
-
-strong {
-	font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-}
-
-em {
-  font: normal 100%/1.2 "quicksanditalic", Helvetica, Arial, sans-serif;
-}
-
-abbr {cursor: help;}
-
 code {
 	font: 100% "Courrier New", Courier, monospace;
-	color: #000;
-	background-color: rgba(255,255,255,.5);
+	color: var(--sec-color);
+	background-color: var(--body-bg);
+	vertical-align: baseline;
 }
 
 .svgLibrary {display:none;}
 
-/* ********************** SCROLLBAR *************** */
-::-webkit-scrollbar{
-	width:16px;
-	background-color:#dbd8d8;
+/* ********************** SCROLLBAR/Webkit only *************** */
+
+::-webkit-scrollbar {
+	width: 16px;
+	background-color: #dbd8d8;
 }
 ::-webkit-scrollbar:horizontal{
-	height:16px;
+	height: 16px;
 }
-::-webkit-scrollbar-track{
-	border:1px #dbd8d8 solid;
+::-webkit-scrollbar-track {
+	border: 1px #dbd8d8 solid;
 	border-radius:10px;
 	-webkit-box-shadow:0 0 6px #dbd8d8 inset;
 }
-::-webkit-scrollbar-thumb{
-	background-color:#44abbc;
-	border:1px solid #dbd8d8;
-	border-radius:3px;
+::-webkit-scrollbar-thumb {
+	background-color: #44abbc;
+	border: 1px solid #dbd8d8;
+	border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover{
-	background-color:#2b9bad;
-	border:1px solid #2b9bad;
+::-webkit-scrollbar-thumb:hover {
+	background-color: #2b9bad;
+	border: 1px solid #2b9bad;
 }
-::-webkit-scrollbar-thumb:active{
-	background-color:#44abbc;
-	border:1px solid #dbd8d8;
+::-webkit-scrollbar-thumb:active {
+	background-color: #44abbc;
+	border: 1px solid #dbd8d8;
 }
 
 /* *********** PAGE STRUCTURE ************* */
-body > app-root > app-main > main > div > c3m-breadcrumbs{
-  display: none;
+
+c3m-breadcrumbs {display: none;}
+div.demo c3m-breadcrumbs {display: block;}
+
+main {}
+
+/* *********** FORMS ************* */
+
+label {
+	display: block;
+	font: 90%/1 var(--stack-b);
+	padding-bottom: 0.3em;
 }
 
-main {
-  background: url(assets/img/background.jpg);
+input, select, textarea {
+	font: 100%/1 var(--stack);
+	color: var(--n-dark);
+	background-color: var(--body-bg);
+	padding: 0.3em 0.5em 0.2em;
+	border: 1px solid var(--n-medium);
+	border-radius: 0.3em;
+	transition: all;
+}
+input:focus, select:focus, textarea:focus {
+	border-color: var(--body-bg);
+	border-bottom-color: var(--sec-light);
+	border-radius: 0;
 }
 
 
 /* *********** ARTICLES ************* */
 
 article.post {
-    background-color: rgba(0,0,0,.3);
+    background-color: var(n-lighter);
     padding: 5vh 5%;
 }
 
 	article.post h3 {
 			display: block;
-			font: 1.3rem "quicksandbold", Helvetica, Arial, sans-serif;
-			color: #3A8017;
+			font: 1.3rem var(--stack-b);
+			color: var(--sec-color);
 			margin-bottom: 1em;
 	}
 
 	article.post h4 {
-		font: 1rem "quicksandbold", Helvetica, Arial, sans-serif;
+		font: 1rem var(--stack-b);
 		margin-bottom: 1em;
 	}
 
@@ -164,31 +190,20 @@ article.post {
 	article.post p + h3, article.post p + h4 {margin-top: 1em;}
 
 	article.post a {
-		font-family: "quicksandbold", Helvetica, Arial, sans-serif;
+		font-family: var(--stack-b);
 		text-decoration: underline;
-		color: #B7468E;
-		background-color: rgba(255,255,255,0);
 	}
 		article.post a:visited {
-			color: #000;
-			background-color: rgba(255,255,255,0);
 		}
 		article.post a:hover, article.post a:focus {
 			text-decoration: none;
-			color: #000;
-			background-color: #FCBD08;
 		}
 
-	article.post strong {
-		font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-		color: #1A7B90;
-		background-color: rgba(255,255,255,0);
-	}
 	article.post code {
 		display: inline-block;
 		white-space: pre-wrap;
 		word-wrap: break-word;
-		background-color: #FFF;
+		background-color: var(--body-bg);
 		margin: 0 0 0.3em;
 		padding: 0.5rem 1rem;
 		border-radius: 0.3em;
@@ -196,7 +211,7 @@ article.post {
 
   /* Child Containers */
   article.post section {
-    background-color: #F5F5F5;
+    background-color: var(--n-lighter);
     padding: 1rem;
     margin-bottom: 1rem;
   }
@@ -206,7 +221,7 @@ article.post {
 	article.post div.group + div.group {
 		padding-top: 1rem;
 		margin-top: 1rem;
-		border-top: 1px solid #CCC;
+		border-top: 1px solid var(--n-medium);
 	}
 
   div.code-ex {margin: 1em 0;}
@@ -214,114 +229,106 @@ article.post {
 
 /* *********** PANEL TITLE ************* */
 
-.panelTitle {padding: 1rem 5%;}
+.panelTitle {
+	margin-bottom: 10vh;
+	border-top: 1px solid var(--body-bg);
+}
 
 	.panelTitle h2 {
-	    font: 1.6em "quicksandregular", Helvetica, Arial, sans-serif;
-			margin-bottom: 0.5em;
+	    font: 1.2em var(--stack);
+			color: var(--text-inv);
+			background-color: var(--main-color);
+			padding: 0.5em 5%;
+			margin-bottom: 1em;
   }
-    .panelTitle ul{
+    .panelTitle ul {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
+			margin: 0 5%;
+			border-left: 5px solid var(--main-light);
     }
     .panelTitle li {
-        font: 1.1em "quicksandlight", Helvetica, Arial, sans-serif;
-        margin-bottom: 1rem;
+        font: 1em var(--stack);
         min-width: 30%;
-        /* text-align: left; */
         flex-basis: 20%;
-        text-overflow: ellipsis;
     }
     	.panelTitle li a {
-        padding: 0.5em 0 0.3rem 0;
-        color: #000;
+				display: block;
+				text-decoration: none;
+        padding: 0.5em 1em;
         transform: perspective(1px) translateZ(0);
-        position: relative;
-      }
-        .panelTitle li a:before {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          left: 50%;
-          right: 50%;
-          bottom: 0;
-          background: #333333;
-          height: 2px;
-          transition-property: left, right;
-          transition-duration: 0.1s;
-          transition-timing-function: ease-out;
-        }
-    	.panelTitle li a:hover:before {
-        left: 0;
-        right: 0;
       }
 
 
 /* ********** TITLE COMPONENT *********** */
 
 .titleComponent {
-    background-color: rgba(160, 160, 160, 0.38);
-		padding: 1.5rem 5%;
+    background-color: var(--body-bg);
+		padding: 0 5%;
 }
-  .titleComponent > div {margin-bottom: 3rem;}
+
+.titleComponent + .titleComponent {margin-top: 5vh;}
+
+  .titleComponent > div {
+		padding-top: 1rem;
+		margin-bottom: 2rem;
+		border-top: 3px dotted var(--n-dark);
+	}
 
       .titleComponent > div h3 {
 				position: relative;
-        font: 1.4em "quicksandregular", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-				text-indent: -30px;
+        font: 1.2em var(--stack-b);
+				text-transform: uppercase;
 				padding-right: 45px;
-        margin: 0 0 1rem 30px;
+        margin: 0 0 0.5em 0;
       }
-        .titleComponent > div h3 svg {
-          display: inline;
+        .titleComponent > div h3 > svg {
+          /*display: inline;
           width: 22.2px;
           height: 32px;
-          vertical-align: bottom;
+					fill: var(--main-light);
+          vertical-align: bottom;*/
+					display: none;
         }
 
 
    /* GitHub Button */
   .titleComponent .gitBtn {
 			position: absolute;
+			display: inline-block;
+			overflow: hidden;
 			width: 35px;
 			height: 35px;
 			top: 0;
 			right: 0;
-      font: 1rem/35px "quicksandregular", Helvetica, Arial, sans-serif;
-      text-decoration: none;
-      text-transform: capitalize;
-			text-align: center;
-			color: #312C2C;
-      background-color: #FFF;
-      border-radius: 3px;
+			text-transform: none;
+			color: var(--main-color);
+      background-color: var(--n-lighter);
+      border-radius: 0.3em;
       border: none;
-      cursor: pointer;
       transition-property: color;
       transition-duration: 0.3s;
       transform: perspective(1px) translateZ(0);
   }
       /* Git Hub IMG */
       .titleComponent .gitBtn svg {
+				display: inline-block;
 				position: relative;
-				left: 20px;
+				top: 6px;
+				left: 6px;
 				width: 35px;
         height: 30px;
-        fill: #333;
-        vertical-align: middle;
+        fill: var(--n-dark);
         transition: fill 0.3s ease-out;
       }
-      .titleComponent .gitBtn span {
-          display: none;
-      }
+      .titleComponent .gitBtn span {position: absolute; left: 150px;}
 
       /* GitHub Button Hover */
       .titleComponent .gitBtn:hover {
-          color: white;
+          color: var(--body-bg);
       }
         .titleComponent .gitBtn:hover svg {
-          fill: white;
+          fill: var(--body-bg);
         }
 	      .titleComponent .gitBtn::before {
 	          content: "";
@@ -332,7 +339,7 @@ article.post {
 	          right: 0;
 	          bottom: 0;
 	          border-radius: 3px;
-	          background: #45abbc;
+	          background:  var(--main-color);
 	          transform: scale(0);
 	          transition-property: transform;
 	          transition-duration: 0.3s;
@@ -345,41 +352,43 @@ article.post {
 	          transform: scale(1);
 	        }
 
-  .titleComponent > div > p {
+  .titleComponent > div > p, .titleComponent div.explain > p {
 		max-width: 40em;
 		line-height: 1.45;
+		padding-right: 50px;
   }
     .titleComponent > div > p > strong {
-      color: #000;
+      color: var(--n-dark);
     }
-    .titleComponent > div > p > a{
+    .titleComponent > div > p > a {
       text-decoration: underline;
-      color: #1A7B90;
     }
 
 /* DEMO BLOCK */
 
 div.demo {
-	background: #FFF url(assets/img/demo-bkgd.png);
+	background: var(--n-lighter) url(assets/img/demo-bkgd.png);
 	padding: 1rem;
 	margin: 2rem 0;
 }
 
-    div.demo {background: #FFF; padding: 1rem; margin: 2rem 0; background: #fff url(assets/img/demo-bkgd.png) repeat;}
-
-
 div.explain h4 {
-	font: 1.3em "quicksandbold", Helvetica, Arial, sans-serif;
+	font: 1.3em var(--stack-b);
 	margin-bottom: 1rem;
 }
-div.explain dl {display: table-row; margin-bottom: 0.5rem;}
-div.explain dt, div.explain dd {display: table-cell; padding: 0 0 0.5rem;}
-
+div.explain dl {display: table-row;}
+div.explain dt, div.explain dd {
+	display: table-cell;
+	font-size: 1em;
+	padding: 0.5em 0;
+	border-bottom: 1px solid var(--n-medium);
+}
+div.explain dt {padding-right: 1em;}
 div.explain p + p {margin-top: 0.8em;}
 
 div.explain dt {
-  font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-  color: #000;
+  font-family: var(--stack-b);
+  color: var(--n-dark);
   padding-right: 1em;
 }
 div.explain a, div.explain a:visited {
@@ -389,14 +398,14 @@ div.explain a, div.explain a:visited {
 /* **************** CODE SNIPPPEETTSS *************** */
 
 .pre-code {
-    font: 1.1em "quicksandregular", Helvetica, Arial, sans-serif;
+    font: 1.1em var(--stack);
     margin: 0 0 1rem;
 }
-    .pre-code strong {color: #5d5d5d;}
+    .pre-code strong {color: var(--sec-color);}
 
 
 ol.linenums code {
-	font: 1em "quicksandregular", Helvetica, Arial, sans-serif;
+	font: 1em var(--stack);
 	background-color: rgba(255,255,255,0);
 }
 
@@ -406,8 +415,8 @@ c3m-tabs div.code {
 	overflow: auto;
 	width: 100%;
 	max-height: 300px;
-	color: white;
-  background-color: #3e3e3e;
+	color: var(--text-inv);
+  background-color: var(--n-dark);
 	margin: 0 0 1rem;
 }
 
@@ -449,7 +458,7 @@ c3m-tabs ol.display-code {
     display: inline-block;
     min-width: 100%;
   }
-  c3m-tabs .prettyprint {background: #3E3E3E;}
+  c3m-tabs .prettyprint {background: var(--n-dark);}
 
 c3m-tabs li.L0,
 c3m-tabs li.L1,
@@ -487,12 +496,6 @@ c3m-tabs li.L9 {
 
 /* *********** QUERIES ************* */
 
-@media (min-width: 500px) {
-	.github-corner:hover .octo-arm {
-    animation: octocat-wave 560ms ease-in-out;
-	}
-}
-
 @media (max-width: 660px) {
   .panelTitle li {min-width: 50%;}
 }
@@ -503,43 +506,51 @@ c3m-tabs li.L9 {
 
 	p, li, dt, dd {font-size: 1.3em;}
 	ol.linenums li {font-size: 1em;}
+	div.explain dt, div.explain dd {font-size: 1em;}
 
-	.titleComponent > div h3 {font-size: 1.6em; margin-bottom: 3rem;}
-
-	c3m-tabs div.code {
-	  width: 90%;
-		max-height: 500px;
-	  margin: 0 auto;
+	.titleComponent > div h3 {
+		font-size: 1.6em;
+		padding-right: 8em;
 	}
+
+	c3m-tabs div.code {max-height: 500px;}
 
 	c3m-tabs ol.display-code {margin-left: 0;}
 
 	.pre-code {
-		width: 90%;
-	  font: 1.1em "quicksandregular", Helvetica, Arial, sans-serif;
+	  font: 1.1em var(--stack);
 	  margin: 1rem auto;
 	}
 }
 
 @media screen and (min-width: 1000px) {
 
-	.titleComponent {padding: 4rem 5% 2rem;}
-		.titleComponent .gitBtn {width: 6em;}
+		.titleComponent .gitBtn {
+			width: 5.8em;
+			font-size: 75%;
+			text-decoration: none;
+			color: var(--n-dark);
+		}
+			.titleComponent .gitBtn svg {left: 10px;}
 	  	.titleComponent .gitBtn span {
-				display: inline;
-				padding-left: 20px;
+				position: static;
+				text-indent: 0;
+				line-height: 2em;
 			}
-		.titleComponent .gitBtn svg {left: 29px;}
 
-		div.panelTitle {padding: 2rem 5%;}
-				div.panelTitle h2 {font-size: 2em;}
+		div.panelTitle {padding: 2rem 5%; margin-bottom: 5vh;}
+				div.panelTitle h2 {
+					font-size: 2em;
+					padding: 0.5em 2rem;
+				}
+				.panelTitle ul {padding: 0.5em 1rem; margin: 0;}
 
     app-root {
         display: flex;
         flex-wrap: wrap;
     }
 
-    app-header { width: 25%; z-index:2;}
+    app-header {flex-basis: 25%; z-index:2;}
     app-main {width: 75%;}
     app-footer {flex-basis: 100%; z-index: 1;}
 
@@ -547,4 +558,10 @@ c3m-tabs li.L9 {
 		article.post h3 {font-size: 1.5em; margin-bottom: 2em;}
 		article.post h4 {font-size: 1.4em;}
 		article.post div.group + div.group {padding-top: 2rem; margin-top: 2rem;}
+}
+
+
+@media screen and (min-width: 1400px) {
+	app-header {flex-basis: 20%;}
+	app-main {width: 80%;}
 }

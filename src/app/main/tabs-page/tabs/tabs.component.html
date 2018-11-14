@@ -1,14 +1,14 @@
 <div class="tabsContainer">
   <ul>
         <li #tabs *ngFor="let tab of tabs"
+            [ngClass]="{active: tab.isActive, over: isOver, disabled: isDisabled}">
+
+          <button
+            id={{tab.tabID}}
             (click)="selectTab(tab)"
-            [ngClass]="{active: tab.isActive, over: isOver, disabled: isDisabled}"
             [attr.aria-expanded]="tab.isActive"
             [attr.aria-controls]="tab.panelID"
-            [attr.aria-selected]="tab.isActive"
-            id={{tab.tabID}}>
-
-          <a> {{ tab.tabTitle }} </a>
+            [attr.aria-selected]="tab.isActive">{{ tab.tabTitle }}</button>
         </li>
   </ul>
 
