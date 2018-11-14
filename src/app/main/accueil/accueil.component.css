@@ -1,98 +1,104 @@
+/* Welcome Title */
 
-    /* Welcome Title */
-    .whyNgCream h1 {
-        font: 2rem "quicksandbold", Helvetica, Arial, sans-serif;
-        text-align: center;
-        color: #333;
-        padding: 2rem 1rem 0.5rem;
-    }
-      /* Welcome Paragraph */
-      .whyNgCream {
-        display: block;
-        padding: 1rem;
-        background-color: rgba(249, 249, 249, 0.72);
-        background: url(/assets/background.1ba0c6f664cf338ab5ea.jpg);
-      }
-        .whyNgCream p {
-          text-align: center;
-          font: 1.3rem/1.3 "quicksandlight", Helvetica, Arial, sans-serif;
-        }
-            .whyNgCream p strong{
-              font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-              color:  #368093;
-            }
-              .whyNgCream p a{
-                font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-                font-size: 1.1rem;
-                color:  #d769a8
-              }
+.whyNgCream h2 {
+  font: 2em var(--stack-b);
+  text-align: center;
+  color: var(--n-dark);
+  margin-bottom: 0.5em;
+}
 
-      /* Containers with SVG icons */
-      .ngCreamBecause {
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 1rem;
-        background-color: rgba(249, 249, 249, 0.72);
-        padding-bottom: 3rem;
+/* Welcome Paragraph */
 
-      }
-        .ngCreamBecause li {
-          margin: 0 auto;
-          margin-bottom: 2rem;
-        }
-          /* The SVG */
-          .ngCreamBecause li svg {
-            width: 7.9rem;
-            height: 7.9rem;
-            fill: #333;
-          }
-            .ngCreamBecause li h3 {
-              font: 1.1rem "quicksandbold", Helvetica, Arial, sans-serif;
-              text-transform: uppercase;
-              margin-bottom: 0.8rem;
-            }
-              .ngCreamBecause li p {
-                  display: block;
-                  margin: 0 auto;
-                  width: 70%;
-                  font: 1rem/1.2 "quicksandlight", Helvetica, Arial, sans-serif;
-              }
-                .ngCreamBecause li p strong {
-                  font-family: "quicksandbold", Helvetica, Arial, sans-serif;
-                  color: #368093;
-                }
+.whyNgCream {
+  display: block;
+  padding: 6vh 1rem 7vh;
+  background-color: rgba(249, 249, 249, 0.72);
+  background: url(/assets/background.1ba0c6f664cf338ab5ea.jpg);
+}
 
+.whyNgCream p {
+  text-align: center;
+  font: 1.3rem/1.45 var(--stack-l);
+}
+
+.whyNgCream p strong {
+  font-family: var(--stack-b);
+  color: #368093;
+}
+
+.whyNgCream p a {
+  font-family: var(--stack-b);
+  font-size: 1.1rem;
+  color: #d769a8
+}
+
+/* Containers with SVG icons */
+
+.ngCreamBecause {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 1rem;
+  background-color: rgba(249, 249, 249, 0.72);
+  padding-bottom: 3rem;
+}
+
+.ngCreamBecause li {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* The SVG */
+
+.ngCreamBecause li svg {
+  width: 7.9rem;
+  height: 7.9rem;
+  fill: var(--n-dark);
+}
+
+.ngCreamBecause li h3 {
+  font: 1.5rem var(--stack-b);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.ngCreamBecause li p {
+  display: block;
+  width: 70%;
+  max-width: 20em;
+  line-height: 1.45;
+  margin: 0 auto;
+}
+
+.ngCreamBecause li p strong {
+  font-family: var(--stack-b);
+  color: var(--main-color);
+}
 
 /* BREAKPOINT */
 
 @media screen and (min-width: 450px) {
-    .ngCreamBecause li {
-      width: 50%;
-    }
+  .ngCreamBecause li {width: 50%;}
+}
+@media screen and (min-width: 750px) {
+  .ngCreamBecause li {font-size: 1em;}
 }
 
 /* BREAKPOINT */
 
-@media screen and (min-width: 850px) {
-    .ngCreamBecause li {
-      width: 33%;
-    }
-}
-
-
 @media screen and (min-width: 1000px) {
-  .ngCreamBecause {
-    padding-top: 4rem;
-  }
-  .ngCreamBecause li {
-    margin-bottom: 6rem;
-  }
+
+  .whyNgCream {padding: 6vh 5vw 7vh;}
+    .whyNgCream h2 {font-size: 3em;}
+    .whyNgCream p {font-size: 1.6em;}
+
+  .ngCreamBecause {padding-top: 4rem;}
+    .ngCreamBecause li {margin-bottom: 6rem;}
 }
 
 @media screen and (min-width: 1400px) {
   lottie-animation-view > div {
-    background-color: white;
+    background-color: var(--body-bg);
   }
 }

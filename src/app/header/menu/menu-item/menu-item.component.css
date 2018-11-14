@@ -1,105 +1,95 @@
-.menu-group.closed > .panel-collapse {display: none;}
+.menu-group.closed .panel-collapse {display: none;}
 
-  c3m-menu-item > li {
-    color: #000;
-    border-top: 1px solid rgba(255,255,255,.5);
-  }
-      c3m-menu-item > li > button {
-          position: relative;
-          width: 100%;
-          text-align: left;
-          color: #FFF;
-          background-color: initial;
-          padding: 1.1rem 1rem 0.8rem;
-          transform: perspective(1px) translateZ(0);
-          transition: color 0.5s;
-          cursor: pointer;
-      }
-        c3m-menu-item > li > button::before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #EEE;
-            transform: scaleX(0);
-            transform-origin: 0 50%;
-            transition-property: transform;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-out;
-            z-index: -1;
-        }
-        c3m-menu-item > li > button:hover:before,
-        c3m-menu-item > li > button:focus:before,
-        c3m-menu-item > li > button:active:before {
-          transform: scaleX(1);
-          transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-        }
+c3m-menu-item button {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  color: var(--text-inv);
+  background-color: initial;
+  padding: 1.1rem 1rem 0.8rem;
+  transform: perspective(1px) translateZ(0);
+  transition: color 0.5s;
+  cursor: pointer;
+}
 
-        c3m-menu-item > li > button:hover,
-        c3m-menu-item > li > button:active,
-        c3m-menu-item > li > button:focus {
-          color: #333;
-          font-weight: bold;
-        }
-          c3m-menu-item > li > button svg {
-            position: relative;
-            top: -3px;
-            width: 24px;
-            height: 29px;
-            fill: #CCC;
-            margin-right: 10px;
-            vertical-align: middle;
-            transition : fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
-          }
-            c3m-menu-item.help > li > button svg {
-              fill: #45ABBC;
-            }
-              c3m-menu-item.help > li > button {
-                color: #45ABBC;
-              }
-                c3m-menu-item > li > button:hover > svg,
-                c3m-menu-item > li > button:active > svg,
-                c3m-menu-item > li > button:focus > svg {
-                  fill: #333;
-                }
-                c3m-menu-item.help > li > button:hover svg,
-                c3m-menu-item.help > li > button:active svg,
-                c3m-menu-item.help > li > button:focus svg{
-                  fill: #45ABBC;
-                }
+c3m-menu-item button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--n-light);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  z-index: -1;
+}
 
+c3m-menu-item button:hover:before, c3m-menu-item button:focus:before, c3m-menu-item button:active:before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
 
-    /* Menu Items */
-    .contenuMenu {margin: 0 0 0.5rem 0.8rem;}
-    .contenuMenu li {
-      padding: 0 0 0.4rem 30px;
-      font: 0.85em/1 "quicksandlight", Helvetica, Arial, sans-serif;
-    }
-    .contenuMenu li:first-child{
-      margin-top: 0.5rem;
-    }
+c3m-menu-item button:hover, c3m-menu-item button:active, c3m-menu-item button:focus {
+  color: var(--n-dark);
+}
 
-        .contenuMenu li a {
-          display: block;
-          width: 80%;
-          color: #FFF;
-          background-color: initial;
-          padding: 0.5rem 0 0.5rem 1rem;
-          cursor: pointer;
-        }
-        .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
-          color: #000;
-          background-color: #EEE;
-        }
+c3m-menu-item button svg {
+  position: relative;
+  top: -3px;
+  width: 24px;
+  height: 29px;
+  fill: var(--n-light);
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
 
+c3m-menu-item.help button {color: var(--main-light);}
+  c3m-menu-item.help button svg {fill: var(--main-light);}
 
+c3m-menu-item button:hover svg, c3m-menu-item button:active svg, c3m-menu-item button:focus svg {
+  fill: var(--n-dark);
+}
+c3m-menu-item.help button:hover, c3m-menu-item.help button:active, c3m-menu-item.help button:focus {
+  color: var(--main-color);
+}
+c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-menu-item.help button:focus svg {
+  fill: var(--main-color);
+}
+
+/* Menu Items */
+
+.contenuMenu {margin: 0 0 0.5rem 0.8rem;}
+
+.contenuMenu li {
+  padding: 0 0 0.4rem 30px;
+  font: 0.85em/1 var(--stack-l);
+}
+
+.contenuMenu li:first-child {
+  margin-top: 0.5rem;
+}
+
+.contenuMenu li a {
+  display: block;
+  width: 80%;
+  text-decoration: none;
+  color: var(--text-inv);
+  background-color: initial;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
+  color: var(--n-dark);
+  background-color: var(--n-light);
+}
 
 /* DESKTOP */
-@media screen and (min-width: 1000px) {
-  c3m-menu-item > li > button {color: #EEE;}
-  c3m-menu-item > li > button svg {fill: #EEE;}
-    .contenuMenu li li {font-size: 100%;}
-    .contenuMenu li a {color: #EFEFEF;}
+
+@media screen and (min-width: 1400px) {
+  c3m-menu-item button {padding: 1.1rem 2rem 0.8rem;}
 }

@@ -1,41 +1,17 @@
-c3m-tabs.presentationTabV > div > ul > li {
-  background-color: rgba(224, 161, 64, 1);
-  margin-right: 0.3rem;
-}
- c3m-tabs.presentationTabV > div > ul > li.disabled {
-  background-color: rgba(224, 161, 64, 0.70);
- }
-  c3m-tabs.presentationTabV > div > ul > li.active {
-    background-color: #44ABBC;
-  }
-    c3m-tabs.presentationTabV > div > ul > li > a {
-      color: #FFF;
-      font: 0.9rem "quicksandlight", Helvetica, Arial, sans-serif;
-      padding: 0.3rem 0.9rem;
-      display: block;
-    }
+c3m-tabs.presentationTabV .tabsContainer {margin: 0;}
 
-
-c3m-tabs.presentationTabV > div {
-  width: 80%;
-  margin-bottom: 2.5rem;
+c3m-tabs.presentationTabV > div div.content[aria-hidden="false"] {
+  border: 1px solid var(--main-color);
 }
-  c3m-tabs.presentationTabV > div div.content[aria-hidden="false"] {
-      font: 0.9rem "quicksandlight", Helvetica, Arial, sans-serif;
-      color: #FFF;
-      background-color: #44ABBC;
-      padding-top: 1.1rem;
-  }
-    c3m-tabs.presentationTabV > div > ul a {color: #FFF;}
 
 
 @media screen and (min-width:850px) {
 
-  c3m-tabs.presentationTabV > div {margin-bottom: 2.5rem;}
+  /*c3m-tabs.presentationTabV > div {margin-bottom: 2.5rem;}
     c3m-tabs.presentationTabV > div div.content[aria-hidden="false"] {
       font-size:1rem;
     }
       c3m-tabs.presentationTabV > div > ul > li > a {
         font-size: 1.3rem;
-      }
+      }*/
 }

@@ -1,8 +1,0 @@
-
-.contentMain {
-    background-color: rgba(241, 241, 241, 0.97);
-    height: 100%;
-}
-body > app-root > app-main > main > div > c3m-breadcrumbs{
-  display: none;
-}

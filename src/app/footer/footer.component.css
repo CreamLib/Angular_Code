@@ -1,17 +1,18 @@
 footer {
-    color: #000;
-    background-color: rgba(189, 186, 186, 0.2);
+    color: var(--body-text);
+    background-color: var(--n-light);
     padding: 1rem 5%;
 }
 
   footer p {
-    font: 0.8rem "quicksandlight", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
 
-  @media screen and (min-width: 1000px) {
-      .footerContent p {
-        font-size: 1rem;
-        text-align: right;
-      }
-  }
+@media screen and (min-width: 1000px) {
+    .footerContent p {
+      font-size: 1rem;
+      text-align: right;
+    }
+}
