@@ -3,8 +3,8 @@
     <h2><strong>Input</strong> Component</h2>
     <ul>
       <li><a scrollTo href="#input">Regular Input</a></li>
-      <li><a scrollTo href="#input-floating">Input Floating Label</a></li>
-      <li><a scrollTo href="#input-material">Input Floating Material</a></li>
+      <!--li><a scrollTo href="#input-floating">Input Floating Label</a></li>
+      <li><a scrollTo href="#input-material">Input Floating Material</a></li-->
       <li><a scrollTo href="#input-tel">Input Phone</a></li>
       <li><a scrollTo href="#input-mail">Input Mail</a></li>
       <li><a scrollTo href="#input-error-msg">Error Message</a></li>
@@ -28,7 +28,7 @@
 
           <span>Github</span></a>
       </h3>
-      <p>Regular Input (don't forget to add the <code>form</code> tag)</p>
+      <p>Regular Input</p>
 
       <div class="demo">
         <!-- SIMPLE INPUT -->
@@ -77,127 +77,48 @@
 
       </c3m-tabs>
     </div>
-    </div>
+  </div>
 
 
-  <!-- INPUT FLOATING LABEL -->
-  <div class="titleComponent">
-      <div class="descriptionComponent" id="input-floating">
-        <h3>
-          <svg>
-            <use xlink:href="#gitListItem"></use>
-          </svg>
-          Input Floating Label
-
-          <a href="https://github.com/CreamNG/Components/tree/master/input-floating" class="gitBtn" target="_blank">
-            <svg>
-              <use xlink:href="#gitSvg"></use>
-            </svg>
-
-            <span>Github</span></a>
-        </h3>
-
-        <p>Input with a floating label <code>bottom</code></p>
-
-        <div class="demo">
-          <!-- FLOATING BOTTOM INPUT -->
-          <c3m-input-floating
-            title="Enter your name"
-            floating="bottom"
-            name="name1"
-            id="name1">
-          </c3m-input-floating>
-        </div>
-
-          <p>Input with a floating label <code>right</code></p>
-
-        <div class="demo">
-            <c3m-input-floating
-              title="Enter your name"
-              floating="right"
-              name="name2"
-              id="name2">
-            </c3m-input-floating>
-        </div>
-
-
-        <div class="explain">
-          <dl>
-            <dt>title</dt>
-            <dd>The label tag</dd>
-          </dl>
-          <dl>
-            <dt>placeholder</dt>
-            <dd>Placeholder value 'bottom', 'right' or 'top' </dd>
-          </dl>
-        </div>
-
-        <!-- TABS SNIPPETS -->
-        <c3m-tabs class="snippets">
-          <c3m-tab tabTitle="HTML">
-            <p class="pre-code">To call the component</p>
-            <div class="code">
-               <!--?prettify lang=html linenums=true?-->
-                <pre class="prettyprint linenums">
-&lt;!-- FLOATING BOTTOM INPUT --&gt;
-&lt;c3m-input-floating
-  title=&#34;Enter your name&#34;
-  floating=&#34;bottom&#34;
-  name=&#34;name1&#34;
-  id=&#34;name1&#34;&gt;
-&lt;/c3m-input-floating&gt;
-
-&lt;!-- FLOATING RIGHT INPUT --&gt;
-&lt;c3m-input-floating
-  title=&#34;Enter your name&#34;
-  floating=&#34;right&#34;
-  name=&#34;name1&#34;
-  id=&#34;name1&#34;&gt;
-&lt;/c3m-input-floating&gt;
-
-                </pre>
-            </div>
-          </c3m-tab>
-
-          <c3m-tab tabTitle="CSS">
-          </c3m-tab>
-
-          <c3m-tab tabTitle="TypeScript">
-          </c3m-tab>
-
-        </c3m-tabs>
-      </div>
-    </div>
-
-
-    <!-- INPUT MATERIAL FLOATING LABEL -->
-  <div class="titleComponent">
-    <div class="descriptionComponent" id="input-material">
+<!-- INPUT FLOATING LABEL
+<div class="titleComponent">
+    <div class="descriptionComponent" id="input-floating">
       <h3>
         <svg>
           <use xlink:href="#gitListItem"></use>
         </svg>
-        Input Material Floating
+        Input Floating Label
 
-        <a href="https://github.com/CreamNG/Components/tree/master/input-material" class="gitBtn" target="_blank">
+        <a href="https://github.com/CreamNG/Components/tree/master/input-floating" class="gitBtn" target="_blank">
           <svg>
             <use xlink:href="#gitSvg"></use>
           </svg>
 
           <span>Github</span></a>
       </h3>
-      <p>Input Material Like (don't forget to add a <code>form</code> tag). </p>
-      <p>It uses the functionality <code>:placeholder-shown</code> that is not handled by all browsers</p>
+
+      <p>Input with a floating label <code>bottom</code></p>
 
       <div class="demo">
-        <!-- Input Material -->
-        <c3m-input-material
+        <c3m-input-floating
           title="Enter your name"
-          placeholder="placeholder3"
-          name="name3"
-          id="name3">
-        </c3m-input-material>
+          floating="bottom"
+          name="name1"
+          id="name1">
+        </c3m-input-floating>
       </div>
+
+        <p>Input with a floating label <code>right</code></p>
+
+      <div class="demo">
+          <c3m-input-floating
+            title="Enter your name"
+            floating="right"
+            name="name2"
+            id="name2">
+          </c3m-input-floating>
+      </div>
+
 
       <div class="explain">
         <dl>
@@ -206,24 +127,30 @@
         </dl>
         <dl>
           <dt>placeholder</dt>
-          <dd>Placeholder value (optional)</dd>
+          <dd>Placeholder value 'bottom', 'right' or 'top' </dd>
         </dl>
       </div>
 
-      <!-- TABS SNIPPETS -->
       <c3m-tabs class="snippets">
         <c3m-tab tabTitle="HTML">
           <p class="pre-code">To call the component</p>
           <div class="code">
-             <!--?prettify lang=html linenums=true?-->
               <pre class="prettyprint linenums">
-&lt;!-- Input Material --&gt;
-&lt;c3m-input-material
-  title=&#34; Enter your name &#34;
-  placeholder=&#34;placeholder3&#34;
-  name=&#34;name3&#34;
-  id=&#34;name3&#34;&gt;
-&lt;/c3m-input-material&gt;
+&lt;!-- FLOATING BOTTOM INPUT --&gt;
+&lt;c3m-input-floating
+title=&#34;Enter your name&#34;
+floating=&#34;bottom&#34;
+name=&#34;name1&#34;
+id=&#34;name1&#34;&gt;
+&lt;/c3m-input-floating&gt;
+
+&lt;!-- FLOATING RIGHT INPUT --&gt;
+&lt;c3m-input-floating
+title=&#34;Enter your name&#34;
+floating=&#34;right&#34;
+name=&#34;name1&#34;
+id=&#34;name1&#34;&gt;
+&lt;/c3m-input-floating&gt;
 
               </pre>
           </div>
@@ -237,7 +164,73 @@
 
       </c3m-tabs>
     </div>
+</div> -->
+
+<!-- INPUT MATERIAL FLOATING LABEL
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-material">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Input Material Floating
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-material" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <p>Input Material Like (don't forget to add a <code>form</code> tag). </p>
+    <p>It uses the functionality <code>:placeholder-shown</code> that is not handled by all browsers</p>
+
+    <div class="demo">
+      <c3m-input-material
+        title="Enter your name"
+        placeholder="placeholder3"
+        name="name3"
+        id="name3">
+      </c3m-input-material>
     </div>
+
+    <div class="explain">
+      <dl>
+        <dt>title</dt>
+        <dd>The label tag</dd>
+      </dl>
+      <dl>
+        <dt>placeholder</dt>
+        <dd>Placeholder value (optional)</dd>
+      </dl>
+    </div>
+
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+            <pre class="prettyprint linenums">
+&lt;!-- Input Material --&gt;
+&lt;c3m-input-material
+title=&#34; Enter your name &#34;
+placeholder=&#34;placeholder3&#34;
+name=&#34;name3&#34;
+id=&#34;name3&#34;&gt;
+&lt;/c3m-input-material&gt;
+
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div> -->
 
 
 <!-- INPUT TYPE PHONE -->

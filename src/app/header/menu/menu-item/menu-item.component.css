@@ -67,7 +67,7 @@ c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-m
 
 .contenuMenu li {
   padding: 0 0 0.4rem 30px;
-  font: 0.85em/1 var(--stack-l);
+  font: 0.95em/1 var(--stack-l);
 }
 
 .contenuMenu li:first-child {
