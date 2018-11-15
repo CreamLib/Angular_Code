@@ -40,7 +40,7 @@ c3m-input-material p.field {
   }
 
   /* Label With Input PlaceHolder Selected */
-  c3m-input-material input:placeholder-shown + label {
+  c3m-input-material input::placeholder-shown + label {
     cursor: text;
     padding-bottom: 0.4rem;
     max-width: 66.66%;

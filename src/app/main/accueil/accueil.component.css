@@ -1,6 +1,7 @@
 /* Welcome Title */
 
 .whyNgCream h2 {
+  display: none;
   font: 2em var(--stack-b);
   text-align: center;
   color: var(--n-dark);
@@ -18,18 +19,7 @@
 
 .whyNgCream p {
   text-align: center;
-  font: 1.3rem/1.45 var(--stack-l);
-}
-
-.whyNgCream p strong {
-  font-family: var(--stack-b);
-  color: #368093;
-}
-
-.whyNgCream p a {
-  font-family: var(--stack-b);
-  font-size: 1.1rem;
-  color: #d769a8
+  font: calc(1.3em + 0.8vmax)/1.45 var(--stack-l);
 }
 
 /* Containers with SVG icons */
@@ -45,15 +35,16 @@
 }
 
 .ngCreamBecause li {
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 
 /* The SVG */
 
 .ngCreamBecause li svg {
-  width: 7.9rem;
-  height: 7.9rem;
+  width: 16vmax;
+  height: 16vmax;
+  max-width: 150px;
+  max-height: 150px;
   fill: var(--n-dark);
 }
 
@@ -89,9 +80,7 @@
 
 @media screen and (min-width: 1000px) {
 
-  .whyNgCream {padding: 6vh 5vw 7vh;}
-    .whyNgCream h2 {font-size: 3em;}
-    .whyNgCream p {font-size: 1.6em;}
+  .whyNgCream {padding: 12vh 13vw 7vh;}
 
   .ngCreamBecause {padding-top: 4rem;}
     .ngCreamBecause li {margin-bottom: 6rem;}

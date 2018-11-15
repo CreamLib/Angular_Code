@@ -58,7 +58,7 @@ c3m-menu {
       text-align: center;
       padding: 5vh 0 9vh;
     }
-    header h1 {padding: 0;}
+    header h1 {padding: 0; margin: 0;}
     header > button {display: none;}
     header > p {padding: 0;}
 

@@ -150,7 +150,7 @@ input, select, textarea {
 	font: 100%/1 var(--stack);
 	color: var(--n-dark);
 	background-color: var(--body-bg);
-	padding: 0.3em 0.5em 0.2em;
+	padding: 0.5em;
 	border: 1px solid var(--n-medium);
 	border-radius: 0.3em;
 	transition: all;
@@ -161,8 +161,9 @@ input:focus, select:focus, textarea:focus {
 	border-radius: 0;
 }
 
-
 /* *********** ARTICLES ************* */
+
+p + p {margin-top: 1em;}
 
 article.post {
     background-color: var(n-lighter);

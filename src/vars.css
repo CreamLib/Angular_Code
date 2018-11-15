@@ -4,8 +4,22 @@
 /*-------------------------------------------------------------------- */
 
 :root {
+	--tourquoise: 21,129,158;
+	--tourquoise-light: 69,171,188;
+	--green: 53,120,28;
+	--green-light: 108,199,69;
+	--hot-rose: 189,77,150;
+	--light-rose: 215,105,168;
+	--orange: 237,156,33;
+	--dark-blu: 30,46,57;
+	--gray-m: 204,204,204;
+	--gray-light: 238,238,238;
+	--gray-s-light: 239,239,239;
+	--black: 0,0,0;
+	--red: 204,0,0;
+
 	--body-text: #000;
-	--body-bg: #F9F9F9;
+	--body-bg: #FFF;
 	--text-inv: #FFF;
 
 	--main-color: #15819E;
@@ -17,6 +31,7 @@
 	--hot-color-sec: #ED9C21;
 	--n-dark: #1E2E39;
 	--n-medium: #CCC;
+	--n-medium-a: #6B6B6B;
 	--n-light: #EEE;
 	--n-lighter: #EFEFEF;
 	--n-s-dark: #000;
