@@ -45,6 +45,7 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-HTML');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.html';
+
         this.http.get(file2Read)
           .map((response: Response) => response.text())
           .subscribe(data => {
@@ -77,6 +78,7 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-CSS');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.css';
+
         this.http.get(file2Read)
           .map((response: Response) => response.text())
           .subscribe(data => {

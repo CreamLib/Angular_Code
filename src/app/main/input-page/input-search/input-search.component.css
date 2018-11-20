@@ -1,0 +1,11 @@
+c3m-input-search button {
+  vertical-align: bottom;
+}
+
+c3m-input-search circle {
+  fill: var(--main-color);
+}
+
+c3m-input-search button:hover circle, c3m-input-search button:focus circle {
+  fill: var(--sec-color);
+}

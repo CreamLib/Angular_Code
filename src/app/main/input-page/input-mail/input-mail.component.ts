@@ -9,10 +9,15 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class InputMailComponent implements OnInit {
 
  // Inputs
- @Input() title;
- @Input() placeholder = '';
- @Input() name;
  @Input() id = '';
+ @Input() name = '';
+ @Input() value = '';
+ @Input() autocomplete = 'on';
+ @Input() maxlength = '';
+ @Input() multiple: boolean;
+ @Input() required: boolean;
+ @Input() disabled: boolean;
+ @Input() placeholder = '';
 
  constructor() { }
 

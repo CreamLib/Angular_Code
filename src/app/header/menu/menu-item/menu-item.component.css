@@ -83,7 +83,7 @@ c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-m
   padding: 0.5rem 0 0.5rem 1rem;
 }
 
-.contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
+.contenuMenu li a.active, .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
   color: var(--n-dark);
   background-color: var(--n-light);
 }

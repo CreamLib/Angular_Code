@@ -2,12 +2,13 @@
 <div class="panelTitle">
     <h2><strong>Input</strong> Component</h2>
     <ul>
-      <li><a scrollTo href="#input">Regular Input</a></li>
+      <li><a scrollTo href="#input">Regular Text Input</a></li>
       <!--li><a scrollTo href="#input-floating">Input Floating Label</a></li>
       <li><a scrollTo href="#input-material">Input Floating Material</a></li-->
+      <li><a scrollTo href="#input-search">Input Search</a></li>
       <li><a scrollTo href="#input-tel">Input Phone</a></li>
       <li><a scrollTo href="#input-mail">Input Mail</a></li>
-      <li><a scrollTo href="#input-error-msg">Error Message</a></li>
+      <li><a scrollTo href="#input-error-msg">Contextual Error Message</a></li>
     </ul>
 </div>
 
@@ -19,7 +20,7 @@
         <svg>
           <use xlink:href="#gitListItem"></use>
         </svg>
-        Regular Input
+        Regular Text Input
 
         <a href="https://github.com/CreamNG/Components/tree/master/input" class="gitBtn" target="_blank">
           <svg>
@@ -28,27 +29,84 @@
 
           <span>Github</span></a>
       </h3>
-      <p>Regular Input</p>
 
       <div class="demo">
         <!-- SIMPLE INPUT -->
         <c3m-input
-          title="Enter your name"
-          placeholder="placeholder"
-          name="name"
-          [id]="'name'">
+          [id]="'name1'"
+          name="name1"
+          placeholder="a placeholder">
+          Enter your name
         </c3m-input>
       </div>
 
       <div class="explain">
         <dl>
-          <dt>title</dt>
-          <dd>The label tag</dd>
+          <div>
+            <dt>id</dt>
+            <dd>input's identifier</dd>
+          </div>
+          <div>
+            <dt>name</dt>
+            <dd>input's general identifier</dd>
+          </div>
+          <div>
+            <dt>value</dt>
+            <dd>input's current value (optional)</dd>
+          </div>
+          <div>
+            <dt>autocomplete</dt>
+            <dd>Defaults to "on" (optional)</dd>
+          </div>
+          <div>
+            <dt>maxlength</dt>
+            <dd>The maximum allowed value length (optional)</dd>
+          </div>
+          <div>
+            <dt>required</dt>
+            <dd>When present, the element is required (optional)</dd>
+          </div>
+          <div>
+            <dt>disabled</dt>
+            <dd>When present, the element is disabled/read-only (optional)</dd>
+          </div>
+          <div>
+            <dt>placeholder</dt>
+            <dd>Placeholder value (optional)</dd>
+          </div>
         </dl>
-        <dl>
-          <dt>placeholder</dt>
-          <dd>Placeholder value (optional)</dd>
-        </dl>
+
+        <div class="tip">
+          <svg width="46" height="46"><use href="#tip" /></svg>
+          <div class="content">
+            <p>The <code>id</code> attribute of an input is very important for form accessibility. It allows
+            the user-agent to associate a label to its input.</p>
+            <p><code>Placeholders</code> don't replace labels; they should give hints on how to fill the input.</p>
+          </div>
+        </div>
+      </div>
+
+      <h4>Mandatory field</h4>
+      <div class="demo">
+        <!-- SIMPLE INPUT -->
+        <c3m-input
+          [id]="'name2'"
+          name="name2"
+          required="required">
+          Enter your name
+        </c3m-input>
+      </div>
+
+      <h4>Disabled field</h4>
+      <div class="demo">
+        <!-- SIMPLE INPUT -->
+        <c3m-input
+          [id]="'name3'"
+          name="name3"
+          value="Peter Parker"
+          disabled="disabled">
+          Enter your name
+        </c3m-input>
       </div>
 
       <!-- TABS SNIPPETS -->
@@ -59,12 +117,29 @@
              <!--?prettify lang=html linenums=true?-->
               <pre class="prettyprint linenums">
 &lt;!-- SIMPLE INPUT --&gt;
-&lt;c3m-input
-  title=&#34;Enter your name&#34;
-  placeholder=&#34;placeholder&#34;
-  name=&#34;name&#34;
-  [id]=&#34;&apos;name&apos;&#34;&gt;
-&lt;/c3m-input&gt;
+  &lt;c3m-input
+    [id]=&#34;'name1'&#34;
+    name=&#34;name1&#34;
+    placeholder=&#34;a placeholder&#34;&gt;
+    Enter your name
+  &lt;/c3m-input&gt;
+
+&lt;!-- MANDATORY INPUT --&gt;
+  &lt;c3m-input
+    [id]=&#34;'name2'&#34;
+    name=&#34;name2&#34;
+    required=&#34;required&#34;&gt;
+    Enter your name
+  &lt;/c3m-input&gt;
+
+&lt;!-- DISABLED INPUT --&gt;
+  &lt;c3m-input
+    [id]=&#34;'name3'&#34;
+    name=&#34;name3&#34;
+    value=&#34;Peter Parker&#34;
+    disabled=&#34;disabled&#34;&gt;
+    Enter your name
+  &lt;/c3m-input&gt;
               </pre>
           </div>
         </c3m-tab>
@@ -232,6 +307,53 @@ id=&#34;name3&#34;&gt;
   </div>
 </div> -->
 
+<!-- INPUT TYPE SEARCH -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-search">
+    <h3><svg><use xlink:href="#gitListItem"></use></svg>
+      Search Input
+      <a href="https://github.com/CreamNG/Components/tree/master/input-tel" class="gitBtn" target="_blank">
+        <svg><use xlink:href="#gitSvg"></use></svg> <span>Github</span></a>
+    </h3>
+
+    <div class="demo">
+      <!-- INPUT SEARCH -->
+      <c3m-input-search
+        [id]="'main-search'"
+        name="main-search">
+        Search the site
+      </c3m-input-search>
+    </div>
+
+    <div class="explain">
+      <p>The input type <code>search</code> will inherit all attributes from the generic <code>input</code> element.</p>
+    </div>
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- INPUT SEARCH --&gt;
+  &lt;c3m-input-search
+    [id]=&#34;'main-search'&#34;
+    name=&#34;main-search&#34;&gt;
+    Search the site
+  &lt;/c3m-input-search&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
 
 <!-- INPUT TYPE PHONE -->
 <div class="titleComponent">
@@ -249,27 +371,39 @@ id=&#34;name3&#34;&gt;
 
         <span>Github</span></a>
     </h3>
-    <p>Input Type Phone (don't forget the <code>form</code> tag)</p>
 
     <div class="demo">
       <!-- INPUT PHONE -->
       <c3m-input-tel
-        title="Enter your Phone Number"
-        placeholder="06.xx.xx.xx.xx"
+        [id]="'phoneTelId'"
         name="phoneTelName"
-        [id]="'phoneTelId'">
+        placeholder="+xx x.xx.xx.xx.xx">
+        Enter your phone number
       </c3m-input-tel>
     </div>
 
     <div class="explain">
+      <p>The input type <code>tel</code> will inherit all attributes from the generic <code>input</code> element.
+        In addition, you may use also:</p>
       <dl>
-        <dt>title</dt>
-        <dd>The label tag</dd>
+        <div>
+          <dt>pattern</dt>
+          <dd>regular expression against which the control's value is to be checked (optional)</dd>
+        </div>
+        <div>
+          <dt>title</dt>
+          <dd>gives description of the pattern (mandatory if <code>pattern</code> is used)</dd>
+        </div>
       </dl>
-      <dl>
-        <dt>placeholder</dt>
-        <dd>Placeholder value (optional)</dd>
-      </dl>
+
+      <div class="tip">
+        <svg width="46" height="46"><use href="#tip" /></svg>
+        <div class="content">
+          <p>If you're using the <code>pattern</code> attribute, you should add a <code>title</code> attribute
+            to give a description of the pattern.</p>
+          <p>For pattern examples, check <a href="http://html5pattern.com/">HTML Pattern</a>.</p>
+        </div>
+      </div>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -281,10 +415,10 @@ id=&#34;name3&#34;&gt;
             <pre class="prettyprint linenums">
   &lt;!-- INPUT PHONE --&gt;
   &lt;c3m-input-tel
-    title=&#34;Enter your Phone Number&#34;
-    placeholder=&#34;06.xx.xx.xx.xx&#34;
+    [id]=&#34;'phoneTelId'&#34;
     name=&#34;phoneTelName&#34;
-    [id]=&#34;&apos;phoneTelId&apos;&#34;&gt;
+    placeholder=&#34;+xx x.xx.xx.xx.xx&#34;&gt;
+    Enter your phone number
   &lt;/c3m-input-tel&gt;
             </pre>
         </div>
@@ -317,26 +451,25 @@ id=&#34;name3&#34;&gt;
 
         <span>Github</span></a>
     </h3>
-    <p>Input Type Email (don't forget the <code>form</code> tag)</p>
 
     <div class="demo">
       <!-- INPUT MAIL -->
       <c3m-input-mail
-        title="Enter your Mail adress"
-        placeholder="john-doe@something.com"
+        [id]="'mailId'"
         name="mailName"
-        [id]="'mailId'">
+        placeholder="peter-parker@dailybugle.com">
+        Enter your e-mail adress
       </c3m-input-mail>
     </div>
 
     <div class="explain">
+      <p>The input type <code>email</code> will inherit all attributes from the generic <code>input</code> element.
+        In addition, you may use also:</p>
       <dl>
-        <dt>title</dt>
-        <dd>The label tag</dd>
-      </dl>
-      <dl>
-        <dt>placeholder</dt>
-        <dd>Placeholder value (optional)</dd>
+        <div>
+          <dt>multiple</dt>
+          <dd>If present, allows the user to enter more than one value (optional)</dd>
+        </div>
       </dl>
     </div>
 
@@ -348,11 +481,11 @@ id=&#34;name3&#34;&gt;
            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
   &lt;!-- INPUT MAIL --&gt;
-  &lt;c3m-input-mail
-    title=&#34;Enter your Mail adress&#34;
-    placeholder=&#34;john-doe@something.com&#34;
-    name=&#34;mailName&#34;
-    [id]=&#34;&apos;mailId&apos;&#34;&gt;
+    &lt;c3m-input-mail
+      [id]=&#34;'mailId'&#34;
+      name=&#34;mailName&#34;
+      placeholder=&#34;peter-parker@dailybugle.com&#34;&gt;
+      Enter your e-mail adress
   &lt;/c3m-input-mail&gt;
             </pre>
         </div>
@@ -386,30 +519,30 @@ id=&#34;name3&#34;&gt;
 
         <span>Github</span></a>
     </h3>
-    <p>Contextual Input Error Message (be sure to place error message before form field).</p>
-
-    <div class="demo">
-      <div class="containerForDemo">
-      <!-- INPUT ERROR MESSAGE -->
-      <c3m-input-error-msg>
-        The field is not correct
-      </c3m-input-error-msg>
-
-        <!-- SIMPLE INPUT -->
-        <c3m-input
-          title="Enter a name"
-          placeholder="just look error"
-          name="nameBeforeError"
-          [id]="'nameBeforeError'">
-        </c3m-input>
+    <div class="explain">
+      <p>Contextual Input Error Message.</p>
+      <div class="tip">
+        <svg width="46" height="46"><use href="#tip" /></svg>
+         <p>Always place error messages before the associated field, so it can be read by screen-readers before
+         the field presenting the error.</p>
       </div>
     </div>
 
-    <div class="explain">
-      <dl>
-        <dt>Between the tags</dt>
-        <dd>Insert the text error</dd>
-      </dl>
+    <div class="demo">
+      <div class="containerForDemo">
+        <!-- INPUT ERROR MESSAGE -->
+        <c3m-input-error-msg>
+          The field is not correct
+        </c3m-input-error-msg>
+
+        <!-- SIMPLE INPUT -->
+        <c3m-input
+          [id]="'nameBeforeError'"
+          name="nameBeforeError"
+          placeholder="oh, my!">
+          Enter a name
+        </c3m-input>
+      </div>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -419,20 +552,18 @@ id=&#34;name3&#34;&gt;
         <div class="code">
            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
-  &lt;div class=&#34;containerForDemo&#34;&gt;
-  &lt;!-- SIMPLE INPUT --&gt;
-  &lt;c3m-input
-    title=&#34;Enter a name&#34;
-    placeholder=&#34;just look error&#34;
-    name=&#34;nameBeforeError&#34;
-    [id]=&#34;&apos;nameBeforeError&apos;&#34;&gt;
-  &lt;/c3m-input&gt;
-
-  &lt;!-- INPUT ERROR MESSAGE --&gt;
+&lt;!-- INPUT ERROR MESSAGE --&gt;
   &lt;c3m-input-error-msg&gt;
     The field is not correct
   &lt;/c3m-input-error-msg&gt;
-&lt;/div&gt;
+
+  &lt;!-- SIMPLE INPUT --&gt;
+  &lt;c3m-input
+    [id]=&#34;'aField'&#34;
+    name=&#34;aField&#34;
+    placeholder=&#34;oh, my!&#34;&gt;
+    Enter a name
+  &lt;/c3m-input&gt;
 
             </pre>
         </div>

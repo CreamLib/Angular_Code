@@ -1,14 +1,13 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-  selector: 'c3m-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css'],
+  selector: 'c3m-input-search',
+  templateUrl: './input-search.component.html',
+  styleUrls: ['./input-search.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class InputComponent implements OnInit {
+export class InputSearchComponent implements OnInit {
 
-  // Inputs
   @Input() id = '';
   @Input() name = '';
   @Input() value = '';
@@ -20,6 +19,7 @@ export class InputComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }

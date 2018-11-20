@@ -60,7 +60,6 @@ import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
-import { CheckboxGroupButtonComponent } from './main/checkbox-page/checkbox-group-button/checkbox-group-button.component';
 import { InputTelComponent } from './main/input-page/input-tel/input-tel.component';
 import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
@@ -79,6 +78,12 @@ import { ListThumbnailsComponent } from './main/list-page/list-thumbnails/list-t
 import { ListDescriptionComponent } from './main/list-page/list-description/list-description.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
+import { RadioPageComponent } from './main/radio-page/radio-page.component';
+import { RadioComponent } from './main/radio-page/radio/radio.component';
+import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
+import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
+import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
+import { InputSearchComponent } from './main/input-page/input-search/input-search.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -97,6 +102,7 @@ export const appRoutes: Routes = [
   { path: 'dropdown', component: DropdownPageComponent, data: { breadcrumb: 'Dropdown' } },
   { path: 'input', component: InputPageComponent, data: { breadcrumb: 'Input' } },
   { path: 'checkbox', component: CheckboxPageComponent, data: { breadcrumb: 'Checkbox' } },
+  { path: 'radio', component: RadioPageComponent, data: { breadcrumb: 'Radios' } },
   { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
   { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'fieldset' } },
   { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
@@ -165,7 +171,6 @@ export const appRoutes: Routes = [
     SelectDatalistComponent,
     SelectDatalistsComponent,
     FaqComponent,
-    CheckboxGroupButtonComponent,
     InputTelComponent,
     InputMailComponent,
     InputErrorMsgComponent,
@@ -184,6 +189,12 @@ export const appRoutes: Routes = [
     ListDescriptionComponent,
     BottomPageComponent,
     BottomComponent,
+    RadioPageComponent,
+    RadioComponent,
+    RadioItemComponent,
+    CheckboxGroupItemComponent,
+    CheckboxLinkComponent,
+    InputSearchComponent,
   ],
   imports: [
     BrowserModule,
