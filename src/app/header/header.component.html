@@ -20,14 +20,14 @@
     <c3m-menu [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
 
         <!-- GROUP FORM ELEMENTS -->
-        <c3m-menu-item nameButton="Form Element" idSvg="#svg1" [index]=1 [isOpen]=false>
+        <c3m-menu-item nameButton="Form Elements" idSvg="#svg1" [index]=1 [isOpen]=false>
             <ul class="contenuMenu">
                 <li (click)="ToggleMenuBurger()"><a routerLink="/input" routerLinkActive="active">Inputs</a></li>
-                <li (click)="ToggleMenuBurger()"><a routerLink="/select" routerLinkActive="active">Select</a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/select" routerLinkActive="active">Selects &amp; Datalists</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/checkbox" routerLinkActive="active">Checkboxes</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/radio" routerLinkActive="active">Radios</a></li>
-                <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active">Buttons</a></li>
-                <li (click)="ToggleMenuBurger()"><a routerLink="/slider" routerLinkActive="active">Slider</a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/button" routerLinkActive="active">Buttons &amp; Controls</a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/slider" routerLinkActive="active">Sliders  &amp; Progress</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/step" routerLinkActive="active">Steps</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/calendar" routerLinkActive="active">Calendar</a></li>
                 <li (click)="ToggleMenuBurger()"><a routerLink="/fieldset" routerLinkActive="active">Fieldset</a></li>

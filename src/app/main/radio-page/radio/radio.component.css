@@ -19,7 +19,7 @@ c3m-radio {margin-bottom: 1rem;}
 
 c3m-radio.switch {display: flex; position: relative;}
 
-  c3m-radio.switch li {display: inline;}
+  c3m-radio.switch li {display: inline-block;}
 
   c3m-radio.switch input {
     position: absolute;
@@ -42,16 +42,13 @@ c3m-radio.switch {display: flex; position: relative;}
     cursor: pointer;
   }
   c3m-radio.switch c3m-radio-item:first-child label {
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
-    padding-left: 1em;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
     margin-left: 0;
   }
   c3m-radio.switch c3m-radio-item:last-child label {
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-    padding-right: 1em;
-    margin-left: -3px;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
   }
 
   c3m-radio.switch input:checked + label {

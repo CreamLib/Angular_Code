@@ -84,6 +84,7 @@ import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-ite
 import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
 import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
 import { InputSearchComponent } from './main/input-page/input-search/input-search.component';
+import { ProgressComponent } from './main/slider-page/progress/progress.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -195,6 +196,7 @@ export const appRoutes: Routes = [
     CheckboxGroupItemComponent,
     CheckboxLinkComponent,
     InputSearchComponent,
+    ProgressComponent,
   ],
   imports: [
     BrowserModule,

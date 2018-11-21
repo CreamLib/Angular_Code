@@ -56,8 +56,8 @@
           <dd>disable the checkbox (optional)</dd>
         </div>
         <div>
-          <dt>class (optional)</dt>
-          <dd><em>go-along</em></dd>
+          <dt>classes (optional)</dt>
+          <dd><em>go-along</em>, <em>switch</em></dd>
         </div>
       </dl>
 
@@ -116,7 +116,7 @@
     <h4>Switch radios (add the <em>switch</em> class)</h4>
 
     <div class="demo">
-      <!-- SIMPLE CHECKBOX -->
+      <!-- SWITCH -->
       <c3m-radio class="switch" legend="Check the star">
         <c3m-radio-item
           title="Wars"
@@ -128,6 +128,7 @@
           title="Trek"
           name="starS"
           value="star2"
+          checked="checked"
           [id]="'star2'">
         </c3m-radio-item>
         <c3m-radio-item
@@ -135,6 +136,12 @@
           name="starS"
           value="star3"
           [id]="'star3'">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Dust"
+          name="starS"
+          value="star5"
+          [id]="'star5'">
         </c3m-radio-item>
       </c3m-radio>
     </div>
@@ -183,6 +190,35 @@
     [id]=&#34;'best2'&#34;&gt;
   &lt;/c3m-radio-item&gt;
 &lt;/c3m-radio&gt;
+
+&lt;!-- SWITCH --&gt;
+  &lt;c3m-radio class=&#34;switch&#34; legend=&#34;Check the star&#34;&gt;
+    &lt;c3m-radio-item
+      title=&#34;Wars&#34;
+      name=&#34;starS&#34;
+      value=&#34;star1&#34;
+      [id]=&#34;'star1'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Trek&#34;
+      name=&#34;starS&#34;
+      value=&#34;star2&#34;
+      checked=&#34;checked&#34;
+      [id]=&#34;'star2'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Gate&#34;
+      name=&#34;starS&#34;
+      value=&#34;star3&#34;
+      [id]=&#34;'star3'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Dust&#34;
+      name=&#34;starS&#34;
+      value=&#34;star5&#34;
+      [id]=&#34;'star5'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+  &lt;/c3m-radio&gt;
             </pre>
         </div>
       </c3m-tab>

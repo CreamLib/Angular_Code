@@ -1,6 +1,6 @@
 <!-- TITLE SLIDER COMPONENT PAGE -->
 <div class="panelTitle">
-  <h2><strong>Checkbox</strong> Component</h2>
+  <h2><strong>Checkboxes</strong></h2>
   <ul>
     <li><a scrollTo href="#checkbox">Checkboxes</a></li>
     <li><a scrollTo href="#checkbox-group">Checkbox Group</a></li>
@@ -27,6 +27,15 @@
         <span>Github</span></a>
     </h3>
 
+    <div class="demo">
+      <!-- SIMPLE CHECKBOX -->
+      <c3m-checkbox
+        title="Do you want check me?"
+        name="checkboxName1"
+        value="checkboxValue1"
+        [id]="'checkbox1'">
+      </c3m-checkbox>
+    </div>
 
     <div class="explain">
       <dl>
@@ -59,16 +68,6 @@
           <dd>disable the checkbox (optional)</dd>
         </div>
       </dl>
-    </div>
-
-    <div class="demo">
-      <!-- SIMPLE CHECKBOX -->
-      <c3m-checkbox
-        title="Do you want check me?"
-        name="checkboxName1"
-        value="checkboxValue1"
-        [id]="'checkbox1'">
-      </c3m-checkbox>
     </div>
 
     <h4>Custom checkbox (add the <code>custom</code> class)</h4>
