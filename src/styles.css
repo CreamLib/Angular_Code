@@ -307,8 +307,8 @@ article.post {
 
    /* GitHub Button */
   .titleComponent .gitBtn {
+		display: none;
 			position: absolute;
-			display: inline-block;
 			overflow: hidden;
 			width: 35px;
 			height: 35px;
@@ -325,7 +325,7 @@ article.post {
   }
       /* Git Hub IMG */
       .titleComponent .gitBtn svg {
-				display: inline-block;
+				display: none;
 				position: relative;
 				top: 6px;
 				left: 6px;
@@ -565,6 +565,7 @@ c3m-tabs li.L9 {
 @media screen and (min-width: 1000px) {
 
 		.titleComponent .gitBtn {
+			display: none;
 			width: 5.8em;
 			font-size: 75%;
 			text-decoration: none;

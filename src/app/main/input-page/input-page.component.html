@@ -5,9 +5,11 @@
       <li><a scrollTo href="#input">Regular Text Input</a></li>
       <!--li><a scrollTo href="#input-floating">Input Floating Label</a></li>
       <li><a scrollTo href="#input-material">Input Floating Material</a></li-->
-      <li><a scrollTo href="#input-search">Input Search</a></li>
-      <li><a scrollTo href="#input-tel">Input Phone</a></li>
-      <li><a scrollTo href="#input-mail">Input Mail</a></li>
+      <li><a scrollTo href="#input-search">Search Input</a></li>
+      <li><a scrollTo href="#input-tel">Phone Input</a></li>
+      <li><a scrollTo href="#input-mail">E-mail Input</a></li>
+      <li><a scrollTo href="#input-url">URL Input</a></li>
+      <li><a scrollTo href="#input-password">Password Input</a></li>
       <li><a scrollTo href="#input-error-msg">Contextual Error Message</a></li>
     </ul>
 </div>
@@ -92,6 +94,7 @@
         <c3m-input
           [id]="'name2'"
           name="name2"
+          value="Peter Parker"
           required="required">
           Enter your name
         </c3m-input>
@@ -362,7 +365,7 @@ id=&#34;name3&#34;&gt;
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Input Phone
+      Phone Input
 
       <a href="https://github.com/CreamNG/Components/tree/master/input-tel" class="gitBtn" target="_blank">
         <svg>
@@ -434,6 +437,124 @@ id=&#34;name3&#34;&gt;
   </div>
 </div>
 
+<!-- URL -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-url">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      URL Input
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-url" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+
+    <div class="demo">
+      <div class="containerForDemo">
+        <!-- INPUT URL -->
+        <c3m-input-url
+          id="'myUrl'"
+          name="myUrl"
+          placeholder="http://">
+          URL of your personal site
+        </c3m-input-url>
+      </div>
+    </div>
+    <div class="explain">
+      <p>The input type <code>url</code> will inherit all attributes from the generic <code>input</code> element.</p>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- INPUT URL --&gt;
+  &lt;c3m-input-url
+    id=&#34;'myUrl'&#34;
+    name=&#34;myUrl&#34;
+    placeholder=&#34;http://&#34;&gt;
+    URL of your personal site
+  &lt;/c3m-input-url&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+<!-- URL -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="input-password">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Password Input
+
+      <a href="https://github.com/CreamNG/Components/tree/master/input-password" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+
+    <div class="demo">
+      <div class="containerForDemo">
+        <!-- INPUT PASSWORD -->
+        <c3m-input-password
+          id="'myPwd'"
+          name="myPwd"
+          required="required">
+          Password
+        </c3m-input-password>
+      </div>
+    </div>
+    <div class="explain">
+      <p>The input type <code>password</code> will inherit all attributes from the generic <code>input</code> element.</p>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;c3m-input-password
+  id=&#34;'myPwd'&#34;
+  name=&#34;myPwd&#34;&gt;
+  required=&#34;required&#34;&gt;
+  Password
+&lt;/c3m-input-password&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
 
 <!-- INPUT TYPE MAIL -->
 <div class="titleComponent">
@@ -442,7 +563,7 @@ id=&#34;name3&#34;&gt;
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Input Mail
+       E-mail Input
 
       <a href="https://github.com/CreamNG/Components/tree/master/input-mail" class="gitBtn" target="_blank">
         <svg>
@@ -500,8 +621,6 @@ id=&#34;name3&#34;&gt;
     </c3m-tabs>
   </div>
 </div>
-
-
 
 <!-- ERRO RMESSAGE -->
 <div class="titleComponent">

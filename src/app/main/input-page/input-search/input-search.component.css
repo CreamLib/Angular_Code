@@ -9,3 +9,9 @@ c3m-input-search circle {
 c3m-input-search button:hover circle, c3m-input-search button:focus circle {
   fill: var(--sec-color);
 }
+
+c3m-input-search[required] label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}

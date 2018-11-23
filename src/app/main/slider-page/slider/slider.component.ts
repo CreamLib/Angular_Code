@@ -12,8 +12,8 @@ export class SliderComponent implements AfterViewInit {
     @Input() id: string;
     @Input() name: string;
     @Input() value: string;
-    @Input() min: string;
-    @Input() max: string;
+    @Input() min;
+    @Input() max;
     @Input() step: string;
     @Input() required: boolean;
     @Input() disabled: boolean;
