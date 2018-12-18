@@ -1,6 +1,6 @@
 /* Input  */
 c3m-button-submit input {
-    font: 1em "quicksandregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 100/1 var(--stack);
     color: #FFF;
     background: rgb(105, 105, 105);
     padding: 0.5rem 1rem 0.5rem 1rem;

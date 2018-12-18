@@ -417,7 +417,10 @@ div.tip {
 	background-color: rgba(var(--green), 0.1);
 	padding: 1rem;
 }
-	div.tip svg {margin-right: 1rem;}
+	div.tip svg {
+		min-width: 46px;
+		margin-right: 1rem;
+	}
 	div.tip p {line-height: 1.5;}
 
 /* **************** CODE SNIPPPEETTSS *************** */

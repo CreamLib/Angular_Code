@@ -87,6 +87,7 @@ import { InputSearchComponent } from './main/input-page/input-search/input-searc
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { InputUrlComponent } from './main/input-page/input-url/input-url.component';
 import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
+import { ButtonIconComponent } from './main/button-page/button-icon/button-icon.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -201,6 +202,7 @@ export const appRoutes: Routes = [
     ProgressComponent,
     InputUrlComponent,
     InputPasswordComponent,
+    ButtonIconComponent,
   ],
   imports: [
     BrowserModule,

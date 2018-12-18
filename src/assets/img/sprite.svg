@@ -1,0 +1,18 @@
+<svg id="c51c125e-68df-4fa1-8327-1d06a635c1ea" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="18.12" height="266.87" viewBox="0 0 18.12 266.87">
+  <title>sprite</title>
+  <g>
+    <rect x="2.65" y="2.43" width="13.35" height="2.63" style="fill: #fff"/>
+    <rect x="3.36" y="6.47" width="11.93" height="11.53" style="fill: #fff"/>
+    <rect x="7.2" width="4.25" height="1.62" style="fill: #fff"/>
+  </g>
+  <g>
+    <polygon points="0.59 102.38 5.67 100.74 2.03 97.2 0.59 102.38" style="fill: #fff"/>
+    <rect x="7.24" y="85.36" width="5.07" height="15.04" transform="translate(-48.01 166.25) rotate(-135.76)" style="fill: #fff"/>
+    <path d="M13.92,84.86H19a0,0,0,0,1,0,0v0a2.31,2.31,0,0,1-2.31,2.31h-.45a2.31,2.31,0,0,1-2.31-2.31v0A0,0,0,0,1,13.92,84.86Z" transform="translate(-31.77 159.13) rotate(-135.76)" style="fill: #fff"/>
+  </g>
+  <g>
+    <polygon points="12.23 184.78 12.23 176.3 6.88 176.3 6.88 184.78 4.44 184.78 9.56 190.59 14.68 184.78 12.23 184.78" style="fill: #fff"/>
+    <rect x="2.13" y="192.88" width="14.86" height="1.42" style="fill: #fff"/>
+  </g>
+  <polygon points="18 255.79 11.08 255.79 11.08 248.87 6.92 248.87 6.92 255.79 0 255.79 0 259.95 6.92 259.95 6.92 266.87 11.08 266.87 11.08 259.95 18 259.95 18 255.79" style="fill: #fff"/>
+</svg>
