@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { from } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { PagerService } from './pager.service';
 
 
@@ -28,8 +29,8 @@ export class PaginationComponent implements OnInit {
     // On Init
     ngOnInit() {
         // Get Data of a JSON (or other...)
-        this.http.get('assets/json/dataPagination.json')
-            .map((response: Response) => response.json()) // Specify JSON type
+        from(this.http.get('assets/json/dataPagination.json'))
+            .pipe(map((response: Response) => response.json())) // Specify JSON type
             .subscribe(data => {
                 // Set items to response Json
                 this.allItems = data;

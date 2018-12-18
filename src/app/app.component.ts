@@ -1,6 +1,8 @@
 import { Component, Input, AfterViewChecked, ViewChild } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { from } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -45,8 +47,8 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-HTML');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.html';
-        this.http.get(file2Read)
-          .map((response: Response) => response.text())
+        from(this.http.get(file2Read))
+          .pipe(map((response: Response) => response.text()))
           .subscribe(data => {
             for (let y = 0; y < charArray.length; y++) {
               const pp = new RegExp(charArray[y], 'g');
@@ -58,8 +60,8 @@ public codeSnippets(subComp) {
           });
           if (subComp) {
             file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + subComp + '/' + subComp + '.component.html';
-            this.http.get(file2Read)
-              .map((response: Response) => response.text())
+            from(this.http.get(file2Read))
+              .pipe(map((response: Response) => response.text()))
               .subscribe(data => {
                 for (let y = 0; y < charArray.length; y++) {
                   const pp = new RegExp(charArray[y], 'g');
@@ -77,8 +79,8 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-CSS');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.css';
-        this.http.get(file2Read)
-          .map((response: Response) => response.text())
+        from(this.http.get(file2Read))
+          .pipe(map((response: Response) => response.text()))
           .subscribe(data => {
             for (let y = 0; y < charArray.length; y++) {
               const pp = new RegExp(charArray[y], 'g');
@@ -90,8 +92,8 @@ public codeSnippets(subComp) {
           });
           if (subComp) {
             file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + subComp + '/' + subComp + '.component.css';
-            this.http.get(file2Read)
-              .map((response: Response) => response.text())
+            from(this.http.get(file2Read))
+              .pipe(map((response: Response) => response.text()))
               .subscribe(data => {
                 for (let y = 0; y < charArray.length; y++) {
                   const pp = new RegExp(charArray[y], 'g');
@@ -109,8 +111,8 @@ public codeSnippets(subComp) {
         output = document.getElementById(compBlockId + '-TS');
 
         file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + compBlockId + '.component.ts';
-        this.http.get(file2Read)
-          .map((response: Response) => response.text())
+        from(this.http.get(file2Read))
+          .pipe(map((response: Response) => response.text()))
           .subscribe(data => {
             for (let y = 0; y < charArray.length; y++) {
               const pp = new RegExp(charArray[y], 'g');
@@ -123,7 +125,7 @@ public codeSnippets(subComp) {
           if (subComp) {
             file2Read = 'app/main/' + mainFolder + '-page/' + compBlockId + '/' + subComp + '/' + subComp + '.component.ts';
             this.http.get(file2Read)
-              .map((response: Response) => response.text())
+              .pipe(map((response: Response) => response.text()))
               .subscribe(data => {
                 for (let y = 0; y < charArray.length; y++) {
                   const pp = new RegExp(charArray[y], 'g');

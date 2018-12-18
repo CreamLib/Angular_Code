@@ -6,7 +6,8 @@ import {
   Params,
   PRIMARY_OUTLET
 } from "@angular/router";
-import "rxjs/add/operator/filter";
+import { from } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { IBreadcrumb } from "./breadcrumbs.model";
 import { BreadcrumbsService } from "./breadcrumbs.service";
 
@@ -43,8 +44,8 @@ export class BreadcrumbsComponent implements OnInit {
     const ROUTE_PARAM_BREADCRUMB: string = "breadcrumb";
     const PREFIX_BREADCRUMB: string = "prefixBreadcrumb";
     // subscribe to the NavigationEnd event
-    this.router.events
-      .filter(event => event instanceof NavigationEnd)
+    from(this.router.events)
+      .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(event => {
         // reset currentBreadcrumbs
         this.currentBreadcrumbs = [];

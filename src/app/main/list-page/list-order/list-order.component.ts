@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation, Input} from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { from } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'c3m-list-order',
@@ -23,8 +24,8 @@ export class ListOrderComponent implements OnInit {
   // On Init
   ngOnInit() {
       // Get Data of a JSON (or other...)
-      this.http.get('assets/json/dataList.json')
-          .map((response: Response) => response.json()) // Specify JSON type
+      from(this.http.get('assets/json/dataList.json'))
+          .pipe(map((response: Response) => response.json())) // Specify JSON type
           .subscribe(data => {
               // Set items to response Json
               this.listItem = data;
