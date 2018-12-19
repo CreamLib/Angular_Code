@@ -1,54 +1,51 @@
+<div id="application" role="application">
+  <label id="date_label" for="date">Date</label>
+  <input id="date" type="text" value={{targetString}} />
 
+  <button id="bn_date">Select Date</button>
 
-   <div id="application" role="application">
-   <label id="date_label" for="date">Date</label>
-   <input id="date" type="text" value={{targetString}} />
+  <div id="dp1" class="datepicker" aria-hidden="true">
 
-    <button id="bn_date">Select Date</button>
+    <table id="cal" aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0">
 
-    <div id="dp1" class="datepicker" aria-hidden="true">
-
-      <div id="month-wrap">
+      <caption id="month-wrap">
         <button id="bn_prev" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0">
-          <svg>
-            <use xlink:href="#leftCalendarSvg"></use>
-          </svg>
-          </button>
+           <svg>
+             <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
+           </svg>
+         </button>
 
-          <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">
-             {{ monthString }}
-          </strong>
+        <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">{{ monthString }}</strong>
 
-          <button id="bn_next" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0">
-            <svg>
-              <use xlink:href="#rightCalendarSvg"></use>
-            </svg>
-          </button>
-     </div>
+        <button id="bn_next" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0">
+         <svg>
+           <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
+         </svg>
+        </button>
+      </caption>
+      
+      <thead>
 
-       <table id="cal" aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0">
-          <thead>
+        <tr id="weekdays">
+          <th scope="col" id="Sunday"><abbr title="Sunday">Su</abbr></th>
+          <th scope="col" id="Monday"><abbr title="Monday">Mo</abbr></th>
+          <th scope="col" id="Tuesday"><abbr title="Tuesday">Tu</abbr></th>
+          <th scope="col" id="Wednesday"><abbr title="Wednesday">We</abbr></th>
+          <th scope="col" id="Thursday"><abbr title="Thursday">Th</abbr></th>
+          <th scope="col" id="Friday"><abbr title="Friday">Fr</abbr></th>
+          <th scope="col" id="Saturday"><abbr title="Saturday">Sa</abbr></th>
+        </tr>
+      </thead>
 
-             <tr id="weekdays">
-                <th scope="col" id="Sunday"><abbr title="Sunday">Su</abbr></th>
-                <th scope="col" id="Monday"><abbr title="Monday">Mo</abbr></th>
-                <th scope="col" id="Tuesday"><abbr title="Tuesday">Tu</abbr></th>
-                <th scope="col" id="Wednesday"><abbr title="Wednesday">We</abbr></th>
-                <th scope="col" id="Thursday"><abbr title="Thursday">Th</abbr></th>
-                <th scope="col" id="Friday"><abbr title="Friday">Fr</abbr></th>
-                <th scope="col" id="Saturday"><abbr title="Saturday">Sa</abbr></th>
-             </tr>
-          </thead>
+      <tbody>
+        <tr>
+          <td id="errMsg" colspan="7">Javascript must be enabled</td>
+        </tr>
+      </tbody>
 
-          <tbody>
-             <tr>
-               <td id="errMsg" colspan="7">Javascript must be enabled</td>
-              </tr>
-          </tbody>
+    </table>
 
-       </table>
-
-       <button id="bn_prev-label" class="offscreen">Go to previous month</button>
-       <button id="bn_next-label" class="offscreen">Go to next month</button>
-    </div>
+    <button id="bn_prev-label" class="offscreen">Go to previous month</button>
+    <button id="bn_next-label" class="offscreen">Go to next month</button>
   </div>
+</div>

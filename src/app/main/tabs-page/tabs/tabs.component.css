@@ -33,6 +33,7 @@ c3m-tab .content[aria-hidden="true"] {
 
 .tabsContainer > ul li.over button {
   background-color: var(--body-bg);
+  border-radius: 0;
 }
 .tabsContainer > ul li.over.active button,
   .tabsContainer > ul li.over button:hover,

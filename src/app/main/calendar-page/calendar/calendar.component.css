@@ -1,59 +1,32 @@
-c3m-calendar div > label{
-  display: block;
-  font-size: 1.1rem;
+
+c3m-calendar div > input {max-width: 9em;}
+
+c3m-calendar div > button {
+  color: var(--text-inv);
+  background-color: var(--n-dark);
 }
-c3m-calendar div > input{
-  display: inline-block;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
-  padding-left: 0.3rem;
-}
-c3m-calendar div > button{
-  display: inline-block;
-  color: white;
-  background-color: #45ABBC;
-  font-size: 1rem;
-  padding: 0.2rem;
-  border: none;
-  cursor :pointer;
-}
-  c3m-calendar button:hover {
-    opacity: 0.8;
-  }
+  c3m-calendar button:hover {opacity: 0.8;}
 
 c3m-calendar .datepicker {
   margin: 0.5rem;
   position: absolute;
   width: 250px;
-  background-color: #fff;
+  background-color: var(--body-bg);
   border: none;
-  border-radius: 3px;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
 }
-c3m-calendar div#month-wrap {
-  height: 2.3rem;
-  background-color: #45ABBC;
-  border-radius: 3px 3px 0 0;
-  color: white;
+c3m-calendar caption {
+  display: flex;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-radius: 0.3rem 0.3rem 0 0;
 }
-  c3m-calendar div#month-wrap strong {
-    display: inline-block;
-    margin-top: 0.6rem;
-    text-align: center;
-    width: 11rem;
-  }
-  c3m-calendar div#month-wrap > button{
-    height: 2.3rem;
-    width: 2.3rem;
-    background-color: initial;
-    cursor: pointer;
-  }
-c3m-calendar #bn_prev {
-  float: left;
-}
-c3m-calendar #bn_next {
-  float: right
-}
-c3m-calendar table thead{
+  c3m-calendar caption strong {display: inline-block;}
+
+  c3m-calendar caption button {}
+
+c3m-calendar table thead {
   margin-top: 2rem;
   line-height: 2.2rem;
 }

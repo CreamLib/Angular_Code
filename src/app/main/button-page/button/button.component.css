@@ -2,9 +2,6 @@
  c3m-button button {
     color: var(--text-inv);
     background: var(--main-color);
-    padding: 0.5rem 1rem;
-    border-radius: 0.3em;
-    cursor: pointer;
   }
       /* BUTTON HOVER */
       c3m-button button:hover {opacity: 0.8;}

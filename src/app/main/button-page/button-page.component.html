@@ -4,6 +4,7 @@
   <ul>
     <li><a scrollTo href="#button">General buttons</a></li>
     <li><a scrollTo href="#button-icon">Button with icons</a></li>
+    <li><a scrollTo href="#button-icon-only">Button with icons only</a></li>
     <li><a scrollTo href="#button-file">Upload</a></li>
     <li><a scrollTo href="#button-submit">Submit</a></li>
   </ul>
@@ -72,7 +73,7 @@
     </c3m-tabs>
   </div>
 
-<!-- ICON BUTTONS -->
+<!-- ICONS BUTTONS -->
 <div class="descriptionComponent" id="button-icon">
   <h3>
     <!-- GitHub SVG -->
@@ -127,6 +128,60 @@
   </c3m-tabs>
 </div>
 
+<!-- ICON ONLY BUTTONS -->
+<div class="descriptionComponent" id="button-icon-only">
+  <h3>
+    <!-- GitHub SVG -->
+    <svg>
+      <use xlink:href="#gitListItem"></use>
+    </svg>
+    Buttons With Icons Only
+
+    <!-- GitHub Repo Link -->
+    <a href="https://github.com/CreamNG/Components/tree/master/button" class="gitBtn" target="_blank">
+      <svg>
+        <use xlink:href="assets/img/icons.svg#gitSvg"></use>
+      </svg>
+
+      <span>Github</span></a>
+  </h3>
+
+  <!-- Demo -->
+  <div class="demo">
+    <c3m-button-icon-only class="icon-delete">Delete</c3m-button-icon-only>
+    <c3m-button-icon-only class="icon-edit">Edit</c3m-button-icon-only>
+    <c3m-button-icon-only class="icon-add">Add</c3m-button-icon-only>
+  </div>
+
+  <!-- CODE SNIPPETS -->
+  <c3m-tabs class="snippets">
+
+    <!-- SNIPPETS HTML -->
+    <c3m-tab tabTitle="HTML">
+      <p class="pre-code"> To call the component </p>
+      <div class="code">
+        <!--?prettify lang=html linenums=true?-->
+        <pre class="prettyprint linenums">
+                    <code>
+&lt;c3m-button-icon-only class=&#34;icon-delete&#34;&gt;Delete&lt;/c3m-button-icon-only&gt;
+&lt;c3m-button-icon-only class=&#34;icon-edit&#34;&gt;Edit&lt;/c3m-button-icon-only&gt;
+&lt;c3m-button-icon-only class=&#34;icon-add&#34;&gt;Add&lt;/c3m-button-icon-only&gt;
+</code>
+                </pre>
+      </div>
+
+
+    </c3m-tab>
+
+    <!-- SNIPPETS CSS -->
+    <c3m-tab tabTitle="CSS">
+    </c3m-tab>
+
+    <!-- SNIPPETS TYPESCRIPT -->
+    <c3m-tab tabTitle="TypeScript">
+    </c3m-tab>
+  </c3m-tabs>
+</div>
 
   <!-- UPLOAD BUTTON -->
   <div class="descriptionComponent" id="button-file">

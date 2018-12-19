@@ -74,8 +74,9 @@ em {
 
 button {
 	font: 100%/1 var(--stack-m);
-	padding: 0;
+	padding: 0.5rem 1rem;
 	border: none;
+	border-radius: 0.3em;
 	cursor: pointer;
 }
 abbr {cursor: help;}

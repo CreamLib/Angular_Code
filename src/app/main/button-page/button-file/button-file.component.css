@@ -1,13 +1,10 @@
 /* Label */
 c3m-button-file label {
     display: inline-block;
-    color: #FFF;
-    background-color: var(--main-color);
-    background-image: url(/assets/img/sprite.svg);
-    background-position: 0.5em -242px;
-    background-repeat: no-repeat;
+    color: var(--text-inv);
+    background: var(--main-color) url(/assets/img/sprite.svg) 0.5em -242px no-repeat;
     padding: 0.5rem 1rem 0.5rem 2rem;
-    border-radius: 3px;
+    border-radius: 0.3em;
     cursor: pointer;
 }
   /* Label Hover */
