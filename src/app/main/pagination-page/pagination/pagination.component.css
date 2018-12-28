@@ -42,7 +42,7 @@ c3m-pagination .paginationContainer{
 
            /* Pagination List Item Button */
            c3m-pagination .pagination button{
-               background-color: initial;
+               background-color: transparent;
                height: 100%;
                width: 100%;
                color:white;

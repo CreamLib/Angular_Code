@@ -115,6 +115,7 @@ code {
 ::-webkit-scrollbar-track {
 	border: 1px #dbd8d8 solid;
 	border-radius:10px;
+	box-shadow: 0 0 6px #dbd8d8 inset;
 	-webkit-box-shadow:0 0 6px #dbd8d8 inset;
 }
 ::-webkit-scrollbar-thumb {
@@ -136,7 +137,6 @@ code {
 c3m-breadcrumbs {display: none;}
 div.demo c3m-breadcrumbs {display: block;}
 
-main {}
 
 /* *********** FORMS ************* */
 
@@ -193,8 +193,6 @@ article.post {
 		font-family: var(--stack-b);
 		text-decoration: underline;
 	}
-		article.post a:visited {
-		}
 		article.post a:hover, article.post a:focus {
 			text-decoration: none;
 		}
@@ -478,7 +476,7 @@ c3m-tabs li.L3,
 c3m-tabs li.L5,
 c3m-tabs li.L7,
 c3m-tabs li.L9 {
-  background: initial;
+  background: var(--n-dark);
   padding: 0.2rem 0;
 }
 

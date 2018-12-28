@@ -44,7 +44,7 @@ c3m-accordion-item > li > button {
   line-height: 1.7rem;
   text-align: left;
   color: #FFF;
-  background-color: initial;
+  background-color: var(--main-light);
   background-size: 2.1rem;
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   cursor: pointer;

@@ -39,7 +39,7 @@ c3m-carousel .carousel{
                 c3m-carousel .bulletpoint li button{
                     height: 100%;
                     width: 100%;
-                    background-color: initial;
+                    background-color: transparent;
                     cursor: pointer;
                 }
                     c3m-carousel .bulletpoint li[aria-selected="true"]{
