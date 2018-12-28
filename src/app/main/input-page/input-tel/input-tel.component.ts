@@ -9,10 +9,16 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class InputTelComponent implements OnInit {
 
  // Inputs
-  @Input() title;
-  @Input() placeholder = '';
-  @Input() name;
-  @Input() id = '';
+ @Input() id = '';
+ @Input() name = '';
+ @Input() value = '';
+ @Input() autocomplete = 'on';
+ @Input() maxlength = '';
+ @Input() pattern = '';
+ @Input() title = '';
+ @Input() required: boolean;
+ @Input() disabled: boolean;
+ @Input() placeholder = '';
 
   constructor() { }
 

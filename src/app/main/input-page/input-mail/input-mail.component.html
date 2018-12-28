@@ -1,4 +1,12 @@
 <p>
-  <label for="{{id}}" >{{ this.title }}</label>
-  <input type="email" [placeholder]=placeholder id="{{id}}" [name]=this.name />
+  <label for="{{id}}"><ng-content></ng-content></label>
+  <input type="email"
+    id = "{{id}}"
+    [name] = this.name
+    [value] = value
+    [autocomplete] = autocomplete
+    [multiple] = 'multiple'
+    [required] = 'required'
+    [disabled] = 'disabled'
+    [placeholder] = placeholder />
 </p>

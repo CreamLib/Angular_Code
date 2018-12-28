@@ -1,9 +1,9 @@
 <!-- TITLE SLIDER COMPONENT PAGE -->
 <div class="panelTitle">
-  <h2><strong>Slider</strong> Component</h2>
+  <h2><strong>Sliders  &amp; Progress</strong></h2>
   <ul>
-    <li><a scrollTo href="#slider">Regular Slider</a></li>
-    <li><a scrollTo href="#slider-bubble">Tooltip Slider</a></li>
+    <li><a scrollTo href="#slider">Slider</a></li>
+    <li><a scrollTo href="#progress">Progress Bar</a></li>
   </ul>
 </div>
 
@@ -15,49 +15,83 @@
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Regular Slider
+      Slider
 
       <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
         <svg>
-          <use xlink:href="#gitSvg"></use>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
         <span>Github</span></a>
     </h3>
-    <p>Regular slider with OUTPUT tag.</p>
 
     <div class="demo">
       <!-- SIMPLE SLIDER -->
       <c3m-slider
-            title="Choose a value"
-            min="0"
-            max="50"
-            value="45"
-            step="1">
+        [id]="'slider1'"
+        name="checkboxName1"
+        min="0"
+        max="50"
+        value="45"
+        step="1">
+        Choose a value
       </c3m-slider>
     </div>
 
     <div class="explain">
       <dl>
-        <dt>title</dt>
-        <dd>The label tag</dd>
+        <div>
+          <dt>id</dt>
+          <dd>single field identifier</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>general field identifier</dd>
+        </div>
+        <div>
+          <dt>min</dt>
+          <dd>minimum slider value</dd>
+        </div>
+        <div>
+          <dt>max</dt>
+          <dd>maximum slider value</dd>
+        </div>
+        <div>
+          <dt>value</dt>
+          <dd>default value</dd>
+        </div>
+        <div>
+          <dt>step</dt>
+          <dd>steps value (integer or float)</dd>
+        </div>
+        <div>
+          <dt>class (optional)</dt>
+          <dd><em>bubble</em></dd>
+        </div>
       </dl>
-      <dl>
-        <dt>min</dt>
-        <dd>Minimum slider value</dd>
-      </dl>
-      <dl>
-        <dt>max</dt>
-        <dd>Maximum slider value</dd>
-      </dl>
-      <dl>
-        <dt>step</dt>
-        <dd>Steps value (Integer or Float)</dd>
-      </dl>
-      <dl>
-        <dt>value</dt>
-        <dd>Default value</dd>
-      </dl>
+    </div>
+
+    <h4>Tooltip Slider</h4>
+    <div class="explain">
+      <p>The current value is displayed in a sliding tooltip.</p>
+    </div>
+
+    <div class="demo">
+      <!-- SLIDER WITH BUBBLE -->
+      <c3m-slider
+        [id]="'slider2'"
+        min="0"
+        max="100"
+        value="30"
+        step="1"
+        class="bubble">
+        Slider with Bubble
+      </c3m-slider>
+    </div>
+
+    <div class="explain">
+      <p>Just add the class <em>bubble</em> when calling the <code>c3m-slider</code> component
+        to display the <code>output</code> element as a tooltip.</p>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -67,14 +101,16 @@
         <div class="code">
            <!--?prettify lang=html linenums=true?-->
             <pre class="prettyprint linenums">
-  &#x3C;!-- SIMPLE SLIDER --&#x3E;
-    &#x3C;c3m-slider
-          title=&#x22;Simple Slider&#x22;
-          min=&#x22;0&#x22;
-          max=&#x22;50&#x22;
-          value=&#x22;45&#x22;
-          step=&#x22;1&#x22;&#x3E;
-    &#x3C;/c3m-slider&#x3E;
+&lt;!-- SIMPLE SLIDER --&gt;
+  &lt;c3m-slider
+    [id]=&#34;'slider1'&#34;
+    name=&#34;checkboxName1&#34;
+    min=&#34;0&#34;
+    max=&#34;50&#34;
+    value=&#34;45&#34;
+    step=&#34;1&#34;&gt;
+    Choose a value
+&lt;/c3m-slider&gt;
             </pre>
         </div>
       </c3m-tab>
@@ -90,40 +126,83 @@
 </div>
 
 <div class="titleComponent">
-  <div class="demoComponent" id="slider-bubble">
+  <div class="descriptionComponent" id="progress">
     <h3>
       <svg>
         <use xlink:href="#gitListItem"></use>
       </svg>
-      Tooltip Slider
+      Progress Bar
 
-      <a href="https://github.com/CreamNG/Components/tree/master/slider" class="gitBtn" target="_blank">
+      <a href="https://github.com/CreamNG/Components/tree/master/progress" class="gitBtn" target="_blank">
         <svg>
-          <use xlink:href="#gitSvg"></use>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
         <span>Github</span></a>
     </h3>
 
-    <div class="explain">
-      <p>The current value is displayed in a sliding tooltip.</p>
-    </div>
-
     <div class="demo">
-      <!-- SLIDER WITH BUBBLE -->
-      <c3m-slider
-              title="Slider with Bubble"
-              min="0"
-              max="100"
-              value="30"
-              step="1"
-              class="bubble">
-      </c3m-slider>
+      <!-- SIMPLE PROGRESS BAR -->
+      <c3m-progress
+        [id]="'prog1'"
+        name="prog1"
+        max="100"
+        value="30">
+        Progress
+      </c3m-progress>
     </div>
 
     <div class="explain">
-      <p>Just add the <strong>class="bubble"</strong> when calling the <code>c3m-slider</code> component
-        to display the OUTPUT element as a tooltip.</p>
+      <dl>
+        <div>
+          <dt>id</dt>
+          <dd>single field identifier</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>general field identifier</dd>
+        </div>
+        <div>
+          <dt>value</dt>
+          <dd>indicates progress (floating between 0 and <code>max</code>)</dd>
+        </div>
+        <div>
+          <dt>max</dt>
+          <dd>maximum progress value, defaults to 1 (optional)</dd>
+        </div>
+        <div>
+          <dt>disabled</dt>
+          <dd>when present, the element is disabled/read-only (optional)</dd>
+        </div>
+      </dl>
     </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- SIMPLE PROGRESS BAR --&gt;
+  &lt;c3m-progress
+    [id]=&#34;'prog1'&#34;
+    name=&#34;prog1&#34;
+    title=&#34;Progress&#34;
+    max=&#34;100&#34;
+    value=&#34;30&#34;&gt;
+    Progress
+  &lt;/c3m-progress&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
   </div>
 </div>

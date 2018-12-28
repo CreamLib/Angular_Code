@@ -9,11 +9,14 @@ import {Component, ElementRef, Input, AfterViewInit, ViewChild, ViewEncapsulatio
 export class SliderComponent implements AfterViewInit {
 
     /* INPUTS */
+    @Input() id: string;
+    @Input() name: string;
+    @Input() value: string;
     @Input() min;
     @Input() max;
-    @Input() step;
-    @Input() value;
-    @Input() title;
+    @Input() step: string;
+    @Input() required: boolean;
+    @Input() disabled: boolean;
 
     /* CHILDRENS */
     @ViewChild('slider') input: ElementRef;

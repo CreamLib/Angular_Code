@@ -1,0 +1,10 @@
+/* Input URL */
+c3m-input-url input {
+  width: 85%;
+  max-width: 22em;
+}
+c3m-input-url[required] label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}

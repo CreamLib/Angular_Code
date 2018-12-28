@@ -1,0 +1,62 @@
+c3m-radio {margin-bottom: 1rem;}
+
+  c3m-radio legend {
+    font: 1em/1 var(--stack-b);
+    padding-bottom: 1em;
+  }
+
+  c3m-radio label {
+    display: inline-block;
+    font-family: var(--stack);
+    padding: 0;
+  }
+
+/* Single line options */
+  c3m-radio.go-along ul {display: flex;}
+  c3m-radio.go-along c3m-radio-item + c3m-radio-item {margin-left: 1em;}
+
+/* Radio buttons */
+
+c3m-radio.switch {display: flex; position: relative;}
+
+  c3m-radio.switch li {display: inline-block;}
+
+  c3m-radio.switch input {
+    position: absolute;
+    width: 25px;
+    left: -35px;
+    opacity: 0;
+  }
+
+  c3m-radio.switch c3m-radio-item label {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: var(--n-dark);
+    background: var(--n-medium);
+    padding: 0.65em 0.8em 0.5em;
+    margin-left: -4px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    transition: all .5s;
+    cursor: pointer;
+  }
+  c3m-radio.switch c3m-radio-item:first-child label {
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    margin-left: 0;
+  }
+  c3m-radio.switch c3m-radio-item:last-child label {
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+  }
+
+  c3m-radio.switch input:checked + label {
+    color: var(--text-inv);
+    background-color: var(--main-color);
+  }
+
+
+@media screen and (min-width: 750px) {
+  c3m-radio legend {font-size: 1.3em;}
+}

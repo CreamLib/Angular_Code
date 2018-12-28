@@ -44,12 +44,12 @@ export class CalendarComponent implements OnInit {
      this.datepicker('dp1', 'date' , true);
      const thisObj = this;
 
-    /* LISTENER CLICK DATE BUTTON */
-    document.getElementById('bn_date').addEventListener('click', function(e) {
-      thisObj.showDlg(); // OPEN MODAL
-      e.stopPropagation();
-      return false;
-    });
+      /* LISTENER CLICK DATE BUTTON */
+      document.getElementById('bn_date').addEventListener('click', function(e) {
+        thisObj.showDlg(); // OPEN MODAL
+        e.stopPropagation();
+        return false;
+      });
     }
 
     /* ************** MAIN FUNCTION ************** */
@@ -803,5 +803,3 @@ export class CalendarComponent implements OnInit {
     return  new Date(year, month, 1).getDay();
   }
 }
-
-

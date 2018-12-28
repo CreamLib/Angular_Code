@@ -1,0 +1,234 @@
+<!-- TITLE SLIDER COMPONENT PAGE -->
+<div class="panelTitle">
+  <h2><strong>Radio</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="#radio">Radios</a></li>
+  </ul>
+</div>
+
+
+<!-- DESCRIPTION SLIDER COMPONENT PAGE -->
+<div class="titleComponent">
+  <div class="descriptionComponent" id="radio">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Radios
+
+      <a href="https://github.com/CreamNG/Components/tree/master/radio" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+
+    <div class="explain">
+      <p>Rememeber that all radios from the same group must share the same <code>name</code> attribute value.</p>
+      <dl>
+        <div>
+          <dt>title</dt>
+          <dd>The label description</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>The value of the <code>name</code> attribute</dd>
+        </div>
+        <div>
+          <dt>value</dt>
+          <dd>The value of the input <code>value</code> attribute</dd>
+        </div>
+        <div>
+          <dt>id</dt>
+          <dd>The value of the <code>id</code> attribute</dd>
+        </div>
+        <div>
+          <dt>checked</dt>
+          <dd>if present, checkbox will be checked (optional)</dd>
+        </div>
+        <div>
+          <dt>required</dt>
+          <dd>if present, check will be required on submit (optional)</dd>
+        </div>
+        <div>
+          <dt>disabled</dt>
+          <dd>disable the checkbox (optional)</dd>
+        </div>
+        <div>
+          <dt>classes (optional)</dt>
+          <dd><em>go-along</em>, <em>switch</em></dd>
+        </div>
+      </dl>
+
+      <div class="tip">
+        <svg width="40" height="40"><use href="assets/img/icons.svg#tip" /></svg>
+        <p>The <code>id</code> attribute of an input is very important for form accessibility. It allows
+        the user-agent to associate a label to its input.</p>
+      </div>
+    </div>
+
+    <div class="demo">
+      <!-- SIMPLE CHECKBOX -->
+      <c3m-radio legend="Which star do you prefer?">
+        <c3m-radio-item
+          title="Star Wars"
+          [id]="'series1'"
+          name="series"
+          value="series1">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Star Trek"
+          [id]="'series2'"
+          name="series"
+          value="series2"
+          checked="checked">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Star Gate"
+          [id]="'series3'"
+          name="series"
+          value="series3">
+        </c3m-radio-item>
+      </c3m-radio>
+    </div>
+
+    <h4>Single line radios (add the <em>go-along</em> class)</h4>
+
+    <div class="demo">
+      <!-- SIMPLE CHECKBOX -->
+      <c3m-radio class="go-along" legend="Star Trek is the best?">
+        <c3m-radio-item
+          title="Yes"
+          name="startrekisbest"
+          value="startrek"
+          [id]="'best1'">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="No"
+          name="startrekisbest"
+          value="other"
+          [id]="'best2'">
+        </c3m-radio-item>
+      </c3m-radio>
+    </div>
+
+    <h4>Switch radios (add the <em>switch</em> class)</h4>
+
+    <div class="demo">
+      <!-- SWITCH -->
+      <c3m-radio class="switch" legend="Check the star">
+        <c3m-radio-item
+          title="Wars"
+          name="starS"
+          value="star1"
+          [id]="'star1'">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Trek"
+          name="starS"
+          value="star2"
+          checked="checked"
+          [id]="'star2'">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Gate"
+          name="starS"
+          value="star3"
+          [id]="'star3'">
+        </c3m-radio-item>
+        <c3m-radio-item
+          title="Dust"
+          name="starS"
+          value="star5"
+          [id]="'star5'">
+        </c3m-radio-item>
+      </c3m-radio>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+           <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+&lt;!-- RADIOS --&gt;
+&lt;c3m-radio legend=&#34;Which star do you prefer?&#34;&gt;
+  &lt;c3m-radio-item
+    title=&#34;Star Wars&#34;
+    name=&#34;series&#34;
+    value=&#34;series1&#34;
+    [id]=&#34;'series1'&#34;&gt;
+  &lt;/c3m-radio-item&gt;
+  &lt;c3m-radio-item
+    title=&#34;Star Trek&#34;
+    name=&#34;series&#34;
+    value=&#34;series2&#34;
+    [id]=&#34;'series2'&#34;&gt;
+  &lt;/c3m-radio-item&gt;
+  &lt;c3m-radio-item
+    title=&#34;Star Gate&#34;
+    name=&#34;series&#34;
+    value=&#34;series3&#34;
+    [id]=&#34;'series3'&#34;&gt;
+  &lt;/c3m-radio-item&gt;
+&lt;/c3m-radio&gt;
+
+&lt;!-- RADIOS IN-LINE --&gt;
+&lt;c3m-radio class=&#34;go-along&#34; legend=&#34;Star Trek is the best?&#34;&gt;
+  &lt;c3m-radio-item
+    title=&#34;Yes&#34;
+    name=&#34;startrekisbest&#34;
+    value=&#34;startrek&#34;
+    [id]=&#34;'best1'&#34;&gt;
+  &lt;/c3m-radio-item&gt;
+  &lt;c3m-radio-item
+    title=&#34;No&#34;
+    name=&#34;startrekisbest&#34;
+    value=&#34;other&#34;
+    [id]=&#34;'best2'&#34;&gt;
+  &lt;/c3m-radio-item&gt;
+&lt;/c3m-radio&gt;
+
+&lt;!-- SWITCH --&gt;
+  &lt;c3m-radio class=&#34;switch&#34; legend=&#34;Check the star&#34;&gt;
+    &lt;c3m-radio-item
+      title=&#34;Wars&#34;
+      name=&#34;starS&#34;
+      value=&#34;star1&#34;
+      [id]=&#34;'star1'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Trek&#34;
+      name=&#34;starS&#34;
+      value=&#34;star2&#34;
+      checked=&#34;checked&#34;
+      [id]=&#34;'star2'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Gate&#34;
+      name=&#34;starS&#34;
+      value=&#34;star3&#34;
+      [id]=&#34;'star3'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+    &lt;c3m-radio-item
+      title=&#34;Dust&#34;
+      name=&#34;starS&#34;
+      value=&#34;star5&#34;
+      [id]=&#34;'star5'&#34;&gt;
+    &lt;/c3m-radio-item&gt;
+  &lt;/c3m-radio&gt;
+            </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>

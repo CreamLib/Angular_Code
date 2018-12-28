@@ -1,16 +1,10 @@
 <div class="panelTitle">
   <h2>
-    <strong>Select</strong> Component</h2>
+    <strong>Selects &amp; Datalists</strong></h2>
   <ul>
-    <li>
-      <a scrollTo href="#select">Regular Select</a>
-    </li>
-    <li>
-      <a scrollTo href="#select-datalist">Datalist</a>
-    </li>
-    <li>
-      <a scrollTo href="#select-datalists">Combined Datalists</a>
-    </li>
+    <li><a scrollTo href="#select">Regular Select</a></li>
+    <li><a scrollTo href="#select-datalist">Datalist</a></li>
+    <li><a scrollTo href="#select-datalists">Combined Datalists</a></li>
   </ul>
 </div>
 
@@ -25,34 +19,37 @@
 
       <a href="https://github.com/CreamNG/Components/tree/master/select" class="gitBtn" target="_blank">
         <svg>
-          <use xlink:href="#gitSvg"></use>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
         <span>Github</span>
       </a>
     </h3>
-    <p>Regular Select (JSON)</p>
 
-    <div class="demo">
+    <div class="explain">
+      <p>Regular select component with JSON input for options.</p>
+    </div>
+
+    <div class="demo" lang="en">
       <!-- SIMPLE SELECT -->
-      <c3m-select title="Choose something" name="Choose Something" [id]="'choice-something'">
+      <c3m-select title="Choose an answer" name="choice" [id]="'choice'">
       </c3m-select>
-
-
     </div>
 
     <div class="explain">
       <dl>
-        <dt>title</dt>
-        <dd>The Label of the Input</dd>
-      </dl>
-      <dl>
-        <dt>name</dt>
-        <dd>The name of the Input</dd>
-      </dl>
-      <dl>
-        <dt>id</dt>
-        <dd>The id of the Input and the "for" Label Attribute</dd>
+        <div>
+          <dt>title</dt>
+          <dd>The Label of the Input</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>The name of the Input</dd>
+        </div>
+        <div>
+          <dt>id</dt>
+          <dd>The id of the Input and the "for" Label Attribute</dd>
+        </div>
       </dl>
     </div>
 
@@ -96,36 +93,41 @@
 
       <a href="https://github.com/CreamNG/Components/tree/master/select-datalist" class="gitBtn" target="_blank">
         <svg>
-          <use xlink:href="#gitSvg"></use>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
         <span>Github</span>
       </a>
     </h3>
-    <p>Datalist - integrates the auto-completion system (JSON)</p>
+
+    <div class="explain">
+      <p>Integrates native auto-completion system, with JSON source input.</p>
+    </div>
 
     <div class="demo">
       <!-- Datalist Select -->
-      <c3m-select-datalist title="Choose Me" name="Choose Me" list="mylist1" [id]="'choice-me'">
+      <c3m-select-datalist title="Choose an answer" name="Choose Me" list="mylist1" [id]="'choose-me'">
       </c3m-select-datalist>
     </div>
 
     <div class="explain">
       <dl>
-        <dt>title</dt>
-        <dd>The Label of the Input</dd>
-      </dl>
-      <dl>
-        <dt>name</dt>
-        <dd>The name of the Input</dd>
-      </dl>
-      <dl>
-        <dt>list</dt>
-        <dd>Link between input and datalist</dd>
-      </dl>
-      <dl>
-        <dt>id</dt>
-        <dd>The id of the Input and the "for" Label Attribute</dd>
+        <div>
+          <dt>title</dt>
+          <dd>The Label of the Input</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>The name of the Input</dd>
+        </div>
+        <div>
+          <dt>list</dt>
+          <dd>Link between input and datalist</dd>
+        </div>
+        <div>
+          <dt>id</dt>
+          <dd>The id of the Input and the "for" Label Attribute</dd>
+        </div>
       </dl>
     </div>
 
@@ -169,15 +171,18 @@
 
       <a href="https://github.com/CreamNG/Components/tree/master/select-datalists" class="gitBtn" target="_blank">
         <svg>
-          <use xlink:href="#gitSvg"></use>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
         <span>Github</span>
       </a>
     </h3>
-    <p>Combined Datalists - You can associate two inputs to the same datalist.
-      Both datalists integrate the auto-completion system
-      (JSON) </p>
+
+    <div class="explain">
+      <p>You can associate two inputs to the same datalist.
+        Both datalists integrate the auto-completion system
+        (JSON).</p>
+    </div>
 
     <div class="demo">
       <!-- Datalists Select -->
@@ -188,36 +193,38 @@
 
     <div class="explain">
       <dl>
-        <dt>title1</dt>
-        <dd>Label of the first Input</dd>
-      </dl>
-      <dl>
-        <dt>title2</dt>
-        <dd>Label of the Second Input</dd>
-      </dl>
-      <dl>
-        <dt>name1</dt>
-        <dd>Name of the first Input</dd>
-      </dl>
-      <dl>
-        <dt>name2</dt>
-        <dd>Name of the first Input</dd>
-      </dl>
-      <dl>
-        <dt>title1</dt>
-        <dd>Label of the first Input</dd>
-      </dl>
-      <dl>
-        <dt>id1</dt>
-        <dd>ID of the first Input and "for" label attribute</dd>
-      </dl>
-      <dl>
-        <dt>id2</dt>
-        <dd>ID of the Second Input and "for" label attribute</dd>
-      </dl>
-      <dl>
-        <dt>list</dt>
-        <dd>Link between the DataList ID and the "list" attributes of the two lists</dd>
+        <div>
+          <dt>title1</dt>
+          <dd>Label of the first Input</dd>
+        </div>
+        <div>
+          <dt>title2</dt>
+          <dd>Label of the Second Input</dd>
+        </div>
+        <div>
+          <dt>name1</dt>
+          <dd>Name of the first Input</dd>
+        </div>
+        <div>
+          <dt>name2</dt>
+          <dd>Name of the first Input</dd>
+        </div>
+        <div>
+          <dt>title1</dt>
+          <dd>Label of the first Input</dd>
+        </div>
+        <div>
+          <dt>id1</dt>
+          <dd>ID of the first Input and "for" label attribute</dd>
+        </div>
+        <div>
+          <dt>id2</dt>
+          <dd>ID of the Second Input and "for" label attribute</dd>
+        </div>
+        <div>
+          <dt>list</dt>
+          <dd>Link between the DataList ID and the "list" attributes of the two lists</dd>
+        </div>
       </dl>
 
     </div>

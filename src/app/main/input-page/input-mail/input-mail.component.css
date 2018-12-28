@@ -1,4 +1,10 @@
 /* Mail Input */
+c3m-input-mail[required] label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
 c3m-input-mail input {
   width: 85%;
   max-width: 22em;

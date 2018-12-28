@@ -12,7 +12,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, input, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -43,6 +43,11 @@ body {
 	background-color: var(--body-bg);
 }
 
+h4 {
+	font: normal 1.15em/1.2 var(--stack-b);
+	margin-bottom: 1em;
+}
+
 p, li, dt, dd {font-size: 1em;}
 li p, li li, li dt, li dd {font-size: 100%;}
 
@@ -69,8 +74,9 @@ em {
 
 button {
 	font: 100%/1 var(--stack-m);
-	padding: 0;
+	padding: 0.5rem 1rem;
 	border: none;
+	border-radius: 0.3em;
 	cursor: pointer;
 }
 abbr {cursor: help;}
@@ -150,7 +156,7 @@ input, select, textarea {
 	font: 100%/1 var(--stack);
 	color: var(--n-dark);
 	background-color: var(--body-bg);
-	padding: 0.5em 0.7em 0.3em;
+	padding: 0.5em;
 	border: 1px solid var(--n-medium);
 	border-radius: 0.3em;
 	transition: all;
@@ -161,8 +167,16 @@ input:focus, select:focus, textarea:focus {
 	border-radius: 0;
 }
 
+input[disabled] {
+	color: var(--n-dark);
+	background-color: var(--n-medium);
+	border: none;
+}
+
 
 /* *********** ARTICLES ************* */
+
+p + p {margin-top: 1em;}
 
 article.post {
     background-color: var(n-lighter);
@@ -278,7 +292,7 @@ article.post {
         font: 1.2em var(--stack-b);
 				text-transform: uppercase;
 				padding-right: 45px;
-        margin: 0 0 0.5em 0;
+        margin: 0 0 1.5em 0;
       }
         .titleComponent > div h3 > svg {
           /*display: inline;
@@ -292,8 +306,8 @@ article.post {
 
    /* GitHub Button */
   .titleComponent .gitBtn {
+		display: none;
 			position: absolute;
-			display: inline-block;
 			overflow: hidden;
 			width: 35px;
 			height: 35px;
@@ -310,7 +324,7 @@ article.post {
   }
       /* Git Hub IMG */
       .titleComponent .gitBtn svg {
-				display: inline-block;
+				display: none;
 				position: relative;
 				top: 6px;
 				left: 6px;
@@ -367,31 +381,46 @@ article.post {
 div.demo {
 	background: var(--n-lighter) url(assets/img/demo-bkgd.png);
 	padding: 1rem;
-	margin: 2rem 0;
+	margin: 0 0 2rem;
 }
 
-div.explain h4 {
-	font: 1.3em var(--stack-b);
-	margin-bottom: 1rem;
-}
-div.explain dl {display: table-row;}
-div.explain dt, div.explain dd {
-	display: table-cell;
-	font-size: 1em;
-	padding: 0.5em 0;
-	border-bottom: 1px solid var(--n-medium);
-}
-div.explain dt {padding-right: 1em;}
-div.explain p + p {margin-top: 0.8em;}
+div.explain {margin-bottom: 2rem;}
 
-div.explain dt {
-  font-family: var(--stack-b);
-  color: var(--n-dark);
-  padding-right: 1em;
+	div.explain p {margin-bottom: 1rem;}
+
+	div.explain dl div {display: table-row;}
+
+	div.explain dl {margin-bottom: 1rem;}
+	div.explain dt, div.explain dd {
+		display: table-cell;
+		font-size: 1em;
+		padding: 0.5em 0;
+		border-bottom: 1px solid var(--n-medium);
+	}
+	div.explain dt {padding-right: 1em;}
+	div.explain p + p {margin-top: 0.8em;}
+
+	div.explain dt {
+	  font-family: var(--stack-b);
+	  color: var(--n-dark);
+	  padding-right: 1em;
+	}
+	div.explain a, div.explain a:visited {
+		text-decoration: underline;
+	}
+
+/* ------------- TIPS/BEST PRACTICES --------------- */
+
+div.tip {
+	display: flex;
+	background-color: rgba(var(--green), 0.1);
+	padding: 1rem;
 }
-div.explain a, div.explain a:visited {
-	text-decoration: underline;
-}
+	div.tip svg {
+		min-width: 46px;
+		margin-right: 1rem;
+	}
+	div.tip p {line-height: 1.5;}
 
 /* **************** CODE SNIPPPEETTSS *************** */
 
@@ -497,18 +526,19 @@ c3m-tabs li.L9 {
 @media (max-width: 660px) {
   .panelTitle li {min-width: 50%;}
 }
+
 @media (max-width: 460px) {
   .panelTitle li {min-width: 100%;}
 }
-@media screen and (min-width: 750px) {
 
+@media screen and (min-width: 750px) {
+	h4 {font-size: 1.4em;}
 	p, li, dt, dd {font-size: 1.3em;}
 	ol.linenums li {font-size: 1em;}
 	div.explain dt, div.explain dd {font-size: 1em;}
 
 	.titleComponent > div h3 {
 		font-size: 1.6em;
-		padding-right: 8em;
 	}
 
 	c3m-tabs div.code {max-height: 500px;}
@@ -519,11 +549,25 @@ c3m-tabs li.L9 {
 	  font: 1.1em var(--stack);
 	  margin: 1rem auto;
 	}
+
+	div.tip p {font-size: 1em;}
+}
+
+@media screen and (min-width: 850px) {
+	div.explain {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: start;
+	}
+	div.explain p {flex-basis: 100%;}
+	div.tip {flex-basis: 30%;}
 }
 
 @media screen and (min-width: 1000px) {
 
 		.titleComponent .gitBtn {
+			display: none;
 			width: 5.8em;
 			font-size: 75%;
 			text-decoration: none;

@@ -1,33 +1,36 @@
 
 /* Label styled as a button */
 c3m-checkbox-button label {
-  width: 7em;
-  display: block;
+  display: inline-block;
+  overflow: hidden;
 }
 
 /* Style of Button */
 c3m-checkbox-button label span {
-  text-align:center;
-  padding:3px 0px;
-  display:block;
-  border: 1px solid #73716e;
+  display: inline-block;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 0.5em;
+  border: 1px solid var(--n-dark);
   cursor: pointer;
 }
 
 /* Hover */
-c3m-checkbox-button label span:hover{
-  background-color: #eafcff;
+c3m-checkbox-button label span:hover {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 /* Hide Input */
 c3m-checkbox-button label input {
-  display: none;
+  position: relative;
+  left: -5em;
 }
 
 /* Style of Button is Checked */
 c3m-checkbox-button input:checked + span {
-  background-color: #44abbc;
-  padding: calc(3px + 1px) 1px;
-  color: #fff;
-  border: none;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }

@@ -1,0 +1,5 @@
+c3m-input[required] label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}

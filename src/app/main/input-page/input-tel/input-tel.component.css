@@ -1,6 +1,10 @@
 /* Input Phone */
 c3m-input-tel input {
-  width: 40%;
-  min-width: 10em;
-  max-width: 15em;
+  width: 85%;
+  max-width: 22em;
+}
+c3m-input-tel[required] label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
 }

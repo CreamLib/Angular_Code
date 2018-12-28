@@ -8,10 +8,8 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class CheckboxGroupComponent implements OnInit {
 
-    // Inputs
-    @Input() title = '';
-    @Input() name: string;
-    @Input() id: string;
+  // Inputs
+  @Input() legend = '';
 
   constructor() { }
 
