@@ -89,6 +89,7 @@ import { InputUrlComponent } from './main/input-page/input-url/input-url.compone
 import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
 import { ButtonIconComponent } from './main/button-page/button-icon/button-icon.component';
 import { ButtonIconOnlyComponent } from './main/button-page/button-icon-only/button-icon-only.component';
+import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
 
 export const appRoutes: Routes = [
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
@@ -205,6 +206,7 @@ export const appRoutes: Routes = [
     InputPasswordComponent,
     ButtonIconComponent,
     ButtonIconOnlyComponent,
+    SpinnerProgressComponent,
   ],
   imports: [
     BrowserModule,
