@@ -16,18 +16,9 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": [
-              "src/assets",
-              "src/favicon.ico",
-              "src/app"
-            ],
-            "styles": [
-              "src/styles.css",
-              "src/assets/fonts/fonts.css"
-            ],
-            "scripts": [
-              "src/assets/js/prettify.js"
-            ]
+            "assets": ["src/assets", "src/favicon.ico", "src/app"],
+            "styles": ["src/styles.css", "src/assets/fonts/fonts.css"],
+            "scripts": ["src/assets/js/prettify.js"]
           },
           "configurations": {
             "production": {
@@ -73,30 +64,16 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [
-              "src/assets/js/prettify.js"
-            ],
-            "styles": [
-              "src/styles.css",
-              "src/assets/fonts/fonts.css"
-            ],
-            "assets": [
-              "src/assets",
-              "src/favicon.ico",
-              "src/app"
-            ]
+            "scripts": ["src/assets/js/prettify.js"],
+            "styles": ["src/styles.css", "src/assets/fonts/fonts.css"],
+            "assets": ["src/assets", "src/favicon.ico", "src/app"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -116,12 +93,41 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
+            "tsConfig": ["e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "creamnglib": {
+      "root": "projects/creamnglib",
+      "sourceRoot": "projects/creamnglib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/creamnglib/tsconfig.lib.json",
+            "project": "projects/creamnglib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/creamnglib/src/test.ts",
+            "tsConfig": "projects/creamnglib/tsconfig.spec.json",
+            "karmaConfig": "projects/creamnglib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
             "tsConfig": [
-              "e2e/tsconfig.e2e.json"
+              "projects/creamnglib/tsconfig.lib.json",
+              "projects/creamnglib/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
