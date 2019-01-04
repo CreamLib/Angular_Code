@@ -171,7 +171,7 @@ import { appRoutes } from "./app.routes";
     BrowserModule,
     HttpModule,
     ScrollToModule.forRoot(),
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
     LottieAnimationViewModule.forRoot(),
     BreadcrumbsModule,
     CreamnglibModule
