@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng build creamnglib && ng serve",
+    "build": "rimraf  dist && ng build creamnglib && ng build --delete-output-path=false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -50,6 +50,7 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "ng-packagr": "^4.2.0",
     "protractor": "~5.4.1",
+    "rimraf": "2.6.3",
     "ts-node": "~7.0.1",
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
