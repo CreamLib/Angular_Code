@@ -6,7 +6,7 @@
 
 # abort the script if there is a non-zero error
 set -e
-
+CreamLib.github.io
 
 # show where we are on the machine
 pwd
@@ -19,7 +19,7 @@ cd gh-pages-branch
 git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
 git config --global user.name "$GH_NAME" > /dev/null 2>&1
 git init
-git remote add --fetch origin "$remote"
+git remote add --fetch origin https://github.com/CreamLib/CreamLib.github.io
 
 
 # switch into the the gh-pages branch
@@ -41,7 +41,7 @@ git init
 git remote add --fetch origin "$remote"
 git checkout master
 npm i
-npm run build -- --prod --base-href="https://creamlib.github.io/Angular_Code/"
+npm run build -- --prod --base-href="https://creamlib.github.io/"
 
 cd ../gh-pages-branch
 cp -a "../master/dist/." .
