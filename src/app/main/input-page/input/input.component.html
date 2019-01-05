@@ -1,12 +1,14 @@
 <p>
-  <label for="{{id}}"><ng-content></ng-content></label>
-  <input type="text"
-    id = "{{id}}"
-    [name] = this.name
-    [value] = value
-    [autocomplete] = autocomplete
-    [maxlength] = ''
-    [required] = 'required'
-    [disabled] = 'disabled'
-    [placeholder] = placeholder />
+  <label [attr.for]="id"><ng-content></ng-content></label>
+  <input
+    type="text"
+    [attr.id]="id"
+    [name]="this.name"
+    [value]="value"
+    [autocomplete]="autocomplete"
+    [maxlength]=""
+    [required]="required"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+  />
 </p>

@@ -1,12 +1,14 @@
 <p>
-  <label for="{{id}}"><ng-content></ng-content></label>
-  <input type="email"
-    id = "{{id}}"
-    [name] = this.name
-    [value] = value
-    [autocomplete] = autocomplete
-    [multiple] = 'multiple'
-    [required] = 'required'
-    [disabled] = 'disabled'
-    [placeholder] = placeholder />
+  <label [attr.for]="id"><ng-content></ng-content></label>
+  <input
+    type="email"
+    [attr.id]="id"
+    [name]="this.name"
+    [value]="value"
+    [autocomplete]="autocomplete"
+    [multiple]="multiple"
+    [required]="required"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+  />
 </p>
