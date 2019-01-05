@@ -7,5 +7,6 @@ export * from "./lib/button-file/button-file.component";
 export * from "./lib/button-icon/button-icon.component";
 export * from "./lib/button-icon-only/button-icon-only.component";
 export * from "./lib/button-submit/button-submit.component";
+export * from "./lib/toast/toast.component";
 
 export * from "./lib/creamnglib.module";

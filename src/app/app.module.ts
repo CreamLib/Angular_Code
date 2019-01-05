@@ -68,7 +68,6 @@ import { SkipPageComponent } from "./main/skip-page/skip-page.component";
 import { FieldsetComponent } from "./main/fieldset-page/fieldset/fieldset.component";
 import { SkipComponent } from "./main/skip-page/skip/skip.component";
 import { ToastPageComponent } from "./main/toast-page/toast-page.component";
-import { ToastComponent } from "./main/toast-page/toast/toast.component";
 import { ListComponent } from "./main/list-page/list/list.component";
 import { ListOrderComponent } from "./main/list-page/list-order/list-order.component";
 import { ListThumbnailsComponent } from "./main/list-page/list-thumbnails/list-thumbnails.component";
@@ -150,7 +149,6 @@ import { appRoutes } from "./app.routes";
     FieldsetComponent,
     SkipComponent,
     ToastPageComponent,
-    ToastComponent,
     ListComponent,
     ListOrderComponent,
     ListThumbnailsComponent,
