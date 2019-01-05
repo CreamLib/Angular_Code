@@ -1,25 +1,18 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { AppComponent } from '../../app.component';
+import { Component, ViewEncapsulation, ViewChild } from "@angular/core";
 
 @Component({
-  selector: 'c3m-toast-page',
-  templateUrl: './toast-page.component.html',
-  styleUrls: ['./toast-page.component.css'],
+  selector: "c3m-toast-page",
+  templateUrl: "./toast-page.component.html",
+  styleUrls: ["./toast-page.component.css"],
   encapsulation: ViewEncapsulation.None
 })
-export class ToastPageComponent implements OnInit {
+export class ToastPageComponent {
+  @ViewChild("toast") toast;
 
-  @ViewChild('toast') toast;
-
-  public openToast(){
+  public openToast() {
     console.log(this.toast);
     this.toast.toggle();
   }
 
-  constructor(private app: AppComponent) {
-  }
-
-  ngOnInit() {
-    this.app.codeSnippets('');
-  }
+  constructor() {}
 }
