@@ -6,7 +6,6 @@
 
 # abort the script if there is a non-zero error
 set -e
-CreamLib.github.io
 
 # show where we are on the machine
 pwd
