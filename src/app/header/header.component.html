@@ -18,7 +18,14 @@
 
     <!-- MENU -->
     <c3m-menu [ngClass]="{mobileOpen: menuMobile, mobileClose: !menuMobile}">
-
+        <!-- GROUP HELP -->
+        <c3m-menu-item nameButton="Help" class="help" idSvg="assets/img/icons.svg#svg4" [index]=0 [isOpen]=false>
+            <ul class="contenuMenu">
+                <li (click)="ToggleMenuBurger()"><a routerLink="/gettingStarted" routerLinkActive="active">Getting Started</a></li>
+                <li (click)="ToggleMenuBurger()"><a routerLink="/faq" routerLinkActive="active">F.A.Q</a></li>
+            </ul>
+        </c3m-menu-item>
+        
         <!-- GROUP FORM ELEMENTS -->
         <c3m-menu-item nameButton="Form Elements" idSvg="assets/img/icons.svg#svg1" [index]=1 [isOpen]=false>
             <ul class="contenuMenu">
@@ -74,14 +81,6 @@
               <li (click)="ToggleMenuBurger()"><a routerLink="/pagination" routerLinkActive="active">Pagination</a></li>
               <li (click)="ToggleMenuBurger()"><a routerLink="/step" routerLinkActive="active">Steps</a></li>
               <li (click)="ToggleMenuBurger()"><a routerLink="/toast" routerLinkActive="active">Toast</a></li>
-            </ul>
-        </c3m-menu-item>
-
-        <!-- GROUP HELP -->
-        <c3m-menu-item nameButton="Help" class="help" idSvg="assets/img/icons.svg#svg4" [index]=0 [isOpen]=false>
-            <ul class="contenuMenu">
-                <li (click)="ToggleMenuBurger()"><a routerLink="/gettingStarted" routerLinkActive="active">Getting Started</a></li>
-                <li (click)="ToggleMenuBurger()"><a routerLink="/faq" routerLinkActive="active">F.A.Q</a></li>
             </ul>
         </c3m-menu-item>
 
