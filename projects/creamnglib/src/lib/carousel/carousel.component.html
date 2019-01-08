@@ -14,7 +14,7 @@
             [attr.aria-selected]="groupItem.isVisible"
             tabindex={{groupItem.tabIndex}} >
 
-            <button #bulletPoint aria-label="Go to this slide" (click)="goTo(i)"> </button>
+            <button #bulletPoint aria-label="Go to this slide" (click)="goTo(i, groupItem)"> </button>
         </li>
     </ul>
 

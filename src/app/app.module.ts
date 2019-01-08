@@ -24,8 +24,6 @@ import { CarouselPageComponent } from "./main/carousel-page/carousel-page.compon
 import { ModalPageComponent } from "./main/modal-page/modal-page.component";
 import { ModalComponent } from "./main/modal-page/modal/modal.component";
 import { ModalAlertComponent } from "./main/modal-page/modal-alert/modal-alert.component";
-import { CarouselComponent } from "./main/carousel-page/carousel/carousel.component";
-import { CarouselItemComponent } from "./main/carousel-page/carousel/carousel-item/carousel-item.component";
 import { TablePageComponent } from "./main/table-page/table-page.component";
 import { ColumnTableComponent } from "./main/table-page/table/table.component";
 import { ToggleTableComponent } from "./main/table-page/table-toggle/table-toggle.component";
@@ -105,8 +103,6 @@ import { appRoutes } from "./app.routes";
     ModalPageComponent,
     ModalComponent,
     ModalAlertComponent,
-    CarouselComponent,
-    CarouselItemComponent,
     TablePageComponent,
     ColumnTableComponent,
     ToggleTableComponent,
