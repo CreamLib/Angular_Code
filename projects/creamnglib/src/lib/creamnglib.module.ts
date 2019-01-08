@@ -6,6 +6,7 @@ import { ButtonIconOnlyComponent } from "./button-icon-only/button-icon-only.com
 import { ButtonSubmitComponent } from "./button-submit/button-submit.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { ToastComponent } from "./toast/toast.component";
+import { InputComponent } from "./input/input.component";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ToastComponent } from "./toast/toast.component";
     ButtonIconComponent,
     ButtonIconOnlyComponent,
     ButtonSubmitComponent,
-    ToastComponent
+    ToastComponent,
+    InputComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -23,7 +25,8 @@ import { ToastComponent } from "./toast/toast.component";
     ButtonIconComponent,
     ButtonIconOnlyComponent,
     ButtonSubmitComponent,
-    ToastComponent
+    ToastComponent,
+    InputComponent
   ]
 })
 export class CreamnglibModule {}
