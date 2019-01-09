@@ -10,8 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { AccueilComponent } from './main/accueil/accueil.component';
-import { AccordionComponent } from './main/accordion-page/accordion/accordion.component';
-import { AccordionItemComponent } from './main/accordion-page/accordion/accordion-item/accordion-item.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './main/tabs-page/tabs/tabs.component';
 import { TabComponent } from './main/tabs-page/tabs/tabs-item/tabs-item.component';
@@ -82,8 +80,6 @@ import { appRoutes } from './app.routes';
     FooterComponent,
     MainComponent,
     AccueilComponent,
-    AccordionComponent,
-    AccordionItemComponent,
     TabsComponent,
     TabComponent,
     ButtonPageComponent,

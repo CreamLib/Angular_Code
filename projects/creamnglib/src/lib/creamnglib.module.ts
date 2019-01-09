@@ -17,6 +17,8 @@ import { InputUrlComponent } from './input-url/input-url.component';
 import { InputPasswordComponent } from './input-password/input-password.component';
 import { InputMailComponent } from './input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionItemComponent } from './accordion/accordion-item/accordion-item.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.compon
     InputUrlComponent,
     InputPasswordComponent,
     InputMailComponent,
-    InputErrorMsgComponent
+    InputErrorMsgComponent,
+    AccordionComponent,
+    AccordionItemComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -56,7 +60,9 @@ import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.compon
     InputUrlComponent,
     InputPasswordComponent,
     InputMailComponent,
-    InputErrorMsgComponent
+    InputErrorMsgComponent,
+    AccordionComponent,
+    AccordionItemComponent
   ]
 })
 export class CreamnglibModule {}
