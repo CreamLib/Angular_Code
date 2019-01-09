@@ -41,9 +41,6 @@ import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.compon
 import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
 import { InputPageComponent } from './main/input-page/input-page.component';
 import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
-import { CheckboxComponent } from './main/checkbox-page/checkbox/checkbox.component';
-import { CheckboxGroupComponent } from './main/checkbox-page/checkbox-group/checkbox-group.component';
-import { CheckboxButtonComponent } from './main/checkbox-page/checkbox-button/checkbox-button.component';
 import { SelectPageComponent } from './main/select-page/select-page.component';
 import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
@@ -66,8 +63,6 @@ import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { RadioComponent } from './main/radio-page/radio/radio.component';
 import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
-import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
-import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
@@ -108,9 +103,6 @@ import { appRoutes } from './app.routes';
     DropdownItemComponent,
     InputPageComponent,
     CheckboxPageComponent,
-    CheckboxComponent,
-    CheckboxGroupComponent,
-    CheckboxButtonComponent,
     SelectPageComponent,
     SelectComponent,
     SelectDatalistComponent,
@@ -133,8 +125,6 @@ import { appRoutes } from './app.routes';
     RadioPageComponent,
     RadioComponent,
     RadioItemComponent,
-    CheckboxGroupItemComponent,
-    CheckboxLinkComponent,
     ProgressComponent
   ],
   imports: [

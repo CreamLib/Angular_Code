@@ -20,6 +20,11 @@ import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.compon
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion/accordion-item/accordion-item.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { CheckboxButtonComponent } from './checkbox-button/checkbox-button.component';
+import { CheckboxLinkComponent } from './checkbox-link/checkbox-link.component';
+import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
+import { CheckboxGroupItemComponent } from './checkbox-group/checkbox-group-item/checkbox-group-item.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,12 @@ import { CalendarComponent } from './calendar/calendar.component';
     InputErrorMsgComponent,
     AccordionComponent,
     AccordionItemComponent,
-    CalendarComponent
+    CalendarComponent,
+    CheckboxComponent,
+    CheckboxButtonComponent,
+    CheckboxLinkComponent,
+    CheckboxGroupComponent,
+    CheckboxGroupItemComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -65,7 +75,12 @@ import { CalendarComponent } from './calendar/calendar.component';
     InputErrorMsgComponent,
     AccordionComponent,
     AccordionItemComponent,
-    CalendarComponent
+    CalendarComponent,
+    CheckboxComponent,
+    CheckboxButtonComponent,
+    CheckboxLinkComponent,
+    CheckboxGroupComponent,
+    CheckboxGroupItemComponent
   ]
 })
 export class CreamnglibModule {}
