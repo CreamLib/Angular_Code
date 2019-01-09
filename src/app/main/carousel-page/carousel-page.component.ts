@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
 @Component({
@@ -7,14 +7,9 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./carousel-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class CarouselPageComponent implements OnInit {
+export class CarouselPageComponent {
 
   constructor(private app: AppComponent) {
-  }
-
-  ngOnInit() {
-    let subComp = ['carousel-item'];
-    this.app.codeSnippets(subComp);
   }
 
 }

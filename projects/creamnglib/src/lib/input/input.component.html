@@ -1,12 +1,12 @@
 <p>
   <label [attr.for]="id"><ng-content></ng-content></label>
   <input
-    type="url"
+    type="text"
     [attr.id]="id"
     [name]="this.name"
     [value]="value"
     [autocomplete]="autocomplete"
-    [maxlength]=""
+    maxlength="maxlength"
     [required]="required"
     [disabled]="disabled"
     [placeholder]="placeholder"

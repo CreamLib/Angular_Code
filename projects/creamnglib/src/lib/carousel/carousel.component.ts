@@ -157,7 +157,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   /* Function to go on a specific item with Bullepoint Click Event */
-  goTo(indexToGo: number, group: CarouselItemComponent, ): void {
+  goTo(indexToGo: number, group: CarouselItemComponent): void {
 
       const random = Math.floor(Math.random() * 2 + 0);
       console.log(random);
