@@ -14,6 +14,9 @@ import { InputMaterialComponent } from './input-material/input-material.componen
 import { InputSearchComponent } from './input-search/input-search.component';
 import { InputTelComponent } from './input-tel/input-tel.component';
 import { InputUrlComponent } from './input-url/input-url.component';
+import { InputPasswordComponent } from './input-password/input-password.component';
+import { InputMailComponent } from './input-mail/input-mail.component';
+import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { InputUrlComponent } from './input-url/input-url.component';
     InputMaterialComponent,
     InputSearchComponent,
     InputTelComponent,
-    InputUrlComponent
+    InputUrlComponent,
+    InputPasswordComponent,
+    InputMailComponent,
+    InputErrorMsgComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -47,7 +53,10 @@ import { InputUrlComponent } from './input-url/input-url.component';
     InputMaterialComponent,
     InputSearchComponent,
     InputTelComponent,
-    InputUrlComponent
+    InputUrlComponent,
+    InputPasswordComponent,
+    InputMailComponent,
+    InputErrorMsgComponent
   ]
 })
 export class CreamnglibModule {}

@@ -52,8 +52,6 @@ import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
-import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
-import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
@@ -74,7 +72,6 @@ import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-ite
 import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
 import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
-import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 
@@ -125,8 +122,6 @@ import { appRoutes } from './app.routes';
     SelectDatalistComponent,
     SelectDatalistsComponent,
     FaqComponent,
-    InputMailComponent,
-    InputErrorMsgComponent,
     BreadcrumbsPageComponent,
     FieldsetPageComponent,
     NavbarPageComponent,
@@ -146,8 +141,7 @@ import { appRoutes } from './app.routes';
     RadioItemComponent,
     CheckboxGroupItemComponent,
     CheckboxLinkComponent,
-    ProgressComponent,
-    InputPasswordComponent
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
