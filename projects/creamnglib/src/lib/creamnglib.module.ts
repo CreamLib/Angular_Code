@@ -27,6 +27,7 @@ import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.componen
 import { CheckboxGroupItemComponent } from './checkbox-group/checkbox-group-item/checkbox-group-item.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DropdownItemComponent } from './dropdown/dropdown-item/dropdown-item.component';
+import { FieldsetComponent } from './fieldset/fieldset.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { DropdownItemComponent } from './dropdown/dropdown-item/dropdown-item.co
     CheckboxGroupComponent,
     CheckboxGroupItemComponent,
     DropdownComponent,
-    DropdownItemComponent
+    DropdownItemComponent,
+    FieldsetComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -86,7 +88,8 @@ import { DropdownItemComponent } from './dropdown/dropdown-item/dropdown-item.co
     CheckboxGroupComponent,
     CheckboxGroupItemComponent,
     DropdownComponent,
-    DropdownItemComponent
+    DropdownItemComponent,
+    FieldsetComponent
   ]
 })
 export class CreamnglibModule {}

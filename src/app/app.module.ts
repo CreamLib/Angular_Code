@@ -49,7 +49,6 @@ import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.compon
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
-import { FieldsetComponent } from './main/fieldset-page/fieldset/fieldset.component';
 import { SkipComponent } from './main/skip-page/skip/skip.component';
 import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { ListComponent } from './main/list-page/list/list.component';
@@ -109,7 +108,6 @@ import { appRoutes } from './app.routes';
     NavbarPageComponent,
     ListPageComponent,
     SkipPageComponent,
-    FieldsetComponent,
     SkipComponent,
     ToastPageComponent,
     ListComponent,
