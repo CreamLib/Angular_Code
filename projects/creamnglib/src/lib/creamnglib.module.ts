@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel/carousel-item/carousel-item.component';
 import { InputFloatingComponent } from './input-floating/input-floating.component';
 import { InputMaterialComponent } from './input-material/input-material.component';
+import { InputSearchComponent } from './input-search/input-search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InputMaterialComponent } from './input-material/input-material.componen
     CarouselComponent,
     CarouselItemComponent,
     InputFloatingComponent,
-    InputMaterialComponent
+    InputMaterialComponent,
+    InputSearchComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -38,7 +40,8 @@ import { InputMaterialComponent } from './input-material/input-material.componen
     CarouselComponent,
     CarouselItemComponent,
     InputFloatingComponent,
-    InputMaterialComponent
+    InputMaterialComponent,
+    InputSearchComponent
   ]
 })
 export class CreamnglibModule {}

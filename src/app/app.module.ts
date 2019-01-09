@@ -74,7 +74,6 @@ import { RadioComponent } from './main/radio-page/radio/radio.component';
 import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
 import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
 import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
-import { InputSearchComponent } from './main/input-page/input-search/input-search.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { InputUrlComponent } from './main/input-page/input-url/input-url.component';
 import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
@@ -150,7 +149,6 @@ import { appRoutes } from './app.routes';
     RadioItemComponent,
     CheckboxGroupItemComponent,
     CheckboxLinkComponent,
-    InputSearchComponent,
     ProgressComponent,
     InputUrlComponent,
     InputPasswordComponent
