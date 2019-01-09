@@ -74,7 +74,6 @@ import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-ite
 import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
 import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
-import { InputUrlComponent } from './main/input-page/input-url/input-url.component';
 import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
@@ -148,7 +147,6 @@ import { appRoutes } from './app.routes';
     CheckboxGroupItemComponent,
     CheckboxLinkComponent,
     ProgressComponent,
-    InputUrlComponent,
     InputPasswordComponent
   ],
   imports: [

@@ -13,6 +13,7 @@ import { InputFloatingComponent } from './input-floating/input-floating.componen
 import { InputMaterialComponent } from './input-material/input-material.component';
 import { InputSearchComponent } from './input-search/input-search.component';
 import { InputTelComponent } from './input-tel/input-tel.component';
+import { InputUrlComponent } from './input-url/input-url.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { InputTelComponent } from './input-tel/input-tel.component';
     InputFloatingComponent,
     InputMaterialComponent,
     InputSearchComponent,
-    InputTelComponent
+    InputTelComponent,
+    InputUrlComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -44,7 +46,8 @@ import { InputTelComponent } from './input-tel/input-tel.component';
     InputFloatingComponent,
     InputMaterialComponent,
     InputSearchComponent,
-    InputTelComponent
+    InputTelComponent,
+    InputUrlComponent
   ]
 })
 export class CreamnglibModule {}
