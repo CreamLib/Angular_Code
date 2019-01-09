@@ -43,7 +43,6 @@ import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.compon
 import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
 import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
 import { InputPageComponent } from './main/input-page/input-page.component';
-import { InputMaterialComponent } from './main/input-page/input-material/input-material.component';
 import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
 import { CheckboxComponent } from './main/checkbox-page/checkbox/checkbox.component';
 import { CheckboxGroupComponent } from './main/checkbox-page/checkbox-group/checkbox-group.component';
@@ -120,7 +119,6 @@ import { appRoutes } from './app.routes';
     DropdownComponent,
     DropdownItemComponent,
     InputPageComponent,
-    InputMaterialComponent,
     CheckboxPageComponent,
     CheckboxComponent,
     CheckboxGroupComponent,
