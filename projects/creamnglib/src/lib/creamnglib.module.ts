@@ -25,6 +25,8 @@ import { CheckboxButtonComponent } from './checkbox-button/checkbox-button.compo
 import { CheckboxLinkComponent } from './checkbox-link/checkbox-link.component';
 import { CheckboxGroupComponent } from './checkbox-group/checkbox-group.component';
 import { CheckboxGroupItemComponent } from './checkbox-group/checkbox-group-item/checkbox-group-item.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownItemComponent } from './dropdown/dropdown-item/dropdown-item.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { CheckboxGroupItemComponent } from './checkbox-group/checkbox-group-item
     CheckboxButtonComponent,
     CheckboxLinkComponent,
     CheckboxGroupComponent,
-    CheckboxGroupItemComponent
+    CheckboxGroupItemComponent,
+    DropdownComponent,
+    DropdownItemComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -80,7 +84,9 @@ import { CheckboxGroupItemComponent } from './checkbox-group/checkbox-group-item
     CheckboxButtonComponent,
     CheckboxLinkComponent,
     CheckboxGroupComponent,
-    CheckboxGroupItemComponent
+    CheckboxGroupItemComponent,
+    DropdownComponent,
+    DropdownItemComponent
   ]
 })
 export class CreamnglibModule {}

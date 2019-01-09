@@ -37,8 +37,6 @@ import { StepComponent } from './main/step-page/step/step.component';
 import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
 import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
-import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
-import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
 import { InputPageComponent } from './main/input-page/input-page.component';
 import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
 import { SelectPageComponent } from './main/select-page/select-page.component';
@@ -99,8 +97,6 @@ import { appRoutes } from './app.routes';
     StepItemComponent,
     CalendarPageComponent,
     DropdownPageComponent,
-    DropdownComponent,
-    DropdownItemComponent,
     InputPageComponent,
     CheckboxPageComponent,
     SelectPageComponent,

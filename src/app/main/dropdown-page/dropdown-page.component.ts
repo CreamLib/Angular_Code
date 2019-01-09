@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DropdownComponent } from './dropdown/dropdown.component';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
 @Component({
@@ -8,14 +7,9 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./dropdown-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class DropdownPageComponent implements OnInit {
+export class DropdownPageComponent {
 
   constructor(private app: AppComponent) {
-  }
-
-  ngOnInit() {
-    const subComp = ['dropdown-item'];
-    this.app.codeSnippets(subComp);
   }
 
 }
