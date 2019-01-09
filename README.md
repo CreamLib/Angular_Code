@@ -1,8 +1,8 @@
-![Logo](https://creamng.github.io/Library/assets/img/creamNG-logo.svg)
+![Logo](https://creamlib.github.io/assets/img/creamNG-logo.svg)
 
 **UI components for Angular**
 
-SEE DEMO : https://creamng.github.io/Library/
+SEE DEMO : https://creamlib.github.io
 
 ![Npm](https://camo.githubusercontent.com/3cb4eb3c991f38eddc8092d7d9c8c5b5d8888a33/68747470733a2f2f62616467652e667572792e696f2f6a732f253430616e67756c6172253246636f72652e737667)
 ![build](https://camo.githubusercontent.com/8d227cc53b74107a9721d592157e02723beb43a9/68747470733a2f2f7472617669732d63692e6f72672f616e67756c61722f616e67756c61722e7376673f6272616e63683d6d6173746572)

@@ -10,8 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { AccueilComponent } from './main/accueil/accueil.component';
-import { AccordionComponent } from './main/accordion-page/accordion/accordion.component';
-import { AccordionItemComponent } from './main/accordion-page/accordion/accordion-item/accordion-item.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './main/tabs-page/tabs/tabs.component';
 import { TabComponent } from './main/tabs-page/tabs/tabs-item/tabs-item.component';
@@ -38,15 +36,9 @@ import { StepPageComponent } from './main/step-page/step-page.component';
 import { StepComponent } from './main/step-page/step/step.component';
 import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
 import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
-import { CalendarComponent } from './main/calendar-page/calendar/calendar.component';
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
-import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
-import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
 import { InputPageComponent } from './main/input-page/input-page.component';
 import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
-import { CheckboxComponent } from './main/checkbox-page/checkbox/checkbox.component';
-import { CheckboxGroupComponent } from './main/checkbox-page/checkbox-group/checkbox-group.component';
-import { CheckboxButtonComponent } from './main/checkbox-page/checkbox-button/checkbox-button.component';
 import { SelectPageComponent } from './main/select-page/select-page.component';
 import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
@@ -57,20 +49,13 @@ import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.compon
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
-import { FieldsetComponent } from './main/fieldset-page/fieldset/fieldset.component';
 import { SkipComponent } from './main/skip-page/skip/skip.component';
 import { ToastPageComponent } from './main/toast-page/toast-page.component';
-import { ListComponent } from './main/list-page/list/list.component';
-import { ListOrderComponent } from './main/list-page/list-order/list-order.component';
-import { ListThumbnailsComponent } from './main/list-page/list-thumbnails/list-thumbnails.component';
-import { ListDescriptionComponent } from './main/list-page/list-description/list-description.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { RadioComponent } from './main/radio-page/radio/radio.component';
 import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
-import { CheckboxGroupItemComponent } from './main/checkbox-page/checkbox-group/checkbox-group-item/checkbox-group-item.component';
-import { CheckboxLinkComponent } from './main/checkbox-page/checkbox-link/checkbox-link.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
@@ -82,8 +67,6 @@ import { appRoutes } from './app.routes';
     FooterComponent,
     MainComponent,
     AccueilComponent,
-    AccordionComponent,
-    AccordionItemComponent,
     TabsComponent,
     TabComponent,
     ButtonPageComponent,
@@ -108,15 +91,9 @@ import { appRoutes } from './app.routes';
     StepComponent,
     StepItemComponent,
     CalendarPageComponent,
-    CalendarComponent,
     DropdownPageComponent,
-    DropdownComponent,
-    DropdownItemComponent,
     InputPageComponent,
     CheckboxPageComponent,
-    CheckboxComponent,
-    CheckboxGroupComponent,
-    CheckboxButtonComponent,
     SelectPageComponent,
     SelectComponent,
     SelectDatalistComponent,
@@ -127,20 +104,13 @@ import { appRoutes } from './app.routes';
     NavbarPageComponent,
     ListPageComponent,
     SkipPageComponent,
-    FieldsetComponent,
     SkipComponent,
     ToastPageComponent,
-    ListComponent,
-    ListOrderComponent,
-    ListThumbnailsComponent,
-    ListDescriptionComponent,
     BottomPageComponent,
     BottomComponent,
     RadioPageComponent,
     RadioComponent,
     RadioItemComponent,
-    CheckboxGroupItemComponent,
-    CheckboxLinkComponent,
     ProgressComponent
   ],
   imports: [

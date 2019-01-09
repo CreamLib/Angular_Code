@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
 @Component({
@@ -6,12 +6,7 @@ import { AppComponent } from '../../app.component';
   templateUrl: './calendar-page.component.html',
   styleUrls: ['./calendar-page.component.css']
 })
-export class CalendarPageComponent implements OnInit {
+export class CalendarPageComponent {
   constructor(private app: AppComponent) {
-  }
-
-  ngOnInit() {
-    let subComp = ['tabs-item'];
-    this.app.codeSnippets(subComp);
   }
 }
