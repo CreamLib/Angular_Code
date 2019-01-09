@@ -52,7 +52,6 @@ import { SelectComponent } from './main/select-page/select/select.component';
 import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
-import { InputTelComponent } from './main/input-page/input-tel/input-tel.component';
 import { InputMailComponent } from './main/input-page/input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './main/input-page/input-error-msg/input-error-msg.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
@@ -127,7 +126,6 @@ import { appRoutes } from './app.routes';
     SelectDatalistComponent,
     SelectDatalistsComponent,
     FaqComponent,
-    InputTelComponent,
     InputMailComponent,
     InputErrorMsgComponent,
     BreadcrumbsPageComponent,
