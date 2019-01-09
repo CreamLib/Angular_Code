@@ -36,7 +36,6 @@ import { StepPageComponent } from './main/step-page/step-page.component';
 import { StepComponent } from './main/step-page/step/step.component';
 import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
 import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
-import { CalendarComponent } from './main/calendar-page/calendar/calendar.component';
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
 import { DropdownComponent } from './main/dropdown-page/dropdown/dropdown.component';
 import { DropdownItemComponent } from './main/dropdown-page/dropdown/dropdown-item/dropdown-item.component';
@@ -104,7 +103,6 @@ import { appRoutes } from './app.routes';
     StepComponent,
     StepItemComponent,
     CalendarPageComponent,
-    CalendarComponent,
     DropdownPageComponent,
     DropdownComponent,
     DropdownItemComponent,

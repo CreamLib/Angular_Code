@@ -19,6 +19,7 @@ import { InputMailComponent } from './input-mail/input-mail.component';
 import { InputErrorMsgComponent } from './input-error-msg/input-error-msg.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion/accordion-item/accordion-item.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AccordionItemComponent } from './accordion/accordion-item/accordion-ite
     InputMailComponent,
     InputErrorMsgComponent,
     AccordionComponent,
-    AccordionItemComponent
+    AccordionItemComponent,
+    CalendarComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -62,7 +64,8 @@ import { AccordionItemComponent } from './accordion/accordion-item/accordion-ite
     InputMailComponent,
     InputErrorMsgComponent,
     AccordionComponent,
-    AccordionItemComponent
+    AccordionItemComponent,
+    CalendarComponent
   ]
 })
 export class CreamnglibModule {}
