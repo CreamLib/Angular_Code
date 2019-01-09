@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
 @Component({
@@ -7,15 +7,10 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./list-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ListPageComponent implements OnInit {
+export class ListPageComponent {
 
   constructor(private app: AppComponent) {
 
   }
-
-  ngOnInit() {
-      this.app.codeSnippets('');
-  }
-
 
 }

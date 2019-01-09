@@ -51,10 +51,6 @@ import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
 import { SkipComponent } from './main/skip-page/skip/skip.component';
 import { ToastPageComponent } from './main/toast-page/toast-page.component';
-import { ListComponent } from './main/list-page/list/list.component';
-import { ListOrderComponent } from './main/list-page/list-order/list-order.component';
-import { ListThumbnailsComponent } from './main/list-page/list-thumbnails/list-thumbnails.component';
-import { ListDescriptionComponent } from './main/list-page/list-description/list-description.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
@@ -110,10 +106,6 @@ import { appRoutes } from './app.routes';
     SkipPageComponent,
     SkipComponent,
     ToastPageComponent,
-    ListComponent,
-    ListOrderComponent,
-    ListThumbnailsComponent,
-    ListDescriptionComponent,
     BottomPageComponent,
     BottomComponent,
     RadioPageComponent,
