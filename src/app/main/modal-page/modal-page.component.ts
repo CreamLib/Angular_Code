@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
 import { ModalComponent } from './modal/modal.component';
 import { AppComponent } from '../../app.component';
 
@@ -8,7 +8,7 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./modal-page.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class ModalPageComponent implements OnInit {
+export class ModalPageComponent {
 
   @ViewChild(ModalComponent) modal: ModalComponent;
 
@@ -17,9 +17,5 @@ export class ModalPageComponent implements OnInit {
 
   public OpenModal() {
     this.modal.ToggleOpen();
-  }
-
-  ngOnInit() {
-      this.app.codeSnippets('');
   }
 }

@@ -20,8 +20,6 @@ import { MenuComponent } from './header/menu/menu.component';
 import { MenuItemComponent } from './header/menu/menu-item/menu-item.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
-import { ModalComponent } from './main/modal-page/modal/modal.component';
-import { ModalAlertComponent } from './main/modal-page/modal-alert/modal-alert.component';
 import { TablePageComponent } from './main/table-page/table-page.component';
 import { ColumnTableComponent } from './main/table-page/table/table.component';
 import { ToggleTableComponent } from './main/table-page/table-toggle/table-toggle.component';
@@ -76,8 +74,6 @@ import { appRoutes } from './app.routes';
     MenuItemComponent,
     CarouselPageComponent,
     ModalPageComponent,
-    ModalComponent,
-    ModalAlertComponent,
     TablePageComponent,
     ColumnTableComponent,
     ToggleTableComponent,

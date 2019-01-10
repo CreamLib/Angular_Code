@@ -32,6 +32,8 @@ import { ListComponent } from './list/list.component';
 import { ListOrderComponent } from './list-order/list-order.component';
 import { ListThumbnailsComponent } from './list-thumbnails/list-thumbnails.component';
 import { ListDescriptionComponent } from './list-description/list-description.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalAlertComponent } from './modal-alert/modal-alert.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { ListDescriptionComponent } from './list-description/list-description.co
     ListComponent,
     ListOrderComponent,
     ListThumbnailsComponent,
-    ListDescriptionComponent
+    ListDescriptionComponent,
+    ModalComponent,
+    ModalAlertComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -101,7 +105,9 @@ import { ListDescriptionComponent } from './list-description/list-description.co
     ListComponent,
     ListOrderComponent,
     ListThumbnailsComponent,
-    ListDescriptionComponent
+    ListDescriptionComponent,
+    ModalComponent,
+    ModalAlertComponent
   ]
 })
 export class CreamnglibModule {}
