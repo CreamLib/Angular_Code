@@ -1,5 +1,5 @@
 import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
-import { ModalComponent } from './modal/modal.component';
+import { ModalComponent } from 'creamnglib';
 import { AppComponent } from '../../app.component';
 
 @Component({
