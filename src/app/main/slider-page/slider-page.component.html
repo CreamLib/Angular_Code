@@ -192,7 +192,7 @@
 </div>
 
 <div class="titleComponent">
-  <div class="descriptionComponent" id="progress">
+  <div class="descriptionComponent" id="spinner-progress">
     <h3>
       <svg>
         <use xlink:href="#gitListItem"></use>
@@ -208,6 +208,48 @@
     </h3>
     <div class="demo">
       <!-- SPINNER PROGRESS -->
-      <c3m-spinner-progress></c3m-spinner-progress>
+      <c3m-spinner-progress [id]="'prog2'"></c3m-spinner-progress>
     </div>
+
+    <div class="explain">
+      <dl>
+        <div>
+          <dt>id</dt>
+          <dd>single field identifier</dd>
+        </div>
+        <div>
+          <dt>size</dt>
+          <dd>size of the spinner, default to 50px</dd>
+        </div>
+        <div>
+          <dt>disabled</dt>
+          <dd>when present, the element is disabled/read-only (optional)</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+    &lt;!-- PROGRESS SPINNER --&gt;
+      &lt;c3m-spinner-progress
+        [id]=&#34;'prog2'&#34;
+        size=&#34;50&#34;&gt;
+      &lt;/c3m-progress&gt;
+                </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
   </div>
+</div>

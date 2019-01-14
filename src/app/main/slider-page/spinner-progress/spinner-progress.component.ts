@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'c3m-spinner-progress',
@@ -7,6 +7,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class SpinnerProgressComponent implements OnInit {
+
+  @Input() id: String;
+  @Input() size: number = 50;
+  @Input() disabled: boolean;
 
   constructor() { }
 
