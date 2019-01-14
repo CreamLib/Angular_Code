@@ -1,9 +1,10 @@
 <!-- TITLE SLIDER COMPONENT PAGE -->
 <div class="panelTitle">
-  <h2><strong>Sliders  &amp; Progress</strong></h2>
+  <h2><strong>Sliders &amp; Progress</strong></h2>
   <ul>
     <li><a scrollTo href="#slider">Slider</a></li>
     <li><a scrollTo href="#progress">Progress Bar</a></li>
+    <li><a scrollTo href="#spinner-progress">Progress Spinner</a></li>
   </ul>
 </div>
 
@@ -27,13 +28,7 @@
 
     <div class="demo">
       <!-- SIMPLE SLIDER -->
-      <c3m-slider
-        [id]="'slider1'"
-        name="checkboxName1"
-        min="0"
-        max="50"
-        value="45"
-        step="1">
+      <c3m-slider [id]="'slider1'" name="checkboxName1" min="0" max="50" value="45" step="1">
         Choose a value
       </c3m-slider>
     </div>
@@ -78,13 +73,7 @@
 
     <div class="demo">
       <!-- SLIDER WITH BUBBLE -->
-      <c3m-slider
-        [id]="'slider2'"
-        min="0"
-        max="100"
-        value="30"
-        step="1"
-        class="bubble">
+      <c3m-slider [id]="'slider2'" min="0" max="100" value="30" step="1" class="bubble">
         Slider with Bubble
       </c3m-slider>
     </div>
@@ -99,8 +88,8 @@
       <c3m-tab tabTitle="HTML">
         <p class="pre-code">To call the component</p>
         <div class="code">
-           <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
 &lt;!-- SIMPLE SLIDER --&gt;
   &lt;c3m-slider
     [id]=&#34;'slider1'&#34;
@@ -143,11 +132,7 @@
 
     <div class="demo">
       <!-- SIMPLE PROGRESS BAR -->
-      <c3m-progress
-        [id]="'prog1'"
-        name="prog1"
-        max="100"
-        value="30">
+      <c3m-progress [id]="'prog1'" name="prog1" max="100" value="30">
         Progress
       </c3m-progress>
     </div>
@@ -182,8 +167,8 @@
       <c3m-tab tabTitle="HTML">
         <p class="pre-code">To call the component</p>
         <div class="code">
-           <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
 &lt;!-- SIMPLE PROGRESS BAR --&gt;
   &lt;c3m-progress
     [id]=&#34;'prog1'&#34;
@@ -194,6 +179,69 @@
     Progress
   &lt;/c3m-progress&gt;
             </pre>
+        </div>
+      </c3m-tab>
+
+      <c3m-tab tabTitle="CSS">
+      </c3m-tab>
+
+      <c3m-tab tabTitle="TypeScript">
+      </c3m-tab>
+
+    </c3m-tabs>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="spinner-progress">
+    <h3>
+      <svg>
+        <use xlink:href="#gitListItem"></use>
+      </svg>
+      Progress Spinner
+
+      <a href="https://github.com/CreamNG/Components/tree/master/progress" class="gitBtn" target="_blank">
+        <svg>
+          <use xlink:href="assets/img/icons.svg#gitSvg"></use>
+        </svg>
+
+        <span>Github</span></a>
+    </h3>
+    <div class="demo">
+      <!-- SPINNER PROGRESS -->
+      <c3m-spinner-progress [id]="'prog2'"></c3m-spinner-progress>
+    </div>
+
+    <div class="explain">
+      <dl>
+        <div>
+          <dt>id</dt>
+          <dd>single field identifier</dd>
+        </div>
+        <div>
+          <dt>size</dt>
+          <dd>size of the spinner, default to 50px</dd>
+        </div>
+        <div>
+          <dt>disabled</dt>
+          <dd>when present, the element is disabled/read-only (optional)</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="HTML">
+        <p class="pre-code">To call the component</p>
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+    &lt;!-- PROGRESS SPINNER --&gt;
+      &lt;c3m-spinner-progress
+        [id]=&#34;'prog2'&#34;
+        size=&#34;50&#34;&gt;
+      &lt;/c3m-progress&gt;
+                </pre>
         </div>
       </c3m-tab>
 
