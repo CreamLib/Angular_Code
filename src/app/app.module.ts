@@ -57,47 +57,8 @@ import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { RadioComponent } from './main/radio-page/radio/radio.component';
 import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
-<<<<<<< .merge_file_a12244
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
-=======
-import { InputUrlComponent } from './main/input-page/input-url/input-url.component';
-import { InputPasswordComponent } from './main/input-page/input-password/input-password.component';
-import { ButtonIconComponent } from './main/button-page/button-icon/button-icon.component';
-import { ButtonIconOnlyComponent } from './main/button-page/button-icon-only/button-icon-only.component';
-import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
-
-export const appRoutes: Routes = [
-  { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
-  { path: 'button', component: ButtonPageComponent, data: { breadcrumb: 'Button' } },
-  { path: 'tabs', component: TabsPageComponent, data: { breadcrumb: 'Tabs' } },
-  { path: 'accordion', component: AccordionPageComponent, data: { breadcrumb: 'Accordion' } },
-  { path: 'modal', component: ModalPageComponent, data: { breadcrumb: 'modal' } },
-  { path: 'carousel', component: CarouselPageComponent, data: { breadcrumb: 'carousel' } },
-  { path: 'table', component: TablePageComponent, data: { breadcrumb: 'table' } },
-  { path: 'pagination', component: PaginationPageComponent, data: { breadcrumb: 'pagination' } },
-  { path: 'slider', component: SliderPageComponent, data: { breadcrumb: 'slider' } },
-  { path: 'gettingStarted', component: GettingStartedComponent, data: { breadcrumb: 'GettingStarted' } },
-  { path: 'faq', component: FaqComponent, data: { breadcrumb: 'F.A.Q' } },
-  { path: 'step', component: StepPageComponent, data: { breadcrumb: 'Step' } },
-  { path: 'calendar', component: CalendarPageComponent, data: { breadcrumb: 'Calendar' } },
-  { path: 'dropdown', component: DropdownPageComponent, data: { breadcrumb: 'Dropdown' } },
-  { path: 'input', component: InputPageComponent, data: { breadcrumb: 'Input' } },
-  { path: 'checkbox', component: CheckboxPageComponent, data: { breadcrumb: 'Checkbox' } },
-  { path: 'radio', component: RadioPageComponent, data: { breadcrumb: 'Radios' } },
-  { path: 'select', component: SelectPageComponent, data: { breadcrumb: 'select' } },
-  { path: 'fieldset', component: FieldsetPageComponent, data: { breadcrumb: 'fieldset' } },
-  { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
-  { path: 'toast', component: ToastPageComponent, data: { breadcrumb: 'toast' } },
-  { path: 'list', component: ListPageComponent, data: { breadcrumb: 'list' } },
-  { path: 'bottom', component: BottomPageComponent, data: { breadcrumb: 'Bottom' } },
-  { path: 'breadcrumbs', component: BreadcrumbsPageComponent, data: { breadcrumb: 'Breadcrumbs' }
- },
-
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  //  { path: '**', component: PageNotFoundComponent }
-];
->>>>>>> .merge_file_a09768
 
 @NgModule({
   declarations: [
@@ -150,19 +111,7 @@ export const appRoutes: Routes = [
     RadioPageComponent,
     RadioComponent,
     RadioItemComponent,
-<<<<<<< .merge_file_a12244
     ProgressComponent
-=======
-    CheckboxGroupItemComponent,
-    CheckboxLinkComponent,
-    InputSearchComponent,
-    ProgressComponent,
-    InputUrlComponent,
-    InputPasswordComponent,
-    ButtonIconComponent,
-    ButtonIconOnlyComponent,
-    SpinnerProgressComponent,
->>>>>>> .merge_file_a09768
   ],
   imports: [
     BrowserModule,
