@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
-import { ModalComponent } from './modal/modal.component';
 import { AppComponent } from '../../app.component';
+import { ModalComponent } from 'creamnglib';
 
 @Component({
   selector: 'c3m-modal-page',
