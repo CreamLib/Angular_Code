@@ -56,7 +56,7 @@ import { RadioComponent } from './main/radio-page/radio/radio.component';
 import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
-import { CreamnglibModule } from '../../projects/creamnglib/src/lib/creamnglib.module';
+import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 
 @NgModule({
