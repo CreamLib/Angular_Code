@@ -24,6 +24,7 @@
     "@angular/router": "7.1.4",
     "classlist.js": "1.1.20150312",
     "core-js": "2.6.1",
+    "creamngnpm": "^2.0.2",
     "css-vars-ponyfill": "1.16.2",
     "ng-lottie": "0.3.2",
     "ng2-scroll-to": "1.0.7",
