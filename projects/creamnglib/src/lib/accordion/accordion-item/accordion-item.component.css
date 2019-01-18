@@ -29,13 +29,6 @@ c3m-accordion-item > li.closed > .panel-collapse {
   display: none;
 }
 
-/* Accordion Item Content */
-c3m-accordion .panel-collapse {
-  color: #000;
-  background-color: #F9F0E2;
-  padding: 1rem;
-}
-
 /* Accordion Item Button */
 c3m-accordion-item > li > button {
   position: relative;
@@ -44,6 +37,7 @@ c3m-accordion-item > li > button {
   line-height: 1.7rem;
   text-align: left;
   color: #FFF;
+  border-radius: 0;
   background-color: var(--main-light);
   background-size: 2.1rem;
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;

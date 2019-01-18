@@ -19,10 +19,10 @@ import { AccordionComponent } from '../accordion.component';
         opacity: 0.5,
       })),
       transition('open => closed', [
-        animate('0.5s')
+        animate('0.2s')
       ]),
       transition('closed => open', [
-        animate('0.5s')
+        animate('0.2s')
       ]),
     ])
   ],
@@ -85,5 +85,6 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewIn
 
   toggleOpen(): void {
     this.isOpen = !this.isOpen;
+    this.accordion.closeOthers(this);
   }
 }
