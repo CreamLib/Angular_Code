@@ -1,10 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScrollToModule } from 'ng2-scroll-to';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { BreadcrumbsModule } from './module-breadcrumbs';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -58,6 +59,8 @@ import { ProgressComponent } from './main/slider-page/progress/progress.componen
 import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
+import { CardPageComponent } from './main/card-page/card-page.component';
+import { CardComponent } from './main/card-page/card/card.component';
 
 @NgModule({
   declarations: [
@@ -109,10 +112,13 @@ import { appRoutes } from './app.routes';
     RadioComponent,
     RadioItemComponent,
     ProgressComponent,
-    SpinnerProgressComponent
+    SpinnerProgressComponent,
+    CardPageComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes, { useHash: true }),

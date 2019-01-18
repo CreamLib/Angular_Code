@@ -1,10 +1,31 @@
 import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
+import { trigger, state, transition, animate, style } from '@angular/animations';
 import { AccordionComponent } from '../accordion.component';
 
 @Component({
   selector: 'c3m-accordion-item',
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.css'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        color: '#000',
+        backgroundColor: '#F9F0E2',
+        padding: '1rem'
+      })),
+      state('closed', style({
+        display: 'none',
+        padding: '0',
+        opacity: 0.5,
+      })),
+      transition('open => closed', [
+        animate('0.5s')
+      ]),
+      transition('closed => open', [
+        animate('0.5s')
+      ]),
+    ])
+  ],
   encapsulation: ViewEncapsulation.None
 })
 export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewInit, OnInit {
@@ -53,12 +74,16 @@ export class AccordionItemComponent implements OnDestroy, OnChanges, AfterViewIn
 
 
   /* open accordion'element */
-  toggleOpen(): void {
+  /*toggleOpen(): void {
     if (!this.isOpen) {
       this.isOpen = true;
       this.accordion.closeOthers(this);
     } else if (this.isOpen) {
       this.accordion.closeAll(this);
     }
+  }*/
+
+  toggleOpen(): void {
+    this.isOpen = !this.isOpen;
   }
 }
