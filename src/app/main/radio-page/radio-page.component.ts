@@ -15,7 +15,6 @@ export class RadioPageComponent implements OnInit {
 
   ngOnInit() {
     const subComp = ['radio-item'];
-    this.app.codeSnippets(subComp);
   }
 
 }

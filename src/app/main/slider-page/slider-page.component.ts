@@ -12,7 +12,5 @@ export class SliderPageComponent implements OnInit {
   constructor(private app: AppComponent) {
   }
 
-  ngOnInit() {
-      this.app.codeSnippets('');
-  }
+  ngOnInit() {}
 }

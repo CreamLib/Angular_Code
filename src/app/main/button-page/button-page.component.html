@@ -14,21 +14,7 @@
 <div class="titleComponent">
   <!-- NORMAL BUTTON -->
   <div class="descriptionComponent" id="button">
-    <h3>
-      <!-- GitHub SVG -->
-      <svg><use xlink:href="#gitListItem"></use></svg> General Buttons
-
-      <!-- GitHub Repo Link -->
-      <a
-        href="https://github.com/CreamNG/Components/tree/master/button"
-        class="gitBtn"
-        target="_blank"
-      >
-        <svg><use xlink:href="assets/img/icons.svg#gitSvg"></use></svg>
-
-        <span>Github</span></a
-      >
-    </h3>
+    <h3>General Buttons</h3>
 
     <!-- Description -->
     <div class="explain">
@@ -38,20 +24,17 @@
 
     <!-- Demo -->
     <div class="demo">
-      <c3m-button (click)="alert('general action')">general action</c3m-button>
-      <c3m-button (click)="alert('submit action')" ngClass="submit"
-        >submit action</c3m-button
-      >
-      <c3m-button (click)="alert('optional action')" ngClass="optional"
-        >optional action</c3m-button
-      >
+      <ul class="buttons-bar">
+        <li><c3m-button (click)="alert('general action')">general action</c3m-button></li>
+        <li><c3m-button (click)="alert('submit action')" ngClass="submit">submit action</c3m-button></li>
+        <li><c3m-button (click)="alert('optional action')" ngClass="optional">optional action</c3m-button></li>
+      </ul>
     </div>
 
     <!-- CODE SNIPPETS -->
     <c3m-tabs class="snippets">
       <!-- SNIPPETS HTML -->
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code">To call the component</p>
+      <c3m-tab tabTitle="To call the component">
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
@@ -68,34 +51,21 @@
 
   <!-- ICONS BUTTONS -->
   <div class="descriptionComponent" id="button-icon">
-    <h3>
-      <!-- GitHub SVG -->
-      <svg><use xlink:href="#gitListItem"></use></svg> Icon Buttons
-
-      <!-- GitHub Repo Link -->
-      <a
-        href="https://github.com/CreamNG/Components/tree/master/button"
-        class="gitBtn"
-        target="_blank"
-      >
-        <svg><use xlink:href="assets/img/icons.svg#gitSvg"></use></svg>
-
-        <span>Github</span></a
-      >
-    </h3>
+    <h3>Icon Buttons</h3>
 
     <!-- Demo -->
     <div class="demo">
-      <c3m-button-icon class="icon-delete">Delete</c3m-button-icon>
-      <c3m-button-icon class="icon-edit">Edit</c3m-button-icon>
-      <c3m-button-icon class="icon-add">Add</c3m-button-icon>
+      <ul class="buttons-bar">
+        <li><c3m-button-icon class="icon-delete">Delete</c3m-button-icon></li>
+        <li><c3m-button-icon class="icon-edit">Edit</c3m-button-icon></li>
+        <li><c3m-button-icon class="icon-add">Add</c3m-button-icon></li>
+      </ul>
     </div>
 
     <!-- CODE SNIPPETS -->
     <c3m-tabs class="snippets">
       <!-- SNIPPETS HTML -->
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code">To call the component</p>
+      <c3m-tab tabTitle="To call the component">
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
@@ -112,34 +82,21 @@
 
   <!-- ICON ONLY BUTTONS -->
   <div class="descriptionComponent" id="button-icon-only">
-    <h3>
-      <!-- GitHub SVG -->
-      <svg><use xlink:href="#gitListItem"></use></svg> Buttons With Icons Only
-
-      <!-- GitHub Repo Link -->
-      <a
-        href="https://github.com/CreamNG/Components/tree/master/button"
-        class="gitBtn"
-        target="_blank"
-      >
-        <svg><use xlink:href="assets/img/icons.svg#gitSvg"></use></svg>
-
-        <span>Github</span></a
-      >
-    </h3>
+    <h3>Buttons With Icons Only</h3>
 
     <!-- Demo -->
     <div class="demo">
-      <c3m-button-icon-only class="icon-delete">Delete</c3m-button-icon-only>
-      <c3m-button-icon-only class="icon-edit">Edit</c3m-button-icon-only>
-      <c3m-button-icon-only class="icon-add">Add</c3m-button-icon-only>
+      <ul class="buttons-bar">
+        <li><c3m-button-icon-only class="icon-delete">Delete</c3m-button-icon-only></li>
+        <li><c3m-button-icon-only class="icon-edit">Edit</c3m-button-icon-only></li>
+        <li><c3m-button-icon-only class="icon-add">Add</c3m-button-icon-only></li>
+      </ul>
     </div>
 
     <!-- CODE SNIPPETS -->
     <c3m-tabs class="snippets">
       <!-- SNIPPETS HTML -->
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code">To call the component</p>
+      <c3m-tab tabTitle="To call the component">
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
@@ -156,33 +113,23 @@
 
   <!-- UPLOAD BUTTON -->
   <div class="descriptionComponent" id="button-file">
-    <h3>
-      <svg><use xlink:href="#gitListItem"></use></svg> Upload Button
+    <h3>Upload Button</h3>
 
-      <a
-        href="https://github.com/CreamNG/Components/tree/master/button-file"
-        class="gitBtn"
-        target="_blank"
-      >
-        <svg><use xlink:href="assets/img/icons.svg#gitSvg"></use></svg>
-
-        <span>Github</span></a
-      >
-    </h3>
-
-    <div class="explain"><p>Allow the upload of multiple files.</p></div>
-    <div class="demo"><c3m-button-file>Files to upload</c3m-button-file></div>
+    <div class="explain">
+      <p>Allow the upload of multiple files.</p>
+    </div>
+    <div class="demo">
+      <c3m-button-file>Files to upload</c3m-button-file>
+    </div>
 
     <c3m-tabs class="snippets">
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code">To call the component</p>
+      <c3m-tab tabTitle="To call the component">
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
   &lt;!-- Button Upload --&gt;
   &#x3C;c3m-button-file&#x3E;Choose a file&#x3C;/c3m-button-file&#x3E;
-                  </pre
-          >
+                  </pre>
         </div>
       </c3m-tab>
     </c3m-tabs>
@@ -190,19 +137,7 @@
 
   <!-- SUBMIT BUTTON -->
   <div class="descriptionComponent" id="button-submit">
-    <h3>
-      <svg><use xlink:href="#gitListItem"></use></svg> Submit Button
-
-      <a
-        href="https://github.com/CreamNG/Components/tree/master/button-submit"
-        class="gitBtn"
-        target="_blank"
-      >
-        <svg><use xlink:href="assets/img/icons.svg#gitSvg"></use></svg>
-
-        <span>Github</span></a
-      >
-    </h3>
+    <h3>Submit Button</h3>
 
     <div class="explain">
       <p>
@@ -215,8 +150,7 @@
     </div>
 
     <c3m-tabs class="snippets">
-      <c3m-tab tabTitle="HTML">
-        <p class="pre-code">To call the component</p>
+      <c3m-tab tabTitle="To call the component">
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">

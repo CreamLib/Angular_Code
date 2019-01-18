@@ -1,10 +1,7 @@
 <!-- Header -->
 <header>
   <!-- Burger Button -->
-  <button
-    [ngClass]="{ burgerVertical: menuMobile, burgerHorizontal: !menuMobile }"
-    (click)="ToggleMenuBurger()"
-  >
+  <button [ngClass]="{ burgerVertical: menuMobile, burgerHorizontal: !menuMobile }" (click)="ToggleMenuBurger()">
     <img src="assets/img/burger.svg" alt="Mobile Button (Open Menu)" />
   </button>
 
@@ -26,38 +23,12 @@
 
   <!-- MENU -->
   <c3m-menu [ngClass]="{ mobileOpen: menuMobile, mobileClose: !menuMobile }">
-    <!-- GROUP HELP -->
-    <c3m-menu-item
-      nameButton="Help"
-      class="help"
-      idSvg="assets/img/icons.svg#svg4"
-      [index]="0"
-      [isOpen]="false"
-    >
-      <ul class="contenuMenu">
-        <li (click)="ToggleMenuBurger()">
-          <a routerLink="/gettingStarted" routerLinkActive="active"
-            >Getting Started</a
-          >
-        </li>
-        <li (click)="ToggleMenuBurger()">
-          <a routerLink="/faq" routerLinkActive="active">F.A.Q</a>
-        </li>
-      </ul>
-    </c3m-menu-item>
 
     <!-- GROUP FORM ELEMENTS -->
-    <c3m-menu-item
-      nameButton="Form Elements"
-      idSvg="assets/img/icons.svg#svg1"
-      [index]="1"
-      [isOpen]="false"
-    >
+    <c3m-menu-item nameButton="Form Elements" idSvg="assets/img/icons.svg#svg1" [index]="1" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
-          <a routerLink="/button" routerLinkActive="active"
-            >Buttons &amp; Controls</a
-          >
+          <a routerLink="/button" routerLinkActive="active">Buttons &amp; Controls</a>
         </li>
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/checkbox" routerLinkActive="active">Checkboxes</a>
@@ -75,14 +46,10 @@
           <a routerLink="/radio" routerLinkActive="active">Radios</a>
         </li>
         <li (click)="ToggleMenuBurger()">
-          <a routerLink="/select" routerLinkActive="active"
-            >Selects &amp; Datalists</a
-          >
+          <a routerLink="/select" routerLinkActive="active">Selects &amp; Datalists</a>
         </li>
         <li (click)="ToggleMenuBurger()">
-          <a routerLink="/slider" routerLinkActive="active"
-            >Sliders &amp; Progress</a
-          >
+          <a routerLink="/slider" routerLinkActive="active">Sliders &amp; Progress</a>
         </li>
       </ul>
     </c3m-menu-item>
@@ -92,8 +59,7 @@
       nameButton="Navigation"
       idSvg="assets/img/icons.svg#svg2"
       [index]="2"
-      [isOpen]="false"
-    >
+      [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
@@ -105,12 +71,7 @@
     </c3m-menu-item>
 
     <!-- GROUP BLOCKS -->
-    <c3m-menu-item
-      nameButton="Blocks"
-      idSvg="assets/img/icons.svg#svg3"
-      [index]="3"
-      [isOpen]="false"
-    >
+    <c3m-menu-item nameButton="Blocks" idSvg="assets/img/icons.svg#svg3" [index]="3" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/accordion" routerLinkActive="active">Accordion</a>
@@ -131,12 +92,7 @@
     </c3m-menu-item>
 
     <!-- STRUCTURE -->
-    <c3m-menu-item
-      nameButton="Page Structure"
-      idSvg="assets/img/icons.svg#svg5"
-      [index]="4"
-      [isOpen]="false"
-    >
+    <c3m-menu-item nameButton="Page Structure" idSvg="assets/img/icons.svg#svg5" [index]="4" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/bottom" routerLinkActive="active">Bottom</a>
@@ -145,24 +101,14 @@
     </c3m-menu-item>
 
     <!-- EDITORIAL -->
-    <c3m-menu-item
-      nameButton="Editorial"
-      idSvg="assets/img/icons.svg#svg5"
-      [index]="5"
-      [isOpen]="false"
-    >
+    <c3m-menu-item nameButton="Editorial" idSvg="assets/img/icons.svg#svg5" [index]="5" [isOpen]="false">
       <ul class="contenuMenu">
         <li></li>
       </ul>
     </c3m-menu-item>
 
     <!-- GENERAL ELEMENTS -->
-    <c3m-menu-item
-      nameButton="Utilities"
-      idSvg="assets/img/icons.svg#svg5"
-      [index]="6"
-      [isOpen]="false"
-    >
+    <c3m-menu-item nameButton="Utilities" idSvg="assets/img/icons.svg#svg5" [index]="6" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/dropdown" routerLinkActive="active">Dropdown</a>
@@ -178,6 +124,17 @@
         </li>
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/toast" routerLinkActive="active">Toast</a>
+        </li>
+      </ul>
+    </c3m-menu-item>
+    <!-- GROUP HELP -->
+    <c3m-menu-item nameButton="Help" class="help" idSvg="assets/img/icons.svg#svg4" [index]="0" [isOpen]="false">
+      <ul class="contenuMenu">
+        <li (click)="ToggleMenuBurger()">
+          <a routerLink="/gettingStarted" routerLinkActive="active">Getting Started</a>
+        </li>
+        <li (click)="ToggleMenuBurger()">
+          <a routerLink="/faq" routerLinkActive="active">F.A.Q</a>
         </li>
       </ul>
     </c3m-menu-item>

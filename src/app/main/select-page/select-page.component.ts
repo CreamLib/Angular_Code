@@ -13,9 +13,6 @@ export class SelectPageComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-      this.app.codeSnippets('');
-  }
-
-
+  ngOnInit() {}
+  
 }

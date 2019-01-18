@@ -1,8 +1,5 @@
 c3m-checkbox-link label {
   display: inline-block;
-  padding: 0;
-}
-
-c3m-checkbox-link label {
   font-family: var(--stack);
+  padding: 0 0 0 0.5em;
 }

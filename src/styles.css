@@ -173,6 +173,13 @@ input[disabled] {
 	border: none;
 }
 
+/* To structure group of buttons */
+ul.buttons-bar li {
+	display: inline-block;
+	font-size: 1em;
+	margin: 0 0.5em 0.5em 0;
+}
+
 
 /* *********** ARTICLES ************* */
 

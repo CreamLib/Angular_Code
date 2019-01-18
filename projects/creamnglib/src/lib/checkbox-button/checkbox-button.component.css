@@ -8,9 +8,8 @@ c3m-checkbox-button label {
 /* Style of Button */
 c3m-checkbox-button label span {
   display: inline-block;
-  line-height: 1.6;
   text-align: center;
-  padding: 0 0.5em;
+  padding: 0.6em 0.5em 0.5em;
   border: 1px solid var(--n-dark);
   cursor: pointer;
 }
