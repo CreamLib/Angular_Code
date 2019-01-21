@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import * as svgxuse from 'svgxuse/svgxuse.js';
 
 @Component({
   selector: 'app-accueil',
@@ -42,6 +43,7 @@ export class AccueilComponent implements OnInit {
   }
 
   ngOnInit() {
+    svgxuse();
   }
 
 }

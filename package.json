@@ -29,6 +29,7 @@
     "ng-lottie": "0.3.2",
     "ng2-scroll-to": "1.0.7",
     "rxjs": "6.3.3",
+    "svgxuse": "^1.2.6",
     "tslib": "1.9.0",
     "zone.js": "0.8.26"
   },

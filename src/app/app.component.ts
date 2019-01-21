@@ -16,6 +16,7 @@ export class AppComponent implements AfterViewChecked {
 
   constructor(private http: Http) { }
 
+
   // Array of all items to be paged
   private allItems: string;
 
