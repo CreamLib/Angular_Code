@@ -114,6 +114,7 @@ c3m-carousel .carousel{
                                     left:0;
                                     cursor:pointer;
                                     background-color: #ed9c20;
+                                    border-radius: 0;
                                 }
                                   /* NEXT button */
                                   c3m-carousel .nextCarouselItem{
@@ -125,6 +126,7 @@ c3m-carousel .carousel{
                                     left:50%;
                                     cursor:pointer;
                                     background-color: #ed9c20;
+                                    border-radius: 0;
                                 }
 
   /* MANAGE BUTTONS TAB INDEX */
