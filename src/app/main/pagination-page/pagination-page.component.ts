@@ -14,7 +14,6 @@ export class PaginationPageComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.app.codeSnippets('');
   }
 
 }

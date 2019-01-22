@@ -13,6 +13,5 @@ export class StepPageComponent implements OnInit {
 
   ngOnInit() {
     let subComp = ['step-item'];
-    this.app.codeSnippets(subComp);
   }
 }

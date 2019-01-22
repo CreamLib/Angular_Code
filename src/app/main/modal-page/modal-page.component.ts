@@ -20,6 +20,5 @@ export class ModalPageComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.app.codeSnippets('');
   }
 }

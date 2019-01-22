@@ -13,7 +13,6 @@ export class BottomPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app.codeSnippets('');
   }
 
 }

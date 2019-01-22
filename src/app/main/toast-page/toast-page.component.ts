@@ -10,7 +10,6 @@ export class ToastPageComponent {
   @ViewChild("toast") toast;
 
   public openToast() {
-    console.log(this.toast);
     this.toast.toggle();
   }
 
