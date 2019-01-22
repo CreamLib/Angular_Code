@@ -13,7 +13,6 @@ export class SkipPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app.codeSnippets('');
   }
 }
 

@@ -13,6 +13,5 @@ export class BreadcrumbsPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.app.codeSnippets('');
   }
 }

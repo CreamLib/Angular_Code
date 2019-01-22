@@ -14,7 +14,6 @@ export class TablePageComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.app.codeSnippets('');
   }
 
 }
