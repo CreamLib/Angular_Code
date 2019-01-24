@@ -1,0 +1,9 @@
+c3m-spinner-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+c3m-spinner-progress p {
+    padding-top: 0.5rem;
+}

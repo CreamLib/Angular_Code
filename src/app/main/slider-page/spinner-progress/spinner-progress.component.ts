@@ -9,7 +9,8 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class SpinnerProgressComponent implements OnInit {
 
   @Input() size: number = 50;
-  @Input() disabled: boolean;
+  @Input() value: number = 0;
+  @Input() determinate: boolean;
 
   constructor() { }
 
