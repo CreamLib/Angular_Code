@@ -48,6 +48,8 @@ import { StepItemComponent } from './step/step-item/step-item.component';
 import { ColumnTableComponent } from './table/table.component';
 import { ToggleTableComponent } from './table-toggle/table-toggle.component';
 import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { TabComponent } from './tabs/tabs-item/tabs-item.component';
 
 @NgModule({
   declarations: [
@@ -98,7 +100,9 @@ import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
     StepItemComponent,
     ColumnTableComponent,
     ToggleTableComponent,
-    PageSwipeTableComponent
+    PageSwipeTableComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -149,7 +153,9 @@ import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
     StepItemComponent,
     ColumnTableComponent,
     ToggleTableComponent,
-    PageSwipeTableComponent
+    PageSwipeTableComponent,
+    TabsComponent,
+    TabComponent
   ]
 })
 export class CreamnglibModule {}
