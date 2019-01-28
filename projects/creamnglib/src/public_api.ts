@@ -37,7 +37,10 @@ export * from './lib/list-description/list-description.component';
 export * from './lib/list-order/list-order.component';
 export * from './lib/list-thumbnails/list-thumbnails.component';
 export * from './lib/radio/radio.component';
-export * from './lib/radio/radio-item/radio-item.component'
+export * from './lib/radio/radio-item/radio-item.component';
+export * from './lib/select/select.component';
+export * from './lib/select-datalist/select-datalist.component';
+export * from './lib/select-datalists/select-datalists.component';
 
 export * from './lib/modal/modal.component';
 export * from './lib/modal-alert/modal-alert.component';
