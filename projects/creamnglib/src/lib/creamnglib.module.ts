@@ -43,6 +43,8 @@ import { SkipComponent } from './skip/skip.component';
 import { SliderComponent} from './slider/slider.component';
 import { ProgressComponent } from './progress/progress.component';
 import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.component';
+import { StepComponent } from './step/step.component';
+import { StepItemComponent } from './step/step-item/step-item.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,9 @@ import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.co
     SkipComponent,
     SliderComponent,
     ProgressComponent,
-    SpinnerProgressComponent
+    SpinnerProgressComponent,
+    StepComponent,
+    StepItemComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -134,7 +138,9 @@ import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.co
     SkipComponent,
     SliderComponent,
     ProgressComponent,
-    SpinnerProgressComponent
+    SpinnerProgressComponent,
+    StepComponent,
+    StepItemComponent
   ]
 })
 export class CreamnglibModule {}

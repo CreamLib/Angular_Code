@@ -31,8 +31,6 @@ import { PagerService } from './main/pagination-page/pagination/pager.service';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
 import { StepPageComponent } from './main/step-page/step-page.component';
-import { StepComponent } from './main/step-page/step/step.component';
-import { StepItemComponent } from './main/step-page/step/step-item/step-item.component';
 import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
 import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
 import { InputPageComponent } from './main/input-page/input-page.component';
@@ -78,8 +76,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     SliderPageComponent,
     GettingStartedComponent,
     StepPageComponent,
-    StepComponent,
-    StepItemComponent,
     CalendarPageComponent,
     DropdownPageComponent,
     InputPageComponent,

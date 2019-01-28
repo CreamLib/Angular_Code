@@ -45,6 +45,8 @@ export * from './lib/skip/skip.component';
 export * from './lib/slider/slider.component';
 export * from './lib/progress/progress.component';
 export * from './lib/spinner-progress/spinner-progress.component';
+export * from './lib/step/step.component';
+export * from './lib/step/step-item/step-item.component';
 
 export * from './lib/modal/modal.component';
 export * from './lib/modal-alert/modal-alert.component';
