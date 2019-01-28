@@ -22,9 +22,6 @@ import { MenuItemComponent } from './header/menu/menu-item/menu-item.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
 import { TablePageComponent } from './main/table-page/table-page.component';
-import { ColumnTableComponent } from './main/table-page/table/table.component';
-import { ToggleTableComponent } from './main/table-page/table-toggle/table-toggle.component';
-import { PageSwipeTableComponent } from './main/table-page/table-swipe/table-swipe.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
 import { PagerService } from './main/pagination-page/pagination/pager.service';
@@ -68,9 +65,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     CarouselPageComponent,
     ModalPageComponent,
     TablePageComponent,
-    ColumnTableComponent,
-    ToggleTableComponent,
-    PageSwipeTableComponent,
     PaginationPageComponent,
     PaginationComponent,
     SliderPageComponent,

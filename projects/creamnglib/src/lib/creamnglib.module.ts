@@ -45,6 +45,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.component';
 import { StepComponent } from './step/step.component';
 import { StepItemComponent } from './step/step-item/step-item.component';
+import { ColumnTableComponent } from './table/table.component';
+import { ToggleTableComponent } from './table-toggle/table-toggle.component';
+import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +95,10 @@ import { StepItemComponent } from './step/step-item/step-item.component';
     ProgressComponent,
     SpinnerProgressComponent,
     StepComponent,
-    StepItemComponent
+    StepItemComponent,
+    ColumnTableComponent,
+    ToggleTableComponent,
+    PageSwipeTableComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -140,7 +146,10 @@ import { StepItemComponent } from './step/step-item/step-item.component';
     ProgressComponent,
     SpinnerProgressComponent,
     StepComponent,
-    StepItemComponent
+    StepItemComponent,
+    ColumnTableComponent,
+    ToggleTableComponent,
+    PageSwipeTableComponent
   ]
 })
 export class CreamnglibModule {}
