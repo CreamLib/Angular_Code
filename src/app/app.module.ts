@@ -29,7 +29,6 @@ import { PaginationPageComponent } from './main/pagination-page/pagination-page.
 import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
 import { PagerService } from './main/pagination-page/pagination/pager.service';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
-import { SliderComponent } from './main/slider-page/slider/slider.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
 import { StepPageComponent } from './main/step-page/step-page.component';
 import { StepComponent } from './main/step-page/step/step.component';
@@ -49,8 +48,6 @@ import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
-import { ProgressComponent } from './main/slider-page/progress/progress.component';
-import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
 import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
@@ -79,7 +76,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     PaginationPageComponent,
     PaginationComponent,
     SliderPageComponent,
-    SliderComponent,
     GettingStartedComponent,
     StepPageComponent,
     StepComponent,
@@ -99,8 +95,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     BottomPageComponent,
     BottomComponent,
     RadioPageComponent,
-    ProgressComponent,
-    SpinnerProgressComponent,
     CardPageComponent,
     CardComponent
   ],

@@ -40,6 +40,9 @@ import { SelectComponent } from './select/select.component';
 import { SelectDatalistComponent } from './select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './select-datalists/select-datalists.component';
 import { SkipComponent } from './skip/skip.component';
+import { SliderComponent} from './slider/slider.component';
+import { ProgressComponent } from './progress/progress.component';
+import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +85,10 @@ import { SkipComponent } from './skip/skip.component';
     SelectComponent,
     SelectDatalistComponent,
     SelectDatalistsComponent,
-    SkipComponent
+    SkipComponent,
+    SliderComponent,
+    ProgressComponent,
+    SpinnerProgressComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -125,7 +131,10 @@ import { SkipComponent } from './skip/skip.component';
     SelectComponent,
     SelectDatalistComponent,
     SelectDatalistsComponent,
-    SkipComponent
+    SkipComponent,
+    SliderComponent,
+    ProgressComponent,
+    SpinnerProgressComponent
   ]
 })
 export class CreamnglibModule {}
