@@ -34,6 +34,22 @@ import { ListThumbnailsComponent } from './list-thumbnails/list-thumbnails.compo
 import { ListDescriptionComponent } from './list-description/list-description.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalAlertComponent } from './modal-alert/modal-alert.component';
+import { RadioComponent } from './radio/radio.component';
+import { RadioItemComponent } from './radio/radio-item/radio-item.component';
+import { SelectComponent } from './select/select.component';
+import { SelectDatalistComponent } from './select-datalist/select-datalist.component';
+import { SelectDatalistsComponent } from './select-datalists/select-datalists.component';
+import { SkipComponent } from './skip/skip.component';
+import { SliderComponent} from './slider/slider.component';
+import { ProgressComponent } from './progress/progress.component';
+import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.component';
+import { StepComponent } from './step/step.component';
+import { StepItemComponent } from './step/step-item/step-item.component';
+import { ColumnTableComponent } from './table/table.component';
+import { ToggleTableComponent } from './table-toggle/table-toggle.component';
+import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { TabComponent } from './tabs/tabs-item/tabs-item.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +86,23 @@ import { ModalAlertComponent } from './modal-alert/modal-alert.component';
     ListThumbnailsComponent,
     ListDescriptionComponent,
     ModalComponent,
-    ModalAlertComponent
+    ModalAlertComponent,
+    RadioComponent,
+    RadioItemComponent,
+    SelectComponent,
+    SelectDatalistComponent,
+    SelectDatalistsComponent,
+    SkipComponent,
+    SliderComponent,
+    ProgressComponent,
+    SpinnerProgressComponent,
+    StepComponent,
+    StepItemComponent,
+    ColumnTableComponent,
+    ToggleTableComponent,
+    PageSwipeTableComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -107,7 +139,23 @@ import { ModalAlertComponent } from './modal-alert/modal-alert.component';
     ListThumbnailsComponent,
     ListDescriptionComponent,
     ModalComponent,
-    ModalAlertComponent
+    ModalAlertComponent,
+    RadioComponent,
+    RadioItemComponent,
+    SelectComponent,
+    SelectDatalistComponent,
+    SelectDatalistsComponent,
+    SkipComponent,
+    SliderComponent,
+    ProgressComponent,
+    SpinnerProgressComponent,
+    StepComponent,
+    StepItemComponent,
+    ColumnTableComponent,
+    ToggleTableComponent,
+    PageSwipeTableComponent,
+    TabsComponent,
+    TabComponent
   ]
 })
 export class CreamnglibModule {}

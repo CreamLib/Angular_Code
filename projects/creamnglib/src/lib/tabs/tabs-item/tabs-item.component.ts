@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, Input, AfterViewInit} from '@angular/core';
 import { TabsComponent } from '../tabs.component';
-import { AppComponent } from '../../../../app.component';
 
 @Component({
   selector: 'c3m-tab',
@@ -19,9 +18,9 @@ export class TabComponent implements OnInit, AfterViewInit {
 
 
   /* Constructor Tab Component */
-  constructor(tabs: TabsComponent, app: AppComponent) {
+  constructor(tabs: TabsComponent) {
     tabs.addTab(this);
-    this.idTab = app.randomID();
+    this.idTab = this.randomID();
    }
 
    /* ID for Accessbility */
@@ -35,6 +34,11 @@ export class TabComponent implements OnInit, AfterViewInit {
     this.tabID = 'tab' + this.idTab;
     this.panelID = 'panel' + this.idTab;
 
+  }
+
+  randomID() {
+    const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
+    return idRandom;
   }
 
 

@@ -143,6 +143,12 @@ code {
 c3m-breadcrumbs {display: none;}
 div.demo c3m-breadcrumbs {display: block;}
 
+/* *********** NAV ************* */
+
+nav c3m-skip a {
+	position: absolute;
+	left: -9999px;
+}
 
 /* *********** FORMS ************* */
 
