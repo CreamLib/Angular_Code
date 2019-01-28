@@ -34,6 +34,8 @@ import { ListThumbnailsComponent } from './list-thumbnails/list-thumbnails.compo
 import { ListDescriptionComponent } from './list-description/list-description.component';
 import { ModalComponent } from './modal/modal.component';
 import { ModalAlertComponent } from './modal-alert/modal-alert.component';
+import { RadioComponent } from './radio/radio.component';
+import { RadioItemComponent } from './radio/radio-item/radio-item.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { ModalAlertComponent } from './modal-alert/modal-alert.component';
     ListThumbnailsComponent,
     ListDescriptionComponent,
     ModalComponent,
-    ModalAlertComponent
+    ModalAlertComponent,
+    RadioComponent,
+    RadioItemComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -107,7 +111,9 @@ import { ModalAlertComponent } from './modal-alert/modal-alert.component';
     ListThumbnailsComponent,
     ListDescriptionComponent,
     ModalComponent,
-    ModalAlertComponent
+    ModalAlertComponent,
+    RadioComponent,
+    RadioItemComponent
   ]
 })
 export class CreamnglibModule {}

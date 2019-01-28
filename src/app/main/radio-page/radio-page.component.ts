@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { RadioItemComponent } from './radio/radio-item/radio-item.component';
 import { AppComponent } from '../../app.component';
 
 @Component({
