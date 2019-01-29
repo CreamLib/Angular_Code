@@ -36,6 +36,9 @@ import { ModalComponent } from './modal/modal.component';
 import { ModalAlertComponent } from './modal-alert/modal-alert.component';
 import { RadioComponent } from './radio/radio.component';
 import { RadioItemComponent } from './radio/radio-item/radio-item.component';
+import { SelectComponent } from './select/select.component';
+import { SelectDatalistComponent } from './select-datalist/select-datalist.component';
+import { SelectDatalistsComponent } from './select-datalists/select-datalists.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +77,10 @@ import { RadioItemComponent } from './radio/radio-item/radio-item.component';
     ModalComponent,
     ModalAlertComponent,
     RadioComponent,
-    RadioItemComponent
+    RadioItemComponent,
+    SelectComponent,
+    SelectDatalistComponent,
+    SelectDatalistsComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -113,7 +119,10 @@ import { RadioItemComponent } from './radio/radio-item/radio-item.component';
     ModalComponent,
     ModalAlertComponent,
     RadioComponent,
-    RadioItemComponent
+    RadioItemComponent,
+    SelectComponent,
+    SelectDatalistComponent,
+    SelectDatalistsComponent
   ]
 })
 export class CreamnglibModule {}

@@ -39,9 +39,6 @@ import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.compon
 import { InputPageComponent } from './main/input-page/input-page.component';
 import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
 import { SelectPageComponent } from './main/select-page/select-page.component';
-import { SelectComponent } from './main/select-page/select/select.component';
-import { SelectDatalistComponent } from './main/select-page/select-datalist/select-datalist.component';
-import { SelectDatalistsComponent } from './main/select-page/select-datalists/select-datalists.component';
 import { FaqComponent } from './main/faq/faq.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
@@ -93,9 +90,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     InputPageComponent,
     CheckboxPageComponent,
     SelectPageComponent,
-    SelectComponent,
-    SelectDatalistComponent,
-    SelectDatalistsComponent,
     FaqComponent,
     BreadcrumbsPageComponent,
     FieldsetPageComponent,
