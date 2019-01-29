@@ -1,17 +1,12 @@
 /* SNIPPETS */
 
-.tabsContainer {
-  background-color: transparent;
-  margin: 2rem 0;
-}
+.tabsContainer {margin: 2rem 0;}
 
   .tabsContainer > ul li button {
     width: 100%;
     font-family: var(--stack-b);
     text-align: left;
     background-color: var(--n-light);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     padding: 0.5em 1em;
   }
   .tabsContainer > ul li.active button,

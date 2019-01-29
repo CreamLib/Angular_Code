@@ -9,8 +9,6 @@ import { AccordionComponent } from '../accordion.component';
   animations: [
     trigger('openClose', [
       state('open', style({
-        color: '#000',
-        backgroundColor: '#F9F0E2',
         padding: '1rem'
       })),
       state('closed', style({

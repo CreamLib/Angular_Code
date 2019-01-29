@@ -23,24 +23,30 @@ export class TabsComponent implements AfterViewInit {
   /* Resize breakpoint tab */
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if ( this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop ) {
+    /*if (this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop ) {
 
-              if ( (this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop) &&  (this.isOver !== true) ) {
-                  this.widthBreak = event.target.innerWidth;
-                  this.isOver = true;
+      if ( (this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop) &&  (this.isOver !== true) ) {
+          this.widthBreak = event.target.innerWidth;
+          this.isOver = true;
+      }
+
+      if (this.widthBreak) {
+            if ( (event.target.innerWidth > this.widthBreak) && (this.isOver === true) ) {
+            this.isOver = false;
+            }
+
+      } else {
+            this.widthBreak = this.sizeInit;
+              if ( event.target.innerWidth >= this.widthBreak ) {
+                this.isOver = false;
               }
+      }
+    } else {
+      this.isOver = false;
+    }*/
 
-              if (this.widthBreak) {
-                    if ( (event.target.innerWidth > this.widthBreak) && (this.isOver === true) ) {
-                    this.isOver = false;
-                    }
-
-              } else {
-                    this.widthBreak = this.sizeInit;
-                      if ( event.target.innerWidth >= this.widthBreak ) {
-                        this.isOver = false;
-                      }
-              }
+    if (this.tabsElement.length == 1 || this.tabsElement.last.nativeElement.offsetTop == this.tabsElement.first.nativeElement.offsetTop) {
+      this.isOver = true;
     } else {
       this.isOver = false;
     }
@@ -72,10 +78,12 @@ export class TabsComponent implements AfterViewInit {
         this.sizeInit = this.arrayTmp[i].nativeElement.clientWidth + this.sizeInit;
     }
 
-    if ( this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop ) {
+    if (this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop ) {
       this.isOver = true;
+    } else if(this.tabsElement.length == 1) {
+       this.isOver = true;
     } else {
-       this.isOver = false;
+      this.isOver = false;
     }
       this.cdr.detectChanges();
   }

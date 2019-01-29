@@ -1,25 +1,14 @@
-c3m-breadcrumbs li{
+c3m-breadcrumbs li {
   display: inline-block;
   margin-right: 0.1rem;
 }
-c3m-breadcrumbs li:not(:last-of-type)::after{
-  content: ">";
+c3m-breadcrumbs li:not(:last-of-type)::after {
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  content: ">";
+  padding: 0 0.5em; 
 }
 
-c3m-breadcrumbs li > span{
-  font-size: 1.2rem;
-  font-family: "quicksandregular"
-}
+c3m-breadcrumbs li strong {}
 
-c3m-breadcrumbs li > a,
-c3m-breadcrumbs li > a:visited{
-  font-size: 1.2rem;
-  font-family: "quicksandregular";
-  color: #21b1ca;
-}
-  c3m-breadcrumbs li > a:hover{
-    text-decoration: underline;
-  }
+c3m-breadcrumbs li a {}
+  c3m-breadcrumbs li a:hover {}

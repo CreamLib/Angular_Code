@@ -1,28 +1,28 @@
 /* Accordion */
 c3m-accordion > ul {
+  width: 80%;
   padding: 1rem;
-  width: 80%
 }
 
 /* Accordion Item */
 
 c3m-accordion-item > li {
   position: relative;
-  color: #FFF;
-  background-color: #dea348;
+  color: var(--body-text);
+  background-color: var(--body-bg);
   border: none;
   z-index: 5;
 }
 
 /* Accordion item closed */
 c3m-accordion-item > li.closed {
-  color: #FFF;
-  background-color: #44abbc;
-  border-bottom: 1px solid #FFF;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  border-bottom: 1px solid var(--body-bg);
 }
 
 /* Last Accordion Item Closed */
-c3m-accordion-item:last-child > li.closed {border:none;}
+c3m-accordion-item:last-child > li.closed {border: none;}
 
 /* Content Accordion Item Closed */
 c3m-accordion-item > li.closed > .panel-collapse {
@@ -36,11 +36,11 @@ c3m-accordion-item > li > button {
   height: 100%;
   line-height: 1.7rem;
   text-align: left;
-  color: #FFF;
-  border-radius: 0;
-  background-color: var(--main-light);
+  color: var(--text-inv);
+  background-color: var(--main-color);
   background-size: 2.1rem;
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+  border-radius: 0;
   cursor: pointer;
   z-index: 10;
 }
@@ -51,9 +51,9 @@ c3m-accordion-item > li > button {
       right: 1rem;
       fill: white;
       transition: all 0.3s;
-      transform: rotate(180deg);
+      transform: rotate(0deg);
       z-index: 1;
     }
-    c3m-accordion-item > li.closed > button svg {
-      transform: rotate(0deg);
+    c3m-accordion-item > li > button[aria-expanded=true] svg {
+      transform: rotate(180deg);
     }

@@ -11,7 +11,7 @@ export class ColumnTableComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit() {
-    const heads = document.querySelectorAll('thead th');
+    /*const heads = document.querySelectorAll('thead th');
     const titles = [];
     for ( let x = 0; x < heads.length ; x++) {
       titles.push(heads[x].innerHTML);
@@ -28,6 +28,6 @@ export class ColumnTableComponent implements AfterViewInit {
             strong.appendChild(title);
             bodyTrTd[j].insertBefore(strong, bodyTrTd[j].childNodes[0]);
         }
-    }
+    }*/
   }
 }

@@ -11,54 +11,49 @@
 <!-- DESCRIPTION ACCORDION COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="accordion">
-    <h3>
-        Normal Accordion
-      </h3>
+    <h3>Normal Accordion</h3>
 
-      <div class="explain">
-        <dl>
-          <dt>nameButton</dt>
-          <dd>Title of the collapse</dd>
-        </dl>
-        <dl>
-          <dt>Index</dt>
-          <dd>Order of the collapse</dd>
-        </dl>
-        <dl>
-          <dt>isOpen</dt>
-          <dd>true if the collapse is open by default</dd>
-        </dl>
-      </div>
+    <div class="explain">
+      <p>This component is fully accessible and semantic; it is used for the main navigation of this web site.</p>
+      <p>If you want a specific block to be opened on page load, set "isOpen" to "true".</p>
+    </div>
+
     <!-- ACCORDION DEMO -->
     <div class="demo">
         <c3m-accordion>
 
-            <c3m-accordion-item nameButton="Title1" [index]=0 [isOpen]=false>
+            <c3m-accordion-item nameButton="Title 1" [index]="0" [isOpen]="true">
               <p>Content 1</p>
             </c3m-accordion-item>
-
-
-            <c3m-accordion-item nameButton="Title 2" [index]=1 [isOpen]=false>
+            <c3m-accordion-item nameButton="Title 2" [index]="1" [isOpen]="false">
              <p>Content 2</p>
             </c3m-accordion-item>
-
-            <c3m-accordion-item nameButton="Title3" [index]=2 [isOpen]=false>
+            <c3m-accordion-item nameButton="Title 3" [index]="2" [isOpen]="false">
               <p>Content 3</p>
             </c3m-accordion-item>
-
-
-            <c3m-accordion-item nameButton="Title 4" [index]=3 [isOpen]=false>
+            <c3m-accordion-item nameButton="Title 4" [index]="3" [isOpen]="false">
               <p>Content 4</p>
             </c3m-accordion-item>
 
           </c3m-accordion>
-    </div>
+      </div>
 
-    <div class="explain">
-      <p>This component is fully accessible and semantic and it is the same component
-        used for the main navigation of this website.</p>
-      <p>If you want a specific block to be opened on page load, set "isOpen" to "true".</p>
-    </div>
+      <div class="explain">
+        <dl>
+          <div>
+            <dt>nameButton</dt>
+            <dd>Title of the collapse</dd>
+          </div>
+          <div>
+            <dt>Index</dt>
+            <dd>Order of the collapse</dd>
+          </div>
+          <div>
+            <dt>isOpen</dt>
+            <dd>true if the collapse is open by default</dd>
+          </div>
+        </dl>
+      </div>
 
     <!-- TABS SNIPPETS -->
     <c3m-tabs class="snippets">

@@ -1,17 +1,5 @@
 c3m-tabs.presentationTabV .tabsContainer {margin: 0;}
 
-c3m-tabs.presentationTabV > div div.content[aria-hidden="false"] {
-  border: 1px solid var(--main-color);
-}
-
-
-@media screen and (min-width:850px) {
-
-  /*c3m-tabs.presentationTabV > div {margin-bottom: 2.5rem;}
-    c3m-tabs.presentationTabV > div div.content[aria-hidden="false"] {
-      font-size:1rem;
-    }
-      c3m-tabs.presentationTabV > div > ul > li > a {
-        font-size: 1.3rem;
-      }*/
+div.demo {
+  background-color: var(--n-medium);
 }

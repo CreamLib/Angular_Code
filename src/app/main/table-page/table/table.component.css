@@ -1,72 +1,63 @@
 c3m-column-table table {
   width: 100%;
   text-align: left;
-  border: 1px solid #FFF;
 }
 c3m-column-table caption {
-    font: 1.3em "quicksandregular", Helvetica, Arial, sans-serif;
+    font: 1.3em var(--stack);
     text-align: left;
-    color: #1b1b1f;
     margin-bottom: 0.6rem;
 }
 c3m-column-table thead th {
-  color: #333;
-  background-color: rgb(237, 156, 32);
   padding: 1rem 0.4rem;
-  border: 1px solid #423E3E;
 }
-c3m-column-table tbody td {
-  color: #333;
-  background-color: #44ABBC;
+c3m-column-table td {
   padding: 1rem 0.4rem;
-  border: 1px solid #333;
 }
  c3m-column-table tbody strong {display:none;}
 c3m-column-table tfoot td {
-    color: #FFF;
-    background-color: #565658;
     padding: 1rem 0.4rem;
-    border: 1px solid #423E3E;
 }
 
-@media screen and (max-width: 1000px){
+/* !! Uses max-width */
+@media screen and (max-width: 1000px) {
 
     c3m-column-table table {
       display: block;
       width: 100%;
-      background-color: #44ABBC;
       padding: 0.5rem;
       border-radius: 0.3em;
       border: none;
     }
+    c3m-column-table caption {
+      display: block;
+      font-size: 1.5em;
+    }
     c3m-column-table tbody {display: block;}
-    c3m-column-table thead {display:none;}
+    c3m-column-table thead {display: none;}
 
       c3m-column-table tbody tr {
           display: block;
           margin-bottom: 2rem;
       }
-          c3m-column-table tbody tr td {
-            display: block;
-            width: 100%;
-            color: #eaeaea;
-            background-color: initial;
-            padding: 0.3rem 0.4rem;
-            border: none;
-            border-bottom: 1px solid #FFF;
-          }
-          c3m-column-table tbody strong {
-              display: inline-block;
-              width: 6em;
-              color: rgb(245, 245, 245);
-          }
-          c3m-column-table tbody span {display: inline-block;}
+      c3m-column-table tbody th {padding-bottom: 0.5rem;}
+      c3m-column-table td {
+        display: block;
+        background-color: initial;
+        padding: 0.5rem 0;
+        border: none;
+        border-bottom: 1px solid var(--n-medium);
+      }
 
-          c3m-column-table caption {
-            display: block;
-            width: 100%;
-            font-size: 1.5rem;
-            color: #FFF;
-          }
+      c3m-column-table td::before {
+        display: inline-block;
+        width: 45%;
+        content: attr(data-header);
+        padding-right: 2rem;
+      }
 
+      c3m-column-table tbody strong {
+          display: inline-block;
+          width: 6em;
+          color: rgb(245, 245, 245);
+      }
 }
