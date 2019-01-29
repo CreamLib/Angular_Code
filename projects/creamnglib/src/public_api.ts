@@ -52,6 +52,7 @@ export * from './lib/table-toggle/table-toggle.component';
 export * from './lib/table-swipe/table-swipe.component';
 export * from './lib/tabs/tabs.component';
 export * from './lib/tabs/tabs-item/tabs-item.component';
+export * from './lib/pagination/pagination.component';
 
 export * from './lib/modal/modal.component';
 export * from './lib/modal-alert/modal-alert.component';

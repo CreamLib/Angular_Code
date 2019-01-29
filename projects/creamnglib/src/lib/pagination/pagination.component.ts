@@ -7,7 +7,6 @@ import { PagerService } from './pager.service';
 
 @Component({
   selector: 'c3m-pagination',
-  moduleId: module.id,
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.css'],
   encapsulation: ViewEncapsulation.None

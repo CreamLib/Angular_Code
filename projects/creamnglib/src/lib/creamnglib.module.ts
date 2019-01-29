@@ -50,6 +50,8 @@ import { ToggleTableComponent } from './table-toggle/table-toggle.component';
 import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tabs-item/tabs-item.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { PagerService } from './pagination/pager.service';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,8 @@ import { TabComponent } from './tabs/tabs-item/tabs-item.component';
     ToggleTableComponent,
     PageSwipeTableComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    PaginationComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -155,7 +158,9 @@ import { TabComponent } from './tabs/tabs-item/tabs-item.component';
     ToggleTableComponent,
     PageSwipeTableComponent,
     TabsComponent,
-    TabComponent
-  ]
+    TabComponent,
+    PaginationComponent
+  ],
+  providers: [PagerService],
 })
 export class CreamnglibModule {}
