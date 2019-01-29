@@ -34,7 +34,6 @@ import { SelectPageComponent } from './main/select-page/select-page.component';
 import { FaqComponent } from './main/faq/faq.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
-import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
 import { ToastPageComponent } from './main/toast-page/toast-page.component';
@@ -74,7 +73,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     FaqComponent,
     BreadcrumbsPageComponent,
     FieldsetPageComponent,
-    NavbarPageComponent,
     ListPageComponent,
     SkipPageComponent,
     ToastPageComponent,
