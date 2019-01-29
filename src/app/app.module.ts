@@ -21,8 +21,6 @@ import { CarouselPageComponent } from './main/carousel-page/carousel-page.compon
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
 import { TablePageComponent } from './main/table-page/table-page.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
-import { PaginationComponent } from './main/pagination-page/pagination/pagination.component';
-import { PagerService } from './main/pagination-page/pagination/pager.service';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
 import { StepPageComponent } from './main/step-page/step-page.component';
@@ -61,7 +59,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     ModalPageComponent,
     TablePageComponent,
     PaginationPageComponent,
-    PaginationComponent,
     SliderPageComponent,
     GettingStartedComponent,
     StepPageComponent,
@@ -94,7 +91,6 @@ import { CardComponent } from './main/card-page/card/card.component';
   ],
   schemas: [NO_ERRORS_SCHEMA],
   exports: [RouterModule],
-  providers: [PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
