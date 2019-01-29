@@ -53,8 +53,6 @@ import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
-import { RadioComponent } from './main/radio-page/radio/radio.component';
-import { RadioItemComponent } from './main/radio-page/radio/radio-item/radio-item.component';
 import { ProgressComponent } from './main/slider-page/progress/progress.component';
 import { SpinnerProgressComponent } from './main/slider-page/spinner-progress/spinner-progress.component';
 import { CreamnglibModule } from 'creamnglib';
@@ -109,8 +107,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     BottomPageComponent,
     BottomComponent,
     RadioPageComponent,
-    RadioComponent,
-    RadioItemComponent,
     ProgressComponent,
     SpinnerProgressComponent,
     CardPageComponent,
