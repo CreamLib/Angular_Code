@@ -42,6 +42,9 @@ export * from './lib/select/select.component';
 export * from './lib/select-datalist/select-datalist.component';
 export * from './lib/select-datalists/select-datalists.component';
 export * from './lib/skip/skip.component';
+export * from './lib/slider/slider.component';
+export * from './lib/progress/progress.component';
+export * from './lib/spinner-progress/spinner-progress.component';
 
 export * from './lib/modal/modal.component';
 export * from './lib/modal-alert/modal-alert.component';
