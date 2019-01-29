@@ -12,8 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { AccueilComponent } from './main/accueil/accueil.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsComponent } from './main/tabs-page/tabs/tabs.component';
-import { TabComponent } from './main/tabs-page/tabs/tabs-item/tabs-item.component';
 import { ButtonPageComponent } from './main/button-page/button-page.component';
 import { TabsPageComponent } from './main/tabs-page/tabs-page.component';
 import { AccordionPageComponent } from './main/accordion-page/accordion-page.component';
@@ -55,8 +53,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     FooterComponent,
     MainComponent,
     AccueilComponent,
-    TabsComponent,
-    TabComponent,
     ButtonPageComponent,
     TabsPageComponent,
     AccordionPageComponent,

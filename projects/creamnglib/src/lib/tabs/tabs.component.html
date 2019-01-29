@@ -1,7 +1,7 @@
 <div class="tabsContainer">
   <ul>
         <li #tabs *ngFor="let tab of tabs"
-            [ngClass]="{active: tab.isActive, over: isOver, disabled: isDisabled}">
+            [ngClass]="{active: tab.isActive, over: isOver}">
 
           <button
             id={{tab.tabID}}
