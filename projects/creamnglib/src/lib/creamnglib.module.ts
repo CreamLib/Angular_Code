@@ -39,6 +39,7 @@ import { RadioItemComponent } from './radio/radio-item/radio-item.component';
 import { SelectComponent } from './select/select.component';
 import { SelectDatalistComponent } from './select-datalist/select-datalist.component';
 import { SelectDatalistsComponent } from './select-datalists/select-datalists.component';
+import { SkipComponent } from './skip/skip.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { SelectDatalistsComponent } from './select-datalists/select-datalists.co
     RadioItemComponent,
     SelectComponent,
     SelectDatalistComponent,
-    SelectDatalistsComponent
+    SelectDatalistsComponent,
+    SkipComponent
   ],
   imports: [BrowserModule],
   exports: [
@@ -122,7 +124,8 @@ import { SelectDatalistsComponent } from './select-datalists/select-datalists.co
     RadioItemComponent,
     SelectComponent,
     SelectDatalistComponent,
-    SelectDatalistsComponent
+    SelectDatalistsComponent,
+    SkipComponent
   ]
 })
 export class CreamnglibModule {}

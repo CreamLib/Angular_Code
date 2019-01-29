@@ -45,7 +45,6 @@ import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.compon
 import { NavbarPageComponent } from './main/navbar-page/navbar-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { SkipPageComponent } from './main/skip-page/skip-page.component';
-import { SkipComponent } from './main/skip-page/skip/skip.component';
 import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
@@ -96,7 +95,6 @@ import { CardComponent } from './main/card-page/card/card.component';
     NavbarPageComponent,
     ListPageComponent,
     SkipPageComponent,
-    SkipComponent,
     ToastPageComponent,
     BottomPageComponent,
     BottomComponent,
