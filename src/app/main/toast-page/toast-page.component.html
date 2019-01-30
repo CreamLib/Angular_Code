@@ -9,14 +9,14 @@
 <!-- DESCRIPTION TOAST COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="toast">
-    <h3>
-      Floating Toast
-    </h3>
-    <p>A toast appears course moment ion the interface and disappears</p>
-    <p>
-      Change the <strong>active</strong> value with a click event (use
-      <code>ViewChild</code> on <code>#Toast)</code>
-    </p>
+    <h3>Floating Toast</h3>
+
+    <div class="explain">
+      <p>
+        Change the <strong>active</strong> value with a click event (use
+        <code>ViewChild</code> on <code>#Toast)</code>
+      </p>
+    </div>
 
     <div class="demo">
       <c3m-button (click)="openToast()" ngClass="info">
@@ -28,12 +28,14 @@
 
     <div class="explain">
       <dl>
-        <dt>active</dt>
-        <dd>For displaying the toast</dd>
-      </dl>
-      <dl>
-        <dt>delay</dt>
-        <dd>delay before toast dissapears</dd>
+        <div>
+          <dt>active</dt>
+          <dd>For displaying the toast</dd>
+        </div>
+        <div>
+          <dt>delay</dt>
+          <dd>delay before toast dissapears</dd>
+        </div>
       </dl>
     </div>
 

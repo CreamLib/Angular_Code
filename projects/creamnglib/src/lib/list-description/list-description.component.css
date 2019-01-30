@@ -1,7 +1,10 @@
-c3m-list-description dl{
+c3m-list-description dl {
   margin: 1rem 0;
 }
-c3m-list-description dt{
-  text-transform: uppercase;
-  font-weight: bold;
+
+c3m-list-description dt {
+  font-family: var(--stack-b);
+}
+c3m-list-description dd {
+  margin: 0.25em 0 0 1em;
 }

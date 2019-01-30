@@ -1,17 +1,18 @@
-
-c3m-list-thumbnails li{
-  display: block;
-  margin: 1rem 0;
-  padding: 0 0 1rem 0;
-  border-bottom: 1px solid lightgray;
-  width: 50%;
-}
-c3m-list-thumbnails img{
-    display: inline-block;
+c3m-list-thumbnails li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 35em;
 }
 
-c3m-list-thumbnails span{
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 150px;
+c3m-list-thumbnails li + li {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--n-medium);
+}
+
+c3m-list-thumbnails li > p {flex-basis: 30%;}
+c3m-list-thumbnails .content {
+  flex-basis: 65%;
+  line-height: 1.45;
 }

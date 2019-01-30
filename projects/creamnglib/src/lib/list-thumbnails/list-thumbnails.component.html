@@ -1,6 +1,8 @@
 <ul>
     <li *ngFor="let item of listItem">
-      <img src={{item.url}} alt="fake image">
-      <span>{{ item.value }}</span>
+      <p><img src={{item.url}} alt="fake image"></p>
+      <div class="content">
+        {{ item.value }}
+      </div>
     </li>
 </ul>
