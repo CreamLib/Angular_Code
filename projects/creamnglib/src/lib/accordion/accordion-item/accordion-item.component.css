@@ -5,7 +5,6 @@ c3m-accordion > ul {
 }
 
 /* Accordion Item */
-
 c3m-accordion-item > li {
   position: relative;
   color: var(--body-text);
@@ -24,9 +23,10 @@ c3m-accordion-item > li.closed {
 /* Last Accordion Item Closed */
 c3m-accordion-item:last-child > li.closed {border: none;}
 
-/* Content Accordion Item Closed */
-c3m-accordion-item > li.closed > .panel-collapse {
-  display: none;
+/* Content Accordion Item */
+c3m-accordion-item > li > .panel-collapse {
+overflow: hidden;
+padding: 0;
 }
 
 /* Accordion Item Button */
@@ -44,16 +44,16 @@ c3m-accordion-item > li > button {
   cursor: pointer;
   z-index: 10;
 }
-    c3m-accordion-item > li > button svg {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      right: 1rem;
-      fill: white;
-      transition: all 0.3s;
-      transform: rotate(0deg);
-      z-index: 1;
-    }
-    c3m-accordion-item > li > button[aria-expanded=true] svg {
-      transform: rotate(180deg);
-    }
+c3m-accordion-item > li > button svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 1rem;
+  fill: white;
+  transition: all 0.3s;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+c3m-accordion-item > li > button[aria-expanded=true] svg {
+  transform: rotate(180deg);
+}

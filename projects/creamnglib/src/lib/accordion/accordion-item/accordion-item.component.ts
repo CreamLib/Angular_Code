@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
-import { trigger, state, transition, animate, style } from '@angular/animations';
+import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit, OnInit} from '@angular/core';
+import { trigger, state, transition, animate, style, AUTO_STYLE} from '@angular/animations';
 import { AccordionComponent } from '../accordion.component';
 
 @Component({
@@ -9,18 +9,19 @@ import { AccordionComponent } from '../accordion.component';
   animations: [
     trigger('openClose', [
       state('open', style({
-        padding: '1rem'
+        height:AUTO_STYLE,
+        padding:"1em"
       })),
       state('closed', style({
         display: 'none',
-        padding: '0',
-        opacity: 0.5,
+        height:0,
+        padding:"0 1em"
       })),
       transition('open => closed', [
-        animate('0.2s')
+        animate('0.2s ease-in')
       ]),
       transition('closed => open', [
-        animate('0.2s')
+        animate('0.2s ease-in')
       ]),
     ])
   ],
