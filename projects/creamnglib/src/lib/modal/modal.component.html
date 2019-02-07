@@ -1,10 +1,10 @@
 <div class="dialog" [attr.aria-hidden]="!isOpen">
   <div class="dialog-overlay" (click)="ToggleOpen()" tabindex="-1"></div>
-    <div class="dialog-content" [attr.aria-labeledby]="dialogTitle" [attr.aria-describedby]="dialogDescription" role="dialog">
+  <div class="dialog-content" [attr.aria-labeledby]="dialogTitle" [attr.aria-describedby]="dialogDescription" role="dialog">
 
-      <h1 #focusable  id="{{dialogTitle}}" tabindex="0"> Modal Title </h1>
-      <p id="{{dialogDescription}}">Modal content text</p>
+    <h1 #focusable  id="{{dialogTitle}}" tabindex="0"> Modal Title </h1>
+    <p id="{{dialogDescription}}">Modal content text</p>
 
-      <button (click)="ToggleOpen()" (keydown.tab)="focusable.focus()" class="dialog-close" [attr.aria-label]="btnCloseLabel">&times;</button>
-    </div>
+    <button (click)="ToggleOpen()" (keydown.tab)="focusable.focus()" class="dialog-close" [attr.aria-label]="btnCloseLabel">&times;</button>
+  </div>
 </div>

@@ -12,7 +12,7 @@ export class ModalComponent implements OnInit {
   @Input() isOpen: boolean;
   dialogTitle = 'dialogTitle';
   dialogDescription = 'dialogDescription';
-  btnCloseLabel = 'Fermer la fenêtre de dialogue';
+  btnCloseLabel = 'Close dialog';
 
   ngOnInit() {
     this.isOpen = false;
