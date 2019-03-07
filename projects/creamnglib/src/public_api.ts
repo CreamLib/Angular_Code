@@ -57,5 +57,6 @@ export * from './lib/pagination/pagination.component';
 export * from './lib/modal/modal.component';
 export * from './lib/modal-alert/modal-alert.component';
 
-export * from './lib/creamnglib.module';
 export * from './lib/button-link/button-link.component';
+
+export * from './lib/creamnglib.module';
