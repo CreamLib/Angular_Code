@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import * as svgxuse from 'svgxuse/svgxuse.js';
+import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { AppComponent } from '../../app.component';
+
 
 @Component({
   selector: 'app-accueil',
@@ -9,41 +10,11 @@ import * as svgxuse from 'svgxuse/svgxuse.js';
 })
 export class AccueilComponent implements OnInit {
 
-    public lottieConfig: Object;
-    private anim: any;
-    private animationSpeed = 1;
-
-  constructor() {
-    this.lottieConfig = {
-      path: 'assets/json/creamNGanimation.json',
-      autoplay: true,
-      loop: false
-    };
+  constructor(private app: AppComponent) {
   }
 
-  handleAnimation(anim: any) {
-    this.anim = anim;
-  }
-
-  stop() {
-      this.anim.stop();
-  }
-
-  play() {
-      this.anim.play();
-  }
-
-  pause() {
-      this.anim.pause();
-  }
-
-  setSpeed(speed: number) {
-      this.animationSpeed = speed;
-      this.anim.setSpeed(speed);
-  }
 
   ngOnInit() {
-    svgxuse();
   }
 
 }

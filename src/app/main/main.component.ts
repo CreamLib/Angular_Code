@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import * as svgxuse from 'svgxuse/svgxuse.js';
 
 @Component({
   selector: 'app-main',
@@ -9,5 +10,22 @@ export class MainComponent {
 
   component: 'accueil';
   constructor() { }
+
+  ngAfterViewInit() {
+
+    // test if the browser support shadow for svg use
+    function supports_shadow() {
+    if(document.head.attachShadow) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    //if not use svgxuse function
+    if(!supports_shadow()){
+      svgxuse();
+    }
+  }
+
 
 }

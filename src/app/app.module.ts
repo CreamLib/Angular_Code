@@ -2,7 +2,6 @@ import { HttpModule } from '@angular/http';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScrollToModule } from 'ng2-scroll-to';
-import { LottieAnimationViewModule } from 'ng-lottie';
 import { BreadcrumbsModule } from './module-breadcrumbs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -42,7 +41,6 @@ import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
-import { ButtonLinkComponent } from './main/button-page/button-link/button-link.component';
 
 @NgModule({
   declarations: [
@@ -78,8 +76,7 @@ import { ButtonLinkComponent } from './main/button-page/button-link/button-link.
     BottomComponent,
     RadioPageComponent,
     CardPageComponent,
-    CardComponent,
-    ButtonLinkComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -87,7 +84,6 @@ import { ButtonLinkComponent } from './main/button-page/button-link/button-link.
     HttpModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes, { useHash: true }),
-    LottieAnimationViewModule.forRoot(),
     BreadcrumbsModule,
     CreamnglibModule
   ],
