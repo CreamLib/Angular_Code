@@ -41,6 +41,7 @@ import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
+import { ButtonLinkComponent } from './main/button-page/button-link/button-link.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { CardComponent } from './main/card-page/card/card.component';
     BottomComponent,
     RadioPageComponent,
     CardPageComponent,
-    CardComponent
+    CardComponent,
+    ButtonLinkComponent
   ],
   imports: [
     BrowserModule,
