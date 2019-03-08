@@ -38,11 +38,10 @@ import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
-import { CreamnglibModule } from 'creamnglib';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
-import { ButtonLinkComponent } from './main/button-page/button-link/button-link.component';
+import { CreamnglibModule } from 'creamnglib';
 
 @NgModule({
   declarations: [
@@ -78,8 +77,7 @@ import { ButtonLinkComponent } from './main/button-page/button-link/button-link.
     BottomComponent,
     RadioPageComponent,
     CardPageComponent,
-    CardComponent,
-    ButtonLinkComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,

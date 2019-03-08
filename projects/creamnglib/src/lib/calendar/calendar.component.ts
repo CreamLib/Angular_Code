@@ -1,4 +1,3 @@
-
 import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
   ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation} from '@angular/core';
 
