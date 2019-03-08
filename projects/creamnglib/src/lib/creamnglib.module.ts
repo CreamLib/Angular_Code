@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { ButtonComponent } from './button/button.component';
 import { ButtonFileComponent } from './button-file/button-file.component';
 import { ButtonIconComponent } from './button-icon/button-icon.component';
@@ -52,6 +53,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tabs-item/tabs-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pagination/pager.service';
+import { ButtonLinkComponent } from './button-link/button-link.component';
 
 @NgModule({
   declarations: [
@@ -105,9 +107,10 @@ import { PagerService } from './pagination/pager.service';
     PageSwipeTableComponent,
     TabsComponent,
     TabComponent,
-    PaginationComponent
+    PaginationComponent,
+    ButtonLinkComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule,RouterModule],
   exports: [
     ButtonComponent,
     ButtonFileComponent,
@@ -159,7 +162,9 @@ import { PagerService } from './pagination/pager.service';
     PageSwipeTableComponent,
     TabsComponent,
     TabComponent,
-    PaginationComponent
+    PaginationComponent,
+    ButtonLinkComponent,
+    RouterModule
   ],
   providers: [PagerService],
 })
