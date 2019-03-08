@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+
 
 @Component({
   selector: 'c3m-button-link',
@@ -9,6 +10,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class ButtonLinkComponent implements OnInit {
 
   constructor() { }
+
+  @Input() url: string;
+  @Input() linkText: string;
 
   ngOnInit() {
   }
