@@ -11,8 +11,7 @@ export class DropdownItemComponent implements OnInit {
   constructor() { }
 
   /* INPUTS */
-  @Input() nameDdItem: string;
-  @Input() url: string;
+  @Input() theContent: string;
 
   ngOnInit() {
   }

@@ -22,6 +22,7 @@
     "@angular/platform-browser": "7.1.4",
     "@angular/platform-browser-dynamic": "7.1.4",
     "@angular/router": "7.1.4",
+    "@beeman/angular-serve-nodemon": "^1.0.0",
     "classlist.js": "1.1.20150312",
     "core-js": "2.6.1",
     "creamngnpm": "^2.0.2",

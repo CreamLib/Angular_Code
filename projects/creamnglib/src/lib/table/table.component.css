@@ -42,7 +42,8 @@ c3m-column-table td {
           display: block;
           margin-bottom: 2rem;
       }
-      c3m-column-table tbody th {
+      c3m-column-table th, c3m-column-table tbody th {
+        background-color: var(--n-light);
         padding: 0 0 0.5rem 0;
       }
       c3m-column-table td {

@@ -23,28 +23,6 @@ export class TabsComponent implements AfterViewInit {
   /* Resize breakpoint tab */
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    /*if (this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop ) {
-
-      if ( (this.tabsElement.last.nativeElement.offsetTop > this.tabsElement.first.nativeElement.offsetTop) &&  (this.isOver !== true) ) {
-          this.widthBreak = event.target.innerWidth;
-          this.isOver = true;
-      }
-
-      if (this.widthBreak) {
-            if ( (event.target.innerWidth > this.widthBreak) && (this.isOver === true) ) {
-            this.isOver = false;
-            }
-
-      } else {
-            this.widthBreak = this.sizeInit;
-              if ( event.target.innerWidth >= this.widthBreak ) {
-                this.isOver = false;
-              }
-      }
-    } else {
-      this.isOver = false;
-    }*/
-
     if (this.tabsElement.length == 1 || this.tabsElement.last.nativeElement.offsetTop == this.tabsElement.first.nativeElement.offsetTop) {
       this.isOver = true;
     } else {
@@ -89,9 +67,7 @@ export class TabsComponent implements AfterViewInit {
   }
 
 
-
   /* constructor tab */
-  constructor(private cdr: ChangeDetectorRef) {
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
 }

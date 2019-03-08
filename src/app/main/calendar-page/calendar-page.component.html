@@ -12,9 +12,16 @@
   <div class="descriptionComponent" id="calendar">
       <h3>Simple Datepicker</h3>
 
+      <div class="explain">
+        <p>Notice that most modern browsers today have powerful, native datepickers that are fully accessible and
+          adapted to the device. We suggest you to use it instead of a custom component; to do so, set
+          the attribute <code>type</code> to <em>date</em>.
+        </p>
+      </div>
+
     <!-- Demo -->
     <div class="demo">
-        <c3m-calendar></c3m-calendar>
+        <c3m-calendar id="firstCalendar" type="text"></c3m-calendar>
     </div>
 
     <div class="explain">
@@ -89,9 +96,8 @@
                 <div class="code">
                     <!--?prettify lang=html linenums=true?-->
                     <pre class="prettyprint linenums">
-&lt;div class=&#34;calendar&#34;&gt;
-    &lt;c3m-calendar&gt;&lt;/c3m-calendar&gt;
-&lt;/div>
+
+&lt;c3m-calendar type=&#34;text&#34;&gt;&lt;/c3m-calendar&gt;
                     </pre>
                 </div>
             </c3m-tab>

@@ -1,6 +1,5 @@
 c3m-list-thumbnails li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   max-width: 35em;
 }
@@ -11,7 +10,10 @@ c3m-list-thumbnails li + li {
   border-top: 1px solid var(--n-medium);
 }
 
-c3m-list-thumbnails li > p {flex-basis: 30%;}
+c3m-list-thumbnails li > p {
+  flex-basis: 30%;
+  max-width: 180px;
+}
 c3m-list-thumbnails .content {
   flex-basis: 65%;
   line-height: 1.45;
