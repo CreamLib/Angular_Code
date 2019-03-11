@@ -1,6 +1,7 @@
 
 import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
   ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation} from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'c3m-calendar',
@@ -802,4 +803,10 @@ export class CalendarComponent implements OnInit {
   calcStarWeekDay(year, month) {
     return  new Date(year, month, 1).getDay();
   }
+
+   // Function create random ID for Accessibility
+ public randomID() {
+  const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
+  return idRandom;
+}
 }
