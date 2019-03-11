@@ -42,13 +42,6 @@ export class CalendarComponent implements OnInit {
     ngOnInit() {
      this.datepicker('dp1', 'date' , true);
      const thisObj = this;
-
-      /* LISTENER CLICK DATE BUTTON */
-      document.getElementById('bn_date').addEventListener('click', function(e) {
-        thisObj.showDlg(); // OPEN MODAL
-        e.stopPropagation();
-        return false;
-      });
     }
 
     /* ************** MAIN FUNCTION ************** */
