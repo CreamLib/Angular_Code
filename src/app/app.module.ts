@@ -5,7 +5,6 @@ import { ScrollToModule } from 'ng2-scroll-to';
 import { BreadcrumbsModule } from './module-breadcrumbs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CreamnglibModule } from 'projects/creamnglib/src/lib/creamnglib.module';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
