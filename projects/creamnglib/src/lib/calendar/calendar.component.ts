@@ -45,7 +45,7 @@ export class CalendarComponent implements OnInit {
     }
 
     /* ************** MAIN FUNCTION ************** */
-    datepicker(id, target, modal) {
+    datepicker(id:string, target:any, modal:boolean) {
 
       /* All the selectors */
       this.id = '#' + id;

@@ -3,19 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "api": {
-      "root": "src/app",
-      "projectType": "application",
-      "architect": {
-        "serve": {
-          "builder": "@beeman/angular-serve-nodemon:run",
-          "options": {
-            "script": "src/app/index.ts",
-            "tsConfig": "src/tsconfig.server.json"
-          }
-        }
-      }
-    },
     "projet": {
       "root": "",
       "sourceRoot": "src",
