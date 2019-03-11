@@ -25,6 +25,6 @@ export class DropdownComponent implements OnInit {
     } else if (this.isOpen) {
       this.isOpen = false;
     }
-  }
+}
 
 }

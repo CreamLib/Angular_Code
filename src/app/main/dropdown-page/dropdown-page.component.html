@@ -18,9 +18,10 @@
 
       <div class="demo">
           <c3m-dropdown nameDropdown="Dropdown">
-            <c3m-dropdown-item nameDdItem="Item1" url="creamng.github.io"></c3m-dropdown-item>
-            <c3m-dropdown-item nameDdItem="Item2"></c3m-dropdown-item>
-            <c3m-dropdown-item nameDdItem="Item3"></c3m-dropdown-item>
+            <c3m-dropdown-item><c3m-button>Action 1</c3m-button></c3m-dropdown-item>
+            <c3m-dropdown-item><c3m-button>Action 2</c3m-button></c3m-dropdown-item>
+            <c3m-dropdown-item><c3m-button-link url="#" linkText="Action 3"></c3m-button-link></c3m-dropdown-item>
+              <c3m-dropdown-item><a href="#">Action 4</a></c3m-dropdown-item>
           </c3m-dropdown>
       </div>
 
@@ -28,17 +29,9 @@
            <dl>
              <div>
                <dt>nameDropdown</dt>
-               <dd>On the c3m-dropdown component to rename the dropdown button</dd>
+               <dd>Define iton the c3m-dropdown component to label the dropdown button</dd>
             </div>
-            <div>
-              <dt>nameDdItem</dt>
-              <dd>On the c3m-dropdown-item component to rename the link</dd>
-             </div>
-             <div>
-              <dt>url</dt>
-              <dd>On the c3m-dropdown-item component to change the href path of link</dd>
-            </div>
-            </dl>
+          </dl>
       </div>
 
       <!-- TABS SNIPPETS -->
