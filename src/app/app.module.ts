@@ -41,6 +41,7 @@ import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
+import { CreamnglibModule } from 'creamnglib';
 
 @NgModule({
   declarations: [
