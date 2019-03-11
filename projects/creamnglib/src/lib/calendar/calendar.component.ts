@@ -50,7 +50,6 @@ export class CalendarComponent implements OnInit {
       /* All the selectors */
       this.id = '#' + id;
       const elem = document.getElementById(id);
-      this.monthObj = elem.querySelector('#month');
       this.prev = elem.querySelector('#bn_prev');
       this.next = elem.querySelector('#bn_next');
       this.grid = elem.querySelector('#cal');
@@ -110,24 +109,6 @@ export class CalendarComponent implements OnInit {
   /* ************ BIND ALL THE BUTTON WITH EVENT LISTENER ******** */
   bindHandlers() {
     const thisobj = this;
-
-    /* ---------------------------------------------- */
-
-    this.prev.addEventListener('click', function(e){
-      return thisobj.handlePrevClick(e);
-    });
-
-    this.next.addEventListener('click', function(e){
-      return thisobj.handleNextClick(e);
-    });
-
-    this.prev.addEventListener('keydown', function(e){
-      return thisobj.handlePrevKeyDown(e);
-    });
-
-    this.next.addEventListener('keydown', function(e){
-      return thisobj.handleNextKeyDown(e);
-    });
 
     /* ---------------------------------------------- */
 

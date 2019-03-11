@@ -7,13 +7,13 @@
   <div id="dp1" class="datepicker" aria-hidden="true">
 
     <div id="month-wrap">
-      <button id="bn_prev" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0">
+      <button id="bn_prev" (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0">
          <svg>
            <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
          </svg>
       </button>
       <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">{{ monthString }}</strong>
-      <button id="bn_next" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0">
+      <button id="bn_next" (click)="handleNextClick($event)" (keydown)="handleNextKeyDown($event)" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0">
        <svg>
          <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
        </svg>
