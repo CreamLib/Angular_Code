@@ -1,5 +1,5 @@
 import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
-  ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation} from '@angular/core';
+  ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation, HostListener} from '@angular/core';
 
 @Component({
   selector: 'c3m-calendar',
@@ -36,7 +36,9 @@ export class CalendarComponent implements OnInit {
     bModal: boolean;
 
     /* ********* CONSTRUCTOR ********* */
-    constructor() {}
+
+    constructor(private eRef: ElementRef) {
+    }
 
     /* ************ ON INIT *********** */
     ngOnInit() {
@@ -234,7 +236,7 @@ export class CalendarComponent implements OnInit {
   }
 
   /* ************************** HANDLE PREVIOUS BUTTON CLICK ********************** */
-  handlePrevClick(e) {
+  handlePrevClick(e): boolean {
     const active = this.grid.getAttribute('aria-activedescendant');
     if (e.ctrlKey) {
         this.showPrevYear();
@@ -252,7 +254,7 @@ export class CalendarComponent implements OnInit {
   }
 
   /* ************************** HANDLE NEXT BUTTON CLICK ********************** */
-  handleNextClick(e) {
+  handleNextClick(e): boolean {
     const active = this.grid.getAttribute('aria-activedescendant');
 
     if (e.ctrlKey) {
@@ -271,7 +273,7 @@ export class CalendarComponent implements OnInit {
   }
 
   /* ************************** HANDLE PREVIOUS BUTTON KEYDOWN ********************** */
-  handlePrevKeyDown(e) {
+  handlePrevKeyDown(e): boolean {
     if (e.altKey) {
       return true;
     }
@@ -309,7 +311,7 @@ export class CalendarComponent implements OnInit {
   }
 
  /* ************************** HANDLE NEXT BUTTON KEYDOWN ********************** */
-  handleNextKeyDown(e) {
+  handleNextKeyDown(e): boolean {
     // Alt
     if (e.altKey) {
       return true;
@@ -333,7 +335,7 @@ export class CalendarComponent implements OnInit {
   }
 
   /* ************************** SHOW DIALOG ********************** */
-  showDlg() {
+  showDlg(): void {
     const thisObj = this;
     // Bind Event Listener
     document.addEventListener('click', function(e){
@@ -360,14 +362,14 @@ export class CalendarComponent implements OnInit {
 
 
    /* ************************** ShowDialog Modal Method ********************** */
-   showDialogMethod(e) {
+   showDialogMethod(e): boolean {
     this.grid.focus();
     e.stopPropagation();
     return false;
   }
 
   /* ************************** HANDLE GRID CELL KEYDOWN ********************** */
-  handleGridKeyDown(e) {
+  handleGridKeyDown(e): boolean {
     const rows = this.grid.querySelectorAll('tbody tr');
     const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
     let days = this.grid.querySelectorAll('td:not(.empty)');
@@ -606,8 +608,17 @@ export class CalendarComponent implements OnInit {
     return true;
   }
 
+  /* ****************** Hide modal on click outiside ******************* */
+  @HostListener('document:click', ['$event'])
+  clickedOutside(event) {
+    // here you can hide your menu
+    if(!this.eRef.nativeElement.contains(event.target)) {
+      this.hideDlg();
+    }
+  }
+
   /* ************************** HIDE MODAL DIALOG ********************** */
-  hideDlg() {
+  hideDlg(): void {
       const thisObj = this;
 
       document.removeEventListener('click', function(e){
@@ -629,6 +640,11 @@ export class CalendarComponent implements OnInit {
       document.querySelector(this.id).setAttribute('aria-hidden', 'true');
       document.querySelector(this.target).focus();
   }
+
+  /*@HostListener('document:click', ['$event']) clickedOutside($event){
+    // here you can hide your menu
+    this.hideDlg();
+  }*/
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
   showPrevMonth(offset) {
