@@ -18,9 +18,9 @@ export class CalendarComponent implements OnInit {
     /* ************* VARIABLES ************** */
     id: string;
     monthObj: any;
-    prev: any;
-    next: any;
-    grid: any;
+    @ViewChild('prev') prev: any;
+    @ViewChild('next') next: any;
+    @ViewChild('cal') grid: any;
     tbody: any;
     target: any;
     monthNames: string[];
@@ -52,9 +52,9 @@ export class CalendarComponent implements OnInit {
       /* All the selectors */
       this.id = '#' + id;
       const elem = document.getElementById(id);
-      this.prev = elem.querySelector('#bn_prev');
-      this.next = elem.querySelector('#bn_next');
-      this.grid = elem.querySelector('#cal');
+      this.prev = this.prev.nativeElement;
+      this.next = this.next.nativeElement;
+      this.grid = this.grid.nativeElement;
       this.target = '#' + target;
       this.bModal = modal; // true if datepicker should appear in modal
 
