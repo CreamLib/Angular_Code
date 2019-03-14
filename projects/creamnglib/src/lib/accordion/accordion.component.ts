@@ -8,8 +8,7 @@ import { AccordionItemComponent } from './accordion-item/accordion-item.componen
   encapsulation: ViewEncapsulation.None
 })
 export class AccordionComponent {
-
- groups: Array<AccordionItemComponent> = [];
+  groups: Array<AccordionItemComponent> = [];
 
   addGroup(group: AccordionItemComponent): void {
     this.groups.push(group);
@@ -25,7 +24,7 @@ export class AccordionComponent {
 
   closeAll(openGroup: AccordionItemComponent): void {
     this.groups.forEach((group: AccordionItemComponent) => {
-        group.isOpen = false;
+      group.isOpen = false;
     });
   }
 
