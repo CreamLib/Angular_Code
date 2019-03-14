@@ -8,6 +8,8 @@
     "build": "rimraf  dist && ng build creamnglib && ng build --delete-output-path=false",
     "test": "ng test",
     "format:fix": "pretty-quick --staged",
+    "format:check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
+    "format:all": "prettier --config ./.prettierrc --write \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "precommit": "run-s format:fix lint",
     "lint": "ng lint",
     "e2e": "ng e2e",
