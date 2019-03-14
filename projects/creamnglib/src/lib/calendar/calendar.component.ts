@@ -16,7 +16,7 @@ export class CalendarComponent implements OnInit {
     @Input() targetString = ' ';
 
     /* ************* VARIABLES ************** */
-    id: string;
+    @ViewChild('dp') dp: any;
     monthObj: any;
     @ViewChild('prev') prev: any;
     @ViewChild('next') next: any;
@@ -42,22 +42,21 @@ export class CalendarComponent implements OnInit {
 
     /* ************ ON INIT *********** */
     ngOnInit() {
-     this.datepicker('dp1', 'date' , true);
+     this.datepicker('date' , true);
      const thisObj = this;
+     console.log(this.prev);
     }
 
     /* ************** MAIN FUNCTION ************** */
-    datepicker(id:string, target:any, modal:boolean) {
+    datepicker(target:any, modal:boolean) {
 
       /* All the selectors */
-      this.id = '#' + id;
-      const elem = document.getElementById(id);
+      this.dp = this.dp.nativeElement;
       this.prev = this.prev.nativeElement;
       this.next = this.next.nativeElement;
       this.grid = this.grid.nativeElement;
       this.target = '#' + target;
       this.bModal = modal; // true if datepicker should appear in modal
-
 
       // Month Names
       this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -354,7 +353,7 @@ export class CalendarComponent implements OnInit {
       return thisObj.showDialogMethod(e);
     });
 
-    document.querySelector(thisObj.id).setAttribute('aria-hidden', 'false');
+    thisObj.dp.setAttribute('aria-hidden', 'false');
 
     this.grid.focus();
 
@@ -637,14 +636,9 @@ export class CalendarComponent implements OnInit {
         return thisObj.showDialogMethod(e);
       });
 
-      document.querySelector(this.id).setAttribute('aria-hidden', 'true');
+      thisObj.dp.setAttribute('aria-hidden', 'true');
       document.querySelector(this.target).focus();
   }
-
-  /*@HostListener('document:click', ['$event']) clickedOutside($event){
-    // here you can hide your menu
-    this.hideDlg();
-  }*/
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
   showPrevMonth(offset) {
@@ -742,9 +736,6 @@ export class CalendarComponent implements OnInit {
     let rowCount = 1;
     this.tbody = this.grid.querySelector('tbody');
     let gridCells = '\t<tr id="row0">\n';
-
-    // Clear the grid
-    const tbodyChild = this.tbody.querySelector('tr');
 
     while (this.tbody.firstChild) {
       this.tbody.removeChild(this.tbody.firstChild);

@@ -4,7 +4,7 @@
     <input id="date" type="text" value={{targetString}} />
     <button (click)="showDlg()">Select Date</button></p>
 
-  <div id="dp1" class="datepicker" aria-hidden="true">
+  <div id="dp1" class="datepicker" aria-hidden="true" #dp>
 
     <div id="month-wrap">
       <button (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0" #prev>
