@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements AfterViewChecked {
   title = 'app';
+  toto = 'toto';
 
   @ViewChild(HeaderComponent) header: HeaderComponent;
 
