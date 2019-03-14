@@ -1,0 +1,54 @@
+/* SNIPPETS */
+
+.tabsContainer {
+  margin: 2rem 0;
+}
+
+.tabsContainer > ul li button {
+  width: 100%;
+  font-family: var(--stack-b);
+  text-align: left;
+  background-color: var(--n-light);
+  padding: 0.5em 1em;
+}
+.tabsContainer > ul li.active button,
+.tabsContainer > ul li button:hover,
+.tabsContainer > ul li button:focus {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+}
+
+c3m-tab .content[aria-hidden='false'] {
+  background-color: var(--n-light);
+  padding: 1rem;
+}
+
+c3m-tab .content[aria-hidden='true'] {
+  display: none;
+}
+
+/* When space is not enough ... */
+.tabsContainer > ul li.over {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.tabsContainer > ul li.over button {
+  background-color: var(--body-bg);
+  border-radius: 0;
+}
+.tabsContainer > ul li.over.active button,
+.tabsContainer > ul li.over button:hover,
+.tabsContainer > ul li.over button:focus {
+  color: var(--body-text);
+  background-color: var(--n-light);
+}
+
+@media screen and (min-width: 850px) {
+  .tabsContainer > ul li {
+    font-size: 1.2rem;
+  }
+  c3m-tab .content[aria-hidden='false'] {
+    padding: 2rem;
+  }
+}

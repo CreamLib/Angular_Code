@@ -1,14 +1,10 @@
-c3m-breadcrumbs li {
+app-breadcrumbs li {
   display: inline-block;
   margin-right: 0.1rem;
 }
-c3m-breadcrumbs li:not(:last-of-type)::after {
+
+app-breadcrumbs li:not(:last-of-type)::after {
   display: inline-block;
-  content: ">";
-  padding: 0 0.5em; 
+  content: '>';
+  padding: 0 0.5em;
 }
-
-c3m-breadcrumbs li strong {}
-
-c3m-breadcrumbs li a {}
-  c3m-breadcrumbs li a:hover {}

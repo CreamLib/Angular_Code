@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,23 +7,21 @@ import { Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
-
   menuMobile = false;
   mediumRes = '1000px';
 
   /* Action button burger */
   public ToggleMenuBurger() {
-      if (this.menuMobile) {
-          this.menuMobile = false;
-      } else if (!this.menuMobile) {
-        this.menuMobile = true;
-      }
+    if (this.menuMobile) {
+      this.menuMobile = false;
+    } else if (!this.menuMobile) {
+      this.menuMobile = true;
+    }
   }
 
   public ToggleMenuBurgerMain() {
-      if (this.menuMobile) {
-          this.menuMobile = false;
-      }
+    if (this.menuMobile) {
+      this.menuMobile = false;
+    }
   }
-
 }

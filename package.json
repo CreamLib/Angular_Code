@@ -7,6 +7,8 @@
     "start": "ng build creamnglib && ng serve",
     "build": "rimraf  dist && ng build creamnglib && ng build --delete-output-path=false",
     "test": "ng test",
+    "format:fix": "pretty-quick --staged",
+    "precommit": "run-s format:fix lint",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ci": "ng test --watch=false --progress=false"
@@ -65,8 +67,5 @@
     "tslint": "5.12.0",
     "typescript": "3.1.1",
     "webpack": "4.28.3"
-  },
-  "format:fix": "pretty-quick --staged",
-  "precommit": "run-s format:fix lint",
-  "lint": "ng lint"
+  }
 }

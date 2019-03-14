@@ -1,0 +1,17 @@
+/* BUTTON */
+c3m-button button {
+  color: var(--text-inv);
+  background: var(--main-color);
+}
+/* BUTTON HOVER */
+c3m-button button:hover {
+  opacity: 0.8;
+}
+
+/* COLORS OF DIFFERENTS BUTTONS */
+c3m-button.optional button {
+  background-color: var(--n-dark);
+}
+c3m-button.submit button {
+  background-color: var(--hot-color);
+}
