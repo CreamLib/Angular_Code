@@ -29,8 +29,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm run format:check
-
       - run: npm run ci
 
       - add_ssh_keys:
