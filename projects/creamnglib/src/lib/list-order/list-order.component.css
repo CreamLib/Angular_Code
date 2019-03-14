@@ -1,6 +1,0 @@
-c3m-list-order ol {
-  list-style-type: decimal;
-  margin-left: 2rem;
-}
-
-c3m-list-order li + li {margin-top: 0.5em;}

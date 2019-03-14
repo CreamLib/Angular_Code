@@ -1,0 +1,105 @@
+/* Step List */
+c3m-step ol {
+  counter-reset: step;
+}
+/* Step List Item */
+c3m-step ol li {
+  display: inline-block;
+  position: relative;
+  list-style-type: none;
+  font-size: 0.9em;
+  text-align: center;
+  color: var(--n-dark);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.8em 1em;
+  margin-left: -5px;
+}
+/* Step List Item Number */
+c3m-step ol li::before {
+  display: block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  content: counter(step);
+  counter-increment: step;
+  text-align: center;
+  color: var(--text-inv);
+  background-color: var(--n-dark);
+  border-radius: 1.5em;
+  margin: 0 auto 0.6rem;
+  z-index: 2;
+}
+
+/* Line of liaison */
+c3m-step ol li::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 1.5em;
+  left: 0;
+  content: '';
+  background-color: var(--n-dark);
+  z-index: 1;
+}
+
+c3m-step-item:first-child li::after {
+  width: 50%;
+  left: 50%;
+}
+c3m-step-item:last-child li::after {
+  width: 50%;
+  left: auto;
+  right: 50%;
+}
+
+/* PAST STEP */
+c3m-step ol li.past {
+  color: var(--n-dark);
+  background-color: rgba(255, 255, 255, 0);
+}
+c3m-step ol li.past::before {
+  content: '';
+  color: var(--text-inv);
+  background: var(--main-color) url(/assets/img/sprite.svg) 3px -429px no-repeat;
+}
+c3m-step ol li.past::after {
+  background-color: var(--main-color);
+}
+
+/* ACTIVE STEP */
+c3m-step ol li.active {
+}
+c3m-step ol li.active::before {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+}
+c3m-step ol li.active::after {
+  background-color: var(--n-dark);
+  background-image: linear-gradient(90deg, var(--main-color) 50%, var(--n-dark) 50%);
+}
+
+/* FUTURE STEP */
+c3m-step ol li.future {
+  color: var(--n-dark);
+  background-color: var(--n-light);
+}
+c3m-step ol li.future::before {
+  color: var(--n-light);
+  background-color: var(--n-dark);
+}
+
+/* BREAKPOINT */
+
+c3m-step ol.over li {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+}
+c3m-step ol.over li:before {
+  display: inline-block;
+  margin: 0;
+}

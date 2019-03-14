@@ -1,0 +1,11 @@
+/* Input  */
+c3m-button-submit input {
+  color: var(--text-inv);
+  background: var(--hot-color);
+  border: none;
+  cursor: pointer;
+}
+/* Input Hover */
+c3m-button-submit input:hover {
+  opacity: 0.8;
+}

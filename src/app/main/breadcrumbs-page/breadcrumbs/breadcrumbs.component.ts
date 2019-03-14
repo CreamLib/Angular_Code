@@ -1,20 +1,14 @@
-import { Component, Input, OnInit, ViewEncapsulation } from "@angular/core";
-import {
-  Router,
-  ActivatedRoute,
-  NavigationEnd,
-  Params,
-  PRIMARY_OUTLET
-} from "@angular/router";
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd, Params, PRIMARY_OUTLET } from '@angular/router';
 import { from } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { IBreadcrumb } from "./breadcrumbs.model";
-import { BreadcrumbsService } from "./breadcrumbs.service";
+import { IBreadcrumb } from './breadcrumbs.model';
+import { BreadcrumbsService } from './breadcrumbs.service';
 
 @Component({
-  selector: "c3m-breadcrumbs",
-  templateUrl: "./breadcrumbs.component.html",
-  styleUrls: ["./breadcrumbs.component.css"],
+  selector: 'app-breadcrumbs',
+  templateUrl: './breadcrumbs.component.html',
+  styleUrls: ['./breadcrumbs.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class BreadcrumbsComponent implements OnInit {
@@ -34,15 +28,13 @@ export class BreadcrumbsComponent implements OnInit {
   }
 
   public hasParams(breadcrumb: IBreadcrumb) {
-    return Object.keys(breadcrumb.params).length
-      ? [breadcrumb.url, breadcrumb.params]
-      : [breadcrumb.url];
+    return Object.keys(breadcrumb.params).length ? [breadcrumb.url, breadcrumb.params] : [breadcrumb.url];
   }
 
   public ngOnInit() {
-    const ROUTE_DATA_BREADCRUMB: string = "breadcrumb";
-    const ROUTE_PARAM_BREADCRUMB: string = "breadcrumb";
-    const PREFIX_BREADCRUMB: string = "prefixBreadcrumb";
+    const ROUTE_DATA_BREADCRUMB = 'breadcrumb';
+    const ROUTE_PARAM_BREADCRUMB = 'breadcrumb';
+    const PREFIX_BREADCRUMB = 'prefixBreadcrumb';
     // subscribe to the NavigationEnd event
     from(this.router.events)
       .pipe(filter(event => event instanceof NavigationEnd))
@@ -54,12 +46,12 @@ export class BreadcrumbsComponent implements OnInit {
         let currentRoute: ActivatedRoute = this.activatedRoute.root;
 
         // set the url to an empty string
-        let url: string = "";
+        let url = '';
 
         // iterate from activated route to children
         while (currentRoute.children.length > 0) {
-          let childrenRoutes: ActivatedRoute[] = currentRoute.children;
-          let breadCrumbLabel: string = "";
+          const childrenRoutes: ActivatedRoute[] = currentRoute.children;
+          let breadCrumbLabel = '';
 
           // iterate over each children
           childrenRoutes.forEach(route => {
@@ -71,9 +63,7 @@ export class BreadcrumbsComponent implements OnInit {
             }
 
             const hasData = route.routeConfig && route.routeConfig.data;
-            const hasDynamicBreadcrumb: boolean = route.snapshot.params.hasOwnProperty(
-              ROUTE_PARAM_BREADCRUMB
-            );
+            const hasDynamicBreadcrumb: boolean = route.snapshot.params.hasOwnProperty(ROUTE_PARAM_BREADCRUMB);
 
             if (hasData || hasDynamicBreadcrumb) {
               /*
@@ -84,19 +74,13 @@ export class BreadcrumbsComponent implements OnInit {
               attributes.
               */
               if (hasDynamicBreadcrumb) {
-                breadCrumbLabel = route.snapshot.params[
-                  ROUTE_PARAM_BREADCRUMB
-                ].replace(/_/g, " ");
-              } else if (
-                route.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB)
-              ) {
+                breadCrumbLabel = route.snapshot.params[ROUTE_PARAM_BREADCRUMB].replace(/_/g, ' ');
+              } else if (route.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB)) {
                 breadCrumbLabel = route.snapshot.data[ROUTE_DATA_BREADCRUMB];
               }
 
               // Get the route's URL segment
-              let routeURL: string = route.snapshot.url
-                .map(segment => segment.path)
-                .join("/");
+              const routeURL: string = route.snapshot.url.map(segment => segment.path).join('/');
               url += `/${routeURL}`;
 
               // Cannot have parameters on a root route
@@ -105,7 +89,7 @@ export class BreadcrumbsComponent implements OnInit {
               }
 
               // Add breadcrumb
-              let breadcrumb: IBreadcrumb = {
+              const breadcrumb: IBreadcrumb = {
                 label: breadCrumbLabel,
                 params: route.snapshot.params,
                 url: url
