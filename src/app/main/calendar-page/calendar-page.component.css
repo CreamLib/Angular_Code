@@ -1,8 +1,8 @@
-p.a11yExplain{
-    padding:0.6rem 0;
-    font-size: 1.2rem
-  }
+p.a11yExplain {
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+}
 
-  div.explain dd {
-    display: block;
+div.explain dd {
+  display: block;
 }

@@ -1,18 +1,17 @@
 footer {
-    color: var(--body-text);
-    background-color: var(--n-light);
-    padding: 1rem 5%;
+  color: var(--body-text);
+  background-color: var(--n-light);
+  padding: 1rem 5%;
 }
 
-  footer p {
-    font-size: 0.8rem;
-    line-height: 1.45;
-  }
-
+footer p {
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
 
 @media screen and (min-width: 1000px) {
-    .footerContent p {
-      font-size: 1rem;
-      text-align: right;
-    }
+  .footerContent p {
+    font-size: 1rem;
+    text-align: right;
+  }
 }
