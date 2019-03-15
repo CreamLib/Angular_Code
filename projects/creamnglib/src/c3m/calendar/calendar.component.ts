@@ -1,5 +1,6 @@
 import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
   ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation, HostListener} from '@angular/core';
+import { getInjectorIndex } from '@angular/core/src/render3/di';
 
 @Component({
   selector: 'c3m-calendar',
@@ -16,13 +17,12 @@ export class CalendarComponent implements OnInit {
     @Input() targetString = ' ';
 
     /* ************* VARIABLES ************** */
-    @ViewChild('dp') dp: any;
-    monthObj: any;
-    @ViewChild('prev') prev: any;
-    @ViewChild('next') next: any;
+    @ViewChild('dp') dp: ElementRef;
+    @ViewChild('prev') prev: ElementRef;
+    @ViewChild('next') next: ElementRef;
     @ViewChild('cal') grid: any;
     tbody: any;
-    @ViewChild('date') target: any;
+    @ViewChild('date') target: ElementRef;
     monthNames: string[];
     dayNames: string[];
     dateObj: Date;
@@ -209,7 +209,7 @@ export class CalendarComponent implements OnInit {
     const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
 
     // Change the targetString to represente the new current date
-    this.targetString = (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + curDay.firstChild.nodeValue + '/' + this.year;
+    this.targetString = (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + (parseInt(curDay.firstChild.nodeValue) < 9 ? '0' : '') + curDay.firstChild.nodeValue + '/' + this.year;
 
     // Hide modal Dialog
     this.hideDlg();
@@ -283,7 +283,7 @@ export class CalendarComponent implements OnInit {
         } else if ( e.shiftKey) {
           this.grid.focus();
         } else {
-          this.next.focus();
+          this.next.nativeElement.focus();
         }
 
         e.stopPropagation();
@@ -351,7 +351,7 @@ export class CalendarComponent implements OnInit {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.dp.setAttribute('aria-hidden', 'false');
+    thisObj.dp.nativeElement.setAttribute('aria-hidden', 'false');
 
     this.grid.focus();
 
@@ -383,9 +383,9 @@ export class CalendarComponent implements OnInit {
         if (this.bModal === true) {
           // SHIFT + TAB
           if (e.shiftKey) {
-            this.next.focus();
+            this.next.nativeElement.focus();
           } else {
-            this.prev.focus();
+            this.prev.nativeElement.focus();
           }
           e.stopPropagation();
           return false;
@@ -634,8 +634,8 @@ export class CalendarComponent implements OnInit {
         return thisObj.showDialogMethod(e);
       });
 
-      thisObj.dp.setAttribute('aria-hidden', 'true');
-      this.target.focus();
+      thisObj.dp.nativeElement.setAttribute('aria-hidden', 'true');
+      this.target.nativeElement.focus();
   }
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
@@ -735,8 +735,8 @@ export class CalendarComponent implements OnInit {
     this.tbody = this.grid.querySelector('tbody');
     let gridCells = '\t<tr id="row0">\n';
 
-    while (this.tbody.firstChild) {
-      this.tbody.removeChild(this.tbody.firstChild);
+    while (this.tbody.nativeElement.firstChild) {
+      this.tbody.nativeElement.removeChild(this.tbody.nativeElement.firstChild);
     }
 
     // Insert Empty Cells
@@ -768,7 +768,7 @@ export class CalendarComponent implements OnInit {
     }
     gridCells += '\t </tr>';
 
-    this.tbody.insertAdjacentHTML('beforeend', gridCells);
+    this.tbody.nativeElement.insertAdjacentHTML('beforeend', gridCells);
   }
 
   /* ************************** CALCULATE NUMBER OF DAY IN A MONTH ********************** */
