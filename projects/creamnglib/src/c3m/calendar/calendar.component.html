@@ -1,11 +1,10 @@
 <div id="application" role="application">
-<<<<<<< HEAD:projects/creamnglib/src/lib/calendar/calendar.component.html
 
   <p><label id="date_label" for="date">Date</label>
-    <input id="date" type="text" value={{targetString}} />
+    <input type="text" value={{targetString}} #date/>
     <button (click)="showDlg()">Select Date</button></p>
 
-  <div id="dp1" class="datepicker" aria-hidden="true" #dp>
+  <div class="datepicker" aria-hidden="true" #dp>
 
     <div id="month-wrap">
       <button (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0" #prev>
@@ -18,38 +17,6 @@
        <svg>
          <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
        </svg>
-=======
-  <p>
-    <label id="date_label" for="date">Date</label>
-    <input id="date" type="text" value="{{ targetString }}" />
-    <button id="bn_date">Select Date</button>
-  </p>
-
-  <div id="dp1" class="datepicker" aria-hidden="true">
-    <div id="month-wrap">
-      <button
-        id="bn_prev"
-        role="button"
-        aria-label="Mois ou Année précédent(e)"
-        aria-labelledby="bn_prev-label"
-        tabindex="0"
-      >
-        <svg>
-          <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
-        </svg>
-      </button>
-      <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">{{ monthString }}</strong>
-      <button
-        id="bn_next"
-        role="button"
-        aria-label="Mois ou Année suivant(e)"
-        aria-labelledby="bn_next-label"
-        tabindex="0"
-      >
-        <svg>
-          <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
-        </svg>
->>>>>>> f672d2ae785cce9a35d42a01b70b1b9d5ff15bfc:projects/creamnglib/src/c3m/calendar/calendar.component.html
       </button>
     </div>
 

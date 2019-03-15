@@ -22,7 +22,7 @@ export class CalendarComponent implements OnInit {
     @ViewChild('next') next: any;
     @ViewChild('cal') grid: any;
     tbody: any;
-    target: any;
+    @ViewChild('date') target: any;
     monthNames: string[];
     dayNames: string[];
     dateObj: Date;
@@ -42,20 +42,18 @@ export class CalendarComponent implements OnInit {
 
     /* ************ ON INIT *********** */
     ngOnInit() {
-     this.datepicker('date' , true);
-     const thisObj = this;
-     console.log(this.prev);
+     this.datepicker(true);
     }
 
     /* ************** MAIN FUNCTION ************** */
-    datepicker(target:any, modal:boolean) {
+    datepicker(modal:boolean) {
 
       /* All the selectors */
       this.dp = this.dp.nativeElement;
       this.prev = this.prev.nativeElement;
       this.next = this.next.nativeElement;
       this.grid = this.grid.nativeElement;
-      this.target = '#' + target;
+      this.target = this.target.nativeElement;
       this.bModal = modal; // true if datepicker should appear in modal
 
       // Month Names
@@ -122,11 +120,11 @@ export class CalendarComponent implements OnInit {
     });
 
     this.grid.addEventListener('focus', function(e){
-      return thisobj.handleGridFocus(e);
+      return thisobj.handleGridFocus();
     });
 
      this.grid.addEventListener('blur', function(e){
-      return thisobj.handleGridBlur(e);
+      return thisobj.handleGridBlur();
     });
 
     /* ---------------------------------------------- */
@@ -136,7 +134,7 @@ export class CalendarComponent implements OnInit {
 
 
   /* ************************** HANDLE GRID BLUR ********************** */
-  handleGridBlur(e) {
+  handleGridBlur() {
     if (document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
       const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
       idActiveDescendant.classList.remove('focus');
@@ -147,7 +145,7 @@ export class CalendarComponent implements OnInit {
 
 
   /* ************************** HANDLE GRID FOCUS ********************** */
-  handleGridFocus(e) {
+  handleGridFocus() {
     const active = this.grid.getAttribute('aria-activedescendant');
     if (document.querySelector('#' + active).getAttribute('id') === undefined) {
       const lastDay = 'day' + this.calcNumDays(this.year, this.month);
@@ -487,7 +485,7 @@ export class CalendarComponent implements OnInit {
           dayIndex = 3 - days.indexOf(curDay) + 7;
           this.showPrevMonth(dayIndex);
         }
-        e.stopPropagation();
+        e.preventDefault();
         return false;
       }
 
@@ -515,7 +513,7 @@ export class CalendarComponent implements OnInit {
 
           this.showNextMonth(dayIndex);
         }
-        e.stopPropagation();
+        e.preventDefault();
         return false;
       }
 
@@ -541,7 +539,7 @@ export class CalendarComponent implements OnInit {
           lastDayId.classList.add('focus');
           lastDayId.setAttribute('aria-selected', 'true');
         }
-        e.stopPropagation();
+        e.preventDefault();
         return false;
       }
 
@@ -567,7 +565,7 @@ export class CalendarComponent implements OnInit {
           lastDayId.classList.add('focus');
           lastDayId.setAttribute('aria-selected', 'true');
         }
-        e.stopPropagation();
+        e.preventDefault();
         return false;
       }
 
@@ -637,7 +635,7 @@ export class CalendarComponent implements OnInit {
       });
 
       thisObj.dp.setAttribute('aria-hidden', 'true');
-      document.querySelector(this.target).focus();
+      this.target.focus();
   }
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
