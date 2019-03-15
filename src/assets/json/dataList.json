@@ -1,26 +1,26 @@
 [
-    {
-        "value": "List Item 1",
-        "url": "http://via.placeholder.com/150x150",
-        "title": "List Title 1",
-        "content": "List Content 1"
-    },
-    {
-        "value": "List Item 2",
-        "url": "http://via.placeholder.com/150x150",
-        "title": "List Title 2",
-        "content": "List Content 2"
-    },
-    {
-        "value": "List Item 3",
-        "url": "http://via.placeholder.com/150x150",
-        "title": "List Title 3",
-        "content": "List Content 3"
-    },
-    {
-        "value": "List Item 4",
-        "url": "http://via.placeholder.com/150x150",
-        "title": "List Title 4",
-        "content": "List Content 4"
-    }
+  {
+    "value": "List Item 1",
+    "url": "http://via.placeholder.com/150x150",
+    "title": "List Title 1",
+    "content": "List Content 1"
+  },
+  {
+    "value": "List Item 2",
+    "url": "http://via.placeholder.com/150x150",
+    "title": "List Title 2",
+    "content": "List Content 2"
+  },
+  {
+    "value": "List Item 3",
+    "url": "http://via.placeholder.com/150x150",
+    "title": "List Title 3",
+    "content": "List Content 3"
+  },
+  {
+    "value": "List Item 4",
+    "url": "http://via.placeholder.com/150x150",
+    "title": "List Title 4",
+    "content": "List Content 4"
+  }
 ]
