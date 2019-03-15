@@ -1,38 +1,26 @@
 <div id="application" role="application">
-  <p>
-    <label id="date_label" for="date">Date</label>
-    <input id="date" type="text" value="{{ targetString }}" />
-    <button id="bn_date">Select Date</button>
-  </p>
 
-  <div id="dp1" class="datepicker" aria-hidden="true">
+  <p><label id="date_label" for="date">Date</label>
+    <input type="text" value={{targetString}} #date/>
+    <button (click)="showDlg()">Select Date</button></p>
+
+  <div class="datepicker" aria-hidden="true" #dp>
+
     <div id="month-wrap">
-      <button
-        id="bn_prev"
-        role="button"
-        aria-label="Mois ou Année précédent(e)"
-        aria-labelledby="bn_prev-label"
-        tabindex="0"
-      >
-        <svg>
-          <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
-        </svg>
+      <button (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0" #prev>
+         <svg>
+           <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
+         </svg>
       </button>
       <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">{{ monthString }}</strong>
-      <button
-        id="bn_next"
-        role="button"
-        aria-label="Mois ou Année suivant(e)"
-        aria-labelledby="bn_next-label"
-        tabindex="0"
-      >
-        <svg>
-          <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
-        </svg>
+      <button (click)="handleNextClick($event)" (keydown)="handleNextKeyDown($event)" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0" #next>
+       <svg>
+         <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
+       </svg>
       </button>
     </div>
 
-    <table id="cal" aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0">
+    <table aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0" #cal>
       <thead>
         <tr id="weekdays">
           <th scope="col" id="Sunday"><abbr title="Sunday">Su</abbr></th>
