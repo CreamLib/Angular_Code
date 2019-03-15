@@ -1,0 +1,14 @@
+c3m-button-link a,
+c3m-button-link a:visited {
+  background-color: var(--sec-light);
+  padding: 0.5em;
+  border-radius: 0.25em;
+  color: #fff;
+  text-decoration: none;
+  transition: background ease 0.2s;
+}
+c3m-button-link a:hover,
+c3m-button-link a:focus {
+  color: #fff;
+  background: var(--main-light);
+}

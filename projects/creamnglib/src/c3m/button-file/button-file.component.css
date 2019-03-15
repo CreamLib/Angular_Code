@@ -1,0 +1,48 @@
+/* Label */
+c3m-button-file label {
+  display: inline-block;
+  color: var(--text-inv);
+  background: var(--main-color) url(/assets/img/sprite.svg) 0.5em -242px no-repeat;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+/* Label Hover */
+c3m-button-file label:hover {
+  opacity: 0.8;
+}
+
+/* Input FILE */
+c3m-button-file input[type='file'] {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Item List file name */
+c3m-button-file ul {
+  max-width: 350px;
+  padding-left: 0.5em;
+  margin: 0.5rem 0 0 1em;
+  border-left: 3px solid var(--main-color);
+}
+
+c3m-button-file li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 95% var(--stack-i);
+  padding: 0.3em 0 0.3em 0.5em;
+  border-bottom: 1px solid var(--n-medium);
+}
+c3m-button-file li:last-of-type {
+  border: none;
+}
+
+c3m-button-file span {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 20em;
+  white-space: nowrap;
+  margin-right: 1rem;
+}

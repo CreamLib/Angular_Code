@@ -1,14 +1,22 @@
-import { Component, ViewEncapsulation, Input, OnChanges, SimpleChanges, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  OnDestroy,
+  AfterViewInit,
+  OnInit
+} from '@angular/core';
 import { MenuComponent } from '../menu.component';
 
 @Component({
-  selector: 'c3m-menu-item',
+  selector: 'app-menu-item',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class MenuItemComponent implements OnDestroy, OnChanges, AfterViewInit, OnInit {
-
   @Input() nameButton: string;
   @Input() idSvg: string;
   @Input() isOpen: boolean;
@@ -50,7 +58,6 @@ export class MenuItemComponent implements OnDestroy, OnChanges, AfterViewInit, O
     this.tabID = 'tab' + this.index;
     this.panelID = 'panel' + this.index;
   }
-
 
   /* open accordion'element */
   toggleOpen(): void {

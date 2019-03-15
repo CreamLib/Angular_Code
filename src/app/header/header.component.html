@@ -9,23 +9,16 @@
   <h1>
     <a routerLink="/home" class="logo" routerLinkActive="active">
       <picture>
-        <source
-          srcset="assets/img/creamNG-logo.svg"
-          media="(min-width: {{ mediumRes }})"
-        />
-        <img
-          src="assets/img/creamNG-logo-sml.svg"
-          alt="Cream-NG, your accessible Angular Lib"
-        />
+        <source srcset="assets/img/creamNG-logo.svg" media="(min-width: {{ mediumRes }})" />
+        <img src="assets/img/creamNG-logo-sml.svg" alt="Cream-NG, your accessible Angular Lib" />
       </picture>
     </a>
   </h1>
 
   <!-- MENU -->
-  <c3m-menu [ngClass]="{ mobileOpen: menuMobile, mobileClose: !menuMobile }">
-
+  <app-menu [ngClass]="{ mobileOpen: menuMobile, mobileClose: !menuMobile }">
     <!-- GROUP FORM ELEMENTS -->
-    <c3m-menu-item nameButton="Form Elements" idSvg="assets/img/icons.svg#svg1" [index]="1" [isOpen]="false">
+    <app-menu-item nameButton="Form Elements" idSvg="assets/img/icons.svg#svg1" [index]="1" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/button" routerLinkActive="active">Buttons &amp; Controls</a>
@@ -52,14 +45,10 @@
           <a routerLink="/slider" routerLinkActive="active">Sliders &amp; Progress</a>
         </li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
 
     <!-- NAVIGATION -->
-    <c3m-menu-item
-      nameButton="Navigation"
-      idSvg="assets/img/icons.svg#svg2"
-      [index]="2"
-      [isOpen]="false">
+    <app-menu-item nameButton="Navigation" idSvg="assets/img/icons.svg#svg2" [index]="2" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
@@ -68,10 +57,10 @@
           <a routerLink="/skip" routerLinkActive="active">Skip Link</a>
         </li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
 
     <!-- GROUP BLOCKS -->
-    <c3m-menu-item nameButton="Blocks" idSvg="assets/img/icons.svg#svg3" [index]="3" [isOpen]="false">
+    <app-menu-item nameButton="Blocks" idSvg="assets/img/icons.svg#svg3" [index]="3" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/accordion" routerLinkActive="active">Accordion</a>
@@ -89,26 +78,26 @@
           <a routerLink="/tabs" routerLinkActive="active">Tabs</a>
         </li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
 
     <!-- STRUCTURE -->
-    <c3m-menu-item nameButton="Page Structure" idSvg="assets/img/icons.svg#svg5" [index]="4" [isOpen]="false">
+    <app-menu-item nameButton="Page Structure" idSvg="assets/img/icons.svg#svg5" [index]="4" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/bottom" routerLinkActive="active">Bottom</a>
         </li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
 
     <!-- EDITORIAL -->
-    <c3m-menu-item nameButton="Editorial" idSvg="assets/img/icons.svg#svg5" [index]="5" [isOpen]="false">
+    <app-menu-item nameButton="Editorial" idSvg="assets/img/icons.svg#svg5" [index]="5" [isOpen]="false">
       <ul class="contenuMenu">
         <li></li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
 
     <!-- GENERAL ELEMENTS -->
-    <c3m-menu-item nameButton="Utilities" idSvg="assets/img/icons.svg#svg5" [index]="6" [isOpen]="false">
+    <app-menu-item nameButton="Utilities" idSvg="assets/img/icons.svg#svg5" [index]="6" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/dropdown" routerLinkActive="active">Dropdown</a>
@@ -126,9 +115,9 @@
           <a routerLink="/toast" routerLinkActive="active">Toast</a>
         </li>
       </ul>
-    </c3m-menu-item>
+    </app-menu-item>
     <!-- GROUP HELP -->
-    <c3m-menu-item nameButton="Help" class="help" idSvg="assets/img/icons.svg#svg4" [index]="0" [isOpen]="false">
+    <app-menu-item nameButton="Help" class="help" idSvg="assets/img/icons.svg#svg4" [index]="0" [isOpen]="false">
       <ul class="contenuMenu">
         <li (click)="ToggleMenuBurger()">
           <a routerLink="/gettingStarted" routerLinkActive="active">Getting Started</a>
@@ -137,6 +126,6 @@
           <a routerLink="/faq" routerLinkActive="active">F.A.Q</a>
         </li>
       </ul>
-    </c3m-menu-item>
-  </c3m-menu>
+    </app-menu-item>
+  </app-menu>
 </header>

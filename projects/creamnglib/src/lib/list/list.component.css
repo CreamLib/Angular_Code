@@ -1,6 +1,0 @@
-c3m-list ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-}
-
-c3m-list li + li {margin-top: 0.5em;}

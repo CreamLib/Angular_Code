@@ -103,7 +103,7 @@
       "root": "projects/creamnglib",
       "sourceRoot": "projects/creamnglib/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "c3m",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -123,10 +123,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/creamnglib/tsconfig.lib.json",
-              "projects/creamnglib/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/creamnglib/tsconfig.lib.json", "projects/creamnglib/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -137,11 +134,11 @@
   "schematics": {
     "@schematics/angular:component": {
       "viewEncapsulation": "None",
-      "prefix": "c3m",
+      "prefix": "app",
       "styleext": "css"
     },
     "@schematics/angular:directive": {
-      "prefix": "c3m"
+      "prefix": "app"
     }
   }
 }

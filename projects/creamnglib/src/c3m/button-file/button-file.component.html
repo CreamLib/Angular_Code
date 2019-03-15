@@ -1,0 +1,12 @@
+<!-- Label -->
+<label for="fileToUpload"><ng-content></ng-content></label>
+
+<!-- USE "input" type file  -->
+<input (change)="onChange(file.files)" type="file" name="fileToUpload" #file id="fileToUpload" multiple />
+
+<!-- File name list -->
+<ul>
+  <li *ngFor="let f of files">
+    <span>{{ f.name }}</span> <c3m-button-icon-only class="icon-delete">Delete</c3m-button-icon-only>
+  </li>
+</ul>
