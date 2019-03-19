@@ -1,6 +1,5 @@
 import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
   ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation, HostListener} from '@angular/core';
-import { getInjectorIndex } from '@angular/core/src/render3/di';
 
 @Component({
   selector: 'c3m-calendar',
@@ -17,12 +16,12 @@ export class CalendarComponent implements OnInit {
     @Input() targetString = ' ';
 
     /* ************* VARIABLES ************** */
-    @ViewChild('dp') dp: ElementRef;
-    @ViewChild('prev') prev: ElementRef;
-    @ViewChild('next') next: ElementRef;
+    @ViewChild('dp') dp: any;
+    @ViewChild('prev') prev: any;
+    @ViewChild('next') next: any;
     @ViewChild('cal') grid: any;
     tbody: any;
-    @ViewChild('date') target: ElementRef;
+    @ViewChild('date') target: any;
     monthNames: string[];
     dayNames: string[];
     dateObj: Date;
@@ -37,7 +36,7 @@ export class CalendarComponent implements OnInit {
 
     /* ********* CONSTRUCTOR ********* */
 
-    constructor(private eRef: ElementRef) {
+    constructor(private eRef: ElementRef, private renderer: Renderer2) {
     }
 
     /* ************ ON INIT *********** */
@@ -111,20 +110,20 @@ export class CalendarComponent implements OnInit {
 
     /* ---------------------------------------------- */
 
-    this.grid.addEventListener('keydown', function(e){
+    thisobj.renderer.listen(this.grid, 'keydown', (e) => {
       return thisobj.handleGridKeyDown(e);
     });
 
-    this.grid.addEventListener('keypress', function(e){
-      return thisobj.handleGridKeyPress(e);
+    thisobj.renderer.listen(this.grid, 'keypress', (e) => {
+      return thisobj.handleGridKeyDown(e);
     });
 
-    this.grid.addEventListener('focus', function(e){
-      return thisobj.handleGridFocus();
+    thisobj.renderer.listen(this.grid, 'focus', (e) => {
+      return thisobj.handleGridKeyDown(e);
     });
 
-     this.grid.addEventListener('blur', function(e){
-      return thisobj.handleGridBlur();
+    thisobj.renderer.listen(this.grid, 'blur', (e) => {
+      return thisobj.handleGridKeyDown(e);
     });
 
     /* ---------------------------------------------- */
@@ -135,11 +134,9 @@ export class CalendarComponent implements OnInit {
 
   /* ************************** HANDLE GRID BLUR ********************** */
   handleGridBlur() {
-    if (document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
-      const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
-      idActiveDescendant.classList.remove('focus');
-      idActiveDescendant.setAttribute('aria-selected', 'false');
-    }
+    const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
+    idActiveDescendant.classList.remove('focus');
+    idActiveDescendant.setAttribute('aria-selected', 'false');
     return true;
   }
 
@@ -188,6 +185,7 @@ export class CalendarComponent implements OnInit {
 
     const cell = id;
 
+    console.log(cell);
     // If Cell is empty
     if (cell.classList.contains('empty')) {
       return true;
@@ -220,6 +218,18 @@ export class CalendarComponent implements OnInit {
   }
 
   /* ************************** ADD EVENT LISTENER FOR MULTIPLE ELEMENTS  ********************** */
+  /*addEventListenerList(thisobj) {
+    const list = this.grid.querySelectorAll('td');
+    let i = 0;
+    const len = list.length;
+      for ( i = 0; i < len; i++) {
+        const itemList = list[i];
+        thisobj.renderer.listen(itemList, 'click', (e) => {
+          return thisobj.handleGridClick(itemList, e);
+        });
+      }
+  }*/
+
   addEventListenerList(thisobj) {
     const list = this.grid.querySelectorAll('td');
     let i = 0;
@@ -230,7 +240,7 @@ export class CalendarComponent implements OnInit {
           return thisobj.handleGridClick(this, e);
         });
       }
-  }
+}
 
   /* ************************** HANDLE PREVIOUS BUTTON CLICK ********************** */
   handlePrevClick(e): boolean {
@@ -335,23 +345,27 @@ export class CalendarComponent implements OnInit {
   showDlg(): void {
     const thisObj = this;
     // Bind Event Listener
-    document.addEventListener('click', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mousedown', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mouseup', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mousemove', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mouseover', function(e){
+    thisObj.renderer.listen(document, 'click', (e) => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.dp.nativeElement.setAttribute('aria-hidden', 'false');
+    thisObj.renderer.listen(document, 'mousedown', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(document, 'mouseup', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(document, 'mousemove', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(document, 'mouseover', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.dp.setAttribute('aria-hidden', 'false');
 
     this.grid.focus();
 
@@ -367,10 +381,8 @@ export class CalendarComponent implements OnInit {
 
   /* ************************** HANDLE GRID CELL KEYDOWN ********************** */
   handleGridKeyDown(e): boolean {
-    const rows = this.grid.querySelectorAll('tbody tr');
     const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
     let days = this.grid.querySelectorAll('td:not(.empty)');
-    const curRow = curDay.parentElement;
     // ALT
     if (e.altKey) {
       return true;
@@ -618,24 +630,9 @@ export class CalendarComponent implements OnInit {
   hideDlg(): void {
       const thisObj = this;
 
-      document.removeEventListener('click', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mousedown', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mouseup', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mousemove', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mouseover', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-
-      thisObj.dp.nativeElement.setAttribute('aria-hidden', 'true');
-      this.target.nativeElement.focus();
+      thisObj.renderer.destroy();
+      thisObj.dp.setAttribute('aria-hidden', 'true');
+      this.target.focus();
   }
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
@@ -735,8 +732,8 @@ export class CalendarComponent implements OnInit {
     this.tbody = this.grid.querySelector('tbody');
     let gridCells = '\t<tr id="row0">\n';
 
-    while (this.tbody.nativeElement.firstChild) {
-      this.tbody.nativeElement.removeChild(this.tbody.nativeElement.firstChild);
+    while (this.tbody.firstChild) {
+      this.tbody.removeChild(this.tbody.firstChild);
     }
 
     // Insert Empty Cells
@@ -768,7 +765,7 @@ export class CalendarComponent implements OnInit {
     }
     gridCells += '\t </tr>';
 
-    this.tbody.nativeElement.insertAdjacentHTML('beforeend', gridCells);
+    this.tbody.insertAdjacentHTML('beforeend', gridCells);
   }
 
   /* ************************** CALCULATE NUMBER OF DAY IN A MONTH ********************** */
