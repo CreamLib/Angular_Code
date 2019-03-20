@@ -11,6 +11,12 @@ details.dropdown summary {
   cursor: pointer;
 }
 
+details.dropdown summary:focus,
+details.dropdown summary[open] {
+  border: outline 1px dashed;
+  background: var(--main-light);
+}
+
 details.dropdown ul {
   box-sizing: border-box;
   position: absolute;
@@ -30,6 +36,7 @@ details.dropdown.open ul {
   opacity: 1;
   transition: all 1s;
 }
+
 details.dropdown.open li {
   font-size: 1em;
 }
