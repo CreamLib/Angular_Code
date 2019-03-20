@@ -19,7 +19,7 @@ c3m-calendar .datepicker {
   border-radius: 0.3rem;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
 }
-#month-wrap {
+.month-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,15 +27,12 @@ c3m-calendar .datepicker {
   background-color: var(--main-color);
   padding: 0.5em;
 }
-#month-wrap strong {
+.month-wrap strong {
   display: inline-block;
 }
-#month-wrap button {
+.month-wrap button {
   background-color: var(--main-color);
   padding: 0;
-}
-
-c3m-calendar caption button {
 }
 
 c3m-calendar table thead {

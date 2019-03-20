@@ -1,6 +1,4 @@
-import {NgModule, Component, ElementRef, AfterViewInit, AfterViewChecked, OnDestroy, OnInit, Input, Output, SimpleChange, EventEmitter, forwardRef, Renderer2,
-  ViewChild, ChangeDetectorRef, TemplateRef, ContentChildren, QueryList, ViewChildren, ViewEncapsulation, HostListener} from '@angular/core';
-import { getInjectorIndex } from '@angular/core/src/render3/di';
+import {NgModule, Component, ElementRef, OnInit, Input, Renderer2, ViewChild, ViewEncapsulation, HostListener} from '@angular/core';
 
 @Component({
   selector: 'c3m-calendar',
@@ -38,7 +36,6 @@ export class CalendarComponent implements OnInit {
     /* ********* CONSTRUCTOR ********* */
 
     constructor(private eRef: ElementRef, private renderer: Renderer2) {
-      console.log(eRef.nativeElement);
     }
 
     /* ************ ON INIT *********** */

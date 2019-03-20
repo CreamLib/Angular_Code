@@ -6,7 +6,7 @@
 
   <div class="datepicker" aria-hidden="true" #dp>
 
-    <div id="month-wrap">
+    <div class="month-wrap">
       <button (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0" #prev>
          <svg>
            <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
@@ -23,17 +23,17 @@
     <table aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0" #cal>
       <thead>
         <tr id="weekdays">
-          <th scope="col" id="Sunday"><abbr title="Sunday">Su</abbr></th>
-          <th scope="col" id="Monday"><abbr title="Monday">Mo</abbr></th>
-          <th scope="col" id="Tuesday"><abbr title="Tuesday">Tu</abbr></th>
-          <th scope="col" id="Wednesday"><abbr title="Wednesday">We</abbr></th>
-          <th scope="col" id="Thursday"><abbr title="Thursday">Th</abbr></th>
-          <th scope="col" id="Friday"><abbr title="Friday">Fr</abbr></th>
-          <th scope="col" id="Saturday"><abbr title="Saturday">Sa</abbr></th>
+          <th scope="col"><abbr title="Sunday">Su</abbr></th>
+          <th scope="col"><abbr title="Monday">Mo</abbr></th>
+          <th scope="col"><abbr title="Tuesday">Tu</abbr></th>
+          <th scope="col"><abbr title="Wednesday">We</abbr></th>
+          <th scope="col"><abbr title="Thursday">Th</abbr></th>
+          <th scope="col"><abbr title="Friday">Fr</abbr></th>
+          <th scope="col"><abbr title="Saturday">Sa</abbr></th>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody #tbody>
         <tr>
           <td id="errMsg" colspan="7">Javascript must be enabled</td>
         </tr>
