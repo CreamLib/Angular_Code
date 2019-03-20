@@ -1,4 +1,14 @@
-import {NgModule, Component, ElementRef, OnInit, Input, Renderer2, ViewChild, ViewEncapsulation, HostListener} from '@angular/core';
+import {
+  NgModule,
+  Component,
+  ElementRef,
+  OnInit,
+  Input,
+  Renderer2,
+  ViewChild,
+  ViewEncapsulation,
+  HostListener
+} from '@angular/core';
 
 @Component({
   selector: 'c3m-calendar',
@@ -6,101 +16,108 @@ import {NgModule, Component, ElementRef, OnInit, Input, Renderer2, ViewChild, Vi
   styleUrls: ['./calendar.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-
-
 export class CalendarComponent implements OnInit {
+  /* *********** INPUT *********** */
+  @Input() monthString: string;
+  @Input() targetString = ' ';
 
-    /* *********** INPUT *********** */
-    @Input() monthString: string;
-    @Input() targetString = ' ';
+  /* ************* VARIABLES ************** */
+  @ViewChild('dp') dp: any;
+  @ViewChild('prev') prev: any;
+  @ViewChild('next') next: any;
+  @ViewChild('cal') grid: any;
+  tbody: any;
+  @ViewChild('date') target: any;
+  monthNames: string[];
+  dayNames: string[];
+  dateObj: Date;
+  curYear: number;
+  year: number;
+  curMonth: number;
+  month: number;
+  currentDate: boolean;
+  keys: { [name: string]: any } = {};
+  date: number;
+  bModal: boolean;
 
-    /* ************* VARIABLES ************** */
-    @ViewChild('dp') dp: any;
-    @ViewChild('prev') prev: any;
-    @ViewChild('next') next: any;
-    @ViewChild('cal') grid: any;
-    tbody: any;
-    @ViewChild('date') target: any;
-    monthNames: string[];
-    dayNames: string[];
-    dateObj: Date;
-    curYear: number;
-    year: number;
-    curMonth: number;
-    month: number;
-    currentDate: boolean;
-    keys: { [name: string]: any; } = { };
-    date: number;
-    bModal: boolean;
+  /* ********* CONSTRUCTOR ********* */
 
-    /* ********* CONSTRUCTOR ********* */
+  constructor(private eRef: ElementRef, private renderer: Renderer2) {}
 
-    constructor(private eRef: ElementRef, private renderer: Renderer2) {
-    }
+  /* ************ ON INIT *********** */
+  ngOnInit() {
+    this.datepicker(true);
+  }
 
-    /* ************ ON INIT *********** */
-    ngOnInit() {
-     this.datepicker(true);
-    }
+  /* ************** MAIN FUNCTION ************** */
+  datepicker(modal: boolean) {
+    /* All the selectors */
+    this.dp = this.dp.nativeElement;
+    this.prev = this.prev.nativeElement;
+    this.next = this.next.nativeElement;
+    this.grid = this.grid.nativeElement;
+    this.target = this.target.nativeElement;
+    this.bModal = modal; // true if datepicker should appear in modal
 
-    /* ************** MAIN FUNCTION ************** */
-    datepicker(modal:boolean) {
+    // Month Names
+    this.monthNames = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
+    ];
 
-      /* All the selectors */
-      this.dp = this.dp.nativeElement;
-      this.prev = this.prev.nativeElement;
-      this.next = this.next.nativeElement;
-      this.grid = this.grid.nativeElement;
-      this.target = this.target.nativeElement;
-      this.bModal = modal; // true if datepicker should appear in modal
+    // Day Names
+    this.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-      // Month Names
-      this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'];
+    // DATE
+    this.dateObj = new Date();
 
-      // Day Names
-      this.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    // Current Date
+    this.curYear = this.dateObj.getFullYear(); // Get the Year using Local Time
+    this.year = this.curYear;
+    this.curMonth = this.dateObj.getMonth(); // Get the Month using Local Time
+    this.month = this.curMonth;
+    this.currentDate = true;
 
-      // DATE
-      this.dateObj = new Date();
+    this.date = this.dateObj.getDate();
 
-      // Current Date
-      this.curYear = this.dateObj.getFullYear(); // Get the Year using Local Time
-      this.year = this.curYear;
-      this.curMonth = this.dateObj.getMonth(); // Get the Month using Local Time
-      this.month = this.curMonth;
-      this.currentDate = true;
+    // Keyboard Keys
+    this.keys = {
+      tab: 9,
+      enter: 13,
+      esc: 27,
+      space: 32,
+      pageup: 33,
+      pagedown: 34,
+      end: 35,
+      home: 36,
+      left: 37,
+      up: 38,
+      right: 39,
+      down: 40
+    };
 
-      this.date = this.dateObj.getDate();
+    // Stock name of current Date
+    this.monthString = this.monthNames[this.month] + ' ' + this.year;
 
-      // Keyboard Keys
-      this.keys = {
-        tab:       9,
-        enter:    13,
-        esc:      27,
-        space:    32,
-        pageup:   33,
-        pagedown: 34,
-        end:      35,
-        home:     36,
-        left:     37,
-        up:       38,
-        right:    39,
-        down:     40
-      };
+    // Fill the calendar grid
+    this.fillGrid();
 
-      // Stock name of current Date
-      this.monthString = this.monthNames[this.month] + ' ' + this.year;
+    // Point Activedescendant to the current day
+    const today = this.grid.querySelector('.today');
+    this.grid.setAttribute('aria-activedescendant', today.getAttribute('id'));
 
-      // Fill the calendar grid
-      this.fillGrid();
-
-      // Point Activedescendant to the current day
-      const today = this.grid.querySelector('.today');
-      this.grid.setAttribute('aria-activedescendant', today.getAttribute('id'));
-
-      // Call all events listener
-      this.bindHandlers();
+    // Call all events listener
+    this.bindHandlers();
   }
 
   /* ************ BIND ALL THE BUTTON WITH EVENT LISTENER ******** */
@@ -108,11 +125,11 @@ export class CalendarComponent implements OnInit {
     const thisobj = this;
 
     /* ---------------------------------------------- */
-    thisobj.renderer.listen(this.grid, 'keydown', (e) => {
+    thisobj.renderer.listen(this.grid, 'keydown', e => {
       return thisobj.handleGridKeyDown(e);
     });
-    
-    thisobj.renderer.listen(this.grid, 'keypress', (e) => {
+
+    thisobj.renderer.listen(this.grid, 'keypress', e => {
       return thisobj.handleGridKeyDown(e);
     });
 
@@ -129,17 +146,17 @@ export class CalendarComponent implements OnInit {
     this.addEventListenerList(thisobj);
   }
 
-
   /* ************************** HANDLE GRID BLUR ********************** */
   handleGridBlur() {
     if (this.eRef.nativeElement.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
-      const idActiveDescendant = this.eRef.nativeElement.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
+      const idActiveDescendant = this.eRef.nativeElement.querySelector(
+        '#' + this.grid.getAttribute('aria-activedescendant')
+      );
       idActiveDescendant.classList.remove('focus');
       idActiveDescendant.setAttribute('aria-selected', 'false');
     }
     return true;
   }
-
 
   /* ************************** HANDLE GRID FOCUS ********************** */
   handleGridFocus() {
@@ -173,16 +190,15 @@ export class CalendarComponent implements OnInit {
       case this.keys.pagedown:
       case this.keys.home:
       case this.keys.end: {
-         e.stopPropagation();
-         return false;
+        e.stopPropagation();
+        return false;
       }
-   }
-   return true;
+    }
+    return true;
   }
 
   /* ************************** HANDLE GRID CLICK ********************** */
   handleGridClick(id, e) {
-
     const cell = id;
 
     // If Cell is empty
@@ -206,14 +222,21 @@ export class CalendarComponent implements OnInit {
     const curDay = this.eRef.nativeElement.querySelector(`#${this.grid.getAttribute('aria-activedescendant')}`);
 
     // Change the targetString to represente the new current date
-    this.targetString = (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + (parseInt(curDay.firstChild.nodeValue) < 9 ? '0' : '') + curDay.firstChild.nodeValue + '/' + this.year;
+    const x: string = curDay.firstChild.nodeValue;
+    this.targetString =
+      (this.month < 9 ? '0' : '') +
+      (this.month + 1) +
+      '/' +
+      (parseInt(x, 10) < 9 ? '0' : '') +
+      curDay.firstChild.nodeValue +
+      '/' +
+      this.year;
 
     // Hide modal Dialog
     this.hideDlg();
 
     e.stopPropagation();
     return false;
-
   }
 
   /* ************************** ADD EVENT LISTENER FOR MULTIPLE ELEMENTS  ********************** */
@@ -221,22 +244,22 @@ export class CalendarComponent implements OnInit {
     const list = this.grid.querySelectorAll('td');
     let i = 0;
     const len = list.length;
-      for ( i = 0; i < len; i++) {
-        const itemList = list[i];
-        /*itemList.addEventListener('click', function(e){
+    for (i = 0; i < len; i++) {
+      const itemList = list[i];
+      /*itemList.addEventListener('click', function(e){
           return thisobj.handleGridClick(this, e);
         });*/
-        thisobj.renderer.listen(itemList, 'click', (e) => {
-          return thisobj.handleGridClick(itemList, e);
-        });
-      }
+      thisobj.renderer.listen(itemList, 'click', e => {
+        return thisobj.handleGridClick(itemList, e);
+      });
+    }
   }
 
   /* ************************** HANDLE PREVIOUS BUTTON CLICK ********************** */
   handlePrevClick(e): boolean {
     const active = this.grid.getAttribute('aria-activedescendant');
     if (e.ctrlKey) {
-        this.showPrevYear();
+      this.showPrevYear();
     } else {
       this.showPrevMonth(1);
     }
@@ -255,7 +278,7 @@ export class CalendarComponent implements OnInit {
     const active = this.grid.getAttribute('aria-activedescendant');
 
     if (e.ctrlKey) {
-        this.showNextYear();
+      this.showNextYear();
     } else {
       this.showNextMonth(1);
     }
@@ -280,7 +303,7 @@ export class CalendarComponent implements OnInit {
         e.preventDefault();
         if (e.ctrlKey) {
           return true;
-        } else if ( e.shiftKey) {
+        } else if (e.shiftKey) {
           this.grid.focus();
         } else {
           this.next.focus();
@@ -307,7 +330,7 @@ export class CalendarComponent implements OnInit {
     return true;
   }
 
- /* ************************** HANDLE NEXT BUTTON KEYDOWN ********************** */
+  /* ************************** HANDLE NEXT BUTTON KEYDOWN ********************** */
   handleNextKeyDown(e): boolean {
     // Alt
     if (e.altKey) {
@@ -335,35 +358,33 @@ export class CalendarComponent implements OnInit {
   showDlg(): void {
     const thisObj = this;
     // Bind Event Listener
-    thisObj.renderer.listen(this.eRef.nativeElement, 'click', (e) => {
+    thisObj.renderer.listen(this.eRef.nativeElement, 'click', e => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.renderer.listen(this.eRef.nativeElement, 'mousedown', (e) => {
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mousedown', e => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseup', (e) => {
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseup', e => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.renderer.listen(this.eRef.nativeElement, 'mousemove', (e) => {
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mousemove', e => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseover', (e) => {
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseover', e => {
       return thisObj.showDialogMethod(e);
     });
 
     thisObj.dp.setAttribute('aria-hidden', 'false');
 
     this.grid.focus();
+  }
 
-   }
-
-
-   /* ************************** ShowDialog Modal Method ********************** */
-   showDialogMethod(e): boolean {
+  /* ************************** ShowDialog Modal Method ********************** */
+  showDialogMethod(e): boolean {
     this.grid.focus();
     e.stopPropagation();
     return false;
@@ -405,7 +426,8 @@ export class CalendarComponent implements OnInit {
           return true;
         }
         // update targent box
-        this.targetString = (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + curDay.firstChild.nodeValue + '/' + this.year;
+        this.targetString =
+          (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + curDay.firstChild.nodeValue + '/' + this.year;
         this.hideDlg();
         return false;
       }
@@ -436,7 +458,7 @@ export class CalendarComponent implements OnInit {
 
           this.grid.setAttribute('aria-activedescendant', prevDay.getAttribute('id'));
         } else {
-            this.showPrevMonth(1);
+          this.showPrevMonth(1);
         }
         e.stopPropagation();
         return false;
@@ -460,7 +482,7 @@ export class CalendarComponent implements OnInit {
 
           this.grid.setAttribute('aria-activedescendant', nextDay.getAttribute('id'));
         } else {
-           this.showNextMonth(1);
+          this.showNextMonth(1);
         }
         e.stopPropagation();
         return false;
@@ -503,14 +525,14 @@ export class CalendarComponent implements OnInit {
         let nextDay = null;
 
         if (dayIndex < days.length) {
-           nextDay = days[dayIndex];
+          nextDay = days[dayIndex];
 
-           curDay.classList.remove('focus');
-           curDay.setAttribute('aria-selected', 'false');
-           nextDay.classList.add('focus');
-           nextDay.setAttribute('aria-selected', 'true');
+          curDay.classList.remove('focus');
+          curDay.setAttribute('aria-selected', 'false');
+          nextDay.classList.add('focus');
+          nextDay.setAttribute('aria-selected', 'true');
 
-           this.grid.setAttribute('aria-activedescendant', nextDay.getAttribute('id'));
+          this.grid.setAttribute('aria-activedescendant', nextDay.getAttribute('id'));
         } else {
           days = Array.prototype.slice.call(days);
           dayIndex = 8 - (days.length - days.indexOf(curDay));
@@ -595,7 +617,6 @@ export class CalendarComponent implements OnInit {
         }
 
         const lastDay = 'day' + this.calcNumDays(this.year, this.month);
-;
         curDay.classList.remove('focus');
         curDay.setAttribute('aria-selected', 'false');
 
@@ -613,18 +634,18 @@ export class CalendarComponent implements OnInit {
   @HostListener('document:click', ['$event'])
   clickedOutside(event) {
     // here you can hide your menu
-    if(!this.eRef.nativeElement.contains(event.target)) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
       this.hideDlg();
     }
   }
 
   /* ************************** HIDE MODAL DIALOG ********************** */
   hideDlg(): void {
-      const thisObj = this;
+    const thisObj = this;
 
-      thisObj.renderer.destroy();
-      thisObj.dp.setAttribute('aria-hidden', 'true');
-      this.target.focus();
+    thisObj.renderer.destroy();
+    thisObj.dp.setAttribute('aria-hidden', 'true');
+    this.target.focus();
   }
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
@@ -695,7 +716,7 @@ export class CalendarComponent implements OnInit {
     }
 
     this.fillGrid();
-    this.monthString = (this.monthNames[this.month] + ' ' + this.year);
+    this.monthString = this.monthNames[this.month] + ' ' + this.year;
     this.addEventListenerList(this);
   }
 
@@ -710,7 +731,7 @@ export class CalendarComponent implements OnInit {
     }
 
     this.fillGrid();
-    this.monthString = (this.monthNames[this.month] + ' ' + this.year);
+    this.monthString = this.monthNames[this.month] + ' ' + this.year;
     this.addEventListenerList(this);
   }
 
@@ -729,30 +750,51 @@ export class CalendarComponent implements OnInit {
     }
 
     // Insert Empty Cells
-    for (weekDay = 0; weekDay < startWeekDay; weekDay ++) {
+    for (weekDay = 0; weekDay < startWeekDay; weekDay++) {
       gridCells += '\t\t<td class="empty">&nbsp; </td>\n';
     }
 
     // Insert the days of the month
     for (curDay = 1; curDay <= numDays; curDay++) {
       if (curDay === this.date && this.currentDate === true) {
-            gridCells += '\t\t<td id="day' + curDay + '" class="today"' +  'headers="row' + rowCount + ' ' + this.dayNames[weekDay] + '" ' + 'role="gridcell" aria-selected="false">' + curDay + '</td> \n';
+        gridCells +=
+          '\t\t<td id="day' +
+          curDay +
+          '" class="today"' +
+          'headers="row' +
+          rowCount +
+          ' ' +
+          this.dayNames[weekDay] +
+          '" ' +
+          'role="gridcell" aria-selected="false">' +
+          curDay +
+          '</td> \n';
       } else {
-            gridCells += '\t\t<td id="day' + curDay + '" headers="row' + rowCount + ' ' + this.dayNames[weekDay] + '" ' + 'role="gridcell" aria-selected="false">' + curDay + '</td> \n';
+        gridCells +=
+          '\t\t<td id="day' +
+          curDay +
+          '" headers="row' +
+          rowCount +
+          ' ' +
+          this.dayNames[weekDay] +
+          '" ' +
+          'role="gridcell" aria-selected="false">' +
+          curDay +
+          '</td> \n';
       }
 
       // Last day of week
       if (weekDay === 6 && curDay < numDays) {
-          gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '">\n';
-          rowCount++;
-          weekDay = 0;
+        gridCells += '\t</tr>\n\t<tr id="row' + rowCount + '">\n';
+        rowCount++;
+        weekDay = 0;
       } else {
         weekDay++;
       }
     }
 
     // Insert empty cells
-    for (weekDay; weekDay < 7; weekDay ++) {
+    for (weekDay; weekDay < 7; weekDay++) {
       gridCells += '\t\t<td class="empty">&nbsp;</td>\n';
     }
     gridCells += '\t </tr>';
@@ -762,11 +804,11 @@ export class CalendarComponent implements OnInit {
 
   /* ************************** CALCULATE NUMBER OF DAY IN A MONTH ********************** */
   calcNumDays(year, month) {
-      return 32 - new Date(year, month, 32).getDate();
+    return 32 - new Date(year, month, 32).getDate();
   }
 
   /* ************************** CALCULULATE THE FIRST DAY OF A MONTH AND A YEAR  ********************** */
   calcStarWeekDay(year, month) {
-    return  new Date(year, month, 1).getDay();
+    return new Date(year, month, 1).getDay();
   }
 }
