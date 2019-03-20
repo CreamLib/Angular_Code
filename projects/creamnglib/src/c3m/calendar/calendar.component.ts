@@ -17,12 +17,12 @@ export class CalendarComponent implements OnInit {
     @Input() targetString = ' ';
 
     /* ************* VARIABLES ************** */
-    @ViewChild('dp') dp: ElementRef;
-    @ViewChild('prev') prev: ElementRef;
-    @ViewChild('next') next: ElementRef;
+    @ViewChild('dp') dp: any;
+    @ViewChild('prev') prev: any;
+    @ViewChild('next') next: any;
     @ViewChild('cal') grid: any;
     tbody: any;
-    @ViewChild('date') target: ElementRef;
+    @ViewChild('date') target: any;
     monthNames: string[];
     dayNames: string[];
     dateObj: Date;
@@ -37,7 +37,8 @@ export class CalendarComponent implements OnInit {
 
     /* ********* CONSTRUCTOR ********* */
 
-    constructor(private eRef: ElementRef) {
+    constructor(private eRef: ElementRef, private renderer: Renderer2) {
+      console.log(eRef.nativeElement);
     }
 
     /* ************ ON INIT *********** */
@@ -110,20 +111,19 @@ export class CalendarComponent implements OnInit {
     const thisobj = this;
 
     /* ---------------------------------------------- */
-
-    this.grid.addEventListener('keydown', function(e){
+    thisobj.renderer.listen(this.grid, 'keydown', (e) => {
+      return thisobj.handleGridKeyDown(e);
+    });
+    
+    thisobj.renderer.listen(this.grid, 'keypress', (e) => {
       return thisobj.handleGridKeyDown(e);
     });
 
-    this.grid.addEventListener('keypress', function(e){
-      return thisobj.handleGridKeyPress(e);
-    });
-
-    this.grid.addEventListener('focus', function(e){
+    thisobj.renderer.listen(this.grid, 'focus', () => {
       return thisobj.handleGridFocus();
     });
 
-     this.grid.addEventListener('blur', function(e){
+    thisobj.renderer.listen(this.grid, 'blur', () => {
       return thisobj.handleGridBlur();
     });
 
@@ -135,8 +135,8 @@ export class CalendarComponent implements OnInit {
 
   /* ************************** HANDLE GRID BLUR ********************** */
   handleGridBlur() {
-    if (document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
-      const idActiveDescendant = document.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
+    if (this.eRef.nativeElement.querySelector('#' + this.grid.getAttribute('aria-activedescendant'))) {
+      const idActiveDescendant = this.eRef.nativeElement.querySelector('#' + this.grid.getAttribute('aria-activedescendant'));
       idActiveDescendant.classList.remove('focus');
       idActiveDescendant.setAttribute('aria-selected', 'false');
     }
@@ -147,13 +147,13 @@ export class CalendarComponent implements OnInit {
   /* ************************** HANDLE GRID FOCUS ********************** */
   handleGridFocus() {
     const active = this.grid.getAttribute('aria-activedescendant');
-    if (document.querySelector('#' + active).getAttribute('id') === undefined) {
+    if (this.eRef.nativeElement.querySelector('#' + active).getAttribute('id') === undefined) {
       const lastDay = 'day' + this.calcNumDays(this.year, this.month);
-      document.querySelector('#' + lastDay).classList.add('focus');
-      document.querySelector('#' + lastDay).setAttribute('aria-selected', 'true');
+      this.eRef.nativeElement.querySelector('#' + lastDay).classList.add('focus');
+      this.eRef.nativeElement.querySelector('#' + lastDay).setAttribute('aria-selected', 'true');
     } else {
-      document.querySelector('#' + active).classList.add('focus');
-      document.querySelector('#' + active).setAttribute('aria-selected', 'true');
+      this.eRef.nativeElement.querySelector('#' + active).classList.add('focus');
+      this.eRef.nativeElement.querySelector('#' + active).setAttribute('aria-selected', 'true');
     }
     return true;
   }
@@ -206,7 +206,7 @@ export class CalendarComponent implements OnInit {
     this.grid.setAttribute('aria-activedescendant', cell.getAttribute('id'));
 
     // Get the new Click Cell
-    const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
+    const curDay = this.eRef.nativeElement.querySelector(`#${this.grid.getAttribute('aria-activedescendant')}`);
 
     // Change the targetString to represente the new current date
     this.targetString = (this.month < 9 ? '0' : '') + (this.month + 1) + '/' + (parseInt(curDay.firstChild.nodeValue) < 9 ? '0' : '') + curDay.firstChild.nodeValue + '/' + this.year;
@@ -226,8 +226,11 @@ export class CalendarComponent implements OnInit {
     const len = list.length;
       for ( i = 0; i < len; i++) {
         const itemList = list[i];
-        itemList.addEventListener('click', function(e){
+        /*itemList.addEventListener('click', function(e){
           return thisobj.handleGridClick(this, e);
+        });*/
+        thisobj.renderer.listen(itemList, 'click', (e) => {
+          return thisobj.handleGridClick(itemList, e);
         });
       }
   }
@@ -283,7 +286,7 @@ export class CalendarComponent implements OnInit {
         } else if ( e.shiftKey) {
           this.grid.focus();
         } else {
-          this.next.nativeElement.focus();
+          this.next.focus();
         }
 
         e.stopPropagation();
@@ -335,23 +338,27 @@ export class CalendarComponent implements OnInit {
   showDlg(): void {
     const thisObj = this;
     // Bind Event Listener
-    document.addEventListener('click', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mousedown', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mouseup', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mousemove', function(e){
-      return thisObj.showDialogMethod(e);
-    });
-    document.addEventListener('mouseover', function(e){
+    thisObj.renderer.listen(this.eRef.nativeElement, 'click', (e) => {
       return thisObj.showDialogMethod(e);
     });
 
-    thisObj.dp.nativeElement.setAttribute('aria-hidden', 'false');
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mousedown', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseup', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mousemove', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.renderer.listen(this.eRef.nativeElement, 'mouseover', (e) => {
+      return thisObj.showDialogMethod(e);
+    });
+
+    thisObj.dp.setAttribute('aria-hidden', 'false');
 
     this.grid.focus();
 
@@ -368,7 +375,7 @@ export class CalendarComponent implements OnInit {
   /* ************************** HANDLE GRID CELL KEYDOWN ********************** */
   handleGridKeyDown(e): boolean {
     const rows = this.grid.querySelectorAll('tbody tr');
-    const curDay = document.getElementById(this.grid.getAttribute('aria-activedescendant'));
+    const curDay = this.eRef.nativeElement.querySelector(`#${this.grid.getAttribute('aria-activedescendant')}`);
     let days = this.grid.querySelectorAll('td:not(.empty)');
     const curRow = curDay.parentElement;
     // ALT
@@ -383,9 +390,9 @@ export class CalendarComponent implements OnInit {
         if (this.bModal === true) {
           // SHIFT + TAB
           if (e.shiftKey) {
-            this.next.nativeElement.focus();
+            this.next.focus();
           } else {
-            this.prev.nativeElement.focus();
+            this.prev.focus();
           }
           e.stopPropagation();
           return false;
@@ -618,24 +625,9 @@ export class CalendarComponent implements OnInit {
   hideDlg(): void {
       const thisObj = this;
 
-      document.removeEventListener('click', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mousedown', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mouseup', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mousemove', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-      document.removeEventListener('mouseover', function(e){
-        return thisObj.showDialogMethod(e);
-      });
-
-      thisObj.dp.nativeElement.setAttribute('aria-hidden', 'true');
-      this.target.nativeElement.focus();
+      thisObj.renderer.destroy();
+      thisObj.dp.setAttribute('aria-hidden', 'true');
+      this.target.focus();
   }
 
   /* ************************** SHOW PREVIOUS MONTH ********************** */
@@ -735,8 +727,8 @@ export class CalendarComponent implements OnInit {
     this.tbody = this.grid.querySelector('tbody');
     let gridCells = '\t<tr id="row0">\n';
 
-    while (this.tbody.nativeElement.firstChild) {
-      this.tbody.nativeElement.removeChild(this.tbody.nativeElement.firstChild);
+    while (this.tbody.firstChild) {
+      this.tbody.removeChild(this.tbody.firstChild);
     }
 
     // Insert Empty Cells
@@ -768,7 +760,7 @@ export class CalendarComponent implements OnInit {
     }
     gridCells += '\t </tr>';
 
-    this.tbody.nativeElement.insertAdjacentHTML('beforeend', gridCells);
+    this.tbody.insertAdjacentHTML('beforeend', gridCells);
   }
 
   /* ************************** CALCULATE NUMBER OF DAY IN A MONTH ********************** */
