@@ -1,46 +1,91 @@
 <!-- TITLE MODAL COMPONENT PAGE -->
 <div class="panelTitle">
-    <h2><strong>Modal</strong> Component</h2>
-    <ul>
-        <li><a scrollTo href="modal">Dialog Modal</a></li>
-    </ul>
+  <h2><strong>Modal</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="modal">Dialog Modal</a></li>
+  </ul>
 </div>
-
 
 <!-- DESCRIPTION ACCORDION COMPONENT PAGE -->
 <div class="titleComponent">
-    <div class="descriptionComponent" id="modal">
-        <h3>Dialog Modal</h3>
+  <div class="descriptionComponent" id="modal">
+    <h3>Dialog Modal</h3>
 
-        <div class="explain">
-          <p>Opens a dialog modal with focus set on the modal title. Focus loops inside the modal.</p>
-        </div>
+    <div class="explain">
+      <p>Opens a dialog modal with focus set on the modal title. Focus loops inside the modal.</p>
+    </div>
 
+    <div class="demo">
+      <!-- MODAL DEMO -->
+      <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
+      <c3m-modal (onShow)="modalOpened($event)" (onHide)="modalClosed($event)"></c3m-modal>
 
-        <div class="demo">
-          <!-- MODAL DEMO -->
-          <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
-          <c3m-modal></c3m-modal>
-        </div>
+      <c3m-toast #toast1 delay="5000"> Modal is opened ! </c3m-toast>
+      <c3m-toast #toast2 delay="5000"> Modal is closed ! </c3m-toast>
+    </div>
 
-        <div class="explain">
-          <dl>
-            <dt>click</dt>
-            <dd>event that opens the modal</dd>
-          </dl>
-        </div>
+    <div class="explain">
+      <dl>
+        <dt>click</dt>
+        <dd>event that opens the modal</dd>
+      </dl>
+    </div>
 
-        <!-- TABS SNIPPETS -->
-        <c3m-tabs class="snippets">
-          <c3m-tab tabTitle="To call the component">
-              <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
   &#x3C;c3m-button (click)=&#x22;OpenModal()&#x22;&#x3E;Open Modal&#x3C;/c3m-button&#x3E;
   &#x3C;c3m-modal&#x3E;&#x3C;/c3m-modal&#x3E;
-                    </pre>
-              </div>
-          </c3m-tab>
-        </c3m-tabs>
+                    </pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Parameter</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>onShow</td>
+            <td>event: Event object</td>
+            <td>Callback to invoke when dialog is shown.</td>
+          </tr>
+          <tr>
+            <td>onHide</td>
+            <td>event: Event object</td>
+            <td>Callback to invoke when dialog is shown.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="properties">
+      <h4>Events</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -1,4 +1,14 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
+import { trigger, state, style, transition, animate, AnimationEvent } from '@angular/animations';
 
 @Component({
   selector: 'c3m-modal',
@@ -8,6 +18,12 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Input() isOpen: boolean;
+
+  @Output() onShow: EventEmitter<any> = new EventEmitter();
+  @Output() onHide: EventEmitter<any> = new EventEmitter();
+
+  @ViewChild('dialogElement') dialogElement: ElementRef;
+
   dialogTitle = 'dialogTitle';
   dialogDescription = 'dialogDescription';
   btnCloseLabel = 'Close dialog';
@@ -20,8 +36,11 @@ export class ModalComponent implements OnInit {
   ToggleOpen(): void {
     if (!this.isOpen) {
       this.isOpen = true;
+      const eventOpen = this;
+      this.onShow.emit(this.dialogElement);
     } else if (this.isOpen) {
       this.isOpen = false;
+      this.onHide.emit(this.dialogElement);
     }
   }
 
