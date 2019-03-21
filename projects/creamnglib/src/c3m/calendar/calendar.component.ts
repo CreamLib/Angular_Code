@@ -19,8 +19,8 @@ import {
 export class CalendarComponent implements OnInit {
   /* *********** INPUT *********** */
   @Input() monthString: string;
-  @Input() targetString: string = ' ';
-  @Input() type: string = 'text';
+  @Input() targetString = ' ';
+  @Input() type = 'text';
 
   /* ************* VARIABLES ************** */
   @ViewChild('dp') dp: any;
@@ -49,7 +49,7 @@ export class CalendarComponent implements OnInit {
   /* ************ ON INIT *********** */
   ngOnInit() {
     this.datepicker(true);
-    let isIE = /msie\s|trident\//i.test(window.navigator.userAgent);
+    const isIE = /msie\s|trident\//i.test(window.navigator.userAgent);
     if (this.type === 'date') {
       if (!isIE) {
         this.renderer.setStyle(this.buttonShow.nativeElement, 'display', 'none');
