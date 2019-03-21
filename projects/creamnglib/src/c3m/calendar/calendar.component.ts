@@ -13,12 +13,14 @@ export class CalendarComponent implements OnInit {
     /* *********** INPUT *********** */
     @Input() monthString: string;
     @Input() targetString = ' ';
+    @Input() type: string = 'text';
 
     /* ************* VARIABLES ************** */
     @ViewChild('dp') dp: any;
     @ViewChild('prev') prev: any;
     @ViewChild('next') next: any;
     @ViewChild('cal') grid: any;
+    @ViewChild('showDP') buttonShow: any;
     tbody: any;
     @ViewChild('date') target: any;
     monthNames: string[];
@@ -40,7 +42,14 @@ export class CalendarComponent implements OnInit {
 
     /* ************ ON INIT *********** */
     ngOnInit() {
-     this.datepicker(true);
+      this.datepicker(true);
+      /* ************ isIE ******** */
+      let isIE = /msie\s|trident\//i.test(window.navigator.userAgent);
+      if(this.type === 'date') {
+        if(!isIE) {
+          this.renderer.setStyle(this.buttonShow.nativeElement, 'display', 'none');
+        }
+      }
     }
 
     /* ************** MAIN FUNCTION ************** */
@@ -53,6 +62,7 @@ export class CalendarComponent implements OnInit {
       this.grid = this.grid.nativeElement;
       this.target = this.target.nativeElement;
       this.bModal = modal; // true if datepicker should appear in modal
+
 
       // Month Names
       this.monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -101,6 +111,7 @@ export class CalendarComponent implements OnInit {
 
       // Call all events listener
       this.bindHandlers();
+
   }
 
   /* ************ BIND ALL THE BUTTON WITH EVENT LISTENER ******** */
@@ -223,9 +234,6 @@ export class CalendarComponent implements OnInit {
     const len = list.length;
       for ( i = 0; i < len; i++) {
         const itemList = list[i];
-        /*itemList.addEventListener('click', function(e){
-          return thisobj.handleGridClick(this, e);
-        });*/
         thisobj.renderer.listen(itemList, 'click', (e) => {
           return thisobj.handleGridClick(itemList, e);
         });

@@ -1,8 +1,8 @@
 <div id="application" role="application">
 
   <p><label id="date_label" for="date">Date</label>
-    <input type="text" value={{targetString}} #date/>
-    <button (click)="showDlg()">Select Date</button></p>
+    <input [attr.type]="type" value={{targetString}} #date/>
+    <button (click)="showDlg()" #showDP>Select Date</button></p>
 
   <div class="datepicker" aria-hidden="true" #dp>
 
