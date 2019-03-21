@@ -17,7 +17,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": ["src/assets", "src/favicon.ico", "src/app"],
-            "styles": ["src/styles.css", "src/assets/fonts/fonts.css"],
+            "styles": ["src/styles.css", "src/assets/fonts/fonts.css", "dist/creamnglib/assets/creamNg.css"],
             "scripts": ["src/assets/js/prettify.js"]
           },
           "configurations": {
@@ -106,10 +106,11 @@
       "prefix": "c3m",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@linnenschmidt/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/creamnglib/tsconfig.lib.json",
-            "project": "projects/creamnglib/ng-package.json"
+            "project": "projects/creamnglib/ng-package.json",
+            "assets": ["src/assets"]
           }
         },
         "test": {
