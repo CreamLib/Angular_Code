@@ -18,7 +18,8 @@
     <div class="demo">
       <!-- MODAL DEMO -->
       <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
-      <c3m-modal (onShow)="modalOpened($event)" (onHide)="modalClosed($event)"></c3m-modal>
+      <c3m-modal (onShow)="modalOpened($event)" (onHide)="modalClosed($event)" topPosition="100" modalWidth="700">
+      </c3m-modal>
 
       <c3m-toast #toast1 delay="5000"> Modal is opened ! </c3m-toast>
       <c3m-toast #toast2 delay="5000"> Modal is closed ! </c3m-toast>
@@ -50,19 +51,34 @@
       <table>
         <thead>
           <th>Name</th>
-          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
           <th>Description</th>
         </thead>
         <tbody>
           <tr>
-            <td>onShow</td>
-            <td>event: Event object</td>
-            <td>Callback to invoke when dialog is shown.</td>
+            <td>styleClass</td>
+            <td>string</td>
+            <td>null</td>
+            <td>Class for the component</td>
           </tr>
           <tr>
-            <td>onHide</td>
-            <td>event: Event object</td>
-            <td>Callback to invoke when dialog is shown.</td>
+            <td>topPosition</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Top coordinate of the modal</td>
+          </tr>
+          <tr>
+            <td>leftPosition</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Left coordinate of the modal. It will be interpretate in percentage (for responsive)</td>
+          </tr>
+          <tr>
+            <td>modalWidth</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Width of the modal. No useful if leftPosition is set.</td>
           </tr>
         </tbody>
       </table>
@@ -70,19 +86,23 @@
 
     <div class="properties">
       <h4>Events</h4>
+
       <table>
         <thead>
           <th>Name</th>
-          <th>Type</th>
-          <th>Default</th>
+          <th>Parameter</th>
           <th>Description</th>
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>onShow</td>
+            <td>event: Modal object</td>
+            <td>Callback to invoke when dialog is shown.</td>
+          </tr>
+          <tr>
+            <td>onHide</td>
+            <td>event: Modal object</td>
+            <td>Callback to invoke when dialog is shown.</td>
           </tr>
         </tbody>
       </table>
