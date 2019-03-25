@@ -8,14 +8,16 @@
     [attr.aria-describedby]="dialogDescription"
     role="dialog"
   >
-    <h1 #focusable id="{{ dialogTitle }}" tabindex="0">Modal Title</h1>
-    <p id="{{ dialogDescription }}">Modal content text</p>
+    <h1 #focusable id="{{ dialogTitle }}" tabindex="0">{{ modaTitle }}</h1>
+    <div id="{{ dialogDescription }}">
+      <ng-content></ng-content>
+    </div>
 
     <button
       (click)="ToggleOpen()"
       (keydown.tab)="focusable.focus()"
       class="dialog-close"
-      [attr.aria-label]="btnCloseLabel"
+      [attr.aria-label]="closeBtnTitle"
     >
       &times;
     </button>
