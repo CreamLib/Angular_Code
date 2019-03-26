@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { IBreadcrumb } from "./breadcrumbs.model";
-import { Observable, Observer, Subject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { IBreadcrumb } from './breadcrumbs.model';
+import { Observable, Observer, Subject } from 'rxjs';
 
 @Injectable()
 export class BreadcrumbsService {
@@ -14,10 +14,8 @@ export class BreadcrumbsService {
     this.breadcrumbsSource = new Subject<IBreadcrumb[]>();
     this.breadcrumbsChanged$ = this.breadcrumbsSource.asObservable();
 
-    if (localStorage.getItem("prefixedBreadcrumbs") != null) {
-      this.prefixedBreadcrumbs = JSON.parse(
-        localStorage.getItem("prefixedBreadcrumbs")
-      );
+    if (localStorage.getItem('prefixedBreadcrumbs') != null) {
+      this.prefixedBreadcrumbs = JSON.parse(localStorage.getItem('prefixedBreadcrumbs'));
     }
   }
 
@@ -25,18 +23,15 @@ export class BreadcrumbsService {
   public store(breadcrumbs: IBreadcrumb[]) {
     this.breadcrumbs = breadcrumbs;
 
-    let allBreadcrumbs = this.prefixedBreadcrumbs.concat(this.breadcrumbs);
+    const allBreadcrumbs = this.prefixedBreadcrumbs.concat(this.breadcrumbs);
     this.breadcrumbsSource.next(allBreadcrumbs);
   }
 
   // Add a prefixed breadcrumb
   public storePrefixed(breadcrumb: IBreadcrumb) {
     this.storeIfUnique(breadcrumb);
-    localStorage.setItem(
-      "prefixedBreadcrumbs",
-      JSON.stringify(this.prefixedBreadcrumbs)
-    );
-    let allBreadcrumbs = this.prefixedBreadcrumbs.concat(this.breadcrumbs);
+    localStorage.setItem('prefixedBreadcrumbs', JSON.stringify(this.prefixedBreadcrumbs));
+    const allBreadcrumbs = this.prefixedBreadcrumbs.concat(this.breadcrumbs);
     this.breadcrumbsSource.next(allBreadcrumbs);
   }
 
@@ -48,8 +43,8 @@ export class BreadcrumbsService {
   // storeIfUnique checks if there are any duplicate prefixed breadcrumbs
   private storeIfUnique(newBreadcrumb: IBreadcrumb) {
     let isUnique = true;
-    for (let crumb of this.prefixedBreadcrumbs) {
-      if (newBreadcrumb.url == crumb.url) {
+    for (const crumb of this.prefixedBreadcrumbs) {
+      if (newBreadcrumb.url === crumb.url) {
         isUnique = false;
         break;
       }

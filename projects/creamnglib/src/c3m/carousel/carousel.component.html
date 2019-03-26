@@ -1,0 +1,20 @@
+<!-- A Carousel -->
+<div class="carousel">
+  <!-- Carousel Item List -->
+  <ul role="tablist" class="carouselItemList">
+    <ng-content></ng-content>
+  </ul>
+
+  <!-- Carousel Bullet Points -->
+  <ul class="bulletpoint">
+    <li
+      *ngFor="let groupItem of groups; let i = index"
+      [attr.aria-controls]="groupItem.itemID"
+      role="tab"
+      [attr.aria-selected]="groupItem.isVisible"
+      tabindex="{{ groupItem.tabIndex }}"
+    >
+      <button #bulletPoint aria-label="Go to this slide" (click)="goTo(i, groupItem)"></button>
+    </li>
+  </ul>
+</div>

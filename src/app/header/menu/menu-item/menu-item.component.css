@@ -1,6 +1,8 @@
-.menu-group.closed .panel-collapse {display: none;}
+.menu-group.closed .panel-collapse {
+  display: none;
+}
 
-c3m-menu-item button {
+app-menu-item button {
   position: relative;
   width: 100%;
   text-align: left;
@@ -12,9 +14,9 @@ c3m-menu-item button {
   cursor: pointer;
 }
 
-c3m-menu-item button::before {
+app-menu-item button::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   right: 0;
@@ -28,16 +30,20 @@ c3m-menu-item button::before {
   z-index: -1;
 }
 
-c3m-menu-item button:hover:before, c3m-menu-item button:focus:before, c3m-menu-item button:active:before {
+app-menu-item button:hover:before,
+app-menu-item button:focus:before,
+app-menu-item button:active:before {
   transform: scaleX(1);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-c3m-menu-item button:hover, c3m-menu-item button:active, c3m-menu-item button:focus {
+app-menu-item button:hover,
+app-menu-item button:active,
+app-menu-item button:focus {
   color: var(--n-dark);
 }
 
-c3m-menu-item button svg {
+app-menu-item button svg {
   position: relative;
   top: -3px;
   width: 24px;
@@ -48,22 +54,37 @@ c3m-menu-item button svg {
   transition: fill 1.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-c3m-menu-item.help button {color: var(--main-light);}
-  c3m-menu-item.help button svg {fill: var(--main-light);}
+app-menu-item.help button {
+  color: var(--main-light);
+}
 
-c3m-menu-item button:hover svg, c3m-menu-item button:active svg, c3m-menu-item button:focus svg {
+app-menu-item.help button svg {
+  fill: var(--main-light);
+}
+
+app-menu-item button:hover svg,
+app-menu-item button:active svg,
+app-menu-item button:focus svg {
   fill: var(--n-dark);
 }
-c3m-menu-item.help button:hover, c3m-menu-item.help button:active, c3m-menu-item.help button:focus {
+
+app-menu-item.help button:hover,
+app-menu-item.help button:active,
+app-menu-item.help button:focus {
   color: var(--main-color);
 }
-c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-menu-item.help button:focus svg {
+
+app-menu-item.help button:hover svg,
+app-menu-item.help button:active svg,
+app-menu-item.help button:focus svg {
   fill: var(--main-color);
 }
 
 /* Menu Items */
 
-.contenuMenu {margin: 0 0 0.5rem 0.8rem;}
+.contenuMenu {
+  margin: 0 0 0.5rem 0.8rem;
+}
 
 .contenuMenu li {
   padding: 0 0 0.4rem 30px;
@@ -83,7 +104,10 @@ c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-m
   padding: 0.5rem 0 0.5rem 1rem;
 }
 
-.contenuMenu li a.active, .contenuMenu li a:hover, .contenuMenu li a:active, .contenuMenu li a:focus {
+.contenuMenu li a.active,
+.contenuMenu li a:hover,
+.contenuMenu li a:active,
+.contenuMenu li a:focus {
   color: var(--n-dark);
   background-color: var(--n-light);
 }
@@ -91,5 +115,7 @@ c3m-menu-item.help button:hover svg, c3m-menu-item.help button:active svg, c3m-m
 /* DESKTOP */
 
 @media screen and (min-width: 1400px) {
-  c3m-menu-item button {padding: 1.1rem 2rem 0.8rem;}
+  app-menu-item button {
+    padding: 1.1rem 2rem 0.8rem;
+  }
 }

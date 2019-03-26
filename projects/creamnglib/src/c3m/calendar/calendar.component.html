@@ -1,0 +1,46 @@
+<div id="application" role="application">
+
+  <p><label id="date_label" for="date">Date</label>
+    <input [attr.type]="type" value={{targetString}} #date/>
+    <button (click)="showDlg()" #showDP>Select Date</button></p>
+
+  <div class="datepicker" aria-hidden="true" #dp>
+
+    <div class="month-wrap">
+      <button (click)="handlePrevClick($event)" (keydown)="handlePrevKeyDown($event)" role="button" aria-label="Mois ou Année précédent(e)" aria-labelledby="bn_prev-label" tabindex="0" #prev>
+         <svg>
+           <use xlink:href="assets/img/icons.svg#leftCalendarSvg"></use>
+         </svg>
+      </button>
+      <strong id="month" role="heading" aria-live="assertive" aria-atomic="true">{{ monthString }}</strong>
+      <button (click)="handleNextClick($event)" (keydown)="handleNextKeyDown($event)" role="button" aria-label="Mois ou Année suivant(e)" aria-labelledby="bn_next-label" tabindex="0" #next>
+       <svg>
+         <use xlink:href="assets/img/icons.svg#rightCalendarSvg"></use>
+       </svg>
+      </button>
+    </div>
+
+    <table aria-activedescendant="errMsg" aria-labelledby="month" tabindex="0" #cal>
+      <thead>
+        <tr id="weekdays">
+          <th scope="col"><abbr title="Sunday">Su</abbr></th>
+          <th scope="col"><abbr title="Monday">Mo</abbr></th>
+          <th scope="col"><abbr title="Tuesday">Tu</abbr></th>
+          <th scope="col"><abbr title="Wednesday">We</abbr></th>
+          <th scope="col"><abbr title="Thursday">Th</abbr></th>
+          <th scope="col"><abbr title="Friday">Fr</abbr></th>
+          <th scope="col"><abbr title="Saturday">Sa</abbr></th>
+        </tr>
+      </thead>
+
+      <tbody #tbody>
+        <tr>
+          <td id="errMsg" colspan="7">Javascript must be enabled</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="bn_prev-label" class="offscreen">Go to previous month</button>
+    <button id="bn_next-label" class="offscreen">Go to next month</button>
+  </div>
+</div>

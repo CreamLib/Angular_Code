@@ -1,0 +1,6 @@
+<p>
+  <label for="{{ id }}"> {{ this.title }} </label>
+  <select id="{{ id }}" [name]="this.name">
+    <option *ngFor="let option of allOptions" value="{{ option.value }}"> {{ option.value }} </option>
+  </select>
+</p>

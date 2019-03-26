@@ -3,19 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "api": {
-      "root": "src/app",
-      "projectType": "application",
-      "architect": {
-        "serve": {
-          "builder": "@beeman/angular-serve-nodemon:run",
-          "options": {
-            "script": "src/app/index.ts",
-            "tsConfig": "src/tsconfig.server.json"
-          }
-        }
-      }
-    },
     "projet": {
       "root": "",
       "sourceRoot": "src",
@@ -30,7 +17,7 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": ["src/assets", "src/favicon.ico", "src/app"],
-            "styles": ["src/styles.css", "src/assets/fonts/fonts.css"],
+            "styles": ["src/styles.css", "src/assets/fonts/fonts.css", "dist/creamnglib/assets/creamNg.css"],
             "scripts": ["src/assets/js/prettify.js"]
           },
           "configurations": {
@@ -116,13 +103,14 @@
       "root": "projects/creamnglib",
       "sourceRoot": "projects/creamnglib/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "c3m",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@linnenschmidt/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/creamnglib/tsconfig.lib.json",
-            "project": "projects/creamnglib/ng-package.json"
+            "project": "projects/creamnglib/ng-package.json",
+            "assets": ["src/assets"]
           }
         },
         "test": {
@@ -136,10 +124,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/creamnglib/tsconfig.lib.json",
-              "projects/creamnglib/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/creamnglib/tsconfig.lib.json", "projects/creamnglib/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -150,11 +135,11 @@
   "schematics": {
     "@schematics/angular:component": {
       "viewEncapsulation": "None",
-      "prefix": "c3m",
+      "prefix": "app",
       "styleext": "css"
     },
     "@schematics/angular:directive": {
-      "prefix": "c3m"
+      "prefix": "app"
     }
   }
 }

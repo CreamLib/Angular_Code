@@ -1,0 +1,117 @@
+c3m-calendar div > input {
+  max-width: 9em;
+}
+
+c3m-calendar p button {
+  color: var(--text-inv);
+  background-color: var(--n-dark);
+}
+c3m-calendar button:hover {
+  opacity: 0.8;
+}
+
+c3m-calendar .datepicker {
+  position: absolute;
+  width: 250px;
+  background-color: var(--body-bg);
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+}
+.month-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  padding: 0.5em;
+}
+.month-wrap strong {
+  display: inline-block;
+}
+.month-wrap button {
+  background-color: var(--main-color);
+  padding: 0;
+}
+
+c3m-calendar table thead {
+  margin-top: 2rem;
+  line-height: 2.2rem;
+}
+
+c3m-calendar button svg {
+  height: 1.2rem;
+  width: 1.7rem;
+  fill: var(--text-inv);
+}
+
+c3m-calendar div#month {
+  float: left;
+  padding-top: 6px;
+  width: 199px;
+  height: 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+c3m-calendar tbody#cal {
+  width: 261px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* THE CELLS */
+c3m-calendar table {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+}
+c3m-calendar table th,
+c3m-calendar table td {
+  width: 35px;
+  height: 35px;
+  line-height: 2em;
+  text-align: center;
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  padding: 0;
+}
+c3m-calendar table th {
+  font: var(--stack-l);
+  text-transform: uppercase;
+}
+c3m-calendar table th abbr {
+  text-decoration: none;
+}
+
+c3m-calendar table td.today,
+c3m-calendar table td.today.focus {
+  background-color: var(--hot-color-sec);
+}
+
+c3m-calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 1px;
+}
+c3m-calendar table td.empty,
+c3m-calendar table td.empty:hover {
+  background-color: var(--main-color);
+  cursor: initial;
+}
+
+c3m-calendar table td:hover,
+c3m-calendar table td.focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+c3m-calendar .offscreen {
+  position: absolute;
+  left: -200em;
+  top: -100em;
+}
+
+c3m-calendar [aria-hidden='true'] {
+  display: none;
+}

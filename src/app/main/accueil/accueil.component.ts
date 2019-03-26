@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AppComponent } from '../../app.component';
-
 
 @Component({
   selector: 'app-accueil',
@@ -9,12 +8,7 @@ import { AppComponent } from '../../app.component';
   encapsulation: ViewEncapsulation.None
 })
 export class AccueilComponent implements OnInit {
+  constructor(private app: AppComponent) {}
 
-  constructor(private app: AppComponent) {
-  }
-
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

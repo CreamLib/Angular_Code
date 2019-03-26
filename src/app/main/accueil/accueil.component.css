@@ -19,7 +19,7 @@
 
 .whyNgCream p {
   text-align: center;
-  font: calc(1.3em + 0.8vmax)/1.45 var(--stack-l);
+  font: calc(1.3em + 0.8vmax) / 1.45 var(--stack-l);
 }
 
 /* Containers with SVG icons */
@@ -70,20 +70,29 @@
 /* BREAKPOINT */
 
 @media screen and (min-width: 450px) {
-  .ngCreamBecause li {width: 50%;}
+  .ngCreamBecause li {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 750px) {
-  .ngCreamBecause li {font-size: 1em;}
+  .ngCreamBecause li {
+    font-size: 1em;
+  }
 }
 
 /* BREAKPOINT */
 
 @media screen and (min-width: 1000px) {
+  .whyNgCream {
+    padding: 12vh 13vw 7vh;
+  }
 
-  .whyNgCream {padding: 12vh 13vw 7vh;}
-
-  .ngCreamBecause {padding-top: 4rem;}
-    .ngCreamBecause li {margin-bottom: 6rem;}
+  .ngCreamBecause {
+    padding-top: 4rem;
+  }
+  .ngCreamBecause li {
+    margin-bottom: 6rem;
+  }
 }
 
 @media screen and (min-width: 1400px) {

@@ -1,0 +1,16 @@
+/* Hide the link */
+
+c3m-skip a {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+}
+
+c3m-skip a:focus {
+  position: static;
+  overflow: visible;
+  width: auto;
+  height: auto;
+}

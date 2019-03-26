@@ -8,9 +8,7 @@ import { AppComponent } from '../../app.component';
   encapsulation: ViewEncapsulation.None
 })
 export class TabsPageComponent implements OnInit {
-
-  constructor(private app: AppComponent) {
-  }
+  constructor(private app: AppComponent) {}
 
   ngOnInit() {
     const subComp = ['tabs-item'];

@@ -1,4 +1,6 @@
-c3m-tabs.presentationTabV .tabsContainer {margin: 0;}
+c3m-tabs.presentationTabV .tabsContainer {
+  margin: 0;
+}
 
 div.demo {
   background-color: var(--n-medium);

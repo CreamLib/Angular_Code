@@ -2,14 +2,13 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @Component({
-  selector: 'c3m-menu',
+  selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent {
-
- groups: Array<MenuItemComponent> = [];
+  groups: Array<MenuItemComponent> = [];
 
   addGroup(group: MenuItemComponent): void {
     this.groups.push(group);
@@ -25,7 +24,7 @@ export class MenuComponent {
 
   closeAll(openGroup: MenuItemComponent): void {
     this.groups.forEach((group: MenuItemComponent) => {
-        group.isOpen = false;
+      group.isOpen = false;
     });
   }
 

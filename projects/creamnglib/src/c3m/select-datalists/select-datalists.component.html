@@ -1,0 +1,13 @@
+<p>
+  <label for="{{ id1 }}">{{ this.title1 }}</label>
+  <input #inputList1 type="text" id="{{ id2 }}" [name]="this.name1" />
+</p>
+
+<p>
+  <label for="{{ id1 }}">{{ this.title2 }}</label>
+  <input #inputList2 type="text" id="{{ id2 }}" [name]="this.name2" />
+
+  <datalist #dataList>
+    <option *ngFor="let option of allOptions" value="{{ option.value }}"> {{ option.value }} </option>
+  </datalist>
+</p>

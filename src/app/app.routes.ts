@@ -1,127 +1,127 @@
-import { Routes } from "@angular/router";
-import { AccueilComponent } from "./main/accueil/accueil.component";
-import { ButtonPageComponent } from "./main/button-page/button-page.component";
-import { TabsPageComponent } from "./main/tabs-page/tabs-page.component";
-import { AccordionPageComponent } from "./main/accordion-page/accordion-page.component";
-import { ModalPageComponent } from "./main/modal-page/modal-page.component";
-import { CarouselPageComponent } from "./main/carousel-page/carousel-page.component";
-import { TablePageComponent } from "./main/table-page/table-page.component";
-import { PaginationPageComponent } from "./main/pagination-page/pagination-page.component";
-import { SliderPageComponent } from "./main/slider-page/slider-page.component";
-import { GettingStartedComponent } from "./main/getting-started/getting-started.component";
-import { FaqComponent } from "./main/faq/faq.component";
-import { StepPageComponent } from "./main/step-page/step-page.component";
-import { CalendarPageComponent } from "./main/calendar-page/calendar-page.component";
-import { DropdownPageComponent } from "./main/dropdown-page/dropdown-page.component";
-import { InputPageComponent } from "./main/input-page/input-page.component";
-import { CheckboxPageComponent } from "./main/checkbox-page/checkbox-page.component";
-import { RadioPageComponent } from "./main/radio-page/radio-page.component";
-import { SelectPageComponent } from "./main/select-page/select-page.component";
-import { FieldsetPageComponent } from "./main/fieldset-page/fieldset-page.component";
-import { SkipPageComponent } from "./main/skip-page/skip-page.component";
-import { ToastPageComponent } from "./main/toast-page/toast-page.component";
-import { ListPageComponent } from "./main/list-page/list-page.component";
-import { BottomPageComponent } from "./main/bottom-page/bottom-page.component";
-import { BreadcrumbsPageComponent } from "./main/breadcrumbs-page/breadcrumbs-page.component";
+import { Routes } from '@angular/router';
+import { AccueilComponent } from './main/accueil/accueil.component';
+import { ButtonPageComponent } from './main/button-page/button-page.component';
+import { TabsPageComponent } from './main/tabs-page/tabs-page.component';
+import { AccordionPageComponent } from './main/accordion-page/accordion-page.component';
+import { ModalPageComponent } from './main/modal-page/modal-page.component';
+import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
+import { TablePageComponent } from './main/table-page/table-page.component';
+import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
+import { SliderPageComponent } from './main/slider-page/slider-page.component';
+import { GettingStartedComponent } from './main/getting-started/getting-started.component';
+import { FaqComponent } from './main/faq/faq.component';
+import { StepPageComponent } from './main/step-page/step-page.component';
+import { CalendarPageComponent } from './main/calendar-page/calendar-page.component';
+import { DropdownPageComponent } from './main/dropdown-page/dropdown-page.component';
+import { InputPageComponent } from './main/input-page/input-page.component';
+import { CheckboxPageComponent } from './main/checkbox-page/checkbox-page.component';
+import { RadioPageComponent } from './main/radio-page/radio-page.component';
+import { SelectPageComponent } from './main/select-page/select-page.component';
+import { FieldsetPageComponent } from './main/fieldset-page/fieldset-page.component';
+import { SkipPageComponent } from './main/skip-page/skip-page.component';
+import { ToastPageComponent } from './main/toast-page/toast-page.component';
+import { ListPageComponent } from './main/list-page/list-page.component';
+import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
+import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 
 export const appRoutes: Routes = [
-  { path: "home", component: AccueilComponent, data: { breadcrumb: "Home" } },
+  { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
   {
-    path: "button",
+    path: 'button',
     component: ButtonPageComponent,
-    data: { breadcrumb: "Button" }
+    data: { breadcrumb: 'Button' }
   },
-  { path: "tabs", component: TabsPageComponent, data: { breadcrumb: "Tabs" } },
+  { path: 'tabs', component: TabsPageComponent, data: { breadcrumb: 'Tabs' } },
   {
-    path: "accordion",
+    path: 'accordion',
     component: AccordionPageComponent,
-    data: { breadcrumb: "Accordion" }
+    data: { breadcrumb: 'Accordion' }
   },
   {
-    path: "modal",
+    path: 'modal',
     component: ModalPageComponent,
-    data: { breadcrumb: "modal" }
+    data: { breadcrumb: 'modal' }
   },
   {
-    path: "carousel",
+    path: 'carousel',
     component: CarouselPageComponent,
-    data: { breadcrumb: "carousel" }
+    data: { breadcrumb: 'carousel' }
   },
   {
-    path: "table",
+    path: 'table',
     component: TablePageComponent,
-    data: { breadcrumb: "table" }
+    data: { breadcrumb: 'table' }
   },
   {
-    path: "pagination",
+    path: 'pagination',
     component: PaginationPageComponent,
-    data: { breadcrumb: "pagination" }
+    data: { breadcrumb: 'pagination' }
   },
   {
-    path: "slider",
+    path: 'slider',
     component: SliderPageComponent,
-    data: { breadcrumb: "slider" }
+    data: { breadcrumb: 'slider' }
   },
   {
-    path: "gettingStarted",
+    path: 'gettingStarted',
     component: GettingStartedComponent,
-    data: { breadcrumb: "GettingStarted" }
+    data: { breadcrumb: 'GettingStarted' }
   },
-  { path: "faq", component: FaqComponent, data: { breadcrumb: "F.A.Q" } },
-  { path: "step", component: StepPageComponent, data: { breadcrumb: "Step" } },
+  { path: 'faq', component: FaqComponent, data: { breadcrumb: 'F.A.Q' } },
+  { path: 'step', component: StepPageComponent, data: { breadcrumb: 'Step' } },
   {
-    path: "calendar",
+    path: 'calendar',
     component: CalendarPageComponent,
-    data: { breadcrumb: "Calendar" }
+    data: { breadcrumb: 'Calendar' }
   },
   {
-    path: "dropdown",
+    path: 'dropdown',
     component: DropdownPageComponent,
-    data: { breadcrumb: "Dropdown" }
+    data: { breadcrumb: 'Dropdown' }
   },
   {
-    path: "input",
+    path: 'input',
     component: InputPageComponent,
-    data: { breadcrumb: "Input" }
+    data: { breadcrumb: 'Input' }
   },
   {
-    path: "checkbox",
+    path: 'checkbox',
     component: CheckboxPageComponent,
-    data: { breadcrumb: "Checkbox" }
+    data: { breadcrumb: 'Checkbox' }
   },
   {
-    path: "radio",
+    path: 'radio',
     component: RadioPageComponent,
-    data: { breadcrumb: "Radios" }
+    data: { breadcrumb: 'Radios' }
   },
   {
-    path: "select",
+    path: 'select',
     component: SelectPageComponent,
-    data: { breadcrumb: "select" }
+    data: { breadcrumb: 'select' }
   },
   {
-    path: "fieldset",
+    path: 'fieldset',
     component: FieldsetPageComponent,
-    data: { breadcrumb: "fieldset" }
+    data: { breadcrumb: 'fieldset' }
   },
-  { path: "skip", component: SkipPageComponent, data: { breadcrumb: "skip" } },
+  { path: 'skip', component: SkipPageComponent, data: { breadcrumb: 'skip' } },
   {
-    path: "toast",
+    path: 'toast',
     component: ToastPageComponent,
-    data: { breadcrumb: "toast" }
+    data: { breadcrumb: 'toast' }
   },
-  { path: "list", component: ListPageComponent, data: { breadcrumb: "list" } },
+  { path: 'list', component: ListPageComponent, data: { breadcrumb: 'list' } },
   {
-    path: "bottom",
+    path: 'bottom',
     component: BottomPageComponent,
-    data: { breadcrumb: "Bottom" }
+    data: { breadcrumb: 'Bottom' }
   },
   {
-    path: "breadcrumbs",
+    path: 'breadcrumbs',
     component: BreadcrumbsPageComponent,
-    data: { breadcrumb: "Breadcrumbs" }
+    data: { breadcrumb: 'Breadcrumbs' }
   },
 
-  { path: "", redirectTo: "/home", pathMatch: "full" }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
   //  { path: '**', component: PageNotFoundComponent }
 ];

@@ -29,10 +29,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run: npm run format:check
       - run: npm run ci
 
       - add_ssh_keys:
           fingerprints:
-            - "69:ee:34:1f:7e:06:e4:a4:c6:c8:2b:96:c5:67:a8:79"
+            - '69:ee:34:1f:7e:06:e4:a4:c6:c8:2b:96:c5:67:a8:79'
       - deploy:
           command: ./scripts/deploy-ghpages.sh build
