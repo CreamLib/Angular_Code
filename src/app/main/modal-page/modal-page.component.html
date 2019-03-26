@@ -18,7 +18,13 @@
     <div class="demo">
       <!-- MODAL DEMO -->
       <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
-      <c3m-modal (onShow)="modalOpened($event)" (onHide)="modalClosed($event)" topPosition="100" modalWidth="700">
+      <c3m-modal
+        modaTitle="Modal exemple"
+        (onShow)="modalOpened($event)"
+        (onHide)="modalClosed($event)"
+        topPosition="100"
+        modalWidth="700"
+      >
         Example of modal</c3m-modal
       >
 

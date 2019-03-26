@@ -8,7 +8,7 @@
     [attr.aria-describedby]="dialogDescription"
     role="dialog"
   >
-    <h1 #focusable id="{{ dialogTitle }}" tabindex="0">{{ modaTitle }}</h1>
+    <h1 #focusable id="{{ dialogTitle }}" tabindex="0" c3mModalOut>{{ modaTitle }}</h1>
     <div id="{{ dialogDescription }}">
       <ng-content></ng-content>
     </div>
