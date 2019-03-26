@@ -1,12 +1,15 @@
 details.dropdown {display: inline-block; position: relative;}
 
 details.dropdown summary {
-    color: var(--text-inv);
-    background: var(--main-color);
-    padding: 0.4em 1em 0.5em 0.5em;
-    border-radius: 0.3em;
-    cursor: pointer;
-  }
+  color: var(--text-inv);
+  background: var(--main-color);
+  padding: 0.4em 1em 0.5em 0.5em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+details.dropdown summary:hover, details.dropdown summary:focus {
+  background-color: var(--sec-light);
+}
 
   details.dropdown ul {
     box-sizing: border-box;
@@ -15,16 +18,30 @@ details.dropdown summary {
     width: 10em;
     height: 1px;
     list-style-type: none;
+    background-color: var(--body-bg);
     padding: 0.5em;
     border-radius: 0.3em;
     box-shadow: 1px 1px 3px rgba(0,0,0,.5);
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   details.dropdown.open ul {height: auto; opacity: 1; transition: all 1s;}
   details.dropdown.open li {font-size: 1em;}
 
-  details.dropdown button {
+  details.dropdown button, details.dropdown a, details.dropdown a:visited {
+    display: block;
     width: 100%;
+    font: 100%/1 var(--stack);
+    text-decoration: none;
+    text-align: left;
+    color: var(--body-text);
+    background-color: var(--body-bg);
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
   }
+  details.dropdown button:hover, details.dropdown button:focus,
+    details.dropdown a:hover, details.dropdown a:focus {
+      color: var(--text-inv);
+      background-color: var(--main-light);
+    }
