@@ -99,6 +99,13 @@ export class ModalComponent implements OnInit {
     }
   }
 
+  onKey(event) {
+    if (event.key === 'Escape') {
+      this.isOpen = false;
+      this.onHide.emit(this.dialogElement);
+    }
+  }
+
   randomID() {
     const idRandom = Math.round(Math.random() * (20000 - 1) + 1);
     return idRandom;

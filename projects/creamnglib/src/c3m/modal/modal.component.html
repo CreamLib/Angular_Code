@@ -7,6 +7,7 @@
     [attr.aria-labeledby]="dialogTitle"
     [attr.aria-describedby]="dialogDescription"
     role="dialog"
+    (keyup)="onKey($event)"
     c3mModalOut
   >
     <h1 id="{{ dialogTitle }}" tabindex="0" #focusable>{{ modaTitle }}</h1>
