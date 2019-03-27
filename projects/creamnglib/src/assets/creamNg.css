@@ -2,6 +2,11 @@
 /***** CSS for creamNg Library *****/
 /***********************************/
 
+a:focus,
+button:focus {
+  text-decoration: underline;
+}
+
 /**** **** Dropdown Component **** ****/
 
 c3m-dropdown details.dropdown.open ul {
