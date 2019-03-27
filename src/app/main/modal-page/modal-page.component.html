@@ -18,8 +18,30 @@
     <div class="demo">
       <!-- MODAL DEMO -->
       <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
-      <c3m-modal (onShow)="modalOpened($event)" (onHide)="modalClosed($event)" topPosition="100" modalWidth="700">
-        Example of modal</c3m-modal
+      <c3m-modal
+        modaTitle="Modal exemple"
+        (onShow)="modalOpened($event)"
+        (onHide)="modalClosed($event)"
+        topPosition="100"
+        modalWidth="700"
+      >
+        <p>
+          Cyprum itidem insulam procul a continenti discretam et portuosam inter municipia crebra urbes duae faciunt
+          claram Salamis et Paphus, altera Iovis delubris altera Veneris templo insignis. tanta autem tamque multiplici
+          fertilitate abundat rerum omnium eadem Cyprus ut nullius externi indigens adminiculi indigenis viribus a
+          fundamento ipso carinae ad supremos usque carbasos aedificet onerariam navem omnibusque armamentis instructam
+          mari committat.
+        </p>
+        <p>
+          Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur
+          Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis
+          efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela
+          generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita
+          quadam aeternitate tradunt omnia despectare terrena.
+        </p>
+        <p>
+          <a href="#">Need more ?</a>
+        </p></c3m-modal
       >
 
       <c3m-toast #toast1 delay="5000"> Modal is opened ! </c3m-toast>

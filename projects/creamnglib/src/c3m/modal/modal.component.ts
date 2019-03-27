@@ -32,6 +32,7 @@ export class ModalComponent implements OnInit {
 
   @ViewChild('dialogElement') dialogElement: ElementRef;
   @ViewChild('container') container: ElementRef;
+  @ViewChild('focusable') focusable: ElementRef;
 
   dialogTitle = this.randomID();
   dialogDescription = this.randomID();
@@ -60,14 +61,16 @@ export class ModalComponent implements OnInit {
       const eventOpen = this;
       this.onShow.emit(this.dialogElement);
       this.modalPosition();
+
+      // Focus on close button
+      const titleModalFocus = this.focusable.nativeElement;
+      setTimeout(function() {
+        titleModalFocus.focus();
+      }, 500);
     } else if (this.isOpen) {
       this.isOpen = false;
       this.onHide.emit(this.dialogElement);
     }
-  }
-
-  OnKey(event): void {
-    console.log(event);
   }
 
   modalPosition() {
@@ -93,6 +96,13 @@ export class ModalComponent implements OnInit {
     } else {
       this.container.nativeElement.style.left = '5%';
       this.container.nativeElement.style.width = '90%';
+    }
+  }
+
+  onKey(event) {
+    if (event.key === 'Escape') {
+      this.isOpen = false;
+      this.onHide.emit(this.dialogElement);
     }
   }
 
