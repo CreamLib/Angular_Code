@@ -9,24 +9,35 @@
 <!-- DESCRIPTION PAGINATION COMPONENT PAGE -->
 <div class="titleComponent">
   <div class="descriptionComponent" id="pagination">
-
     <h3>
       Pagination
     </h3>
 
-
-  <p>A simple page pagination.</p>
+    <p>A simple page pagination.</p>
 
     <div class="demo">
       <!-- Pagination Demo -->
-      <c3m-pagination></c3m-pagination>
+      <c3m-pagination
+        imgFirst="/assets/img/first.svg"
+        imgBack="/assets/img/previous.svg"
+        imgNext="/assets/img/next.svg"
+        imgLast="/assets/img/last.svg"
+      >
+      </c3m-pagination>
     </div>
     <div class="explain">
-        <dl>
-          <dt>pageSize</dt>
-          <dd>allows you to change the value of items per page
-            (You will need to download <em><a href="https://github.com/CreamNG/Components/blob/master/pagination/pager.service.ts" target="_blank">pager.service.ts</a></em> service)</dd>
-        </dl>
+      <dl>
+        <dt>pageSize</dt>
+        <dd>
+          allows you to change the value of items per page (You will need to download
+          <em
+            ><a href="https://github.com/CreamNG/Components/blob/master/pagination/pager.service.ts" target="_blank"
+              >pager.service.ts</a
+            ></em
+          >
+          service)
+        </dd>
+      </dl>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -35,11 +46,50 @@
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
-  &#x3C;c3m-pagination&#x3E;&#x3C;/c3m-pagination&#x3E;
-                    </pre>
+  &#x3C;c3m-pagination imgFirst="/assets/img/first.svg" imgBack="/assets/img/previous.svg" imgNext="/assets/img/next.svg"
+  imgLast="/assets/img/last.svg"&#x3E;&#x3C;/c3m-pagination&#x3E;
+                    </pre
+          >
         </div>
       </c3m-tab>
-
     </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>imgFirst</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Image for the return to first page button</td>
+          </tr>
+          <tr>
+            <td>imgBack</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Image for the previous button</td>
+          </tr>
+          <tr>
+            <td>imgNext</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Image for the next button</td>
+          </tr>
+          <tr>
+            <td>imgLast</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Image for the go to last page button</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
