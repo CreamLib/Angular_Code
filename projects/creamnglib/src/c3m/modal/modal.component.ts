@@ -34,8 +34,8 @@ export class ModalComponent implements OnInit {
   @ViewChild('container') container: ElementRef;
   @ViewChild('focusable') focusable: ElementRef;
 
-  dialogTitle = this.randomID();
-  dialogDescription = this.randomID();
+  dialogTitle = 'modalTitle' + this.randomID();
+  dialogDescription = 'modalDesc' + this.randomID();
   btnCloseLabel = 'Close dialog';
   screenHeight: any;
   screenWidth: any;
