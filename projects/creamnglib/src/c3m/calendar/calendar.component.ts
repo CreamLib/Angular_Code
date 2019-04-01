@@ -129,16 +129,13 @@ export class CalendarComponent implements OnInit {
 
   /* ************ CHECK IF TYPE DATE IS SUPPORTED ******** */
   checkDateInput(): boolean {
-    var input = document.createElement('input');
+    const input = document.createElement('input');
     input.setAttribute('type', 'date');
 
-    var notADateValue = 'not-a-date';
+    const notADateValue = 'not-a-date';
     input.setAttribute('value', notADateValue);
 
     return input.value !== notADateValue;
-    /*var i = document.createElement('input');
-    i.setAttribute('type', 'date');
-    return i.type !== 'text';*/
   }
 
   /* ************ BIND ALL THE BUTTON WITH EVENT LISTENER ******** */
