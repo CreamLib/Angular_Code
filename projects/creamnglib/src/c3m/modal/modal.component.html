@@ -1,20 +1,21 @@
-<div class="dialog" [attr.aria-hidden]="!isOpen">
+<div class="dialog" #dialogElement [attr.aria-hidden]="!isOpen">
   <div class="dialog-overlay" (click)="ToggleOpen()" tabindex="-1"></div>
   <div
     class="dialog-content"
+    #container
+    [ngClass]="styleClass"
     [attr.aria-labeledby]="dialogTitle"
     [attr.aria-describedby]="dialogDescription"
     role="dialog"
+    (keyup)="onKey($event)"
+    c3mModalOut
   >
-    <h1 #focusable id="{{ dialogTitle }}" tabindex="0">Modal Title</h1>
-    <p id="{{ dialogDescription }}">Modal content text</p>
+    <h1 id="{{ dialogTitle }}" tabindex="0" #focusable>{{ modaTitle }}</h1>
+    <div id="{{ dialogDescription }}">
+      <ng-content></ng-content>
+    </div>
 
-    <button
-      (click)="ToggleOpen()"
-      (keydown.tab)="focusable.focus()"
-      class="dialog-close"
-      [attr.aria-label]="btnCloseLabel"
-    >
+    <button (click)="ToggleOpen()" class="dialog-close" [attr.aria-label]="closeBtnTitle">
       &times;
     </button>
   </div>

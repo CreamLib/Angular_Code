@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -16,6 +16,12 @@ export class PaginationComponent implements OnInit {
 
   // Array of all items to be paged
   private allItems: any[];
+
+  // Inputs
+  @Input() imgFirst = '';
+  @Input() imgBack = '';
+  @Input() imgNext = '';
+  @Input() imgLast = '';
 
   // Pager Object
   pager: any = {};

@@ -1,46 +1,165 @@
 <!-- TITLE MODAL COMPONENT PAGE -->
 <div class="panelTitle">
-    <h2><strong>Modal</strong> Component</h2>
-    <ul>
-        <li><a scrollTo href="modal">Dialog Modal</a></li>
-    </ul>
+  <h2><strong>Modal</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="modal">Dialog Modal</a></li>
+  </ul>
 </div>
-
 
 <!-- DESCRIPTION ACCORDION COMPONENT PAGE -->
 <div class="titleComponent">
-    <div class="descriptionComponent" id="modal">
-        <h3>Dialog Modal</h3>
+  <div class="descriptionComponent" id="modal">
+    <h3>Dialog Modal</h3>
 
-        <div class="explain">
-          <p>Opens a dialog modal with focus set on the modal title. Focus loops inside the modal.</p>
-        </div>
+    <div class="explain">
+      <p>Opens a dialog modal with focus set on the modal title. Focus loops inside the modal.</p>
+    </div>
 
+    <div class="demo">
+      <!-- MODAL DEMO -->
+      <c3m-button ngClass="info" (click)="OpenModal(modal1)">Open Modal 1</c3m-button>
+      <c3m-modal
+        modaTitle="Modal exemple 1"
+        (onShow)="modalOpened($event)"
+        (onHide)="modalClosed($event)"
+        topPosition="100"
+        modalWidth="700"
+        #modal1
+      >
+        <p>
+          Cyprum itidem insulam procul a continenti discretam et portuosam inter municipia crebra urbes duae faciunt
+          claram Salamis et Paphus, altera Iovis delubris altera Veneris templo insignis. tanta autem tamque multiplici
+          fertilitate abundat rerum omnium eadem Cyprus ut nullius externi indigens adminiculi indigenis viribus a
+          fundamento ipso carinae ad supremos usque carbasos aedificet onerariam navem omnibusque armamentis instructam
+          mari committat.
+        </p>
+        <p>
+          Haec et huius modi quaedam innumerabilia ultrix facinorum impiorum bonorumque praemiatrix aliquotiens operatur
+          Adrastia atque utinam semper quam vocabulo duplici etiam Nemesim appellamus: ius quoddam sublime numinis
+          efficacis, humanarum mentium opinione lunari circulo superpositum, vel ut definiunt alii, substantialis tutela
+          generali potentia partilibus praesidens fatis, quam theologi veteres fingentes Iustitiae filiam ex abdita
+          quadam aeternitate tradunt omnia despectare terrena.
+        </p>
+        <p>
+          <a href="#">Need more ?</a>
+        </p></c3m-modal
+      >
 
-        <div class="demo">
-          <!-- MODAL DEMO -->
-          <c3m-button ngClass="info" (click)="OpenModal()">Open Modal</c3m-button>
-          <c3m-modal></c3m-modal>
-        </div>
+      <c3m-button ngClass="info" (click)="OpenModal(modal2)">Open Modal 2</c3m-button>
+      <c3m-modal
+        modaTitle="Modal exemple 2"
+        (onShow)="modalOpened($event)"
+        (onHide)="modalClosed($event)"
+        topPosition="100"
+        modalWidth="700"
+        #modal2
+      >
+        <p>
+          Cyprum itidem insulam procul a continenti discretam et portuosam inter municipia crebra urbes duae faciunt
+          claram Salamis et Paphus, altera Iovis delubris altera Veneris templo insignis. tanta autem tamque multiplici
+          fertilitate abundat rerum omnium eadem Cyprus ut nullius externi indigens adminiculi indigenis viribus a
+          fundamento ipso carinae ad supremos usque carbasos aedificet onerariam navem omnibusque armamentis instructam
+          mari committat.
+        </p>
+      </c3m-modal>
 
-        <div class="explain">
-          <dl>
-            <dt>click</dt>
-            <dd>event that opens the modal</dd>
-          </dl>
-        </div>
+      <c3m-toast #toast1 delay="5000"> Modal1 is opened ! </c3m-toast>
+      <c3m-toast #toast2 delay="5000"> Modal1 is closed ! </c3m-toast>
+    </div>
 
-        <!-- TABS SNIPPETS -->
-        <c3m-tabs class="snippets">
-          <c3m-tab tabTitle="To call the component">
-              <div class="code">
-                    <!--?prettify lang=html linenums=true?-->
-                    <pre class="prettyprint linenums">
+    <div class="explain">
+      <dl>
+        <dt>click</dt>
+        <dd>event that opens the modal</dd>
+      </dl>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
   &#x3C;c3m-button (click)=&#x22;OpenModal()&#x22;&#x3E;Open Modal&#x3C;/c3m-button&#x3E;
   &#x3C;c3m-modal&#x3E;&#x3C;/c3m-modal&#x3E;
-                    </pre>
-              </div>
-          </c3m-tab>
-        </c3m-tabs>
+                    </pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>modaTitle</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Title of the modal</td>
+          </tr>
+          <tr>
+            <td>styleClass</td>
+            <td>string</td>
+            <td>null</td>
+            <td>Class for the component</td>
+          </tr>
+          <tr>
+            <td>topPosition</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Top coordinate of the modal</td>
+          </tr>
+          <tr>
+            <td>leftPosition</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Left coordinate of the modal. It will be interpretate in percentage (for responsive)</td>
+          </tr>
+          <tr>
+            <td>modalWidth</td>
+            <td>number</td>
+            <td>null</td>
+            <td>Width of the modal. No useful if leftPosition is set.</td>
+          </tr>
+          <tr>
+            <td>closeBtnTitle</td>
+            <td>string</td>
+            <td>null</td>
+            <td>Aria-label for close button</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="properties">
+      <h4>Events</h4>
+
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Parameter</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>onShow</td>
+            <td>event: Modal object</td>
+            <td>Callback to invoke when dialog is shown.</td>
+          </tr>
+          <tr>
+            <td>onHide</td>
+            <td>event: Modal object</td>
+            <td>Callback to invoke when dialog is shown.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

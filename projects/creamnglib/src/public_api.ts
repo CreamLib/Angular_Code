@@ -59,4 +59,6 @@ export * from './c3m/modal-alert/modal-alert.component';
 
 export * from './c3m/button-link/button-link.component';
 
+export * from './directives/modalDirective';
+
 export * from './c3m/creamnglib.module';

@@ -7,7 +7,9 @@ c3m-toast p {
   background-color: #d769a8;
   color: white;
   border-radius: 3px;
+  z-index: 5000;
 }
+
 /* Before Appears */
 c3m-toast p.inactive {
   bottom: 110%;
