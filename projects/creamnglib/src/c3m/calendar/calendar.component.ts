@@ -49,9 +49,8 @@ export class CalendarComponent implements OnInit {
   /* ************ ON INIT *********** */
   ngOnInit() {
     this.datepicker(true);
-    const isIE = /msie\s|trident\//i.test(window.navigator.userAgent);
     if (this.type === 'date') {
-      if (!isIE) {
+      if (this.checkDateInput()) {
         this.renderer.setStyle(this.buttonShow.nativeElement, 'display', 'none');
       }
     }
@@ -126,6 +125,17 @@ export class CalendarComponent implements OnInit {
 
     // Call all events listener
     this.bindHandlers();
+  }
+
+  /* ************ CHECK IF TYPE DATE IS SUPPORTED ******** */
+  checkDateInput(): boolean {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'date');
+
+    const notADateValue = 'not-a-date';
+    input.setAttribute('value', notADateValue);
+
+    return input.value !== notADateValue;
   }
 
   /* ************ BIND ALL THE BUTTON WITH EVENT LISTENER ******** */
