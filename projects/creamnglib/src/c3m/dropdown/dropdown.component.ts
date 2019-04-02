@@ -12,7 +12,6 @@ export class DropdownComponent implements OnInit {
   /* INPUTS */
   @Input() isOpen = false;
   @Input() nameDropdown: string;
-  @Input() nameSubDropdown: any;
 
   ngOnInit() {}
 
@@ -24,4 +23,9 @@ export class DropdownComponent implements OnInit {
       this.isOpen = false;
     }
   }
+  close(): void {
+    document.querySelector('details').removeAttribute('open');
+    this.isOpen = false;
+  }
+
 }

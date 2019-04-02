@@ -17,20 +17,32 @@
     <div class="demo">
       <!-- CAROUSEL DEMO -->
       <c3m-carousel>
+        <c3m-carousel-item [index]="0">
+          <p>Slide 1</p>
+        </c3m-carousel-item>
 
-          <c3m-carousel-item [index]="0">
-              <p>Slide 1</p>
-          </c3m-carousel-item>
+        <c3m-carousel-item [index]="1">
+          <p>Slide 2</p>
+        </c3m-carousel-item>
 
-          <c3m-carousel-item [index]="1">
-              <p>Slide 2</p>
-          </c3m-carousel-item>
+        <c3m-carousel-item [index]="2">
+          <p>Slide 3</p>
+        </c3m-carousel-item>
+      </c3m-carousel>
 
-          <c3m-carousel-item [index]="2">
-              <p>Slide 3</p>
-          </c3m-carousel-item>
+      <c3m-carousel>
+        <c3m-carousel-item [index]="0">
+          <p>Slide 1</p>
+        </c3m-carousel-item>
 
-        </c3m-carousel>
+        <c3m-carousel-item [index]="1">
+          <p>Slide 2</p>
+        </c3m-carousel-item>
+
+        <c3m-carousel-item [index]="2">
+          <p>Slide 3</p>
+        </c3m-carousel-item>
+      </c3m-carousel>
     </div>
 
     <div class="explain">
@@ -40,7 +52,7 @@
           <dd>Order of the slides</dd>
         </div>
         <div>
-          <dt> p tag</dt>
+          <dt>p tag</dt>
           <dd>Write what you want, it's a ng-content tag</dd>
         </div>
       </dl>
