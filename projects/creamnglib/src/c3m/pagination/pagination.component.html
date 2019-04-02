@@ -6,7 +6,7 @@
   </ul>
 
   <!-- Pages -->
-  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination" #pagination>
     <!-- first -->
     <li [ngClass]="{ disabled: pager.currentPage === 1 }" class="btnFirst">
       <button (click)="setPage(1)"><img src="{{ imgFirst }}" alt="First Page" /></button>
@@ -20,7 +20,12 @@
     </li>
 
     <!-- pages numbers -->
-    <li *ngFor="let page of pager.pages" [ngClass]="{ active: pager.currentPage === page }" class="btnPages">
+    <li
+      *ngFor="let page of pager.pages"
+      [ngClass]="{ active: pager.currentPage === page }"
+      class="btnPages"
+      [c3mPaginationCurrent]="pager.currentPage === page"
+    >
       <button (click)="setPage(page)">{{ page }}</button>
     </li>
 
