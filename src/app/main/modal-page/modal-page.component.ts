@@ -10,13 +10,19 @@ import { ModalComponent } from 'creamnglib';
 })
 export class ModalPageComponent implements OnInit {
   @ViewChild(ModalComponent) modal: ModalComponent;
+
+  @ViewChild('modal1') modal1;
+  @ViewChild('modal2') modal2;
+
   @ViewChild('toast1') toast1;
   @ViewChild('toast2') toast2;
 
   constructor(private app: AppComponent) {}
 
-  public OpenModal() {
-    this.modal.ToggleOpen();
+  public OpenModal(eventM) {
+    console.log('Open the modal');
+    console.log(this.modal1);
+    eventM.ToggleOpen();
   }
 
   modalOpened(event) {

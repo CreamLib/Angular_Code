@@ -6,32 +6,37 @@
   </ul>
 
   <!-- Pages -->
-  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination" #pagination>
     <!-- first -->
     <li [ngClass]="{ disabled: pager.currentPage === 1 }" class="btnFirst">
-      <button (click)="setPage(1)"><img src="assets/img/first.svg" alt="First Page" /></button>
+      <button (click)="setPage(1)"><img src="{{ imgFirst }}" alt="First Page" /></button>
     </li>
 
     <!-- previous -->
     <li [ngClass]="{ disabled: pager.currentPage === 1 }" class="btnPrevious">
       <button (click)="setPage(pager.currentPage - 1)">
-        <img src="assets/img/previous.svg" alt="Previous Page" />
+        <img src="{{ imgBack }}" alt="Previous Page" />
       </button>
     </li>
 
     <!-- pages numbers -->
-    <li *ngFor="let page of pager.pages" [ngClass]="{ active: pager.currentPage === page }" class="btnPages">
+    <li
+      *ngFor="let page of pager.pages"
+      [ngClass]="{ active: pager.currentPage === page }"
+      class="btnPages"
+      [c3mPaginationCurrent]="pager.currentPage === page"
+    >
       <button (click)="setPage(page)">{{ page }}</button>
     </li>
 
     <!-- next -->
     <li [ngClass]="{ disabled: pager.currentPage === pager.totalPages }" class="btnNext">
-      <button (click)="setPage(pager.currentPage + 1)"><img src="assets/img/next.svg" alt="Next Page" /></button>
+      <button (click)="setPage(pager.currentPage + 1)"><img src="{{ imgNext }}" alt="Next Page" /></button>
     </li>
 
     <!-- last -->
     <li [ngClass]="{ disabled: pager.currentPage === pager.totalPages }" class="btnLast">
-      <button (click)="setPage(pager.totalPages)"><img src="assets/img/last.svg" alt="Last Page" /></button>
+      <button (click)="setPage(pager.totalPages)"><img src="{{ imgLast }}" alt="Last Page" /></button>
     </li>
   </ul>
 </div>

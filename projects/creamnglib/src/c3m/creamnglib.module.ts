@@ -55,6 +55,9 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pagination/pager.service';
 import { ButtonLinkComponent } from './button-link/button-link.component';
 
+import { ModalDirective } from '../directives/modalDirective';
+import { PaginationDirective } from '../directives/paginationDirective';
+
 @NgModule({
   declarations: [
     ButtonComponent,
@@ -108,7 +111,9 @@ import { ButtonLinkComponent } from './button-link/button-link.component';
     TabsComponent,
     TabComponent,
     PaginationComponent,
-    ButtonLinkComponent
+    ButtonLinkComponent,
+    ModalDirective,
+    PaginationDirective
   ],
   imports: [BrowserModule, RouterModule],
   exports: [
@@ -164,7 +169,9 @@ import { ButtonLinkComponent } from './button-link/button-link.component';
     TabComponent,
     PaginationComponent,
     ButtonLinkComponent,
-    RouterModule
+    RouterModule,
+    ModalDirective,
+    PaginationDirective
   ],
   providers: [PagerService]
 })

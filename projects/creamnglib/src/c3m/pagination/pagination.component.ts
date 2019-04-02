@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, ViewChild, ElementRef } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -17,11 +17,21 @@ export class PaginationComponent implements OnInit {
   // Array of all items to be paged
   private allItems: any[];
 
+  // Inputs
+  @Input() imgFirst = '';
+  @Input() imgBack = '';
+  @Input() imgNext = '';
+  @Input() imgLast = '';
+
+  // ViewChild
+  @ViewChild('pagination') pagination: ElementRef;
+
   // Pager Object
   pager: any = {};
 
   // Paged Items
   pagedItems: any[];
+  pageSelected = 2;
 
   // On Init
   ngOnInit() {
@@ -48,5 +58,16 @@ export class PaginationComponent implements OnInit {
 
     // Get current page of items (copy with slice(start,end))
     this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+
+    // Change aria-page
+    const paginationListe = this.pagination.nativeElement;
+    const eltPagined = paginationListe.children[this.pageSelected];
+    const btnPagined = eltPagined.childNodes[0];
+    const nextEltPagined = page + 2;
+    const eltOn = page + 1;
+    btnPagined.removeAttribute('aria-current');
+    const nextButtonPagined = this.pagination.nativeElement.childNodes[nextEltPagined];
+    nextButtonPagined.childNodes[0].setAttribute('aria-current', 'page');
+    this.pageSelected = eltOn;
   }
 }
