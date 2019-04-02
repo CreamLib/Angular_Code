@@ -1,4 +1,4 @@
-<details class="dropdown" [ngClass]="{ open: isOpen }" (click)="toggleOpen()">
+<details class="dropdown" [ngClass]="{'open': isOpen}" (click)="toggleOpen()" (focusout)="close()">
   <!-- Dropdown Button -->
   <summary>{{ this.nameDropdown }}</summary>
   <!-- Dropdown Content List -->
