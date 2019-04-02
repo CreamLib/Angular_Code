@@ -43,7 +43,7 @@ c3m-pagination .pagination li:not(.btnPages) {
 
 /* Item List Active */
 c3m-pagination .pagination li.active {
-  background-color: #ea920b;
+  background-color: #45abbc;
 }
 
 /* Pagination List Item Button */
