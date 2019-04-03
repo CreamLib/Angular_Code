@@ -62,3 +62,27 @@ details.dropdown button:hover {
   color: var(--body-text);
   background-color: var(--n-light);
 }
+
+c3m-dropdown details.dropdown.open ul {
+  background: #fff;
+}
+
+c3m-dropdown details c3m-button button,
+c3m-dropdown details li a {
+  display: block;
+  padding: 0.5em;
+  font: 100%/1 var(--stack);
+  color: initial;
+  text-decoration: none;
+  text-align: left;
+  background: transparent;
+}
+
+c3m-dropdown details li a:focus,
+c3m-dropdown details li a:hover,
+c3m-dropdown details li button:focus,
+c3m-dropdown details li button:hover {
+  text-decoration: underline;
+  color: inherit;
+  background: inherit;
+}

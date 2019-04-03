@@ -1,12 +1,4 @@
-import {
-  Component,
-  ViewEncapsulation,
-  OnInit,
-  ElementRef,
-  QueryList,
-  ViewChildren,
-  AfterViewInit
-} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { CarouselItemComponent } from './carousel-item/carousel-item.component';
 
 @Component({
@@ -20,10 +12,12 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   public tabItemContent;
   groups: Array<CarouselItemComponent> = [];
 
+  constructor(private eRef: ElementRef) {}
+
   // After View Init
   ngAfterViewInit() {
     // Select All Carousel Item Content
-    this.tabItemContent = document.querySelectorAll('.carousel-item-content');
+    this.tabItemContent = this.eRef.nativeElement.querySelectorAll('.carousel-item-content');
 
     // Calcul Size of all Carousel Item
     for (let i = 0; i < this.tabItemContent.length; i++) {

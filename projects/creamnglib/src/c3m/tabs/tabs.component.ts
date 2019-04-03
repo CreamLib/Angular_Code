@@ -7,7 +7,8 @@ import {
   ViewChildren,
   QueryList,
   ChangeDetectorRef,
-  HostListener
+  HostListener,
+  ContentChildren
 } from '@angular/core';
 import { TabComponent } from './tabs-item/tabs-item.component';
 
@@ -20,6 +21,7 @@ import { TabComponent } from './tabs-item/tabs-item.component';
 export class TabsComponent implements AfterViewInit {
   /* List of Tabs Element */
   @ViewChildren('tabs') tabsElement: QueryList<ElementRef>;
+  @ContentChildren(TabComponent) tabComponents: QueryList<TabComponent>;
 
   /* Variables */
   tabs: TabComponent[] = [];
