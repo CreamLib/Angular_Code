@@ -13,8 +13,7 @@
 
     <div class="explain">
       <p>
-        Change the <strong>active</strong> value with a click event (use
-        <code>ViewChild</code> on <code>#Toast)</code>
+        Change the <strong>active</strong> value with a click event (use <code>ViewChild</code> on <code>#Toast)</code>
       </p>
     </div>
 
@@ -23,20 +22,7 @@
         Display Toast
       </c3m-button>
       <!-- TOAST DEMO -->
-      <c3m-toast #toast delay="2500"> I'm a toast ! </c3m-toast>
-    </div>
-
-    <div class="explain">
-      <dl>
-        <div>
-          <dt>active</dt>
-          <dd>For displaying the toast</dd>
-        </div>
-        <div>
-          <dt>delay</dt>
-          <dd>delay before toast dissapears</dd>
-        </div>
-      </dl>
+      <c3m-toast #toast delay="50000"> I'm a toast ! <a href="#">Test</a> </c3m-toast>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -55,5 +41,31 @@
         </div>
       </c3m-tab>
     </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>active</td>
+            <td>boolean</td>
+            <td>null</td>
+            <td>display the toast</td>
+          </tr>
+          <tr>
+            <td>delay</td>
+            <td>number</td>
+            <td>Not null</td>
+            <td>delay before toast dissapears</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

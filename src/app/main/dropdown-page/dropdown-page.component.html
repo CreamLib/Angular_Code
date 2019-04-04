@@ -20,20 +20,17 @@
 
     <div class="demo">
       <c3m-dropdown nameDropdown="Dropdown">
-        <c3m-dropdown-item><c3m-button>Action 1</c3m-button></c3m-dropdown-item>
-        <c3m-dropdown-item><c3m-button>Action 2</c3m-button></c3m-dropdown-item>
-        <c3m-dropdown-item><c3m-button-link url="#" linkText="Action 3"></c3m-button-link></c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <c3m-button>Action 1</c3m-button>
+        </c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <c3m-button>Action 2</c3m-button>
+        </c3m-dropdown-item>
+        <c3m-dropdown-item>
+          <c3m-button-link url="#" linkText="Action 3"></c3m-button-link>
+        </c3m-dropdown-item>
         <c3m-dropdown-item><a href="#">Action 4</a></c3m-dropdown-item>
       </c3m-dropdown>
-    </div>
-
-    <div class="explain">
-      <dl>
-        <div>
-          <dt>nameDropdown</dt>
-          <dd>Defines the label of the dropdown's button</dd>
-        </div>
-      </dl>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -44,7 +41,9 @@
           <pre class="prettyprint linenums">
 &lt;c3m-dropdown nameDropdown=&#34;Dropdown&#34;&gt;
       &lt;c3m-dropdown-item nameDdItem=&#34;Item1&#34; url=&#34;creamng.github.io&#34;&gt;&lt;/c3m-dropdown-item&gt;
-      &lt;c3m-dropdown-item nameDdItem=&#34;Item2&#34;&gt;&lt;/c3m-dropdown-item&gt;
+      &lt;c3m-dropdown-item &gt;
+        &lt;c3m-button&gt;Action 1&lt;/c3m-button&gt;
+      &lt;/c3m-dropdown-item&gt;
       &lt;c3m-dropdown-item nameDdItem=&#34;Item3&#34;&gt;&lt;/c3m-dropdown-item&gt;
 &lt;/c3m-dropdown&gt;
               </pre
@@ -52,5 +51,31 @@
         </div>
       </c3m-tab>
     </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>nameDropdown</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Label for the dropdown button</td>
+          </tr>
+          <tr>
+            <td>nameDdItem</td>
+            <td>string</td>
+            <td>Not null</td>
+            <td>Label for the dropdown item (if using the c3m-dropdown-item component)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
