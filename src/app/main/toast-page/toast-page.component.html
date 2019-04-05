@@ -22,7 +22,9 @@
         Display Toast
       </c3m-button>
       <!-- TOAST DEMO -->
-      <c3m-toast #toast delay="50000"> I'm a toast ! <a href="#">Test</a> </c3m-toast>
+      <c3m-toast #toast styleClass="alert" position="bottom-right" closeBtn="true" closeBtnTitle="Close alert">
+        I'm a toast !
+      </c3m-toast>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -32,10 +34,9 @@
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
               <code>
-  &lt;!-- TOAST DEMO --&gt;
-  &lt;c3m-toast #toast delay=&#34;2500&#34;&gt;
-    I&apos;m a toast !
-  &lt;/c3m-toast&gt;
+                  &lt;c3m-toast #toast styleClass=&#34;alert&#34; position=&#34;bottom-right&#34; closeBtn=&#34;true&#34; closeBtnTitle=&#34;Close alert&#34;&gt; 
+                    I&apos;m a toast !
+                &lt;/c3m-toast&gt;
               </code>
             </pre>
         </div>
@@ -63,6 +64,42 @@
             <td>number</td>
             <td>Not null</td>
             <td>delay before toast dissapears</td>
+          </tr>
+          <tr>
+            <td>styleClass</td>
+            <td>string</td>
+            <td>Null</td>
+            <td>Style class of the component</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>string</td>
+            <td>top-right</td>
+            <td>
+              Toast position :
+              <ul>
+                <li>top-right</li>
+                <li>top-left</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>closeBtn</td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>Add a close button</td>
+          </tr>
+          <tr>
+            <td>imgCloseBtn</td>
+            <td>string</td>
+            <td>White 'X'</td>
+            <td>URL for the close button img</td>
+          </tr>
+          <tr>
+            <td>closeBtnTitle</td>
+            <td>string</td>
+            <td>Close</td>
+            <td>Label for the close button img</td>
           </tr>
         </tbody>
       </table>

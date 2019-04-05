@@ -768,10 +768,12 @@ c3m-tabs li.L9 {
   100% {
     transform: rotate(0);
   }
+
   20%,
   60% {
     transform: rotate(-25deg);
   }
+
   40%,
   80% {
     transform: rotate(10deg);
@@ -796,32 +798,40 @@ c3m-tabs li.L9 {
   h4 {
     font-size: 1.4em;
   }
+
   p,
   li,
   dt,
   dd {
     font-size: 1.3em;
   }
+
   ol.linenums li {
     font-size: 1em;
   }
+
   div.explain dt,
   div.explain dd {
     font-size: 1em;
   }
+
   .titleComponent > div h3 {
     font-size: 1.6em;
   }
+
   c3m-tabs div.code {
     max-height: 500px;
   }
+
   c3m-tabs ol.display-code {
     margin-left: 0;
   }
+
   .pre-code {
     font: 1.1em var(--stack);
     margin: 1rem auto;
   }
+
   div.tip p {
     font-size: 1em;
   }
@@ -834,9 +844,11 @@ c3m-tabs li.L9 {
     justify-content: space-between;
     align-items: start;
   }
+
   div.explain p {
     flex-basis: 100%;
   }
+
   div.tip {
     flex-basis: 30%;
   }
@@ -850,51 +862,64 @@ c3m-tabs li.L9 {
     text-decoration: none;
     color: var(--n-dark);
   }
+
   .titleComponent .gitBtn svg {
     left: 10px;
   }
+
   .titleComponent .gitBtn span {
     position: static;
     text-indent: 0;
     line-height: 2em;
   }
+
   div.panelTitle {
     padding: 2rem 5%;
     margin-bottom: 5vh;
   }
+
   div.panelTitle h2 {
     font-size: 2em;
     padding: 0.5em 2rem;
   }
+
   .panelTitle ul {
     padding: 0.5em 1rem;
     margin: 0;
   }
+
   app-root {
     display: flex;
     flex-wrap: wrap;
   }
+
   app-header {
     flex-basis: 25%;
     z-index: 2;
   }
+
   app-main {
     width: 75%;
   }
+
   app-footer {
     flex-basis: 100%;
     z-index: 1;
   }
+
   article.post section {
     padding: 2rem;
   }
+
   article.post h3 {
     font-size: 1.5em;
     margin-bottom: 2em;
   }
+
   article.post h4 {
     font-size: 1.4em;
   }
+
   article.post div.group + div.group {
     padding-top: 2rem;
     margin-top: 2rem;
@@ -905,6 +930,7 @@ c3m-tabs li.L9 {
   app-header {
     flex-basis: 20%;
   }
+
   app-main {
     width: 80%;
   }
@@ -933,4 +959,14 @@ c3m-tabs li.L9 {
 
 .properties table tr:nth-child(even) {
   background-color: var(--n-light);
+}
+
+.properties table td ul {
+  display: block;
+  padding-left: 1em;
+}
+
+.properties table td ul li {
+  list-style-type: disc;
+  font-size: 1em;
 }

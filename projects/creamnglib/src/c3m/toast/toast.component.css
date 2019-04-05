@@ -1,8 +1,22 @@
 /* Toast */
+
+c3m-toast .close {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+}
+
+c3m-toast .close button {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  padding: 0;
+  background: none;
+}
+
 c3m-toast p {
   position: fixed;
-  right: 1rem;
-  transition: bottom 2s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+  /*transition: bottom 2s cubic-bezier(0.43, 1.18, 0.99, 0.98); */
   padding: 0.5rem 1rem;
   background-color: #d769a8;
   color: white;
@@ -10,13 +24,43 @@ c3m-toast p {
   z-index: 5000;
 }
 
+c3m-toast p.topRight,
+c3m-toast p.bottomRight {
+  right: 1em;
+}
+
+c3m-toast p.topLeft,
+c3m-toast p.bottomLeft {
+  left: 1em;
+}
+
+c3m-toast p.topLeft.active,
+c3m-toast p.topRight.active {
+  transition: top 1s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+}
+
+c3m-toast p.bottomLeft.active,
+c3m-toast p.bottomRight.active {
+  transition: bottom 1s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+}
+
 /* Before Appears */
 c3m-toast p.inactive {
-  bottom: 110%;
-  transition: bottom 0.1s;
+  transition: top 1s cubic-bezier(0.43, 1.18, 0.99, 0.98);
+}
+
+c3m-toast p.bottomLeft.inactive,
+c3m-toast p.bottomRight.inactive {
+  transition: bottom 1s cubic-bezier(0.43, 1.18, 0.99, 0.98);
 }
 
 /* Appears */
-c3m-toast p.active {
+c3m-toast p.topRight.active,
+c3m-toast p.topLeft.active {
+  top: 1rem;
+}
+
+c3m-toast p.bottomRight.active,
+c3m-toast p.bottomLeft.active {
   bottom: 1rem;
 }
