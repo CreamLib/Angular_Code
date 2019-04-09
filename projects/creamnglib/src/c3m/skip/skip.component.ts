@@ -8,7 +8,8 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class SkipComponent implements OnInit {
   @Input() target: string;
-  @Input() text: string;
+  @Input() isHidden = false;
+  @Input() styleClass = '';
 
   constructor() {}
 

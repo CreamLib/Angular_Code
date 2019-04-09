@@ -58,6 +58,7 @@ import { ButtonLinkComponent } from './button-link/button-link.component';
 import { ModalDirective } from '../directives/modalDirective';
 import { PaginationDirective } from '../directives/paginationDirective';
 import { StepsDirective } from '../directives/stepsDirective';
+import { ScrolltoDirective } from '../directives/scrolltoDirective';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,8 @@ import { StepsDirective } from '../directives/stepsDirective';
     ButtonLinkComponent,
     ModalDirective,
     PaginationDirective,
-    StepsDirective
+    StepsDirective,
+    ScrolltoDirective
   ],
   imports: [BrowserModule, RouterModule],
   exports: [
@@ -174,7 +176,8 @@ import { StepsDirective } from '../directives/stepsDirective';
     RouterModule,
     ModalDirective,
     PaginationDirective,
-    StepsDirective
+    StepsDirective,
+    ScrolltoDirective
   ],
   providers: [PagerService]
 })

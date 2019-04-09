@@ -10,10 +10,7 @@ export class StepsDirective implements OnInit {
 
   ngOnInit() {
     const liElement = this.el.nativeElement;
-    console.log('Directive steps :' + this.activeStep);
-    console.log(liElement);
     if (this.activeStep) {
-      console.log('Step active');
       liElement.setAttribute('aria-current', 'step');
     }
   }
