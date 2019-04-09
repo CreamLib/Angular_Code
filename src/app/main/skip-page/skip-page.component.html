@@ -1,58 +1,118 @@
 <!-- TITLE SLIDER COMPONENT PAGE -->
 <div class="panelTitle">
-    <h2><strong>Skip Link</strong> Component</h2>
-    <ul>
-      <li><a scrollTo href="#skip">Skip link </a></li>
-    </ul>
+  <h2><strong>Skip Link</strong> Component</h2>
+  <ul>
+    <li><a scrollTo href="#skip1">Skip link (invisible) </a></li>
+    <li><a scrollTo href="#skip2">Skip link </a></li>
+  </ul>
 </div>
 
-
-  <!-- INPUT REGULAR -->
-  <div class="titleComponent">
-    <div class="descriptionComponent" id="skip">
-      <h3>Skip Link (invisible)</h3>
-
-      <div class="explain">
-        <p>This link allows a screen-reader or keyboard user to skip big chunks of navigation links.
-          The link is displayed only when it gets focus with keyboard.</p>
-      </div>
-      <div class="demo">
-        <!-- SKIP LINK -->
-        <c3m-skip
-          text="Go to the main content"
-          [id]="'goTotheBottom'">
-        </c3m-skip>
-      </div>
-
-      <div class="explain">
-        <dl>
-          <div>
-            <dt>Text</dt>
-            <dd>Text of the link</dd>
-          </div>
-          <div>
-            <dt>Target</dt>
-            <dd>Id of targeted section</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- TABS SNIPPETS -->
-      <c3m-tabs class="snippets">
-        <c3m-tab tabTitle="To call the component">
-          <div class="code">
-             <!--?prettify lang=html linenums=true?-->
-              <pre class="prettyprint linenums">
-  &lt;c3m-skip
-    text=&#34;Go to the main content&#34;
-    [target]=&#34;&apos;goTotheBottom&apos;&#34;&gt;
-  &lt;/c3m-skip&gt;
-              </pre>
-          </div>
-        </c3m-tab>
-
-      </c3m-tabs>
-
-      <p id="goTotheBottom">I am the target of <strong>c3m-link</strong></p>
+<div class="titleComponent">
+  <div class="descriptionComponent">
+    <h3>Require</h3>
+    <p>Before using anchor, you have to add some configurations to your routing system.</p>
+    <p>In your app.route file, add :</p>
+    <div class="code">
+      <!--?prettify lang=html linenums=true?-->
+      <pre class="prettyprint linenums">
+export const routerOptions: ExtraOptions = &#123;
+  useHash: true,
+  anchorScrolling: &apos;enabled&apos;
+&#125;;
+      </pre>
     </div>
+
+    <p>In your app.module file, add :</p>
+    <div class="code">
+      <!--?prettify lang=html linenums=true?-->
+      <pre class="prettyprint linenums">
+RouterModule.forRoot(appRoutes, routerOptions),
+      </pre>
     </div>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="skip1">
+    <h3>Skip Link (invisible)</h3>
+
+    <div class="explain">
+      <p>
+        This link allows a screen-reader or keyboard user to skip big chunks of navigation links. The link is displayed
+        only when it gets focus with keyboard.
+      </p>
+    </div>
+    <div class="demo">
+      <!-- SKIP LINK -->
+      <p class="explain">Put focus on it to show it</p>
+      <c3m-skip [target]="'goTotheBottom1'" isHidden="true">Go to the main content</c3m-skip>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+&lt;c3m-skip [target]=&#34;&apos;goTotheBottom1&apos;&#34; isHidden=&#34;true&#34;&gt;Go to the main content&lt;/c3m-skip&gt;</pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+
+    <p id="goTotheBottom1">I am the target of <strong>c3m-link</strong></p>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="skip2">
+    <h3>Skip Link</h3>
+
+    <div class="demo">
+      <!-- SKIP LINK -->
+      <c3m-skip [target]="'goTotheBottom2'">Go to the main content</c3m-skip>
+    </div>
+
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
+&lt;c3m-skip [target]=&#34;&apos;goTotheBottom2&apos;&#34;&gt;Go to the main content&lt;/c3m-skip&gt;</pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+
+    <p id="goTotheBottom2">I am the target of <strong>c3m-link</strong></p>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="properties">
+    <h4>Properties</h4>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>target</td>
+          <td>string</td>
+          <td>Not null</td>
+          <td>Id of targeted section</td>
+        </tr>
+        <tr>
+          <td>isHidden</td>
+          <td>boolean</td>
+          <td>false</td>
+          <td>Set to true if you want to hide the link</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,1 +1,9 @@
-<a scrollTo href="#{{ this.target }}"> {{ this.text }} </a>
+<a
+  c3mScrollTo
+  routerLink="./"
+  fragment="{{ this.target }}"
+  class="{{ this.target }}"
+  [ngClass]="{ hiddenLink: isHidden }"
+>
+  <ng-content></ng-content>
+</a>

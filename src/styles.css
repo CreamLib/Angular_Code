@@ -604,6 +604,10 @@ div.explain a:visited {
   text-decoration: underline;
 }
 
+div.demo .explain {
+  font-size: 1em;
+}
+
 /* ------------- TIPS/BEST PRACTICES --------------- */
 
 div.tip {

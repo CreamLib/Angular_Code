@@ -38,6 +38,7 @@ import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BottomComponent } from './main/bottom-page/bottom/bottom.component';
 import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { appRoutes } from './app.routes';
+import { routerOptions } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
 
@@ -84,7 +85,7 @@ import { CreamnglibModule } from 'creamnglib';
     BrowserAnimationsModule,
     HttpModule,
     ScrollToModule.forRoot(),
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(appRoutes, routerOptions),
     BreadcrumbsModule,
     CreamnglibModule
   ],
