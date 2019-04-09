@@ -45,7 +45,7 @@ RouterModule.forRoot(appRoutes, routerOptions),
     <div class="demo">
       <!-- SKIP LINK -->
       <p class="explain">Put focus on it to show it</p>
-      <c3m-skip [target]="'goTotheBottom1'" isHidden="true">Go to the main content</c3m-skip>
+      <c3m-skip [target]="'goTotheBottom1'" isHidden="true">Go to the main content </c3m-skip>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -111,6 +111,12 @@ RouterModule.forRoot(appRoutes, routerOptions),
           <td>boolean</td>
           <td>false</td>
           <td>Set to true if you want to hide the link</td>
+        </tr>
+        <tr>
+          <td>styleClass</td>
+          <td>string</td>
+          <td>Null</td>
+          <td>Class for the component</td>
         </tr>
       </tbody>
     </table>
