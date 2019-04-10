@@ -39,7 +39,7 @@
     "prefer-const": true,
     "radix": true,
     "triple-equals": [true, "allow-null-check"],
-    "typeof-compare": true,
+    "typeof-compare": false,
     "unified-signatures": true,
     "variable-name": false,
     "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"],
