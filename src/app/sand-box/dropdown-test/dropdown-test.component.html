@@ -1,0 +1,8 @@
+<details #dets class="dropdown" (click)="toggleOpen()" (focusout)="closeAll()">
+  <!-- Dropdown Button -->
+  <summary>{{ this.nameDropdown }}</summary>
+  <!-- Dropdown Content List -->
+  <ul #detsContent [ngClass]="{ open: isOpen }">
+    <ng-content></ng-content>
+  </ul>
+</details>

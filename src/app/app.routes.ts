@@ -23,8 +23,10 @@ import { ToastPageComponent } from './main/toast-page/toast-page.component';
 import { ListPageComponent } from './main/list-page/list-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
+import { SandBoxPageComponent } from './sand-box/sand-box-page/sand-box-page.component';
 
 export const appRoutes: Routes = [
+  { path: 'sandbox', component: SandBoxPageComponent },
   { path: 'home', component: AccueilComponent, data: { breadcrumb: 'Home' } },
   {
     path: 'button',

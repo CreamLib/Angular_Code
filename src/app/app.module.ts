@@ -40,8 +40,10 @@ import { RadioPageComponent } from './main/radio-page/radio-page.component';
 import { appRoutes } from './app.routes';
 import { CardPageComponent } from './main/card-page/card-page.component';
 import { CardComponent } from './main/card-page/card/card.component';
+import { SandBoxPageComponent } from './sand-box/sand-box-page/sand-box-page.component';
 
 import { CreamnglibModule } from 'creamnglib';
+import { DropdownTestComponent } from './sand-box/dropdown-test/dropdown-test.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,9 @@ import { CreamnglibModule } from 'creamnglib';
     BottomComponent,
     RadioPageComponent,
     CardPageComponent,
-    CardComponent
+    CardComponent,
+    SandBoxPageComponent,
+    DropdownTestComponent
   ],
   imports: [
     BrowserModule,
