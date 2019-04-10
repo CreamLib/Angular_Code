@@ -1,5 +1,21 @@
 <!-- Toast -->
-<p role="alert" [ngClass]="{ active: active, inactive: !active }">
+<p
+  #toast
+  role="alert"
+  aria-live="assertive"
+  [ngClass]="{
+    active: active,
+    inactive: !active,
+    topRight: position === 'top-right',
+    topLeft: position === 'top-left',
+    bottomRight: position === 'bottom-right',
+    bottomLeft: position === 'bottom-left'
+  }"
+  class="{{ styleClass }}"
+>
   <!-- Your Content -->
+  <span class="close" *ngIf="closeBtn"
+    ><button class="ico-close" (click)="closeToast()"><img src="{{ imgCloseBtn }}" alt="{{ closeBtnTitle }}" /></button>
+  </span>
   <ng-content></ng-content>
 </p>

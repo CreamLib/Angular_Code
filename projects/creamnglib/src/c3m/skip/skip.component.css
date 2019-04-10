@@ -1,6 +1,6 @@
 /* Hide the link */
 
-c3m-skip a {
+c3m-skip a.hiddenLink {
   position: absolute;
   overflow: hidden;
   width: 1px;
@@ -8,7 +8,7 @@ c3m-skip a {
   left: -9999px;
 }
 
-c3m-skip a:focus {
+c3m-skip a.hiddenLink:focus {
   position: static;
   overflow: visible;
   width: auto;

@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, ExtraOptions } from '@angular/router';
 import { AccueilComponent } from './main/accueil/accueil.component';
 import { ButtonPageComponent } from './main/button-page/button-page.component';
 import { TabsPageComponent } from './main/tabs-page/tabs-page.component';
@@ -24,6 +24,11 @@ import { ListPageComponent } from './main/list-page/list-page.component';
 import { BottomPageComponent } from './main/bottom-page/bottom-page.component';
 import { BreadcrumbsPageComponent } from './main/breadcrumbs-page/breadcrumbs-page.component';
 import { SandBoxPageComponent } from './sand-box/sand-box-page/sand-box-page.component';
+
+export const routerOptions: ExtraOptions = {
+  useHash: true,
+  anchorScrolling: 'enabled'
+};
 
 export const appRoutes: Routes = [
   { path: 'sandbox', component: SandBoxPageComponent },

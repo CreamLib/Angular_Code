@@ -13,8 +13,7 @@
 
     <div class="explain">
       <p>
-        Change the <strong>active</strong> value with a click event (use
-        <code>ViewChild</code> on <code>#Toast)</code>
+        Change the <strong>active</strong> value with a click event (use <code>ViewChild</code> on <code>#Toast)</code>
       </p>
     </div>
 
@@ -23,20 +22,9 @@
         Display Toast
       </c3m-button>
       <!-- TOAST DEMO -->
-      <c3m-toast #toast delay="2500"> I'm a toast ! </c3m-toast>
-    </div>
-
-    <div class="explain">
-      <dl>
-        <div>
-          <dt>active</dt>
-          <dd>For displaying the toast</dd>
-        </div>
-        <div>
-          <dt>delay</dt>
-          <dd>delay before toast dissapears</dd>
-        </div>
-      </dl>
+      <c3m-toast #toast styleClass="alert" position="bottom-right" closeBtn="true" closeBtnTitle="Close alert">
+        I'm a toast !
+      </c3m-toast>
     </div>
 
     <!-- TABS SNIPPETS -->
@@ -46,14 +34,77 @@
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
               <code>
-  &lt;!-- TOAST DEMO --&gt;
-  &lt;c3m-toast #toast delay=&#34;2500&#34;&gt;
-    I&apos;m a toast !
-  &lt;/c3m-toast&gt;
+                  &lt;c3m-toast #toast styleClass=&#34;alert&#34; position=&#34;bottom-right&#34; closeBtn=&#34;true&#34; closeBtnTitle=&#34;Close alert&#34;&gt; 
+                    I&apos;m a toast !
+                &lt;/c3m-toast&gt;
               </code>
             </pre>
         </div>
       </c3m-tab>
     </c3m-tabs>
+
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>active</td>
+            <td>boolean</td>
+            <td>null</td>
+            <td>display the toast</td>
+          </tr>
+          <tr>
+            <td>delay</td>
+            <td>number</td>
+            <td>Not null</td>
+            <td>delay before toast dissapears</td>
+          </tr>
+          <tr>
+            <td>styleClass</td>
+            <td>string</td>
+            <td>Null</td>
+            <td>Style class of the component</td>
+          </tr>
+          <tr>
+            <td>position</td>
+            <td>string</td>
+            <td>top-right</td>
+            <td>
+              Toast position :
+              <ul>
+                <li>top-right</li>
+                <li>top-left</li>
+                <li>bottom-left</li>
+                <li>bottom-right</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>closeBtn</td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>Add a close button</td>
+          </tr>
+          <tr>
+            <td>imgCloseBtn</td>
+            <td>string</td>
+            <td>White 'X'</td>
+            <td>URL for the close button img</td>
+          </tr>
+          <tr>
+            <td>closeBtnTitle</td>
+            <td>string</td>
+            <td>Close</td>
+            <td>Label for the close button img</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -1,4 +1,9 @@
 <!-- Step Item -->
-<li #items [ngClass]="{ active: isActive, past: Past, future: Future }">
-  {{ title }}
+<li #items [ngClass]="{ active: isActive, past: Past, future: Future }" [c3mStepCurrent]="isActive">
+  <ng-container *ngIf="isPassed">
+    <a href="{{ stepLink }}">{{ title }}</a>
+  </ng-container>
+  <ng-container *ngIf="!isPassed">
+    {{ title }}
+  </ng-container>
 </li>

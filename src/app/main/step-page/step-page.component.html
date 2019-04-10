@@ -1,8 +1,8 @@
 <!-- TITLE STEP COMPONENT PAGE -->
 <div class="panelTitle">
-  <h2> <strong> Step </strong> Component </h2>
+  <h2><strong> Step </strong> Component</h2>
   <ul>
-    <li><a  scrollTo href="#step">Multiple Steps</a></li>
+    <li><a scrollTo href="#step">Multiple Steps</a></li>
   </ul>
 </div>
 
@@ -20,42 +20,27 @@
           <use xlink:href="assets/img/icons.svg#gitSvg"></use>
         </svg>
 
-        <span>Github</span></a>
+        <span>Github</span></a
+      >
     </h3>
 
     <div class="explain">
-      <p>This component displays the different steps of a form if divided in different pages/containers.
-        It will automatically detect the previous and next steps.</p>
+      <p>
+        This component displays the different steps of a form if divided in different pages/containers. It will
+        automatically detect the previous and next steps.
+      </p>
     </div>
 
     <div class="demo">
       <!-- STEP -->
       <c3m-step>
         <!-- STEP ITEMS -->
-        <c3m-step-item title="Title Of Past Step"></c3m-step-item>
+        <c3m-step-item isPassed="true" stepLink="#" title="Title Of Past Step"></c3m-step-item>
         <c3m-step-item isActive="true" title="Title Of Active Step"></c3m-step-item>
         <c3m-step-item title="Title Of Future Step"></c3m-step-item>
         <c3m-step-item title="Title Of Future Step"></c3m-step-item>
         <c3m-step-item title="Title Of Future Step"></c3m-step-item>
       </c3m-step>
-    </div>
-
-    <!-- EXPLAIN -->
-    <div class="explain">
-      <dl>
-        <div>
-          <dt>title</dt>
-          <dd>The step title</dd>
-        </div>
-        <div>
-          <dt>isActive="true"</dt>
-          <dd>To indicate the current step</dd>
-        </div>
-        <div>
-          <dt>over</dt>
-          <dd>The class added to calculate the breakpoint</dd>
-        </div>
-      </dl>
     </div>
 
     <c3m-tabs class="snippets">
@@ -66,16 +51,54 @@
   &lt;!-- STEP --&gt;
   &lt;c3m-step&gt;
     &lt;!-- STEP ITEMS --&gt;
-    &lt;c3m-step-item title=&#34;Title Of Past Step&#34;&gt;&lt;/c3m-step-item&gt;
+    &lt;c3m-step-item isPassed=&#34;true&#34; stepLink=&#34;#&#34; title=&#34;Title Of Past Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item isActive=&#34;true&#34; title=&#34;Title Of Active Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
     &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
   &lt;/c3m-step&gt;
-            </pre>
+            </pre
+          >
         </div>
       </c3m-tab>
     </c3m-tabs>
 
+    <div class="properties">
+      <h4>Properties</h4>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>isPassed</td>
+            <td>boolean</td>
+            <td>null</td>
+            <td>Define if a step is valid</td>
+          </tr>
+          <tr>
+            <td>stepLink</td>
+            <td>string</td>
+            <td>null</td>
+            <td>Link to go back to a step (only is a step is passed)</td>
+          </tr>
+          <tr>
+            <td>isActive</td>
+            <td>boolean</td>
+            <td>null</td>
+            <td>Define the active step</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>string</td>
+            <td>null</td>
+            <td>Label of the step</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
