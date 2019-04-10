@@ -59,6 +59,10 @@ export * from './c3m/modal-alert/modal-alert.component';
 
 export * from './c3m/button-link/button-link.component';
 
+export * from './c3m/breadcrumbs/breadcrumbs.component';
+export * from './c3m/breadcrumbs/breadcrumbs.service';
+export * from './c3m/breadcrumbs/breadcrumbs.model';
+
 export * from './directives/modalDirective';
 export * from './directives/paginationDirective';
 export * from './directives/stepsDirective';

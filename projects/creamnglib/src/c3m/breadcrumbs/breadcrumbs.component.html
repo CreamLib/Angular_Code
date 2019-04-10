@@ -1,9 +1,8 @@
 <ol>
   <li><a href="/home"> Home </a></li>
-  <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{ 'list': true, 'active': last }">
-
+  <li *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{ list: true, active: last }">
     <a *ngIf="!last" [routerLink]="hasParams(breadcrumb)">
-      {{breadcrumb.label}}
+      {{ breadcrumb.label }}
     </a>
     <span *ngIf="last">{{ breadcrumb.label }}</span>
   </li>

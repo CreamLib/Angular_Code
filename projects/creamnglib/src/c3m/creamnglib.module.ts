@@ -54,6 +54,7 @@ import { TabComponent } from './tabs/tabs-item/tabs-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pagination/pager.service';
 import { ButtonLinkComponent } from './button-link/button-link.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 import { ModalDirective } from '../directives/modalDirective';
 import { PaginationDirective } from '../directives/paginationDirective';
@@ -114,6 +115,7 @@ import { ScrolltoDirective } from '../directives/scrolltoDirective';
     TabComponent,
     PaginationComponent,
     ButtonLinkComponent,
+    BreadcrumbsComponent,
     ModalDirective,
     PaginationDirective,
     StepsDirective,
@@ -173,6 +175,7 @@ import { ScrolltoDirective } from '../directives/scrolltoDirective';
     TabComponent,
     PaginationComponent,
     ButtonLinkComponent,
+    BreadcrumbsComponent,
     RouterModule,
     ModalDirective,
     PaginationDirective,

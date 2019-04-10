@@ -6,7 +6,7 @@ import { IBreadcrumb } from './breadcrumbs.model';
 import { BreadcrumbsService } from './breadcrumbs.service';
 
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'c3m-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.css'],
   encapsulation: ViewEncapsulation.None
@@ -22,6 +22,8 @@ export class BreadcrumbsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {
+    console.log('COnstructor');
+    console.log(ActivatedRoute);
     breadcrumbService.get().subscribe((breadcrumbs: IBreadcrumb[]) => {
       this.breadcrumbs = breadcrumbs as IBreadcrumb[];
     });
