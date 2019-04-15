@@ -49,9 +49,12 @@ workflows:
   build-deploy:
     jobs:
       - build:
+          filters:
+            branches:
+              only: npm
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: npm
