@@ -45,6 +45,7 @@ npm run build -- --base-href="https://creamlib.github.io/"
 
 ## Deploy the library
 cd dist/creamnglib
+cp ../../../projects/creamnglib/README.md README.md
 echo "> update .npmrc"
 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
 echo "> npm publish --access public"
