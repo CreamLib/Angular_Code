@@ -22,7 +22,7 @@ git remote add --fetch origin https://github.com/CreamLib/CreamLib.github.io
 
 
 # switch into the the gh-pages branch
-if git rev-parse --verify origin/npm > /dev/null 2>&1
+if git rev-parse --verify origin/master > /dev/null 2>&1
 then
     git checkout master
     # delete any old site as we are going to replace it
@@ -38,7 +38,7 @@ mkdir master
 cd master
 git init
 git remote add --fetch origin "$remote"
-git checkout npm
+git checkout master
 npm i
 
 npm run build -- --base-href="https://creamlib.github.io/"

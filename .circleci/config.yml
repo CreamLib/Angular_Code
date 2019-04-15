@@ -51,10 +51,10 @@ workflows:
       - build:
           filters:
             branches:
-              only: npm
+              only: master
       - deploy:
           requires:
             - build
           filters:
             branches:
-              only: npm
+              only: master
