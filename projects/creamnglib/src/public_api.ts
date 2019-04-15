@@ -61,5 +61,7 @@ export * from './c3m/button-link/button-link.component';
 
 export * from './directives/modalDirective';
 export * from './directives/paginationDirective';
+export * from './directives/stepsDirective';
+export * from './directives/scrolltoDirective';
 
 export * from './c3m/creamnglib.module';

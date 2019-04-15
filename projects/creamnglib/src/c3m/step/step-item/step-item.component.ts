@@ -13,6 +13,8 @@ export class StepItemComponent implements AfterViewInit {
   /* INPUTS */
   @Input() title;
   @Input() isActive = false;
+  @Input() isPassed = false;
+  @Input() stepLink = '';
   @Input() indexStep: number;
   @Input() reference: ElementRef;
 
