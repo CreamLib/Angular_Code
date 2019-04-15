@@ -24,12 +24,12 @@ git remote add --fetch origin https://github.com/CreamLib/CreamLib.github.io
 # switch into the the gh-pages branch
 if git rev-parse --verify origin/npm > /dev/null 2>&1
 then
-    git checkout npm
+    git checkout master
     # delete any old site as we are going to replace it
     # Note: this explodes if there aren't any, so moving it here for now
     git rm -rf .
 else
-    git checkout --orphan npm
+    git checkout --orphan master
 fi
 
 # copy over or recompile the new site
