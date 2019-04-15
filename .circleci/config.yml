@@ -31,9 +31,30 @@ jobs:
 
       - run: npm run format:check
       - run: npm run ci
+  deploy:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:jessie-browsers
 
+    steps:
       - add_ssh_keys:
           fingerprints:
             - '69:ee:34:1f:7e:06:e4:a4:c6:c8:2b:96:c5:67:a8:79'
       - deploy:
           command: ./scripts/deploy-ghpages-npm.sh build
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: npm
