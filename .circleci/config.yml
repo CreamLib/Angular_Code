@@ -57,6 +57,7 @@ workflows:
   dependencies-and-deploy:
     jobs:
       - build:
+          requires: [install-dependencies]
           filters:
             branches:
               ignore: gh-pages
