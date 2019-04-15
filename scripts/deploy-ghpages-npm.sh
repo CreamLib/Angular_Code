@@ -40,6 +40,15 @@ git init
 git remote add --fetch origin "$remote"
 git checkout master
 npm i
+
+## Deploy the library
+cd projects/creamnglib
+echo "> update .npmrc"
+echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+echo "> npm publish --access public"
+npm publish --access public
+
+## Build ghpages
 npm run build -- --prod --base-href="https://creamlib.github.io/"
 
 cd ../gh-pages-branch
