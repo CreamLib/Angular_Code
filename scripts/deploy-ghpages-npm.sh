@@ -41,6 +41,8 @@ git remote add --fetch origin "$remote"
 git checkout master
 npm i
 
+npm run build -- --prod --base-href="https://creamlib.github.io/"
+
 ## Deploy the library
 cd dist/creamnglib
 echo "> update .npmrc"
@@ -50,8 +52,6 @@ npm publish --access public
 cd ../.. 
 
 ## Build ghpages
-npm run build -- --prod --base-href="https://creamlib.github.io/"
-
 cd ../gh-pages-branch
 cp -a "../master/dist/." .
 
