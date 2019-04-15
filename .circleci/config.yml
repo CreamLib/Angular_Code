@@ -31,38 +31,9 @@ jobs:
 
       - run: npm run format:check
       - run: npm run ci
-  deploy:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:jessie-browsers
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ./
+
       - add_ssh_keys:
           fingerprints:
             - '69:ee:34:1f:7e:06:e4:a4:c6:c8:2b:96:c5:67:a8:79'
-      - setup_remote_docker
-      - run:
-          name: chmod +x scripts
-          command: chmod +x .circleci/scripts/*.sh
-      - run:
-          name: run gh pages scripts
-          command: .circleci/scripts/deploy-ghpages.sh build
-      - run:
-          name: run npm scripts
-          command: .circleci/scripts/deploy-npm.sh
-workflows:
-  version: 2
-  dependencies-and-deploy:
-    jobs:
-      - build:
-          requires: [install-dependencies]
-          filters:
-            branches:
-              ignore: gh-pages
       - deploy:
-          requires: [build]
-          filters:
-            branches:
-              only: master
+          command: ./scripts/deploy-ghpages.sh build
