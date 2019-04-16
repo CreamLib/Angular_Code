@@ -1,15 +1,19 @@
 import {
   Component,
-  ViewEncapsulation,
-  Input,
-  ElementRef,
-  AfterViewInit,
-  ViewChildren,
+  ContentChildren,
   QueryList,
+  AfterContentInit,
+  ViewChild,
+  ComponentFactoryResolver,
+  ViewContainerRef,
   ChangeDetectorRef,
+  ViewEncapsulation,
   HostListener,
-  ContentChildren
+  ViewChildren,
+  ElementRef,
+  AfterViewInit
 } from '@angular/core';
+
 import { TabComponent } from './tabs-item/tabs-item.component';
 
 @Component({
@@ -18,48 +22,25 @@ import { TabComponent } from './tabs-item/tabs-item.component';
   styleUrls: ['./tabs.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class TabsComponent implements AfterViewInit {
-  /* List of Tabs Element */
+export class TabsComponent implements AfterViewInit, AfterContentInit {
+  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChildren('tabs') tabsElement: QueryList<ElementRef>;
-  @ContentChildren(TabComponent) tabComponents: QueryList<TabComponent>;
-
-  /* Variables */
-  tabs: TabComponent[] = [];
+  @ViewChild('container') container: ElementRef;
   isOver: boolean;
   widthBreak: number;
   sizeInit = 0;
-  arrayTmp: ElementRef[] = [];
-  startIndexActiv = 0;
-  TabComponentBis = TabComponent;
+  marginInit: any;
+  arrayTmp: ElementRef[];
 
-  /* Resize breakpoint tab */
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (
-      this.tabsElement.length === 1 ||
-      this.tabsElement.last.nativeElement.offsetTop === this.tabsElement.first.nativeElement.offsetTop
-    ) {
-      this.isOver = true;
-    } else {
-      this.isOver = false;
+  // contentChildren are set
+  ngAfterContentInit() {
+    // get all active tabs
+    const activeTabs = this.tabs.filter(tab => tab.active);
+
+    // if there is no active tab set, activate the first
+    if (activeTabs.length === 0) {
+      this.selectTab(this.tabs.first);
     }
-    this.cdr.detectChanges();
-  }
-
-  /* add tab to tab table and select tab active */
-  addTab(tab: TabComponent) {
-    if (this.tabs.length === this.startIndexActiv) {
-      tab.isActive = true;
-    }
-    this.tabs.push(tab);
-  }
-
-  /* close tabs et open the active tab */
-  selectTab(tab: TabComponent) {
-    this.tabs.forEach(TabComponentBis => {
-      TabComponentBis.isActive = false;
-    });
-    tab.isActive = true;
   }
 
   /* breakpoint tab */
@@ -69,7 +50,7 @@ export class TabsComponent implements AfterViewInit {
       this.sizeInit = this.arrayTmp[i].nativeElement.clientWidth + this.sizeInit;
     }
 
-    if (this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop) {
+    if (this.tabsElement.last.nativeElement.offsetTop === this.tabsElement.first.nativeElement.offsetTop) {
       this.isOver = true;
     } else if (this.tabsElement.length === 1) {
       this.isOver = true;
@@ -79,6 +60,29 @@ export class TabsComponent implements AfterViewInit {
     this.cdr.detectChanges();
   }
 
-  /* constructor tab */
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (
+      this.tabsElement.length === 1 ||
+      //this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop
+      this.sizeInit +
+        parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1) >
+        this.container.nativeElement.clientWidth
+    ) {
+      this.isOver = false;
+    } else {
+      this.isOver = true;
+    }
+    this.cdr.detectChanges();
+  }
+
+  selectTab(tab: TabComponent) {
+    // deactivate all tabs
+    this.tabs.toArray().forEach(t => (t.active = false));
+
+    // activate the tab the user has clicked on.
+    tab.active = true;
+  }
+
   constructor(private cdr: ChangeDetectorRef) {}
 }

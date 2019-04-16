@@ -1,6 +1,6 @@
-<div class="tabsContainer">
+<div class="tabsContainer" #container>
   <ul>
-    <li #tabs *ngFor="let tab of tabs" [ngClass]="{ active: tab.isActive, over: isOver }">
+    <li #tabs *ngFor="let tab of tabs" [ngClass]="{ active: tab.active, over: isOver }">
       <button
         id="{{ tab.tabID }}"
         (click)="selectTab(tab)"
@@ -8,10 +8,9 @@
         [attr.aria-controls]="tab.panelID"
         [attr.aria-selected]="tab.isActive"
       >
-        {{ tab.tabTitle }}
+        {{ tab.title }}
       </button>
     </li>
   </ul>
-
   <ng-content></ng-content>
 </div>

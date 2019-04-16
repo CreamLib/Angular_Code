@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input, AfterViewInit } from '@angular/core';
-import { TabsComponent } from '../tabs.component';
+import { Component, Input, ViewEncapsulation, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'c3m-tab',
@@ -8,16 +7,15 @@ import { TabsComponent } from '../tabs.component';
   encapsulation: ViewEncapsulation.None
 })
 export class TabComponent implements OnInit, AfterViewInit {
-  @Input() tabTitle;
-  @Input() isActive: boolean;
+  @Input() title: string;
+  @Input() active = false;
   @Input() idTab: number;
   @Input() isDisabled: boolean;
   tabID: string;
   panelID: string;
 
   /* Constructor Tab Component */
-  constructor(tabs: TabsComponent) {
-    tabs.addTab(this);
+  constructor() {
     this.idTab = this.randomID();
   }
 
