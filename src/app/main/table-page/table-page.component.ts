@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-table-page',
@@ -8,7 +7,7 @@ import { AppComponent } from '../../app.component';
   encapsulation: ViewEncapsulation.None
 })
 export class TablePageComponent implements OnInit {
-  constructor(private app: AppComponent) {}
+  constructor() {}
 
   ngOnInit() {}
 }
