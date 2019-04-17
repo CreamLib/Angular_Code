@@ -46,9 +46,6 @@ import { ProgressComponent } from './progress/progress.component';
 import { SpinnerProgressComponent } from './spinner-progress/spinner-progress.component';
 import { StepComponent } from './step/step.component';
 import { StepItemComponent } from './step/step-item/step-item.component';
-import { ColumnTableComponent } from './table/table.component';
-import { ToggleTableComponent } from './table-toggle/table-toggle.component';
-import { PageSwipeTableComponent } from './table-swipe/table-swipe.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { TabComponent } from './tabs/tabs-item/tabs-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -107,9 +104,6 @@ import { ScrolltoDirective } from '../directives/scrolltoDirective';
     SpinnerProgressComponent,
     StepComponent,
     StepItemComponent,
-    ColumnTableComponent,
-    ToggleTableComponent,
-    PageSwipeTableComponent,
     TabsComponent,
     TabComponent,
     PaginationComponent,
@@ -166,9 +160,6 @@ import { ScrolltoDirective } from '../directives/scrolltoDirective';
     SpinnerProgressComponent,
     StepComponent,
     StepItemComponent,
-    ColumnTableComponent,
-    ToggleTableComponent,
-    PageSwipeTableComponent,
     TabsComponent,
     TabComponent,
     PaginationComponent,

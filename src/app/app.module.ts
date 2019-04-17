@@ -18,7 +18,6 @@ import { MenuComponent } from './header/menu/menu.component';
 import { MenuItemComponent } from './header/menu/menu-item/menu-item.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
-import { TablePageComponent } from './main/table-page/table-page.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
@@ -58,7 +57,6 @@ import { CreamnglibModule } from 'creamnglib';
     MenuItemComponent,
     CarouselPageComponent,
     ModalPageComponent,
-    TablePageComponent,
     PaginationPageComponent,
     SliderPageComponent,
     GettingStartedComponent,

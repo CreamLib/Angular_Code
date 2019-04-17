@@ -5,7 +5,6 @@ import { TabsPageComponent } from './main/tabs-page/tabs-page.component';
 import { AccordionPageComponent } from './main/accordion-page/accordion-page.component';
 import { ModalPageComponent } from './main/modal-page/modal-page.component';
 import { CarouselPageComponent } from './main/carousel-page/carousel-page.component';
-import { TablePageComponent } from './main/table-page/table-page.component';
 import { PaginationPageComponent } from './main/pagination-page/pagination-page.component';
 import { SliderPageComponent } from './main/slider-page/slider-page.component';
 import { GettingStartedComponent } from './main/getting-started/getting-started.component';
@@ -51,11 +50,6 @@ export const appRoutes: Routes = [
     path: 'carousel',
     component: CarouselPageComponent,
     data: { breadcrumb: 'carousel' }
-  },
-  {
-    path: 'table',
-    component: TablePageComponent,
-    data: { breadcrumb: 'table' }
   },
   {
     path: 'pagination',
