@@ -34,6 +34,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
 
   // contentChildren are set
   ngAfterContentInit() {
+    this.isOver = true;
     // get all active tabs
     const activeTabs = this.tabs.filter(tab => tab.active);
 
@@ -50,12 +51,12 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
       this.sizeInit = this.arrayTmp[i].nativeElement.clientWidth + this.sizeInit;
     }
 
-    if (this.tabsElement.last.nativeElement.offsetTop === this.tabsElement.first.nativeElement.offsetTop) {
-      this.isOver = true;
-    } else if (this.tabsElement.length === 1) {
-      this.isOver = true;
-    } else {
+    if (this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop) {
       this.isOver = false;
+    } else if (this.tabsElement.length === 1) {
+      this.isOver = false;
+    } else {
+      this.isOver = true;
     }
     this.cdr.detectChanges();
   }
@@ -63,15 +64,27 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if (
-      this.tabsElement.length === 1 ||
-      //this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop
-      this.sizeInit +
+      this.tabsElement.last.nativeElement.offsetTop === this.tabsElement.first.nativeElement.offsetTop
+      /*this.sizeInit +
         parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1) >
+        this.container.nativeElement.clientWidth*/
+    ) {
+      this.isOver = true;
+    } else if (
+      this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop &&
+      this.sizeInit +
+        parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1) <
         this.container.nativeElement.clientWidth
     ) {
-      this.isOver = false;
-    } else {
+      console.log('');
+      console.log(
+        this.sizeInit +
+          parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1)
+      );
+      console.log(this.container.nativeElement.clientWidth);
       this.isOver = true;
+    } else {
+      this.isOver = false;
     }
     this.cdr.detectChanges();
   }
