@@ -47,8 +47,8 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
   /* breakpoint tab */
   ngAfterViewInit() {
     this.arrayTmp = this.tabsElement.toArray();
-    for (let i = 0; i < this.arrayTmp.length - 1; i++) {
-      this.sizeInit = this.arrayTmp[i].nativeElement.clientWidth + this.sizeInit;
+    for (let i = 0; i < this.arrayTmp.length; i++) {
+      this.sizeInit += this.arrayTmp[i].nativeElement.clientWidth;
     }
 
     if (this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop) {
@@ -63,28 +63,17 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (
-      this.tabsElement.last.nativeElement.offsetTop === this.tabsElement.first.nativeElement.offsetTop
-      /*this.sizeInit +
-        parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1) >
-        this.container.nativeElement.clientWidth*/
-    ) {
-      this.isOver = true;
-    } else if (
-      this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop &&
-      this.sizeInit +
-        parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1) <
-        this.container.nativeElement.clientWidth
-    ) {
-      console.log('');
-      console.log(
-        this.sizeInit +
-          parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * (this.tabsElement.length + 1)
-      );
-      console.log(this.container.nativeElement.clientWidth);
-      this.isOver = true;
-    } else {
+    if (this.tabsElement.last.nativeElement.offsetTop !== this.tabsElement.first.nativeElement.offsetTop) {
       this.isOver = false;
+      if (
+        this.sizeInit +
+          parseFloat(getComputedStyle(this.tabsElement.last.nativeElement).marginRight) * this.tabsElement.length <
+        this.container.nativeElement.clientWidth
+      ) {
+        this.isOver = true;
+      }
+    } else {
+      this.isOver = true;
     }
     this.cdr.detectChanges();
   }
