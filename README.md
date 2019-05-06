@@ -37,6 +37,13 @@ And
 How to help
 =====================
 
+### How to run the project.
+
+In order to work on this project, we have to launch two commands. The first one to build the components library, and second one to run the portal. You can execute these commands at the same time, in order to be benefit from the live reload mechanism. 
+
+So in one terminal, run the command `./node_modules/.bin/ng build creamnglib --watch`. In another terminal, launch the portal via the command `npm run start`
+
+
 ### To create a component
 - cd src
 - cd app
