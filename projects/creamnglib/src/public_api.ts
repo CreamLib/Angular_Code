@@ -32,6 +32,7 @@ export * from './c3m/input-password/input-password.component';
 export * from './c3m/input-search/input-search.component';
 export * from './c3m/input-tel/input-tel.component';
 export * from './c3m/input-url/input-url.component';
+export * from './c3m/list/list.model';
 export * from './c3m/list/list.component';
 export * from './c3m/list-description/list-description.component';
 export * from './c3m/list-order/list-order.component';
