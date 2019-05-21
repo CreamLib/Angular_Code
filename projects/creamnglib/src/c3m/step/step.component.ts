@@ -1,5 +1,4 @@
 import {
-  AfterViewChecked,
   AfterViewInit,
   ChangeDetectorRef,
   Component,
@@ -7,9 +6,12 @@ import {
   HostListener,
   QueryList,
   ViewChildren,
-  ViewEncapsulation
+  ViewEncapsulation,
+  ViewChild,
+  Input,
+  OnInit
 } from '@angular/core';
-import { StepItemComponent } from './step-item/step-item.component';
+import { StepItem } from '../../step-item';
 
 @Component({
   selector: 'c3m-step',
@@ -17,38 +19,33 @@ import { StepItemComponent } from './step-item/step-item.component';
   styleUrls: ['./step.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class StepComponent implements AfterViewInit, AfterViewChecked {
-  /* VARIABLES */
-  itemStepTab: StepItemComponent[] = [];
-  theActiveStepItem: number;
+export class StepComponent implements OnInit, AfterViewInit {
+  @Input() activeStep: string;
+  @Input() stepLink = '#';
+  indexNum: number;
   isOver: boolean;
-  widthBreak: number;
-  itemsStepTabReference: ElementRef[] = [];
+  @ViewChildren('stepLi') stepLiReference: QueryList<ElementRef>;
+  stepLi: Array<ElementRef>;
+  @Input() steps: StepItem[];
   sizeInit = 0;
-  StepItemComponentBis = StepItemComponent;
+  widthBreak: number;
 
-  /* CONSTRUCTOR */
   constructor(private cdr: ChangeDetectorRef) {}
 
-  /* AFTER VIEW INIT */
+  ngOnInit() {
+    this.indexNum = parseInt(this.activeStep, 10) - 1;
+  }
+
   ngAfterViewInit() {
-    this.itemStepTab.forEach((StepItemComponentBis, index) => {
-      StepItemComponentBis.indexStep = index + 1;
-      this.itemsStepTabReference.push(StepItemComponentBis.reference);
-      if (StepItemComponentBis.isActive) {
-        this.theActiveStepItem = StepItemComponentBis.indexStep;
-      }
-    });
+    this.stepLi = this.stepLiReference.toArray();
 
     /* CALCUL BREAKPOINT ON PAGE LOAD */
-    for (let i = 0; i < this.itemsStepTabReference.length - 1; i++) {
-      this.sizeInit = this.itemsStepTabReference[i].nativeElement.clientWidth + this.sizeInit;
+    for (let i = 0; i < this.stepLi.length; i++) {
+      this.sizeInit = this.stepLi[i].nativeElement.clientWidth + this.sizeInit;
+      console.log(this.sizeInit);
     }
 
-    if (
-      this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop !==
-      this.itemsStepTabReference[0].nativeElement.offsetTop
-    ) {
+    if (this.stepLi[this.stepLi.length - 1].nativeElement.offsetTop !== this.stepLi[0].nativeElement.offsetTop) {
       this.isOver = true;
     } else {
       this.isOver = false;
@@ -56,35 +53,11 @@ export class StepComponent implements AfterViewInit, AfterViewChecked {
     this.cdr.detectChanges();
   }
 
-  /* AFTER VIEW CHECK */
-  ngAfterViewChecked() {
-    /* For Each items */
-    this.itemStepTab.forEach((StepItemComponentBis, index) => {
-      /* if after the active item, add class future */
-      if (index + 1 > this.theActiveStepItem) {
-        StepItemComponentBis.Future = true;
-      } else {
-        StepItemComponentBis.Future = false;
-      }
-      /* if before the active item, add class past */
-      if (index + 1 < this.theActiveStepItem) {
-        StepItemComponentBis.Past = true;
-      } else {
-        StepItemComponentBis.Past = false;
-      }
-    });
-  }
-
-  /* Resize breakpoint tab*/
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (
-      this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop >
-      this.itemsStepTabReference[0].nativeElement.offsetTop
-    ) {
+    if (this.stepLi[this.stepLi.length - 1].nativeElement.offsetTop > this.stepLi[0].nativeElement.offsetTop) {
       if (
-        this.itemsStepTabReference[this.itemsStepTabReference.length - 1].nativeElement.offsetTop >
-          this.itemsStepTabReference[0].nativeElement.offsetTop &&
+        this.stepLi[this.stepLi.length - 1].nativeElement.offsetTop > this.stepLi[0].nativeElement.offsetTop &&
         this.isOver !== true
       ) {
         this.widthBreak = event.target.innerWidth;
@@ -105,11 +78,5 @@ export class StepComponent implements AfterViewInit, AfterViewChecked {
       this.isOver = false;
     }
     this.cdr.detectChanges();
-  }
-
-  /* ADD AN ITEM INTO ITEMS TAB */
-  addTab(stepItem: StepItemComponent) {
-    stepItem.isActive = false; // And set isActive var to False
-    this.itemStepTab.push(stepItem);
   }
 }

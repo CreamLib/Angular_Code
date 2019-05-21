@@ -47,7 +47,6 @@ export * from './c3m/slider/slider.component';
 export * from './c3m/progress/progress.component';
 export * from './c3m/spinner-progress/spinner-progress.component';
 export * from './c3m/step/step.component';
-export * from './c3m/step/step-item/step-item.component';
 export * from './c3m/tabs/tabs.component';
 export * from './c3m/tabs/tabs-item/tabs-item.component';
 export * from './c3m/pagination/pagination.component';
@@ -56,6 +55,7 @@ export * from './c3m/modal/modal.component';
 export * from './c3m/modal-alert/modal-alert.component';
 
 export * from './c3m/button-link/button-link.component';
+export * from './step-item';
 
 export * from './directives/modalDirective';
 export * from './directives/paginationDirective';

@@ -10,7 +10,5 @@ import { AppComponent } from '../../app.component';
 export class TabsPageComponent implements OnInit {
   constructor(private app: AppComponent) {}
 
-  ngOnInit() {
-    const subComp = ['tabs-item'];
-  }
+  ngOnInit() {}
 }

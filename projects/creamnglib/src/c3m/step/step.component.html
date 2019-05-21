@@ -1,4 +1,14 @@
-<!-- Items List -->
-<ol #items [ngClass]="{ over: isOver }">
-  <ng-content></ng-content>
+<ol [ngClass]="{ over: isOver }">
+  <li
+    #stepLi
+    *ngFor="let step of steps; let i = index"
+    [ngClass]="{ active: i === this.indexNum, past: i < this.indexNum, future: i > this.indexNum }"
+  >
+    <ng-container *ngIf="i < this.indexNum">
+      <a href="{{ stepLink }}">{{ step.title }}</a>
+    </ng-container>
+    <ng-container *ngIf="!(i < this.indexNum)">
+      {{ step.title }}
+    </ng-container>
+  </li>
 </ol>
