@@ -1,6 +1,5 @@
 <div class="panelTitle">
-  <h2>
-    <strong>List</strong> Component</h2>
+  <h2><strong>List</strong> Component</h2>
   <ul>
     <li>
       <a scrollTo href="#list">Regular List</a>
@@ -12,11 +11,10 @@
       <a scrollTo href="#list-thumbnails">List with thumbnails</a>
     </li>
     <li>
-        <a scrollTo href="#list-description">Description list</a>
-      </li>
+      <a scrollTo href="#list-description">Description list</a>
+    </li>
   </ul>
 </div>
-
 
 <div class="titleComponent">
   <div class="descriptionComponent" id="list">
@@ -24,8 +22,7 @@
 
     <div class="demo">
       <!-- SIMPLE LIST -->
-      <c3m-list>
-      </c3m-list>
+      <c3m-list [values]="listItem"> </c3m-list>
     </div>
 
     <div class="explain">
@@ -44,15 +41,16 @@
   &lt;!-- SIMPLE LIST --&gt;
   &lt;c3m-list&gt;
   &lt;/c3m-list&gt;
-            </pre>
+            </pre
+          >
         </div>
       </c3m-tab>
 
       <c3m-tab tabTitle="JSON">
-          <p class="pre-code"> dataList.json</p>
-          <div class="code">
-            <!--?prettify lang=js linenums=true?-->
-              <pre class="prettyprint linenums">
+        <p class="pre-code">dataList.json</p>
+        <div class="code">
+          <!--?prettify lang=js linenums=true?-->
+          <pre class="prettyprint linenums">
 [
   &#123;
       &#34;value&#34;: &#34;List Item 1&#34;,
@@ -67,50 +65,49 @@
       &#34;value&#34;: &#34;List Item 4&#34;,
   &#125;
 ]
-              </pre>
-          </div>
+              </pre
+          >
+        </div>
       </c3m-tab>
-
     </c3m-tabs>
   </div>
 </div>
 
-
 <div class="titleComponent">
-    <div class="descriptionComponent" id="list-order">
-      <h3>Ordered List</h3>
+  <div class="descriptionComponent" id="list-order">
+    <h3>Ordered List</h3>
 
-      <div class="demo">
-        <!-- SIMPLE LIST -->
-        <c3m-list-order>
-        </c3m-list-order>
-      </div>
+    <div class="demo">
+      <!-- SIMPLE LIST -->
+      <c3m-list-order [values]="listItem"> </c3m-list-order>
+    </div>
 
-      <div class="explain">
-        <dl>
-          <dt>dataList</dt>
-          <dd>The data in the list comes from a JSON file</dd>
-        </dl>
-      </div>
+    <div class="explain">
+      <dl>
+        <dt>dataList</dt>
+        <dd>The data in the list comes from a JSON file</dd>
+      </dl>
+    </div>
 
-      <!-- TABS SNIPPETS -->
-      <c3m-tabs class="snippets">
-        <c3m-tab tabTitle="To call the component">
-          <div class="code">
-            <!--?prettify lang=html linenums=true?-->
-            <pre class="prettyprint linenums">
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
     &lt;!-- SIMPLE LIST --&gt;
     &lt;c3m-list-order&gt;
     &lt;/c3m-list-order&gt;
-              </pre>
-          </div>
-        </c3m-tab>
+              </pre
+          >
+        </div>
+      </c3m-tab>
 
-        <c3m-tab tabTitle="JSON">
-            <p class="pre-code"> dataList.json</p>
-            <div class="code">
-              <!--?prettify lang=js linenums=true?-->
-                <pre class="prettyprint linenums">
+      <c3m-tab tabTitle="JSON">
+        <p class="pre-code">dataList.json</p>
+        <div class="code">
+          <!--?prettify lang=js linenums=true?-->
+          <pre class="prettyprint linenums">
 [
     &#123;
         &#34;value&#34;: &#34;List Item 1&#34;,
@@ -125,56 +122,55 @@
         &#34;value&#34;: &#34;List Item 4&#34;,
     &#125;
 ]
-                </pre>
-            </div>
-        </c3m-tab>
-      </c3m-tabs>
-    </div>
+                </pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
   </div>
+</div>
 
+<div class="titleComponent">
+  <div class="descriptionComponent" id="list-thumbnails">
+    <h3>List with thumbnails</h3>
 
+    <div class="demo">
+      <!-- SIMPLE LIST -->
+      <c3m-list-thumbnails [values]="listItem"> </c3m-list-thumbnails>
+    </div>
 
-  <div class="titleComponent">
-      <div class="descriptionComponent" id="list-thumbnails">
-        <h3>List with thumbnails</h3>
-
-        <div class="demo">
-          <!-- SIMPLE LIST -->
-          <c3m-list-thumbnails>
-          </c3m-list-thumbnails>
+    <div class="explain">
+      <dl>
+        <div>
+          <dt>dataList</dt>
+          <dd>The data in the list comes from a JSON file</dd>
         </div>
-
-        <div class="explain">
-          <dl>
-            <div>
-              <dt>dataList</dt>
-              <dd>The data in the list comes from a JSON file</dd>
-            </div>
-            <div>
-              <dt>placeholder.com</dt>
-              <dd>Fake image with a specific size</dd>
-              </div>
-            </dl>
+        <div>
+          <dt>placeholder.com</dt>
+          <dd>Fake image with a specific size</dd>
         </div>
+      </dl>
+    </div>
 
-        <!-- TABS SNIPPETS -->
-        <c3m-tabs class="snippets">
-          <c3m-tab tabTitle="To call the component">
-            <div class="code">
-              <!--?prettify lang=html linenums=true?-->
-              <pre class="prettyprint linenums">
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
       &lt;!-- SIMPLE LIST --&gt;
       &lt;c3m-list-thumbnails&gt;
       &lt;/c3m-list-thumbnails&gt;
-                </pre>
-            </div>
-          </c3m-tab>
+                </pre
+          >
+        </div>
+      </c3m-tab>
 
-          <c3m-tab tabTitle="JSON">
-              <p class="pre-code"> dataList.json</p>
-              <div class="code">
-                <!--?prettify lang=js linenums=true?-->
-                  <pre class="prettyprint linenums">
+      <c3m-tab tabTitle="JSON">
+        <p class="pre-code">dataList.json</p>
+        <div class="code">
+          <!--?prettify lang=js linenums=true?-->
+          <pre class="prettyprint linenums">
   [
       &#123;
           &#34;value&#34;: &#34;List Item 1&#34;,
@@ -193,49 +189,49 @@
           &#34;url&#34;: &#34;http://via.placeholder.com/150x150&#34;,
       &#125;
   ]
-                  </pre>
-              </div>
-          </c3m-tab>
-        </c3m-tabs>
-      </div>
+                  </pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+  </div>
+</div>
+
+<div class="titleComponent">
+  <div class="descriptionComponent" id="list-description">
+    <h3>Description List</h3>
+
+    <div class="demo">
+      <!-- SIMPLE LIST -->
+      <c3m-list-description [values]="listItem"> </c3m-list-description>
     </div>
 
+    <div class="explain">
+      <dl>
+        <dt>dataList</dt>
+        <dd>The data in the list comes from a JSON file</dd>
+      </dl>
+    </div>
 
-  <div class="titleComponent">
-      <div class="descriptionComponent" id="list-description">
-        <h3>Description List</h3>
-
-        <div class="demo">
-          <!-- SIMPLE LIST -->
-          <c3m-list-description>
-          </c3m-list-description>
-        </div>
-
-        <div class="explain">
-          <dl>
-            <dt>dataList</dt>
-            <dd>The data in the list comes from a JSON file</dd>
-          </dl>
-        </div>
-
-        <!-- TABS SNIPPETS -->
-        <c3m-tabs class="snippets">
-          <c3m-tab tabTitle="To call the component">
-            <div class="code">
-              <!--?prettify lang=html linenums=true?-->
-              <pre class="prettyprint linenums">
+    <!-- TABS SNIPPETS -->
+    <c3m-tabs class="snippets">
+      <c3m-tab tabTitle="To call the component">
+        <div class="code">
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="prettyprint linenums">
       &lt;!-- SIMPLE LIST --&gt;
       &lt;c3m-list-description&gt;
       &lt;/c3m-list-description&gt;
-                </pre>
-            </div>
-          </c3m-tab>
+                </pre
+          >
+        </div>
+      </c3m-tab>
 
-          <c3m-tab tabTitle="JSON">
-              <p class="pre-code"> dataList.json</p>
-              <div class="code">
-                <!--?prettify lang=js linenums=true?-->
-                  <pre class="prettyprint linenums">
+      <c3m-tab tabTitle="JSON">
+        <p class="pre-code">dataList.json</p>
+        <div class="code">
+          <!--?prettify lang=js linenums=true?-->
+          <pre class="prettyprint linenums">
   [
       &#123;
           &#34;title&#34;: &#34;List Title 1&#34;,
@@ -254,10 +250,10 @@
           &#34;content&#34;: &#34;List Content 4&#34;
       &#125;
   ]
-                  </pre>
-              </div>
-          </c3m-tab>
-
-        </c3m-tabs>
-      </div>
-    </div>
+                  </pre
+          >
+        </div>
+      </c3m-tab>
+    </c3m-tabs>
+  </div>
+</div>
