@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core';
-import { ListValue } from 'dist/creamnglib/public_api';
+import { ListValue } from '../../public_api';
 
 @Component({
   selector: 'c3m-list-description',
