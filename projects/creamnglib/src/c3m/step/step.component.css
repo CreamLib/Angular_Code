@@ -45,11 +45,11 @@ c3m-step ol li::after {
   z-index: 1;
 }
 
-c3m-step-item:first-child li::after {
+c3m-step ol li:first-child li::after {
   width: 50%;
   left: 50%;
 }
-c3m-step-item:last-child li::after {
+c3m-step ol li:last-child li::after {
   width: 50%;
   left: auto;
   right: 50%;

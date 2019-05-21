@@ -33,14 +33,7 @@
 
     <div class="demo">
       <!-- STEP -->
-      <c3m-step>
-        <!-- STEP ITEMS -->
-        <c3m-step-item isPassed="true" stepLink="#" title="Title Of Past Step"></c3m-step-item>
-        <c3m-step-item isActive="true" title="Title Of Active Step"></c3m-step-item>
-        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
-        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
-        <c3m-step-item title="Title Of Future Step"></c3m-step-item>
-      </c3m-step>
+      <c3m-step activeStep="2" [steps]="items"></c3m-step>
     </div>
 
     <c3m-tabs class="snippets">
@@ -48,17 +41,41 @@
         <div class="code">
           <!--?prettify lang=html linenums=true?-->
           <pre class="prettyprint linenums">
-  &lt;!-- STEP --&gt;
-  &lt;c3m-step&gt;
-    &lt;!-- STEP ITEMS --&gt;
-    &lt;c3m-step-item isPassed=&#34;true&#34; stepLink=&#34;#&#34; title=&#34;Title Of Past Step&#34;&gt;&lt;/c3m-step-item&gt;
-    &lt;c3m-step-item isActive=&#34;true&#34; title=&#34;Title Of Active Step&#34;&gt;&lt;/c3m-step-item&gt;
-    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
-    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
-    &lt;c3m-step-item title=&#34;Title Of Future Step&#34;&gt;&lt;/c3m-step-item&gt;
-  &lt;/c3m-step&gt;
-            </pre
-          >
+&lt;!-- STEP --&gt;
+&lt;c3m-step activeStep=&#34;2&#34; &#91;steps&#93;=&#34;items&#34;&gt;&lt;/c3m-step&gt;
+          </pre>
+        </div>
+      </c3m-tab>
+      <c3m-tab tabTitle="Typescript">
+        <p class="pre-code"></p>
+        <div class="code">
+          <!--?prettify lang=js linenums=true?-->
+          <pre class="prettyprint linenums">
+import &#123; Component, OnInit &#125; from '@angular/core';
+import &#123; AppComponent &#125; from '../../app.component';
+import &#123; StepItem &#125; from '../../../../projects/creamnglib/src/public_api';
+          
+@Component(&#123;
+  selector: 'app-step-page',
+  templateUrl: './step-page.component.html',
+  styleUrls: ['./step-page.component.css']
+&#125;)
+export class StepPageComponent implements OnInit &#123;
+  items: StepItem[];
+
+  constructor(private app: AppComponent) &#123;&#125;
+          
+  ngOnInit() &#123;
+    this.items = [
+      &#123;title: 'titre1'&#125;,
+      &#123;title: 'titre2'&#125;,
+      &#123;title: 'titre3'&#125;,
+      &#123;title: 'titre4'&#125;,
+      &#123;title: 'titre5'&#125;,
+    ];
+  &#125;
+&#125;
+          </pre>
         </div>
       </c3m-tab>
     </c3m-tabs>
@@ -74,20 +91,20 @@
         </thead>
         <tbody>
           <tr>
-            <td>isPassed</td>
-            <td>boolean</td>
-            <td>null</td>
-            <td>Define if a step is valid</td>
+            <td>steps</td>
+            <td>stepItem[]</td>
+            <td>[]</td>
+            <td>Call the steps array</td>
           </tr>
           <tr>
             <td>stepLink</td>
             <td>string</td>
-            <td>null</td>
+            <td>#</td>
             <td>Link to go back to a step (only is a step is passed)</td>
           </tr>
           <tr>
-            <td>isActive</td>
-            <td>boolean</td>
+            <td>activeStep</td>
+            <td>string</td>
             <td>null</td>
             <td>Define the active step</td>
           </tr>
