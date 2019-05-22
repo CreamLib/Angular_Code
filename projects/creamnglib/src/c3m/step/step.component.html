@@ -3,6 +3,7 @@
     #stepLi
     *ngFor="let step of steps; let i = index"
     [ngClass]="{ active: i === this.indexNum, past: i < this.indexNum, future: i > this.indexNum }"
+    [c3mStepCurrent]="i === this.indexNum"
   >
     <ng-container *ngIf="i < this.indexNum">
       <a href="{{ stepLink }}">{{ step.title }}</a>
