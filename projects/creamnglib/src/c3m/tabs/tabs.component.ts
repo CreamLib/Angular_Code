@@ -58,7 +58,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
-    this.cdr.detectChanges();
+    //this.cdr.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -75,7 +75,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
-    this.cdr.detectChanges();
+    //this.cdr.detectChanges();
   }
 
   selectTab(tab: TabComponent) {
@@ -86,5 +86,5 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     tab.active = true;
   }
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor() {}
 }

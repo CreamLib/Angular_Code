@@ -16,7 +16,7 @@ export class TabComponent implements OnInit, AfterViewInit {
   panelID: string;
 
   /* Constructor Tab Component */
-  constructor(tabs: TabsComponent) {
+  constructor() {
     this.idTab = this.randomID();
   }
 
