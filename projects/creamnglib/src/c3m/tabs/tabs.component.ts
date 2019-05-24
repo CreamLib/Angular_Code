@@ -4,9 +4,6 @@ import {
   QueryList,
   AfterContentInit,
   ViewChild,
-  ComponentFactoryResolver,
-  ViewContainerRef,
-  ChangeDetectorRef,
   ViewEncapsulation,
   HostListener,
   ViewChildren,
@@ -31,6 +28,8 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
   sizeInit = 0;
   marginInit: any;
   arrayTmp: ElementRef[];
+
+  constructor() {}
 
   // contentChildren are set
   ngAfterContentInit() {
@@ -58,7 +57,6 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
-    //this.cdr.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -75,7 +73,6 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
-    //this.cdr.detectChanges();
   }
 
   selectTab(tab: TabComponent) {
@@ -85,6 +82,4 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     // activate the tab the user has clicked on.
     tab.active = true;
   }
-
-  constructor() {}
 }

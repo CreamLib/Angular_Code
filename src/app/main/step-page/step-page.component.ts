@@ -11,11 +11,11 @@ export class StepPageComponent {
 
   constructor() {
     this.items = [
-      { title: 'titre1' },
-      { title: 'titre2' },
-      { title: 'titre3' },
-      { title: 'titre4' },
-      { title: 'titre5' }
+      { title: 'titre1', stepLink: '/1' },
+      { title: 'titre2', stepLink: '/2' },
+      { title: 'titre3', stepLink: '/3' },
+      { title: 'titre4', stepLink: '/4' },
+      { title: 'titre5', stepLink: '/5' }
     ];
   }
 

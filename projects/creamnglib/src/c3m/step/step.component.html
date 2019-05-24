@@ -6,7 +6,7 @@
     [c3mStepCurrent]="i === this.indexNum"
   >
     <ng-container *ngIf="i < this.indexNum">
-      <a [routerLink]="[stepLink]">{{ step.title }}</a>
+      <a [routerLink]="[step.stepLink]">{{ step.title }}</a>
     </ng-container>
     <ng-container *ngIf="!(i < this.indexNum)">
       {{ step.title }}

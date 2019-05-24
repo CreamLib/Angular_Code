@@ -22,7 +22,6 @@ import { StepItem } from '../../step-item';
 })
 export class StepComponent implements OnInit, AfterViewInit {
   @Input() activeStep = 1;
-  @Input() stepLink = '/';
   indexNum: number;
   isOver: boolean;
   @ViewChildren('stepLi') stepLiReference: QueryList<ElementRef>;
@@ -31,7 +30,7 @@ export class StepComponent implements OnInit, AfterViewInit {
   sizeInit = 0;
   widthBreak: number;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor() {}
 
   ngOnInit() {
     this.indexNum = this.activeStep - 1;
@@ -55,7 +54,6 @@ export class StepComponent implements OnInit, AfterViewInit {
     } else {
       this.isOver = false;
     }
-    this.cdr.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -82,6 +80,5 @@ export class StepComponent implements OnInit, AfterViewInit {
     } else {
       this.isOver = false;
     }
-    this.cdr.detectChanges();
   }
 }
