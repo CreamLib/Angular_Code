@@ -1,17 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../../app.component';
-import { StepItem } from '../../../../projects/creamnglib/src/public_api';
+import { Component } from '@angular/core';
+import { StepItem, StepComponent } from '../../../../projects/creamnglib/src/public_api';
 
 @Component({
   selector: 'app-step-page',
   templateUrl: './step-page.component.html',
   styleUrls: ['./step-page.component.css']
 })
-export class StepPageComponent implements OnInit {
+export class StepPageComponent {
   items: StepItem[];
-  constructor(private app: AppComponent) {}
 
-  ngOnInit() {
+  constructor() {
     this.items = [
       { title: 'titre1' },
       { title: 'titre2' },
@@ -19,5 +17,9 @@ export class StepPageComponent implements OnInit {
       { title: 'titre4' },
       { title: 'titre5' }
     ];
+  }
+
+  changeStep(s: StepComponent): void {
+    s.newStep();
   }
 }

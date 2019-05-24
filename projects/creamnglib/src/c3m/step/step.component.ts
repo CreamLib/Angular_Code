@@ -9,19 +9,20 @@ import {
   ViewEncapsulation,
   ViewChild,
   Input,
-  OnInit
+  OnInit,
+  OnChanges,
+  SimpleChange
 } from '@angular/core';
 import { StepItem } from '../../step-item';
 
 @Component({
   selector: 'c3m-step',
   templateUrl: './step.component.html',
-  styleUrls: ['./step.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./step.component.css']
 })
 export class StepComponent implements OnInit, AfterViewInit {
-  @Input() activeStep: string;
-  @Input() stepLink = '#';
+  @Input() activeStep = 1;
+  @Input() stepLink = '/';
   indexNum: number;
   isOver: boolean;
   @ViewChildren('stepLi') stepLiReference: QueryList<ElementRef>;
@@ -33,7 +34,12 @@ export class StepComponent implements OnInit, AfterViewInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.indexNum = parseInt(this.activeStep, 10) - 1;
+    this.indexNum = this.activeStep - 1;
+  }
+
+  newStep(): void {
+    this.activeStep++;
+    this.indexNum = this.activeStep - 1;
   }
 
   ngAfterViewInit() {
@@ -42,7 +48,6 @@ export class StepComponent implements OnInit, AfterViewInit {
     /* CALCUL BREAKPOINT ON PAGE LOAD */
     for (let i = 0; i < this.stepLi.length; i++) {
       this.sizeInit = this.stepLi[i].nativeElement.clientWidth + this.sizeInit;
-      console.log(this.sizeInit);
     }
 
     if (this.stepLi[this.stepLi.length - 1].nativeElement.offsetTop !== this.stepLi[0].nativeElement.offsetTop) {

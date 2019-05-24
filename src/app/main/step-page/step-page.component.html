@@ -33,7 +33,8 @@
 
     <div class="demo">
       <!-- STEP -->
-      <c3m-step activeStep="2" [steps]="items"></c3m-step>
+      <c3m-step activeStep="2" [steps]="items" #stepper1></c3m-step>
+      <c3m-button (click)="changeStep(stepper1)">change active step</c3m-button>
     </div>
 
     <c3m-tabs class="snippets">
@@ -99,13 +100,13 @@ export class StepPageComponent implements OnInit &#123;
           <tr>
             <td>stepLink</td>
             <td>string</td>
-            <td>#</td>
+            <td>/</td>
             <td>Link to go back to a step (only is a step is passed)</td>
           </tr>
           <tr>
             <td>activeStep</td>
             <td>string</td>
-            <td>null</td>
+            <td>1</td>
             <td>Define the active step</td>
           </tr>
           <tr>

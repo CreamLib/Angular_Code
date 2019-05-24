@@ -1,9 +1,9 @@
 /* Step List */
-c3m-step ol {
+ol {
   counter-reset: step;
 }
 /* Step List Item */
-c3m-step ol li {
+ol li {
   display: inline-block;
   position: relative;
   list-style-type: none;
@@ -14,8 +14,12 @@ c3m-step ol li {
   padding: 0.8em 1em;
   margin-left: -5px;
 }
+
+li a {
+  padding: 0.2em;
+}
 /* Step List Item Number */
-c3m-step ol li::before {
+ol li::before {
   display: block;
   position: relative;
   width: 1.5em;
@@ -33,7 +37,7 @@ c3m-step ol li::before {
 }
 
 /* Line of liaison */
-c3m-step ol li::after {
+ol li::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -45,61 +49,79 @@ c3m-step ol li::after {
   z-index: 1;
 }
 
-c3m-step ol li:first-child li::after {
+ol li:first-child::after {
   width: 50%;
   left: 50%;
 }
-c3m-step ol li:last-child li::after {
-  width: 50%;
+ol li:last-child::after {
+  width: 42%;
   left: auto;
   right: 50%;
 }
 
+ol.over li::after {
+  width: 5px;
+  height: 100%;
+  top: 1.5em;
+  left: 1.25em;
+}
+
+ol.over li:last-child::after {
+  content: none;
+}
+
 /* PAST STEP */
-c3m-step ol li.past {
+ol li.past {
   color: var(--n-dark);
   background-color: rgba(255, 255, 255, 0);
 }
-c3m-step ol li.past::before {
+
+ol li.past::before {
   content: '';
   color: var(--text-inv);
   background: var(--main-color) url(/assets/img/sprite.svg) 3px -429px no-repeat;
 }
-c3m-step ol li.past::after {
+
+ol li.past::after {
   background-color: var(--main-color);
 }
 
 /* ACTIVE STEP */
-c3m-step ol li.active {
-}
-c3m-step ol li.active::before {
+ol li.active::before {
   color: var(--text-inv);
   background-color: var(--main-color);
 }
-c3m-step ol li.active::after {
+
+ol li.active::after {
   background-color: var(--n-dark);
   background-image: linear-gradient(90deg, var(--main-color) 50%, var(--n-dark) 50%);
 }
 
+ol.over li.active::after {
+  background-image: none;
+}
+
 /* FUTURE STEP */
-c3m-step ol li.future {
+ol li.future {
   color: var(--n-dark);
   background-color: var(--n-light);
 }
-c3m-step ol li.future::before {
+
+ol li.future::before {
   color: var(--n-light);
   background-color: var(--n-dark);
 }
 
 /* BREAKPOINT */
 
-c3m-step ol.over li {
+ol.over li {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
-c3m-step ol.over li:before {
+
+ol.over li:before {
   display: inline-block;
   margin: 0;
 }
