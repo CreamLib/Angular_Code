@@ -13,6 +13,6 @@ button:hover {
   background-color: var(--n-dark);
 }
 
-.submit {
+.hot-color {
   background-color: var(--hot-color);
 }
