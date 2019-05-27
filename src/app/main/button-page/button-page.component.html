@@ -26,8 +26,8 @@
     <div class="demo">
       <ul class="buttons-bar">
         <li><c3m-button (click)="alert('general action')">general action</c3m-button></li>
-        <li><c3m-button (click)="alert('submit action')" ngClass="submit">submit action</c3m-button></li>
-        <li><c3m-button (click)="alert('optional action')" ngClass="optional">optional action</c3m-button></li>
+        <li><c3m-button (click)="alert('submit action')" styleClass="submit">submit action</c3m-button></li>
+        <li><c3m-button (click)="alert('optional action')" styleClass="optional">optional action</c3m-button></li>
       </ul>
     </div>
 
@@ -129,7 +129,8 @@
           <pre class="prettyprint linenums">
   &lt;!-- Button Upload --&gt;
   &#x3C;c3m-button-file&#x3E;Choose a file&#x3C;/c3m-button-file&#x3E;
-                  </pre>
+                  </pre
+          >
         </div>
       </c3m-tab>
     </c3m-tabs>
@@ -141,8 +142,7 @@
 
     <div class="explain">
       <p>
-        A standard submit input (should appear inside a form or be attached to
-        one).
+        A standard submit input (should appear inside a form or be attached to one).
       </p>
     </div>
     <div class="demo">

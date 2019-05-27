@@ -8,7 +8,8 @@ import {
   HostListener,
   ViewChildren,
   ElementRef,
-  AfterViewInit
+  AfterViewInit,
+  ChangeDetectorRef
 } from '@angular/core';
 
 import { TabComponent } from './tabs-item/tabs-item.component';
@@ -29,7 +30,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
   marginInit: any;
   arrayTmp: ElementRef[];
 
-  constructor() {}
+  constructor(private cdr: ChangeDetectorRef) {}
 
   // contentChildren are set
   ngAfterContentInit() {
@@ -57,6 +58,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
+    this.cdr.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -73,6 +75,7 @@ export class TabsComponent implements AfterViewInit, AfterContentInit {
     } else {
       this.isOver = true;
     }
+    this.cdr.detectChanges();
   }
 
   selectTab(tab: TabComponent) {
