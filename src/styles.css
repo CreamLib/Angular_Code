@@ -262,11 +262,11 @@ code {
 
 /* *********** PAGE STRUCTURE ************* */
 
-app-breadcrumbs {
+c3m-breadcrumbs {
   display: none;
 }
 
-div.demo app-breadcrumbs {
+div.demo c3m-breadcrumbs {
   display: block;
 }
 

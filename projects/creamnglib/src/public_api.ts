@@ -11,6 +11,11 @@ export * from './c3m/toast/toast.component';
 
 export * from './c3m/accordion/accordion.component';
 export * from './c3m/accordion/accordion-item/accordion-item.component';
+export * from './c3m/breadcrumbs/breadcrumbs.component';
+export * from './c3m/breadcrumbs/breadcrumbs.module';
+export * from './c3m/breadcrumbs/breadcrumbs.model';
+export * from './c3m/breadcrumbs/breadcrumbs.service';
+
 export * from './c3m/button/button.component';
 export * from './c3m/calendar/calendar.component';
 export * from './c3m/carousel/carousel.component';

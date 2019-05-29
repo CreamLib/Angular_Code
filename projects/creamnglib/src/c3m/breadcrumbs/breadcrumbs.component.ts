@@ -6,10 +6,9 @@ import { IBreadcrumb } from './breadcrumbs.model';
 import { BreadcrumbsService } from './breadcrumbs.service';
 
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'c3m-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
-  styleUrls: ['./breadcrumbs.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./breadcrumbs.component.css']
 })
 export class BreadcrumbsComponent implements OnInit {
   // The breadcrumbs of the current route
